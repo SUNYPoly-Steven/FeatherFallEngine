@@ -1,0 +1,30 @@
+# CMake generation dependency list for this directory.
+F:/Dependencies/SOURCE/glew-2.1.0/build/cmake/CMakeLists.txt
+F:/Dependencies/SOURCE/glew-2.1.0/build/custom/CMakeFiles/3.9.1/CMakeSystem.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeSystemSpecificInitialize.cmake
+F:/Dependencies/SOURCE/glew-2.1.0/build/custom/CMakeFiles/3.9.1/CMakeCCompiler.cmake
+F:/Dependencies/SOURCE/glew-2.1.0/build/custom/CMakeFiles/3.9.1/CMakeCXXCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows-MSVC.cmake
+F:/Dependencies/SOURCE/glew-2.1.0/build/custom/CMakeFiles/3.9.1/CMakeRCCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageMessage.cmake
+F:/Dependencies/SOURCE/glew-2.1.0/build/cmake/../../glew.pc.in
+F:/Dependencies/SOURCE/glew-2.1.0/build/cmake/cmake_uninstall.cmake.in

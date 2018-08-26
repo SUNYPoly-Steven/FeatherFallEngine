@@ -1,0 +1,8 @@
+﻿  Building Custom Rule F:/Dependencies/SOURCE/glfw-3.2.1/tests/CMakeLists.txt
+  CMake does not need to re-run because F:/Dependencies/SOURCE/glfw-3.2.1/build/tests/CMakeFiles/generate.stamp is up-to-date.
+  threads.c
+  tinycthread.c
+  glad.c
+  Generating Code...
+  threads.vcxproj -> F:\Dependencies\SOURCE\glfw-3.2.1\build\tests\Debug\threads.exe
+  threads.vcxproj -> F:/Dependencies/SOURCE/glfw-3.2.1/build/tests/Debug/threads.pdb (Full PDB)

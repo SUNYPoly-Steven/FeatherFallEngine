@@ -1,0 +1,15 @@
+﻿  -- Install configuration: "Debug"
+  -- Installing: F:/Dependencies/INSTALL/lib/glew32d.lib
+  -- Installing: F:/Dependencies/INSTALL/bin/glew32d.dll
+  -- Installing: F:/Dependencies/INSTALL/lib/libglew32d.lib
+  -- Installing: F:/Dependencies/INSTALL/bin/glewinfo.exe
+  -- Installing: F:/Dependencies/INSTALL/bin/visualinfo.exe
+  -- Installing: F:/Dependencies/INSTALL/lib/pkgconfig/glew.pc
+  -- Installing: F:/Dependencies/INSTALL/lib/glew32d.pdb
+  -- Installing: F:/Dependencies/INSTALL/include/GL/wglew.h
+  -- Installing: F:/Dependencies/INSTALL/include/GL/glew.h
+  -- Installing: F:/Dependencies/INSTALL/include/GL/glxew.h
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glew/glew-targets.cmake
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glew/glew-targets-debug.cmake
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glew/glew-config.cmake
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glew/CopyImportedTargetProperties.cmake

@@ -1,0 +1,14 @@
+﻿  -- Install configuration: "Release"
+  -- Installing: F:/Dependencies/INSTALL/lib/glew32.lib
+  -- Installing: F:/Dependencies/INSTALL/bin/glew32.dll
+  -- Installing: F:/Dependencies/INSTALL/lib/libglew32.lib
+  -- Installing: F:/Dependencies/INSTALL/bin/glewinfo.exe
+  -- Installing: F:/Dependencies/INSTALL/bin/visualinfo.exe
+  -- Up-to-date: F:/Dependencies/INSTALL/lib/pkgconfig/glew.pc
+  -- Up-to-date: F:/Dependencies/INSTALL/include/GL/wglew.h
+  -- Up-to-date: F:/Dependencies/INSTALL/include/GL/glew.h
+  -- Up-to-date: F:/Dependencies/INSTALL/include/GL/glxew.h
+  -- Up-to-date: F:/Dependencies/INSTALL/lib/cmake/glew/glew-targets.cmake
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glew/glew-targets-release.cmake
+  -- Up-to-date: F:/Dependencies/INSTALL/lib/cmake/glew/glew-config.cmake
+  -- Up-to-date: F:/Dependencies/INSTALL/lib/cmake/glew/CopyImportedTargetProperties.cmake

@@ -1,0 +1,10 @@
+﻿  -- Install configuration: "Release"
+  -- Installing: F:/Dependencies/INSTALL/include/GLFW
+  -- Installing: F:/Dependencies/INSTALL/include/GLFW/glfw3.h
+  -- Installing: F:/Dependencies/INSTALL/include/GLFW/glfw3native.h
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glfw3/glfw3Config.cmake
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glfw3/glfw3ConfigVersion.cmake
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glfw3/glfw3Targets.cmake
+  -- Installing: F:/Dependencies/INSTALL/lib/cmake/glfw3/glfw3Targets-release.cmake
+  -- Installing: F:/Dependencies/INSTALL/lib/pkgconfig/glfw3.pc
+  -- Installing: F:/Dependencies/INSTALL/lib/glfw3.lib
