@@ -4,23 +4,28 @@
 
 namespace core { namespace buffers {
 
-	VAO::VAO() {
+	VAO::VAO() 
+	{
 		GLCall(glGenVertexArrays(1, &vaoID));
 	}
 
-	VAO::~VAO() {
+	VAO::~VAO() 
+	{
 		GLCall(glDeleteVertexArrays(1, &vaoID));
 	}
 
-	void VAO::bind() const {
+	void VAO::bind() const 
+	{
 		GLCall(glBindVertexArray(vaoID));
 	}
 
-	void VAO::unbind() const {
+	void VAO::unbind() const 
+	{
 		GLCall(glBindVertexArray(0));
 	}
 
-	void VAO::addBuffer(const VBO& vb, const BufferLayout& layout) {
+	void VAO::addBuffer(const VBO& vb, const BufferLayout& layout) 
+	{
 		
 		bind();
 		vb.bind();

@@ -1,4 +1,5 @@
 #include "BatchRenderer2D.h"
+#include <memory>
 #include "../Auto.h"
 
 namespace core { namespace graphics {
@@ -13,18 +14,13 @@ namespace core { namespace graphics {
 		vbo = new buffers::VBO(nullptr, RENDERER_BUFFER_SIZE, false);
 
 		//create index buffer of size RENDERER_MAX_INDEX_COUNT
-		unsigned int* indices = new unsigned int[RENDERER_MAX_INDEX_COUNT];
-
+		std::unique_ptr<unsigned int[]> indices = std::make_unique<unsigned int[]>(RENDERER_MAX_INDEX_COUNT);
 		/*
 		 * Once data is in OpenGL we don't need it CPU side,
-		 * delete it using Auto to make sure that you don't leak
-		 * memory if anything else in this ctor should fail or throw
-		 *
-		 * #Code_Smell? - Consider making indices a unique pointer, this
-		 *                would provide the same functionality as Auto,
-		 *                but with extra features of not using raw new[]/delete[]
+		 * it will be deleted using unique_ptr leaving scope
+		 * to make sure that a memory leak will not happen
+		 * if anything else in this ctor should fail or throw
 		 */
-		Auto(delete[] indices); 
 
 		unsigned int offset = 0;
 		for (int i = 0; i < RENDERER_MAX_INDEX_COUNT; i += 6) {
@@ -39,7 +35,7 @@ namespace core { namespace graphics {
 
 			offset += 4;
 		}
-		ibo = new buffers::IBO(indices, RENDERER_MAX_INDEX_COUNT);
+		ibo = new buffers::IBO(indices.get(), RENDERER_MAX_INDEX_COUNT);
 
 		vao.addBuffer(*vbo, layout);
 
@@ -73,7 +69,9 @@ namespace core { namespace graphics {
 						 (int)(color.g * 255.0f) <<  8 | 
 						 (int)(color.r * 255.0f);
 
-		//#NOTE: doing this glm::vec4 construction is expensive. 
+		//#NOTE: doing this glm::vec4 construction is expensive.
+		//       try to optimize the excessive copies when 
+		//       multiplying with m_StackTop 
 		//       This is a Critical optimization to make.
 		renderBuffer->position = (*m_StackTop) * pos;
 		renderBuffer->color = c;

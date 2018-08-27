@@ -46,7 +46,8 @@ namespace core { namespace buffers {
 		}
 
 		template<typename T>
-		void push(unsigned int count) {
+		void push(unsigned int count) 
+		{
 			//if an unsupported type is used, 
 			//this will create a compile time error
 			static_assert(false, 
@@ -54,19 +55,22 @@ namespace core { namespace buffers {
 		}
 
 		template<>
-		void push<float>(unsigned int count) {
+		void push<float>(unsigned int count) 
+		{
 			elements.push_back({ GL_FLOAT, count, GL_FALSE });
 			stride += count * GLsizeof(GL_FLOAT);
 		}
 
 		template<>
-		void push<unsigned int>(unsigned int count) {
+		void push<unsigned int>(unsigned int count) 
+		{
 			elements.push_back({ GL_UNSIGNED_INT, count, GL_FALSE });
 			stride += count * GLsizeof(GL_UNSIGNED_INT);
 		}
 
 		template<>
-		void push<unsigned char>(unsigned int count) {
+		void push<unsigned char>(unsigned int count) 
+		{
 			elements.push_back({ GL_UNSIGNED_BYTE, count, GL_TRUE });
 			stride += count * GLsizeof(GL_UNSIGNED_BYTE);
 		}

@@ -10479,7 +10479,7 @@ this$ = 96
 count$ = 104
 ??$push@M@BufferLayout@buffers@core@@QEAAXI@Z PROC	; core::buffers::BufferLayout::push<float>, COMDAT
 
-; 57   : 		void push<float>(unsigned int count) {
+; 59   : 		{
 
 $LN3:
 	mov	DWORD PTR [rsp+16], edx
@@ -10488,7 +10488,7 @@ $LN3:
 	sub	rsp, 112				; 00000070H
 	lea	rbp, QWORD PTR [rsp+32]
 
-; 58   : 			elements.push_back({ GL_FLOAT, count, GL_FALSE });
+; 60   : 			elements.push_back({ GL_FLOAT, count, GL_FALSE });
 
 	mov	DWORD PTR $T1[rbp], 5126		; 00001406H
 	mov	eax, DWORD PTR count$[rbp]
@@ -10499,7 +10499,7 @@ $LN3:
 	mov	rcx, rax
 	call	?push_back@?$vector@UBufferElement@buffers@core@@V?$allocator@UBufferElement@buffers@core@@@std@@@std@@QEAAX$$QEAUBufferElement@buffers@core@@@Z ; std::vector<core::buffers::BufferElement,std::allocator<core::buffers::BufferElement> >::push_back
 
-; 59   : 			stride += count * GLsizeof(GL_FLOAT);
+; 61   : 			stride += count * GLsizeof(GL_FLOAT);
 
 	mov	ecx, 5126				; 00001406H
 	call	?SizeOfType@BufferElement@buffers@core@@SAII@Z ; core::buffers::BufferElement::SizeOfType
@@ -10511,7 +10511,7 @@ $LN3:
 	mov	rcx, QWORD PTR this$[rbp]
 	mov	DWORD PTR [rcx+32], eax
 
-; 60   : 		}
+; 62   : 		}
 
 	lea	rsp, QWORD PTR [rbp+80]
 	pop	rbp

@@ -20153,7 +20153,7 @@ $LN21:
 	call	?__autoclassinit2@Window@graphics@core@@QEAAX_K@Z
 	mov	DWORD PTR $T1[rbp], 576			; 00000240H
 	mov	DWORD PTR $T2[rbp], 1024		; 00000400H
-	mov	BYTE PTR [rsp+40], 1
+	mov	BYTE PTR [rsp+40], 0
 	mov	BYTE PTR [rsp+32], 0
 	lea	r9, OFFSET FLAT:??_C@_0BF@FMNCKNFP@FeatherFall?5Examples?$AA@
 	lea	r8, QWORD PTR $T1[rbp]

@@ -34,7 +34,7 @@
 #define WINDOW_HEIGHT 576
 #endif
 #define WINDOW_TITLE "FeatherFall Examples"
-#define WINDOW_VSYNC true
+#define WINDOW_VSYNC false
 
 
 /* TODO:
@@ -59,7 +59,8 @@ using namespace core;
 
 
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv) 
+{
 
 	core::graphics::Window window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, WINDOW_FULLSCREEN, WINDOW_VSYNC);
 

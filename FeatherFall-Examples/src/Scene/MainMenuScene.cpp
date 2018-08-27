@@ -46,7 +46,8 @@ namespace Application { namespace Scene {
 
 	}
 
-	MainMenuScene::~MainMenuScene() {
+	MainMenuScene::~MainMenuScene() 
+	{
 
 		delete vao;
 		delete vbo;
@@ -60,18 +61,21 @@ namespace Application { namespace Scene {
 
 	}
 
-	void MainMenuScene::OnUpdate(float deltaTime) {
+	void MainMenuScene::OnUpdate(float deltaTime) 
+	{
 
 	}
 
-	void MainMenuScene::OnRender() {
+	void MainMenuScene::OnRender() 
+	{
 		
 		shader->setUniform1f("percentage", texMix);
 		GLCall(glDrawElements(GL_TRIANGLES, ibo->getCount(), GL_UNSIGNED_INT, nullptr));
 
 	}
 
-	void MainMenuScene::OnImGuiRender() {
+	void MainMenuScene::OnImGuiRender() 
+	{
 
 		ImGui::Text("Select a Scene to load: ");
 		for (auto& scene : scenes) {
@@ -87,7 +91,8 @@ namespace Application { namespace Scene {
 
 	}
 
-	void MainMenuScene::OnReloadScene() {
+	void MainMenuScene::OnReloadScene() 
+	{
 
 		GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
 
