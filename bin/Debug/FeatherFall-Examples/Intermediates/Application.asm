@@ -61,6 +61,7 @@ PUBLIC	?__autoclassinit2@BoidScene@Scene@Application@@QEAAX_K@Z ; Application::S
 PUBLIC	?__autoclassinit2@MandelbrotScene@Scene@Application@@QEAAX_K@Z ; Application::Scene::MandelbrotScene::__autoclassinit2
 PUBLIC	?__autoclassinit2@ComputeShaderScene@Scene@Application@@QEAAX_K@Z ; Application::Scene::ComputeShaderScene::__autoclassinit2
 PUBLIC	?__autoclassinit2@LayerScene@Scene@Application@@QEAAX_K@Z ; Application::Scene::LayerScene::__autoclassinit2
+PUBLIC	?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z ; Application::Scene::Renderer3DScene::__autoclassinit2
 PUBLIC	main
 PUBLIC	??$RegisterScene@VTestScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::TestScene>
 PUBLIC	??$RegisterScene@VSandboxScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::SandboxScene>
@@ -72,6 +73,7 @@ PUBLIC	??$RegisterScene@VLayerScene@Scene@Application@@@MainMenuScene@Scene@Appl
 PUBLIC	??$RegisterScene@VBoidScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::BoidScene>
 PUBLIC	??$RegisterScene@VMandelbrotScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::MandelbrotScene>
 PUBLIC	??$RegisterScene@VComputeShaderScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::ComputeShaderScene>
+PUBLIC	??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::Renderer3DScene>
 PUBLIC	??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z ; std::_Allocate<16,std::_Default_allocate_traits,0>
 PUBLIC	??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z	; std::_Deallocate<16,0>
 PUBLIC	??0?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@AEBU01@@Z ; std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> >::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> >
@@ -141,6 +143,7 @@ PUBLIC	??_C@_0M@BPMKEGOM@Layer?5Scene?$AA@		; `string'
 PUBLIC	??_C@_0BB@GJJACBDL@Flocking?5?$CIBoids?$CJ?$AA@	; `string'
 PUBLIC	??_C@_0P@FGIJLCEO@Mandelbrot?5Set?$AA@		; `string'
 PUBLIC	??_C@_0BG@BIFNHANB@Simple?5Compute?5Shader?$AA@	; `string'
+PUBLIC	??_C@_08GOJDOLPA@3D?5Scene?$AA@			; `string'
 PUBLIC	??_C@_09JDDCPHDA@Main?5Menu?$AA@		; `string'
 PUBLIC	??_C@_03HEPJOIKG@?$DM?9?9?$AA@			; `string'
 PUBLIC	??_C@_0BG@KBOMGOII@Profiler?5?$CIDEBUG?5Mode?$CJ?$AA@ ; `string'
@@ -193,6 +196,7 @@ EXTRN	??0BoidScene@Scene@Application@@QEAA@XZ:PROC	; Application::Scene::BoidSce
 EXTRN	??0MandelbrotScene@Scene@Application@@QEAA@XZ:PROC ; Application::Scene::MandelbrotScene::MandelbrotScene
 EXTRN	??0ComputeShaderScene@Scene@Application@@QEAA@XZ:PROC ; Application::Scene::ComputeShaderScene::ComputeShaderScene
 EXTRN	??0LayerScene@Scene@Application@@QEAA@XZ:PROC	; Application::Scene::LayerScene::LayerScene
+EXTRN	??0Renderer3DScene@Scene@Application@@QEAA@XZ:PROC ; Application::Scene::Renderer3DScene::Renderer3DScene
 EXTRN	_CxxThrowException:PROC
 EXTRN	_RTC_InitBase:PROC
 EXTRN	_RTC_Shutdown:PROC
@@ -547,8 +551,14 @@ $pdata$?__autoclassinit2@LayerScene@Scene@Application@@QEAAX_K@Z DD imagerel $LN
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+38
+	DD	imagerel $unwind$?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$main DD	imagerel $LN21
-	DD	imagerel $LN21+1248
+	DD	imagerel $LN21+1267
 	DD	imagerel $unwind$main
 pdata	ENDS
 ;	COMDAT pdata
@@ -682,6 +692,18 @@ pdata	SEGMENT
 $pdata$?dtor$0@?0???$RegisterScene@VComputeShaderScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA DD imagerel ?dtor$0@?0???$RegisterScene@VComputeShaderScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA
 	DD	imagerel ?dtor$0@?0???$RegisterScene@VComputeShaderScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA+25
 	DD	imagerel $unwind$?dtor$0@?0???$RegisterScene@VComputeShaderScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z DD imagerel $LN4
+	DD	imagerel $LN4+136
+	DD	imagerel $unwind$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA DD imagerel ?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA
+	DD	imagerel ?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA+25
+	DD	imagerel $unwind$?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1357,6 +1379,60 @@ $pdata$??$?0PEBDV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@$0A@@?$pair@PEBDV?$f
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ DD imagerel ??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ
+	DD	imagerel ??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ+102
+	DD	imagerel $unwind$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA DD imagerel ?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA
+	DD	imagerel ?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA+30
+	DD	imagerel $unwind$?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+76
+	DD	imagerel $unwind$??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z DD imagerel ??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+	DD	imagerel ??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z+23
+	DD	imagerel $unwind$??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+38
+	DD	imagerel $unwind$??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+38
+	DD	imagerel $unwind$??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+69
+	DD	imagerel $unwind$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA DD imagerel ?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA
+	DD	imagerel ?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA+25
+	DD	imagerel $unwind$?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z DD imagerel ??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z
+	DD	imagerel ??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z+84
+	DD	imagerel $unwind$??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z DD imagerel $LN7
 	DD	imagerel $LN7+261
 	DD	imagerel $unwind$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z
@@ -1549,6 +1625,18 @@ $pdata$??$?0AEAPEBDV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@$0A@@?$pair@PEBDV
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z DD imagerel ??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+	DD	imagerel ??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z+23
+	DD	imagerel $unwind$??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+63
+	DD	imagerel $unwind$??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??$?0U?$integral_constant@_N$00@std@@@_Unused_parameter@std@@QEAA@$$QEAU?$integral_constant@_N$00@1@@Z DD imagerel $LN3
 	DD	imagerel $LN3+28
 	DD	imagerel $unwind$??$?0U?$integral_constant@_N$00@std@@@_Unused_parameter@std@@QEAA@$$QEAU?$integral_constant@_N$00@1@@Z
@@ -1702,6 +1790,18 @@ pdata	SEGMENT
 $pdata$??$_Reset@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@Z DD imagerel ??$_Reset@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@Z
 	DD	imagerel ??$_Reset@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@Z+70
 	DD	imagerel $unwind$??$_Reset@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z DD imagerel ??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+	DD	imagerel ??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z+23
+	DD	imagerel $unwind$??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+70
+	DD	imagerel $unwind$??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2299,6 +2399,60 @@ $pdata$??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_9e62dcf887c94db0be73ed49d4
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+34
+	DD	imagerel $unwind$??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z DD imagerel ?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z
+	DD	imagerel ?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z+44
+	DD	imagerel $unwind$?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z DD imagerel ?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z
+	DD	imagerel ?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z+69
+	DD	imagerel $unwind$?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z DD imagerel ?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z
+	DD	imagerel ?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z+72
+	DD	imagerel $unwind$?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ DD imagerel ?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ
+	DD	imagerel ?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ+37
+	DD	imagerel $unwind$?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ DD imagerel ?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ
+	DD	imagerel ?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ+26
+	DD	imagerel $unwind$?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ DD imagerel ?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ
+	DD	imagerel ?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ+37
+	DD	imagerel $unwind$?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z DD imagerel ?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z
+	DD	imagerel ?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z+56
+	DD	imagerel $unwind$?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z DD imagerel ??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z
+	DD	imagerel ??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z+90
+	DD	imagerel $unwind$??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??$destroy@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@?$_Default_allocator_traits@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@@std@@SAXAEAV?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@1@QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@1@@Z DD imagerel $LN3
 	DD	imagerel $LN3+37
 	DD	imagerel $unwind$??$destroy@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@?$_Default_allocator_traits@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@@std@@SAXAEAV?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@1@QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@1@@Z
@@ -2344,6 +2498,18 @@ pdata	SEGMENT
 $pdata$??$_Deallocate@$07$0A@@std@@YAXPEAX_K@Z DD imagerel $LN4
 	DD	imagerel $LN4+62
 	DD	imagerel $unwind$??$_Deallocate@$07$0A@@std@@YAXPEAX_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z DD imagerel ??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z
+	DD	imagerel ??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z+23
+	DD	imagerel $unwind$??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+62
+	DD	imagerel $unwind$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2464,6 +2630,12 @@ pdata	SEGMENT
 $pdata$??$?0V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@X@?$_Func_impl_no_alloc@V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@@Z DD imagerel ??$?0V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@X@?$_Func_impl_no_alloc@V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@@Z
 	DD	imagerel ??$?0V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@X@?$_Func_impl_no_alloc@V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@@Z+62
 	DD	imagerel $unwind$??$?0V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@X@?$_Func_impl_no_alloc@V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+62
+	DD	imagerel $unwind$??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2647,6 +2819,18 @@ $pdata$??$_Call@AEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@?$_Invoker_ret@P
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z DD imagerel ??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z
+	DD	imagerel ??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z+25
+	DD	imagerel $unwind$??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	imagerel ??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+38
+	DD	imagerel $unwind$??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??$forward@AEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@YAAEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@0@AEAU10@@Z DD imagerel $LN3
 	DD	imagerel $LN3+23
 	DD	imagerel $unwind$??$forward@AEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@YAAEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@0@AEAU10@@Z
@@ -2656,6 +2840,12 @@ pdata	SEGMENT
 $pdata$??$construct@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@AEAU12@@?$_Default_allocator_traits@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@@std@@SAXAEAV?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@1@QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@1@AEAU31@@Z DD imagerel $LN3
 	DD	imagerel $LN3+70
 	DD	imagerel $unwind$??$construct@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@AEAU12@@?$_Default_allocator_traits@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@@std@@SAXAEAV?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@1@QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@1@AEAU31@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z DD imagerel ??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z
+	DD	imagerel ??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z+23
+	DD	imagerel $unwind$??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2729,6 +2919,45 @@ rtc$TMZ	ENDS
 rtc$IMZ	SEGMENT
 _RTC_InitBase.rtc$IMZ DQ FLAT:_RTC_InitBase
 rtc$IMZ	ENDS
+;	COMDAT ??_R1A@?0A@EA@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8
+rdata$r	SEGMENT
+??_R1A@?0A@EA@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8 DD imagerel ??_R0?AV?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@@8 ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::`RTTI Base Class Descriptor at (0,-1,0,64)'
+	DD	01H
+	DD	00H
+	DD	0ffffffffH
+	DD	00H
+	DD	040H
+	DD	imagerel ??_R3?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8
+rdata$r	ENDS
+;	COMDAT ??_R2?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8
+rdata$r	SEGMENT
+??_R2?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8 DD imagerel ??_R1A@?0A@EA@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8 ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::`RTTI Base Class Array'
+	DD	imagerel ??_R1A@?0A@EA@?$_Func_base@PEAVScene@1Application@@$$V@std@@8
+	ORG $+3
+rdata$r	ENDS
+;	COMDAT ??_R3?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8
+rdata$r	SEGMENT
+??_R3?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8 DD 00H ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::`RTTI Class Hierarchy Descriptor'
+	DD	00H
+	DD	02H
+	DD	imagerel ??_R2?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8
+rdata$r	ENDS
+;	COMDAT ??_R0?AV?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@@8
+data$r	SEGMENT
+??_R0?AV?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@@8 DQ FLAT:??_7type_info@@6B@ ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *> `RTTI Type Descriptor'
+	DQ	0000000000000000H
+	DB	'.?AV?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25'
+	DB	'ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@', 00H
+data$r	ENDS
+;	COMDAT ??_R4?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@6B@
+rdata$r	SEGMENT
+??_R4?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@6B@ DD 01H ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::`RTTI Complete Object Locator'
+	DD	00H
+	DD	00H
+	DD	imagerel ??_R0?AV?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@@8
+	DD	imagerel ??_R3?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@8
+	DD	imagerel ??_R4?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@6B@
+rdata$r	ENDS
 ;	COMDAT ??_R1A@?0A@EA@?$_Func_impl_no_alloc@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@PEAVScene@2Application@@$$V@std@@8
 rdata$r	SEGMENT
 ??_R1A@?0A@EA@?$_Func_impl_no_alloc@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@PEAVScene@2Application@@$$V@std@@8 DD imagerel ??_R0?AV?$_Func_impl_no_alloc@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@PEAVScene@2Application@@$$V@std@@@8 ; std::_Func_impl_no_alloc<<lambda_9e62dcf887c94db0be73ed49d4be45d7>,Application::Scene::Scene *>::`RTTI Base Class Descriptor at (0,-1,0,64)'
@@ -3207,6 +3436,22 @@ data$r	SEGMENT
 	DQ	0000000000000000H
 	DB	'.?AV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@', 00H
 data$r	ENDS
+;	COMDAT ??_R0?AV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@8
+data$r	SEGMENT
+??_R0?AV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@8 DQ FLAT:??_7type_info@@6B@ ; <lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> `RTTI Type Descriptor'
+	DQ	0000000000000000H
+	DB	'.?AV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@', 00H
+data$r	ENDS
+;	COMDAT ??_7?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@6B@
+CONST	SEGMENT
+??_7?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@6B@ DQ FLAT:??_R4?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@6B@ ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::`vftable'
+	DQ	FLAT:?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z
+	DQ	FLAT:?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z
+	DQ	FLAT:?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ
+	DQ	FLAT:?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ
+	DQ	FLAT:?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z
+	DQ	FLAT:?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ
+CONST	ENDS
 ;	COMDAT ??_7?$_Func_impl_no_alloc@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@PEAVScene@2Application@@$$V@std@@6B@
 CONST	SEGMENT
 ??_7?$_Func_impl_no_alloc@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@PEAVScene@2Application@@$$V@std@@6B@ DQ FLAT:??_R4?$_Func_impl_no_alloc@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@PEAVScene@2Application@@$$V@std@@6B@ ; std::_Func_impl_no_alloc<<lambda_9e62dcf887c94db0be73ed49d4be45d7>,Application::Scene::Scene *>::`vftable'
@@ -3359,6 +3604,10 @@ CONST	ENDS
 CONST	SEGMENT
 ??_C@_09JDDCPHDA@Main?5Menu?$AA@ DB 'Main Menu', 00H	; `string'
 CONST	ENDS
+;	COMDAT ??_C@_08GOJDOLPA@3D?5Scene?$AA@
+CONST	SEGMENT
+??_C@_08GOJDOLPA@3D?5Scene?$AA@ DB '3D Scene', 00H	; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_0BG@BIFNHANB@Simple?5Compute?5Shader?$AA@
 CONST	SEGMENT
 ??_C@_0BG@BIFNHANB@Simple?5Compute?5Shader?$AA@ DB 'Simple Compute Shader'
@@ -3508,6 +3757,12 @@ $unwind$??$forward@AEBV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@std@@YAAEBV<l
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z DD 05030d01H
+	DD	0720a030dH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??$construct@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@AEAU12@@?$_Default_allocator_traits@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@@std@@SAXAEAV?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@1@QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@1@AEAU31@@Z DD 025031901H
 	DD	0d2142319H
 	DD	05010H
@@ -3517,6 +3772,18 @@ xdata	SEGMENT
 $unwind$??$forward@AEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@YAAEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@0@AEAU10@@Z DD 05030d01H
 	DD	0720a030dH
 	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z DD 05031101H
+	DD	0720e0311H
+	DD	0500aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -3700,6 +3967,12 @@ $unwind$??$?0AEBV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@X@?$_Func_impl_no_al
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??$?0V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@X@?$_Func_impl_no_alloc@V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@@Z DD 025031401H
 	DD	0b20f2314H
 	DD	0500bH
@@ -3820,6 +4093,18 @@ $unwind$??$addressof@$$CBV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@std@@YAPEB
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z DD 05030d01H
+	DD	0720a030dH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??$_Deallocate@$07$0A@@std@@YAXPEAX_K@Z DD 025031401H
 	DD	0b20f2314H
 	DD	0500bH
@@ -3885,6 +4170,80 @@ xdata	SEGMENT
 $unwind$??$destroy@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@?$_Default_allocator_traits@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@@std@@SAXAEAV?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@1@QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@1@@Z DD 025031401H
 	DD	0b20f2314H
 	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z DD 025031901H
+	DD	0d2142319H
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z DD imagerel ?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z
+	DD	0ffffffffH
+xdata	ENDS
+;	COMDAT CONST
+CONST	SEGMENT
+$cppxdata$?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z DD 019930522H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	01H
+	DD	imagerel $ip2state$?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z
+	DD	060H
+	DD	00H
+	DD	05H
+CONST	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z DD 025031b19H
+	DD	0d20e2313H
+	DD	0500aH
+	DD	imagerel __CxxFrameHandler3
+	DD	imagerel $cppxdata$?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ DD 05030d01H
+	DD	0720a030dH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z DD 025031401H
+	DD	0d20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z DD 025031901H
+	DD	0d2142319H
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z DD 025031401H
+	DD	0d20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025030f01H
+	DD	0d20a230fH
+	DD	05006H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4740,6 +5099,18 @@ $unwind$??$_Destroy_range1@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025031401H
+	DD	0d20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z DD 05030d01H
+	DD	0720a030dH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??$_Reset@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@Z DD 025031401H
 	DD	0d20f2314H
 	DD	0500bH
@@ -4897,6 +5268,18 @@ xdata	SEGMENT
 $unwind$??$?0U?$integral_constant@_N$00@std@@@_Unused_parameter@std@@QEAA@$$QEAU?$integral_constant@_N$00@1@@Z DD 05031201H
 	DD	0720f0312H
 	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025031901H
+	DD	0b2142319H
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z DD 05030d01H
+	DD	0720a030dH
+	DD	05006H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5143,6 +5526,116 @@ xdata	SEGMENT
 $unwind$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z DD 035041201H
 	DD	010d3312H
 	DD	050060012H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD imagerel ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	0ffffffffH
+	DD	imagerel ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+37
+	DD	00H
+	DD	imagerel ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z+59
+	DD	0ffffffffH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$stateUnwindMap$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 0ffffffffH
+	DD	imagerel ?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA
+xdata	ENDS
+;	COMDAT CONST
+CONST	SEGMENT
+$cppxdata$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 019930522H
+	DD	01H
+	DD	imagerel $stateUnwindMap$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	00H
+	DD	00H
+	DD	03H
+	DD	imagerel $ip2state$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+	DD	060H
+	DD	00H
+	DD	01H
+CONST	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025031b11H
+	DD	0d20e2313H
+	DD	0500aH
+	DD	imagerel __CxxFrameHandler3
+	DD	imagerel $cppxdata$??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z DD 05030d01H
+	DD	0720a030dH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z DD 025031901H
+	DD	0d2142319H
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ DD imagerel ??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ
+	DD	0ffffffffH
+	DD	imagerel ??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ+40
+	DD	00H
+	DD	imagerel ??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ+92
+	DD	0ffffffffH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$stateUnwindMap$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ DD 0ffffffffH
+	DD	imagerel ?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA
+xdata	ENDS
+;	COMDAT CONST
+CONST	SEGMENT
+$cppxdata$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ DD 019930522H
+	DD	01H
+	DD	imagerel $stateUnwindMap$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ
+	DD	00H
+	DD	00H
+	DD	03H
+	DD	imagerel $ip2state$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ
+	DD	070H
+	DD	00H
+	DD	01H
+CONST	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ DD 025031a11H
+	DD	0f20d2312H
+	DD	05006H
+	DD	imagerel __CxxFrameHandler3
+	DD	imagerel $cppxdata$??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -6434,6 +6927,47 @@ $unwind$??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z DD
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z DD imagerel ??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z
+	DD	0ffffffffH
+	DD	imagerel ??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z+93
+	DD	00H
+	DD	imagerel ??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z+117
+	DD	0ffffffffH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$stateUnwindMap$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z DD 0ffffffffH
+	DD	imagerel ?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA
+xdata	ENDS
+;	COMDAT CONST
+CONST	SEGMENT
+$cppxdata$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z DD 019930522H
+	DD	01H
+	DD	imagerel $stateUnwindMap$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z
+	DD	00H
+	DD	00H
+	DD	03H
+	DD	imagerel $ip2state$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z
+	DD	0c8H
+	DD	00H
+	DD	01H
+CONST	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z DD 025052311H
+	DD	01132318H
+	DD	0700c001bH
+	DD	0500bH
+	DD	imagerel __CxxFrameHandler3
+	DD	imagerel $cppxdata$??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$?dtor$0@?0???$RegisterScene@VComputeShaderScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA DD 020601H
 	DD	050023206H
 xdata	ENDS
@@ -6862,7 +7396,7 @@ $ip2state$main DD imagerel main
 	DD	01H
 	DD	imagerel main+264
 	DD	00H
-	DD	imagerel main+1209
+	DD	imagerel main+1228
 	DD	0ffffffffH
 xdata	ENDS
 ;	COMDAT xdata
@@ -6893,6 +7427,12 @@ $unwind$main DD	035043219H
 	DD	imagerel __GSHandlerCheck_EH
 	DD	imagerel $cppxdata$main
 	DD	05baH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z DD 05041301H
+	DD	082100313H
+	DD	0500b700cH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -7538,6 +8078,31 @@ _Arg$ = 80
 ??$forward@AEBV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@std@@YAAEBV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@AEBV1@@Z ENDP ; std::forward<<lambda_9e62dcf887c94db0be73ed49d4be45d7> const &>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\type_traits
+;	COMDAT ??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z
+_TEXT	SEGMENT
+_Arg$ = 80
+??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z PROC ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const &>, COMDAT
+
+; 1540 : 	{	// forward an lvalue as either an lvalue or an rvalue
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 64					; 00000040H
+	mov	rbp, rsp
+
+; 1541 : 	return (static_cast<_Ty&&>(_Arg));
+
+	mov	rax, QWORD PTR _Arg$[rbp]
+
+; 1542 : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z ENDP ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const &>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\xmemory0
 ;	COMDAT ??$construct@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@AEAU12@@?$_Default_allocator_traits@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@@std@@SAXAEAV?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@1@QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@1@AEAU31@@Z
 _TEXT	SEGMENT
@@ -7600,6 +8165,52 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$forward@AEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@YAAEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@0@AEAU10@@Z ENDP ; std::forward<std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> > &>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+;	COMDAT ??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+<_Vals_0>$ = 80
+??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::_Invoker_ret<Application::Scene::Scene *,0>::_Call<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>, COMDAT
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\type_traits
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	rcx, QWORD PTR <_Vals_0>$[rbp]
+	call	??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+	mov	rcx, rax
+	call	??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::invoke<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::_Invoker_ret<Application::Scene::Scene *,0>::_Call<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z
+_TEXT	SEGMENT
+__formal$ = 80
+__formal$ = 88
+??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z PROC ; std::_Test_callable<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >, COMDAT
+
+; 1007 : 	{	// std::function must store arbitrary callable objects
+
+	mov	BYTE PTR [rsp+16], dl
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 64					; 00000040H
+	mov	rbp, rsp
+
+; 1008 : 	return (true);
+
+	mov	al, 1
+
+; 1009 : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z ENDP ; std::_Test_callable<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ;	COMDAT ??$_Call@AEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@Z
@@ -8433,6 +9044,43 @@ _Val$ = 88
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+this$ = 80
+_Val$ = 88
+??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const &,void>, COMDAT
+
+; 1195 : 		: _Callee(_STD forward<_Other>(_Val))
+
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1196 : 		{	// construct
+
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??0?$_Func_base@PEAVScene@1Application@@$$V@std@@QEAA@XZ ; std::_Func_base<Application::Scene::Scene *>::_Func_base<Application::Scene::Scene *>
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rcx, OFFSET FLAT:??_7?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@6B@
+	mov	QWORD PTR [rax], rcx
+
+; 1195 : 		: _Callee(_STD forward<_Other>(_Val))
+
+	mov	rcx, QWORD PTR _Val$[rbp]
+	call	??$forward@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const &>
+
+; 1197 : 		}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const &,void>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
 ;	COMDAT ??$?0V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@X@?$_Func_impl_no_alloc@V<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_411dc79f4b3a863ac6e5ae55809472f9>@@@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -9052,6 +9700,68 @@ _Val$ = 80
 ??$addressof@$$CBV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@std@@YAPEBV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@AEBV1@@Z ENDP ; std::addressof<<lambda_9e62dcf887c94db0be73ed49d4be45d7> const >
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+this$ = 80
+_Val$ = 88
+??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>, COMDAT
+
+; 1195 : 		: _Callee(_STD forward<_Other>(_Val))
+
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1196 : 		{	// construct
+
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??0?$_Func_base@PEAVScene@1Application@@$$V@std@@QEAA@XZ ; std::_Func_base<Application::Scene::Scene *>::_Func_base<Application::Scene::Scene *>
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rcx, OFFSET FLAT:??_7?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@6B@
+	mov	QWORD PTR [rax], rcx
+
+; 1195 : 		: _Callee(_STD forward<_Other>(_Val))
+
+	mov	rcx, QWORD PTR _Val$[rbp]
+	call	??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+
+; 1197 : 		}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\xstddef
+;	COMDAT ??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z
+_TEXT	SEGMENT
+_Val$ = 80
+??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z PROC ; std::addressof<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const >, COMDAT
+
+; 372  : 	{	// return address of _Val
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 64					; 00000040H
+	mov	rbp, rsp
+
+; 373  : 	return (__builtin_addressof(_Val));
+
+	mov	rax, QWORD PTR _Val$[rbp]
+
+; 374  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z ENDP ; std::addressof<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const >
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\xmemory0
 ;	COMDAT ??$_Deallocate@$07$0A@@std@@YAXPEAX_K@Z
 _TEXT	SEGMENT
@@ -9360,6 +10070,304 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$destroy@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@?$_Default_allocator_traits@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@std@@@std@@SAXAEAV?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@1@QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@1@@Z ENDP ; std::_Default_allocator_traits<std::allocator<std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> > > >::destroy<std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> > >
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z
+_TEXT	SEGMENT
+$T1 = 64
+this$ = 96
+_Val$ = 104
+__formal$ = 112
+??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z PROC ; std::_Func_class<Application::Scene::Scene *>::_Reset_impl<std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >, COMDAT
+
+; 1332 : 		{	// store copy of _Val, small (locally stored)
+
+	mov	BYTE PTR [rsp+24], r8b
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1333 : 		_Set(::new (_Getspace()) _Myimpl(_STD forward<_Fx>(_Val)));
+
+	mov	rcx, QWORD PTR this$[rbp]
+	call	?_Getspace@?$_Func_class@PEAVScene@1Application@@$$V@std@@AEAAPEAXXZ ; std::_Func_class<Application::Scene::Scene *>::_Getspace
+	mov	rdx, rax
+	mov	ecx, 16
+	call	??2@YAPEAX_KPEAX@Z			; operator new
+	mov	QWORD PTR $T1[rbp], rax
+	mov	rcx, QWORD PTR _Val$[rbp]
+	call	??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+	mov	rdx, rax
+	mov	rcx, QWORD PTR $T1[rbp]
+	call	??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>
+	mov	rdx, rax
+	mov	rcx, QWORD PTR this$[rbp]
+	call	?_Set@?$_Func_class@PEAVScene@1Application@@$$V@std@@AEAAXPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@@Z ; std::_Func_class<Application::Scene::Scene *>::_Set
+
+; 1334 : 		}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z ENDP ; std::_Func_class<Application::Scene::Scene *>::_Reset_impl<std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z
+_TEXT	SEGMENT
+$T1 = 64
+this$ = 96
+_Dealloc$ = 104
+?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Delete_this, COMDAT
+
+; 1239 : 		{	// destroy self
+
+	mov	BYTE PTR [rsp+16], dl
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	QWORD PTR $T1[rbp], -2
+
+; 1240 : 		this->~_Func_impl_no_alloc();
+; 1241 : 		if (_Dealloc)
+
+	movzx	eax, BYTE PTR _Dealloc$[rbp]
+	test	eax, eax
+	je	SHORT $LN2@Delete_thi
+
+; 1242 : 			{
+; 1243 : 			_Deallocate<alignof(_Func_impl_no_alloc)>(this, sizeof(_Func_impl_no_alloc));
+
+	mov	edx, 16
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??$_Deallocate@$07$0A@@std@@YAXPEAX_K@Z	; std::_Deallocate<8,0>
+	npad	1
+$LN2@Delete_thi:
+
+; 1244 : 			}
+; 1245 : 		}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?_Delete_this@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAX_N@Z ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Delete_this
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ
+_TEXT	SEGMENT
+this$ = 80
+?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Get, COMDAT
+
+; 1234 : 		{	// return address of stored object
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1235 : 		return (_STD addressof(_Callee));
+
+	mov	rax, QWORD PTR this$[rbp]
+	add	rax, 8
+	mov	rcx, rax
+	call	??$addressof@$$CBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAPEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEBV1@@Z ; std::addressof<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const >
+
+; 1236 : 		}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?_Get@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEBXXZ ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Get
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ
+_TEXT	SEGMENT
+this$ = 80
+?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Target_type, COMDAT
+
+; 1225 : 		{	// return type information for stored object
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 64					; 00000040H
+	mov	rbp, rsp
+
+; 1226 : #if _HAS_STATIC_RTTI
+; 1227 : 		return (typeid(_Callable));
+
+	lea	rax, OFFSET FLAT:??_R0?AV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@8
+
+; 1228 : #else /* _HAS_STATIC_RTTI */
+; 1229 : 		return (typeid(void));
+; 1230 : #endif /* _HAS_STATIC_RTTI */
+; 1231 : 		}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?_Target_type@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAAEBVtype_info@@XZ ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Target_type
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+;	COMDAT ?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ
+_TEXT	SEGMENT
+this$ = 80
+?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Do_call, COMDAT
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	rax, QWORD PTR this$[rbp]
+	add	rax, 8
+	mov	rcx, rax
+	call	??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Invoker_ret@PEAVScene@1Application@@$0A@@std@@SAPEAVScene@2Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::_Invoker_ret<Application::Scene::Scene *,0>::_Call<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?_Do_call@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAVScene@3Application@@XZ ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Do_call
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z
+_TEXT	SEGMENT
+$T1 = 64
+this$ = 96
+_Where$ = 104
+?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Move, COMDAT
+
+; 1218 : 		{	// return clone of *this
+
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1219 : 		return (::new (_Where) _Func_impl_no_alloc(_STD move(_Callee)));
+
+	mov	rdx, QWORD PTR _Where$[rbp]
+	mov	ecx, 16
+	call	??2@YAPEAX_KPEAX@Z			; operator new
+	mov	QWORD PTR $T1[rbp], rax
+	mov	rax, QWORD PTR this$[rbp]
+	add	rax, 8
+	mov	rcx, rax
+	call	??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::move<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+	mov	rdx, rax
+	mov	rcx, QWORD PTR $T1[rbp]
+	call	??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>
+
+; 1220 : 		}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?_Move@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEAAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Move
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z
+_TEXT	SEGMENT
+$T1 = 64
+this$ = 96
+_Where$ = 104
+__formal$ = 112
+?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Clone, COMDAT
+
+; 1213 : 		{	// return clone of *this, small (locally stored)
+
+	mov	BYTE PTR [rsp+24], r8b
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1214 : 		return (::new (_Where) _Func_impl_no_alloc(_Callee));
+
+	mov	rdx, QWORD PTR _Where$[rbp]
+	mov	ecx, 16
+	call	??2@YAPEAX_KPEAX@Z			; operator new
+	mov	QWORD PTR $T1[rbp], rax
+	mov	rax, QWORD PTR this$[rbp]
+	add	rax, 8
+	mov	rdx, rax
+	mov	rcx, QWORD PTR $T1[rbp]
+	call	??$?0AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@QEAA@AEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> const &,void>
+
+; 1215 : 		}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Clone
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z
+_TEXT	SEGMENT
+$T1 = 65
+this$ = 96
+_Where$ = 104
+?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z PROC ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Copy, COMDAT
+
+; 1203 : 		{	// return clone of *this
+
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1204 : 		return (_Clone(_Where, _Is_large<_Func_impl_no_alloc>()));
+
+	movzx	r8d, BYTE PTR $T1[rbp]
+	mov	rdx, QWORD PTR _Where$[rbp]
+	mov	rcx, QWORD PTR this$[rbp]
+	call	?_Clone@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@AEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAXU?$integral_constant@_N$0A@@2@@Z ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Clone
+
+; 1205 : 		}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?_Copy@?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@EEBAPEAV?$_Func_base@PEAVScene@1Application@@$$V@2@PEAX@Z ENDP ; std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>::_Copy
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+_Testable$ = 0
+_Arg$ = 96
+??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::_Test_callable<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >, COMDAT
+
+; 1013 : 	{	// determine whether std::function must store _Arg
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1014 : 	bool_constant<is_member_pointer_v<_Ty> || (is_pointer_v<_Ty>
+; 1015 : 		&& is_function_v<remove_pointer_t<_Ty>>)> _Testable;
+; 1016 : 	return (_Test_callable(_Arg, _Testable));
+
+	movzx	edx, BYTE PTR _Testable$[rbp]
+	mov	rcx, QWORD PTR _Arg$[rbp]
+	call	??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@0@@Z ; std::_Test_callable<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+
+; 1017 : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::_Test_callable<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
@@ -12797,6 +13805,82 @@ $LN3@Destroy_ra:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+$T1 = 65
+this$ = 96
+_Val$ = 104
+??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::_Func_class<Application::Scene::Scene *>::_Reset<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >, COMDAT
+
+; 1312 : 		{	// store copy of _Val
+
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 1313 : 		if (!_Test_callable(_Val))
+
+	mov	rcx, QWORD PTR _Val$[rbp]
+	call	??$_Test_callable@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA_NAEBV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::_Test_callable<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+	movzx	eax, al
+	test	eax, eax
+	jne	SHORT $LN2@Reset
+
+; 1314 : 			{	// null member pointer/function pointer/std::function
+; 1315 : 			return;	// already empty
+
+	jmp	SHORT $LN1@Reset
+$LN2@Reset:
+
+; 1316 : 			}
+; 1317 : 
+; 1318 : 		using _Impl = _Func_impl_no_alloc<decay_t<_Fx>, _Ret, _Types...>;
+; 1319 : 		_Reset_impl<_Impl>(_STD forward<_Fx>(_Val), _Is_large<_Impl>());
+
+	mov	rcx, QWORD PTR _Val$[rbp]
+	call	??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+	movzx	r8d, BYTE PTR $T1[rbp]
+	mov	rdx, rax
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??$_Reset_impl@V?$_Func_impl_no_alloc@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@PEAVScene@2Application@@$$V@std@@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@U?$integral_constant@_N$0A@@1@@Z ; std::_Func_class<Application::Scene::Scene *>::_Reset_impl<std::_Func_impl_no_alloc<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,Application::Scene::Scene *>,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+$LN1@Reset:
+
+; 1320 : 		}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::_Func_class<Application::Scene::Scene *>::_Reset<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\type_traits
+;	COMDAT ??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+_TEXT	SEGMENT
+_Arg$ = 80
+??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z PROC ; std::move<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>, COMDAT
+
+; 1555 : 	{	// forward _Arg as movable
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 64					; 00000040H
+	mov	rbp, rsp
+
+; 1556 : 	return (static_cast<remove_reference_t<_Ty>&&>(_Arg));
+
+	mov	rax, QWORD PTR _Arg$[rbp]
+
+; 1557 : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ENDP ; std::move<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
 ;	COMDAT ??$_Reset@V<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@Z
 _TEXT	SEGMENT
 $T1 = 65
@@ -13875,6 +14959,70 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$?0U?$integral_constant@_N$00@std@@@_Unused_parameter@std@@QEAA@$$QEAU?$integral_constant@_N$00@1@@Z ENDP ; std::_Unused_parameter::_Unused_parameter<std::integral_constant<bool,1> >
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\utility
+;	COMDAT ??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+this$ = 80
+_Val1$ = 88
+_Val2$ = 96
+??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::pair<char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >::pair<char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> ><char const * &,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,0>, COMDAT
+
+; 203  : 		{	// construct from moved values
+
+	mov	QWORD PTR [rsp+24], r8
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 201  : 		: first(_STD forward<_Other1>(_Val1)),
+
+	mov	rcx, QWORD PTR _Val1$[rbp]
+	call	??$forward@AEAPEBD@std@@YAAEAPEBDAEAPEBD@Z ; std::forward<char const * &>
+	mov	rcx, QWORD PTR this$[rbp]
+	mov	rax, QWORD PTR [rax]
+	mov	QWORD PTR [rcx], rax
+
+; 202  : 				second(_STD forward<_Other2>(_Val2))
+
+	mov	rcx, QWORD PTR _Val2$[rbp]
+	call	??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+
+; 204  : 		}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::pair<char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >::pair<char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> ><char const * &,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\type_traits
+;	COMDAT ??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+_TEXT	SEGMENT
+_Arg$ = 80
+??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z PROC ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >, COMDAT
+
+; 1540 : 	{	// forward an lvalue as either an lvalue or an rvalue
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 64					; 00000040H
+	mov	rbp, rsp
+
+; 1541 : 	return (static_cast<_Ty&&>(_Arg));
+
+	mov	rax, QWORD PTR _Arg$[rbp]
+
+; 1542 : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ENDP ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\utility
@@ -15335,6 +16483,305 @@ $LN3@Allocate_m:
 	ret	0
 ??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z ENDP ; std::_Allocate_manually_vector_aligned<std::_Default_allocate_traits>
 _TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\utility
+;	COMDAT ??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z
+_TEXT	SEGMENT
+this$ = 80
+_Right$ = 88
+??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z PROC ; std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> >::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> ><char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,0>, COMDAT
+
+; 236  : 		{	// construct from moved compatible pair
+
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 234  : 		: first(_STD forward<_Other1>(_Right.first)),
+
+	mov	rax, QWORD PTR _Right$[rbp]
+	mov	rcx, rax
+	call	??$forward@PEBD@std@@YA$$QEAPEBDAEAPEBD@Z ; std::forward<char const *>
+	mov	rcx, QWORD PTR this$[rbp]
+	mov	rax, QWORD PTR [rax]
+	mov	QWORD PTR [rcx], rax
+
+; 235  : 			second(_STD forward<_Other2>(_Right.second))
+
+	mov	rax, QWORD PTR _Right$[rbp]
+	add	rax, 8
+	mov	rcx, rax
+	call	??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+	mov	rcx, QWORD PTR this$[rbp]
+	add	rcx, 8
+	movzx	edx, BYTE PTR [rax]
+	call	??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::function<Application::Scene::Scene * __cdecl(void)>::function<Application::Scene::Scene * __cdecl(void)><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>
+
+; 237  : 		}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z ENDP ; std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> >::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> ><char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\functional
+;	COMDAT ??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+$T1 = 64
+this$ = 96
+_Func$ = 104
+??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::function<Application::Scene::Scene * __cdecl(void)>::function<Application::Scene::Scene * __cdecl(void)><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>, COMDAT
+
+; 1500 : 		{	// construct wrapper holding copy of _Func
+
+	mov	BYTE PTR [rsp+16], dl
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	QWORD PTR $T1[rbp], -2
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??0?$_Func_class@PEAVScene@1Application@@$$V@std@@QEAA@XZ ; std::_Func_class<Application::Scene::Scene *>::_Func_class<Application::Scene::Scene *>
+	npad	1
+
+; 1501 : 		this->_Reset(_STD move(_Func));
+
+	lea	rcx, QWORD PTR _Func$[rbp]
+	call	??$move@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::move<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+	mov	rdx, rax
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??$_Reset@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@?$_Func_class@PEAVScene@1Application@@$$V@std@@IEAAX$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::_Func_class<Application::Scene::Scene *>::_Reset<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+	npad	1
+
+; 1502 : 		}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::function<Application::Scene::Scene * __cdecl(void)>::function<Application::Scene::Scene * __cdecl(void)><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+$T1 = 64
+this$ = 96
+_Func$ = 104
+?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA PROC ; `std::function<Application::Scene::Scene * __cdecl(void)>::function<Application::Scene::Scene * __cdecl(void)><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>'::`1'::dtor$0
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??1?$_Func_class@PEAVScene@1Application@@$$V@std@@QEAA@XZ ; std::_Func_class<Application::Scene::Scene *>::~_Func_class<Application::Scene::Scene *>
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA ENDP ; `std::function<Application::Scene::Scene * __cdecl(void)>::function<Application::Scene::Scene * __cdecl(void)><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>'::`1'::dtor$0
+text$x	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+;	COMDAT text$x
+text$x	SEGMENT
+$T1 = 64
+this$ = 96
+_Func$ = 104
+?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA PROC ; `std::function<Application::Scene::Scene * __cdecl(void)>::function<Application::Scene::Scene * __cdecl(void)><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>'::`1'::dtor$0
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??1?$_Func_class@PEAVScene@1Application@@$$V@std@@QEAA@XZ ; std::_Func_class<Application::Scene::Scene *>::~_Func_class<Application::Scene::Scene *>
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$0@?0???$?0V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@X@?$function@$$A6APEAVScene@1Application@@XZ@std@@QEAA@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z@4HA ENDP ; `std::function<Application::Scene::Scene * __cdecl(void)>::function<Application::Scene::Scene * __cdecl(void)><<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,void>'::`1'::dtor$0
+text$x	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+;	COMDAT ??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+_Obj$ = 80
+??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::invoke<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>, COMDAT
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\type_traits
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	rcx, QWORD PTR _Obj$[rbp]
+	call	??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+	mov	rcx, rax
+	call	??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::_Invoker_functor::_Call<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$invoke@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@std@@YAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::invoke<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+;	COMDAT ??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+_Obj$ = 80
+??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::_Invoker_functor::_Call<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>, COMDAT
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\type_traits
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	rcx, QWORD PTR _Obj$[rbp]
+	call	??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+	mov	rcx, rax
+	call	??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ ; <lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>::operator()
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$_Call@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$$V@_Invoker_functor@std@@SAPEAVRenderer3DScene@Scene@Application@@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::_Invoker_functor::_Call<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\type_traits
+;	COMDAT ??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z
+_TEXT	SEGMENT
+_Arg$ = 80
+??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z PROC ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>, COMDAT
+
+; 1540 : 	{	// forward an lvalue as either an lvalue or an rvalue
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 64					; 00000040H
+	mov	rbp, rsp
+
+; 1541 : 	return (static_cast<_Ty&&>(_Arg));
+
+	mov	rax, QWORD PTR _Arg$[rbp]
+
+; 1542 : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$forward@AEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YAAEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ENDP ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> &>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\utility
+;	COMDAT ??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z
+_TEXT	SEGMENT
+tv66 = 64
+__$ReturnUdt$ = 96
+_Val1$ = 104
+_Val2$ = 112
+??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z PROC ; std::make_pair<char const * &,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >, COMDAT
+
+; 382  : 	{	// return pair composed from arguments
+
+	mov	QWORD PTR [rsp+24], r8
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+
+; 383  : 	using _Mypair = pair<_Unrefwrap_t<_Ty1>, _Unrefwrap_t<_Ty2>>;
+; 384  : 	return (_Mypair(_STD forward<_Ty1>(_Val1), _STD forward<_Ty2>(_Val2)));
+
+	mov	rcx, QWORD PTR _Val2$[rbp]
+	call	??$forward@V<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@AEAV1@@Z ; std::forward<<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+	mov	QWORD PTR tv66[rbp], rax
+	mov	rcx, QWORD PTR _Val1$[rbp]
+	call	??$forward@AEAPEBD@std@@YAAEAPEBDAEAPEBD@Z ; std::forward<char const * &>
+	mov	rcx, QWORD PTR tv66[rbp]
+	mov	r8, rcx
+	mov	rdx, rax
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??$?0AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@QEAA@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::pair<char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >::pair<char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> ><char const * &,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 385  : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ENDP ; std::make_pair<char const * &,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\featherfall-examples\src\scene\mainmenuscene.h
+;	COMDAT ??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ
+_TEXT	SEGMENT
+$T1 = 64
+$T2 = 72
+$T3 = 80
+tv77 = 88
+this$ = 112
+??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ PROC ; <lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>::operator(), COMDAT
+
+; 53   : 			scenes.push_back(std::make_pair(name, []() { return new T(); }));
+
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 128				; 00000080H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	QWORD PTR $T3[rbp], -2
+	mov	ecx, 280				; 00000118H
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	QWORD PTR $T2[rbp], rax
+	cmp	QWORD PTR $T2[rbp], 0
+	je	SHORT $LN3@operator
+	mov	edx, 280				; 00000118H
+	mov	rcx, QWORD PTR $T2[rbp]
+	call	?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z
+	mov	rcx, QWORD PTR $T2[rbp]
+	call	??0Renderer3DScene@Scene@Application@@QEAA@XZ ; Application::Scene::Renderer3DScene::Renderer3DScene
+	mov	QWORD PTR tv77[rbp], rax
+	jmp	SHORT $LN4@operator
+$LN3@operator:
+	mov	QWORD PTR tv77[rbp], 0
+$LN4@operator:
+	mov	rax, QWORD PTR tv77[rbp]
+	mov	QWORD PTR $T1[rbp], rax
+	mov	rax, QWORD PTR $T1[rbp]
+	lea	rsp, QWORD PTR [rbp+96]
+	pop	rbp
+	ret	0
+??R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ ENDP ; <lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>::operator()
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+$T1 = 64
+$T2 = 72
+$T3 = 80
+tv77 = 88
+this$ = 112
+?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA PROC ; `<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>::operator()'::`1'::dtor$0
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	mov	edx, 280				; 00000118H
+	mov	rcx, QWORD PTR $T2[rbp]
+	call	??3@YAXPEAX_K@Z				; operator delete
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA ENDP ; `<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>::operator()'::`1'::dtor$0
+text$x	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+;	COMDAT text$x
+text$x	SEGMENT
+$T1 = 64
+$T2 = 72
+$T3 = 80
+tv77 = 88
+this$ = 112
+?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA PROC ; `<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>::operator()'::`1'::dtor$0
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	mov	edx, 280				; 00000118H
+	mov	rcx, QWORD PTR $T2[rbp]
+	call	??3@YAXPEAX_K@Z				; operator delete
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$0@?0???R<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@QEBAPEAVRenderer3DScene@Scene@Application@@XZ@4HA ENDP ; `<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>::operator()'::`1'::dtor$0
+text$x	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.14.26428\include\utility
 ;	COMDAT ??$?0PEBDV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_9e62dcf887c94db0be73ed49d4be45d7>@@@1@@Z
@@ -19163,6 +20610,100 @@ $LN1@Allocate:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\featherfall-examples\src\scene\mainmenuscene.h
+;	COMDAT ??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z
+_TEXT	SEGMENT
+$T1 = 64
+$T2 = 144
+$T3 = 152
+$T4 = 168
+this$ = 208
+name$ = 216
+??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z PROC ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::Renderer3DScene>, COMDAT
+
+; 52   : 		void RegisterScene(const char* name) {
+
+$LN4:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	push	rdi
+	sub	rsp, 216				; 000000d8H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	QWORD PTR $T4[rbp], -2
+
+; 53   : 			scenes.push_back(std::make_pair(name, []() { return new T(); }));
+
+	lea	rax, QWORD PTR $T2[rbp]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 1
+	rep stosb
+	lea	r8, QWORD PTR $T2[rbp]
+	lea	rdx, QWORD PTR name$[rbp]
+	lea	rcx, QWORD PTR $T3[rbp]
+	call	??$make_pair@AEAPEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@std@@YA?AU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@0@AEAPEBD$$QEAV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@Z ; std::make_pair<char const * &,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7> >
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??$?0PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@$0A@@?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@$$QEAU?$pair@PEBDV<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>@@@1@@Z ; std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> >::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> ><char const *,<lambda_6e12cc63a602058ae1a25ba2c2f0ccf7>,0>
+	npad	1
+	mov	rax, QWORD PTR this$[rbp]
+	add	rax, 16
+	lea	rdx, QWORD PTR $T1[rbp]
+	mov	rcx, rax
+	call	?push_back@?$vector@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@V?$allocator@U?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@@2@@std@@QEAAX$$QEAU?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@2@@Z ; std::vector<std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> >,std::allocator<std::pair<char const *,std::function<Application::Scene::Scene * __cdecl(void)> > > >::push_back
+	npad	1
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??1?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@XZ
+
+; 54   : 		}
+
+	lea	rsp, QWORD PTR [rbp+184]
+	pop	rdi
+	pop	rbp
+	ret	0
+??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ENDP ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::Renderer3DScene>
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+$T1 = 64
+$T2 = 144
+$T3 = 152
+$T4 = 168
+this$ = 208
+name$ = 216
+?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA PROC ; `Application::Scene::MainMenuScene::RegisterScene<Application::Scene::Renderer3DScene>'::`1'::dtor$0
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??1?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@XZ
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA ENDP ; `Application::Scene::MainMenuScene::RegisterScene<Application::Scene::Renderer3DScene>'::`1'::dtor$0
+text$x	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+;	COMDAT text$x
+text$x	SEGMENT
+$T1 = 64
+$T2 = 144
+$T3 = 152
+$T4 = 168
+this$ = 208
+name$ = 216
+?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA PROC ; `Application::Scene::MainMenuScene::RegisterScene<Application::Scene::Renderer3DScene>'::`1'::dtor$0
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??1?$pair@PEBDV?$function@$$A6APEAVScene@1Application@@XZ@std@@@std@@QEAA@XZ
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$0@?0???$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z@4HA ENDP ; `Application::Scene::MainMenuScene::RegisterScene<Application::Scene::Renderer3DScene>'::`1'::dtor$0
+text$x	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\featherfall-examples\src\scene\mainmenuscene.h
 ;	COMDAT ??$RegisterScene@VComputeShaderScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z
 _TEXT	SEGMENT
 $T1 = 64
@@ -20121,18 +21662,18 @@ $T10 = 1376
 $T11 = 1384
 $T12 = 1392
 $T13 = 1400
-tv245 = 1408
-tv237 = 1408
-tv229 = 1408
-tv202 = 1408
-tv188 = 1408
+tv247 = 1408
+tv239 = 1408
+tv231 = 1408
+tv204 = 1408
+tv190 = 1408
 tv93 = 1408
 __$ArrayPad$ = 1416
 argc$ = 1440
 argv$ = 1448
 main	PROC						; COMDAT
 
-; 62   : int main(int argc, char** argv) {
+; 64   : {
 
 $LN21:
 	mov	QWORD PTR [rsp+16], rdx
@@ -20145,8 +21686,8 @@ $LN21:
 	xor	rax, rbp
 	mov	QWORD PTR __$ArrayPad$[rbp], rax
 
-; 63   : 
-; 64   : 	core::graphics::Window window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, WINDOW_FULLSCREEN, WINDOW_VSYNC);
+; 65   : 
+; 66   : 	core::graphics::Window window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, WINDOW_FULLSCREEN, WINDOW_VSYNC);
 
 	mov	edx, 1096				; 00000448H
 	lea	rcx, QWORD PTR window$[rbp]
@@ -20162,33 +21703,33 @@ $LN21:
 	call	??0Window@graphics@core@@QEAA@AEBH0PEBD_N2@Z ; core::graphics::Window::Window
 	npad	1
 
-; 65   : 
-; 66   : 	//open ImGui
-; 67   : 	ImGui::CreateContext();
+; 67   : 
+; 68   : 	//open ImGui
+; 69   : 	ImGui::CreateContext();
 
 	xor	ecx, ecx
 	call	?CreateContext@ImGui@@YAPEAUImGuiContext@@PEAUImFontAtlas@@@Z ; ImGui::CreateContext
 
-; 68   : 	ImGui_ImplGlfwGL3_Init(window.window, true);
+; 70   : 	ImGui_ImplGlfwGL3_Init(window.window, true);
 
 	xor	r8d, r8d
 	mov	dl, 1
 	mov	rcx, QWORD PTR window$[rbp+1080]
 	call	?ImGui_ImplGlfwGL3_Init@@YA_NPEAUGLFWwindow@@_NPEBD@Z ; ImGui_ImplGlfwGL3_Init
 
-; 69   : 	ImGui::StyleColorsDark();
+; 71   : 	ImGui::StyleColorsDark();
 
 	xor	ecx, ecx
 	call	?StyleColorsDark@ImGui@@YAXPEAUImGuiStyle@@@Z ; ImGui::StyleColorsDark
 
-; 70   : 
-; 71   : 	Application::Scene::Scene* currScene = nullptr;
+; 72   : 
+; 73   : 	Application::Scene::Scene* currScene = nullptr;
 
 	mov	QWORD PTR currScene$[rbp], 0
 
-; 72   : 
-; 73   : 	//load the main menu scene (scene set up to pick example scene)
-; 74   : 	MainMenuScene* mms = new MainMenuScene(currScene);
+; 74   : 
+; 75   : 	//load the main menu scene (scene set up to pick example scene)
+; 76   : 	MainMenuScene* mms = new MainMenuScene(currScene);
 
 	mov	ecx, 144				; 00000090H
 	call	??2@YAPEAX_K@Z				; operator new
@@ -20211,76 +21752,82 @@ $LN12@main:
 	mov	rax, QWORD PTR $T3[rbp]
 	mov	QWORD PTR mms$[rbp], rax
 
-; 75   :  
-; 76   : 	mms->RegisterScene<TestScene>("Clear Color Test");
+; 77   :  
+; 78   : 	mms->RegisterScene<TestScene>("Clear Color Test");
 
 	lea	rdx, OFFSET FLAT:??_C@_0BB@HIFDMJDM@Clear?5Color?5Test?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VTestScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::TestScene>
 
-; 77   : 	mms->RegisterScene<SandboxScene>("Sandbox");
+; 79   : 	mms->RegisterScene<SandboxScene>("Sandbox");
 
 	lea	rdx, OFFSET FLAT:??_C@_07HLLGMCO@Sandbox?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VSandboxScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::SandboxScene>
 
-; 78   : 	mms->RegisterScene<BuffersTestScene>("Buffers");
+; 80   : 	mms->RegisterScene<BuffersTestScene>("Buffers");
 
 	lea	rdx, OFFSET FLAT:??_C@_07NIHFOFBK@Buffers?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VBuffersTestScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::BuffersTestScene>
 
-; 79   : 	mms->RegisterScene<TextureTestScene>("Textures");
+; 81   : 	mms->RegisterScene<TextureTestScene>("Textures");
 
 	lea	rdx, OFFSET FLAT:??_C@_08FLHNKADJ@Textures?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VTextureTestScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::TextureTestScene>
 
-; 80   : 	mms->RegisterScene<SimpleRendererScene>("Simple Renderer");
+; 82   : 	mms->RegisterScene<SimpleRendererScene>("Simple Renderer");
 
 	lea	rdx, OFFSET FLAT:??_C@_0BA@ELHODOCL@Simple?5Renderer?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VSimpleRendererScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::SimpleRendererScene>
 
-; 81   : 	mms->RegisterScene<BatchRendererScene>("Batch Renderer");
+; 83   : 	mms->RegisterScene<BatchRendererScene>("Batch Renderer");
 
 	lea	rdx, OFFSET FLAT:??_C@_0P@JEPKLLKC@Batch?5Renderer?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VBatchRendererScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::BatchRendererScene>
 
-; 82   : 	mms->RegisterScene<LayerScene>("Layer Scene");
+; 84   : 	mms->RegisterScene<LayerScene>("Layer Scene");
 
 	lea	rdx, OFFSET FLAT:??_C@_0M@BPMKEGOM@Layer?5Scene?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VLayerScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::LayerScene>
 
-; 83   : 	mms->RegisterScene<BoidScene>("Flocking (Boids)");
+; 85   : 	mms->RegisterScene<BoidScene>("Flocking (Boids)");
 
 	lea	rdx, OFFSET FLAT:??_C@_0BB@GJJACBDL@Flocking?5?$CIBoids?$CJ?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VBoidScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::BoidScene>
 
-; 84   : 	mms->RegisterScene<MandelbrotScene>("Mandelbrot Set");
+; 86   : 	mms->RegisterScene<MandelbrotScene>("Mandelbrot Set");
 
 	lea	rdx, OFFSET FLAT:??_C@_0P@FGIJLCEO@Mandelbrot?5Set?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VMandelbrotScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::MandelbrotScene>
 
-; 85   : 	mms->RegisterScene<ComputeShaderScene>("Simple Compute Shader");
+; 87   : 	mms->RegisterScene<ComputeShaderScene>("Simple Compute Shader");
 
 	lea	rdx, OFFSET FLAT:??_C@_0BG@BIFNHANB@Simple?5Compute?5Shader?$AA@
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	??$RegisterScene@VComputeShaderScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::ComputeShaderScene>
 
-; 86   : 
-; 87   : 	currScene = mms;//make the current scene the main menu scene (this will be changed by components inside main menu later)
+; 88   : 	mms->RegisterScene<Renderer3DScene>("3D Scene");
+
+	lea	rdx, OFFSET FLAT:??_C@_08GOJDOLPA@3D?5Scene?$AA@
+	mov	rcx, QWORD PTR mms$[rbp]
+	call	??$RegisterScene@VRenderer3DScene@Scene@Application@@@MainMenuScene@Scene@Application@@QEAAXPEBD@Z ; Application::Scene::MainMenuScene::RegisterScene<Application::Scene::Renderer3DScene>
+
+; 89   : 
+; 90   : 	currScene = mms;//make the current scene the main menu scene (this will be changed by components inside main menu later)
 
 	mov	rax, QWORD PTR mms$[rbp]
 	mov	QWORD PTR currScene$[rbp], rax
 $LN2@main:
 
-; 88   : 
-; 89   : 	while (!window.windowShouldClose()) {
+; 91   : 
+; 92   : 	while (!window.windowShouldClose()) {
 
 	lea	rcx, QWORD PTR window$[rbp]
 	call	?windowShouldClose@Window@graphics@core@@QEBA_NXZ ; core::graphics::Window::windowShouldClose
@@ -20288,54 +21835,54 @@ $LN2@main:
 	test	eax, eax
 	jne	$LN3@main
 
-; 90   : 		//Clear the window for the new frame
-; 91   : 		window.clear();
+; 93   : 		//Clear the window for the new frame
+; 94   : 		window.clear();
 
 	lea	rcx, QWORD PTR window$[rbp]
 	call	?clear@Window@graphics@core@@QEBAXXZ	; core::graphics::Window::clear
 
-; 92   : 
-; 93   : 		ImGui_ImplGlfwGL3_NewFrame();
+; 95   : 
+; 96   : 		ImGui_ImplGlfwGL3_NewFrame();
 
 	call	?ImGui_ImplGlfwGL3_NewFrame@@YAXXZ	; ImGui_ImplGlfwGL3_NewFrame
 
-; 94   : 		if (currScene) {
+; 97   : 		if (currScene) {
 
 	cmp	QWORD PTR currScene$[rbp], 0
 	je	$LN4@main
 
-; 95   : 
-; 96   : 			//profile this
-; 97   : 			currScene->OnUpdate(ImGui::GetIO().DeltaTime);
+; 98   : 
+; 99   : 			//profile this
+; 100  : 			currScene->OnUpdate(ImGui::GetIO().DeltaTime);
 
 	call	?GetIO@ImGui@@YAAEAUImGuiIO@@XZ		; ImGui::GetIO
 	mov	rcx, QWORD PTR currScene$[rbp]
 	mov	rcx, QWORD PTR [rcx]
-	mov	QWORD PTR tv245[rbp], rcx
+	mov	QWORD PTR tv247[rbp], rcx
 	movss	xmm1, DWORD PTR [rax+16]
 	mov	rcx, QWORD PTR currScene$[rbp]
-	mov	rax, QWORD PTR tv245[rbp]
+	mov	rax, QWORD PTR tv247[rbp]
 	call	QWORD PTR [rax+8]
 
-; 98   : 			
-; 99   : 			//profile this
-; 100  : 			currScene->OnRender();
+; 101  : 			
+; 102  : 			//profile this
+; 103  : 			currScene->OnRender();
 
 	mov	rax, QWORD PTR currScene$[rbp]
 	mov	rax, QWORD PTR [rax]
 	mov	rcx, QWORD PTR currScene$[rbp]
 	call	QWORD PTR [rax+16]
 
-; 101  : 
-; 102  : 			//for switching scenes
-; 103  : 			ImGui::Begin("Main Menu");
+; 104  : 
+; 105  : 			//for switching scenes
+; 106  : 			ImGui::Begin("Main Menu");
 
 	xor	r8d, r8d
 	xor	edx, edx
 	lea	rcx, OFFSET FLAT:??_C@_09JDDCPHDA@Main?5Menu?$AA@
 	call	?Begin@ImGui@@YA_NPEBDPEA_NH@Z		; ImGui::Begin
 
-; 104  : 			if (currScene != mms && ImGui::Button("<--")) {
+; 107  : 			if (currScene != mms && ImGui::Button("<--")) {
 
 	mov	rax, QWORD PTR mms$[rbp]
 	cmp	QWORD PTR currScene$[rbp], rax
@@ -20351,7 +21898,7 @@ $LN2@main:
 	test	eax, eax
 	je	$LN5@main
 
-; 105  : 				SAFE_DELETE(currScene);
+; 108  : 				SAFE_DELETE(currScene);
 
 	cmp	QWORD PTR currScene$[rbp], 0
 	je	SHORT $LN6@main
@@ -20366,65 +21913,65 @@ $LN2@main:
 	mov	edx, 1
 	mov	rcx, QWORD PTR $T6[rbp]
 	call	QWORD PTR [rax]
-	mov	QWORD PTR tv188[rbp], rax
+	mov	QWORD PTR tv190[rbp], rax
 	jmp	SHORT $LN6@main
 $LN13@main:
-	mov	QWORD PTR tv188[rbp], 0
+	mov	QWORD PTR tv190[rbp], 0
 $LN6@main:
 	mov	QWORD PTR currScene$[rbp], 0
 
-; 106  : 				currScene = mms;
+; 109  : 				currScene = mms;
 
 	mov	rax, QWORD PTR mms$[rbp]
 	mov	QWORD PTR currScene$[rbp], rax
 
-; 107  : 				mms->OnReloadScene();
+; 110  : 				mms->OnReloadScene();
 
 	mov	rcx, QWORD PTR mms$[rbp]
 	call	?OnReloadScene@MainMenuScene@Scene@Application@@QEAAXXZ ; Application::Scene::MainMenuScene::OnReloadScene
 $LN5@main:
 
-; 108  : 			}
-; 109  : 
-; 110  : 			//profile this
-; 111  : 			currScene->OnImGuiRender();
+; 111  : 			}
+; 112  : 
+; 113  : 			//profile this
+; 114  : 			currScene->OnImGuiRender();
 
 	mov	rax, QWORD PTR currScene$[rbp]
 	mov	rax, QWORD PTR [rax]
 	mov	rcx, QWORD PTR currScene$[rbp]
 	call	QWORD PTR [rax+24]
 
-; 112  : 
-; 113  : 			ImGui::End();
+; 115  : 
+; 116  : 			ImGui::End();
 
 	call	?End@ImGui@@YAXXZ			; ImGui::End
 $LN4@main:
 
-; 114  : 
-; 115  : 		}
-; 116  : 
-; 117  : 		//print framerate in "Profiler" window
-; 118  : 		#if _DEBUG
-; 119  : 		ImGui::Begin("Profiler (DEBUG Mode)");
+; 117  : 
+; 118  : 		}
+; 119  : 
+; 120  : 		//print framerate in "Profiler" window
+; 121  : 		#if _DEBUG
+; 122  : 		ImGui::Begin("Profiler (DEBUG Mode)");
 
 	xor	r8d, r8d
 	xor	edx, edx
 	lea	rcx, OFFSET FLAT:??_C@_0BG@KBOMGOII@Profiler?5?$CIDEBUG?5Mode?$CJ?$AA@
 	call	?Begin@ImGui@@YA_NPEBDPEA_NH@Z		; ImGui::Begin
 
-; 120  : 		#else
-; 121  : 		ImGui::Begin("Profiler (RELEASE Mode)");
-; 122  : 		#endif
-; 123  : 		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+; 123  : 		#else
+; 124  : 		ImGui::Begin("Profiler (RELEASE Mode)");
+; 125  : 		#endif
+; 126  : 		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
 	call	?GetIO@ImGui@@YAAEAUImGuiIO@@XZ		; ImGui::GetIO
 	cvtss2sd xmm0, DWORD PTR [rax+924]
-	movsd	QWORD PTR tv202[rbp], xmm0
+	movsd	QWORD PTR tv204[rbp], xmm0
 	call	?GetIO@ImGui@@YAAEAUImGuiIO@@XZ		; ImGui::GetIO
 	movss	xmm0, DWORD PTR __real@447a0000
 	divss	xmm0, DWORD PTR [rax+924]
 	cvtss2sd xmm0, xmm0
-	movsd	xmm1, QWORD PTR tv202[rbp]
+	movsd	xmm1, QWORD PTR tv204[rbp]
 	movaps	xmm2, xmm1
 	movq	r8, xmm2
 	movaps	xmm1, xmm0
@@ -20432,43 +21979,43 @@ $LN4@main:
 	lea	rcx, OFFSET FLAT:??_C@_0CN@EIPBEGMP@Application?5average?5?$CF?43f?5ms?1fram@
 	call	?Text@ImGui@@YAXPEBDZZ			; ImGui::Text
 
-; 124  : 		ImGui::End();
+; 127  : 		ImGui::End();
 
 	call	?End@ImGui@@YAXXZ			; ImGui::End
 
-; 125  : 		
-; 126  : 		//end profiling stage and crate imGui window for collected data
-; 127  : 
-; 128  : 
-; 129  : 		ImGui::Render();
+; 128  : 		
+; 129  : 		//end profiling stage and crate imGui window for collected data
+; 130  : 
+; 131  : 
+; 132  : 		ImGui::Render();
 
 	call	?Render@ImGui@@YAXXZ			; ImGui::Render
 
-; 130  : 		ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());
+; 133  : 		ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());
 
 	call	?GetDrawData@ImGui@@YAPEAUImDrawData@@XZ ; ImGui::GetDrawData
 	mov	rcx, rax
 	call	?ImGui_ImplGlfwGL3_RenderDrawData@@YAXPEAUImDrawData@@@Z ; ImGui_ImplGlfwGL3_RenderDrawData
 
-; 131  : 
-; 132  : 		window.update();
+; 134  : 
+; 135  : 		window.update();
 
 	lea	rcx, QWORD PTR window$[rbp]
 	call	?update@Window@graphics@core@@QEBAXXZ	; core::graphics::Window::update
 
-; 133  : 
-; 134  : 	}
+; 136  : 
+; 137  : 	}
 
 	jmp	$LN2@main
 $LN3@main:
 
-; 135  : 	if (currScene != mms) {
+; 138  : 	if (currScene != mms) {
 
 	mov	rax, QWORD PTR mms$[rbp]
 	cmp	QWORD PTR currScene$[rbp], rax
 	je	SHORT $LN7@main
 
-; 136  : 		SAFE_DELETE(mms);
+; 139  : 		SAFE_DELETE(mms);
 
 	cmp	QWORD PTR mms$[rbp], 0
 	je	SHORT $LN8@main
@@ -20483,16 +22030,16 @@ $LN3@main:
 	mov	edx, 1
 	mov	rcx, QWORD PTR $T8[rbp]
 	call	QWORD PTR [rax]
-	mov	QWORD PTR tv229[rbp], rax
+	mov	QWORD PTR tv231[rbp], rax
 	jmp	SHORT $LN8@main
 $LN15@main:
-	mov	QWORD PTR tv229[rbp], 0
+	mov	QWORD PTR tv231[rbp], 0
 $LN8@main:
 	mov	QWORD PTR mms$[rbp], 0
 $LN7@main:
 
-; 137  : 	}
-; 138  : 	SAFE_DELETE(currScene);
+; 140  : 	}
+; 141  : 	SAFE_DELETE(currScene);
 
 	cmp	QWORD PTR currScene$[rbp], 0
 	je	SHORT $LN9@main
@@ -20507,35 +22054,35 @@ $LN7@main:
 	mov	edx, 1
 	mov	rcx, QWORD PTR $T10[rbp]
 	call	QWORD PTR [rax]
-	mov	QWORD PTR tv237[rbp], rax
+	mov	QWORD PTR tv239[rbp], rax
 	jmp	SHORT $LN9@main
 $LN17@main:
-	mov	QWORD PTR tv237[rbp], 0
+	mov	QWORD PTR tv239[rbp], 0
 $LN9@main:
 	mov	QWORD PTR currScene$[rbp], 0
 
-; 139  : 
-; 140  : 
-; 141  : 	ImGui_ImplGlfwGL3_Shutdown();
+; 142  : 
+; 143  : 
+; 144  : 	ImGui_ImplGlfwGL3_Shutdown();
 
 	call	?ImGui_ImplGlfwGL3_Shutdown@@YAXXZ	; ImGui_ImplGlfwGL3_Shutdown
 
-; 142  : 	ImGui::DestroyContext();
+; 145  : 	ImGui::DestroyContext();
 
 	xor	ecx, ecx
 	call	?DestroyContext@ImGui@@YAXPEAUImGuiContext@@@Z ; ImGui::DestroyContext
 
-; 143  : 	
-; 144  : 
-; 145  : 	return 0;
+; 146  : 	
+; 147  : 
+; 148  : 	return 0;
 
 	mov	DWORD PTR $T12[rbp], 0
 	lea	rcx, QWORD PTR window$[rbp]
 	call	??1Window@graphics@core@@QEAA@XZ	; core::graphics::Window::~Window
 	mov	eax, DWORD PTR $T12[rbp]
 
-; 146  : 
-; 147  : }
+; 149  : 
+; 150  : }
 
 	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
 	xor	rcx, rbp
@@ -20563,11 +22110,11 @@ $T10 = 1376
 $T11 = 1384
 $T12 = 1392
 $T13 = 1400
-tv245 = 1408
-tv237 = 1408
-tv229 = 1408
-tv202 = 1408
-tv188 = 1408
+tv247 = 1408
+tv239 = 1408
+tv231 = 1408
+tv204 = 1408
+tv190 = 1408
 tv93 = 1408
 __$ArrayPad$ = 1416
 argc$ = 1440
@@ -20601,11 +22148,11 @@ $T10 = 1376
 $T11 = 1384
 $T12 = 1392
 $T13 = 1400
-tv245 = 1408
-tv237 = 1408
-tv229 = 1408
-tv202 = 1408
-tv188 = 1408
+tv247 = 1408
+tv239 = 1408
+tv231 = 1408
+tv204 = 1408
+tv190 = 1408
 tv93 = 1408
 __$ArrayPad$ = 1416
 argc$ = 1440
@@ -20641,11 +22188,11 @@ $T10 = 1376
 $T11 = 1384
 $T12 = 1392
 $T13 = 1400
-tv245 = 1408
-tv237 = 1408
-tv229 = 1408
-tv202 = 1408
-tv188 = 1408
+tv247 = 1408
+tv239 = 1408
+tv231 = 1408
+tv204 = 1408
+tv190 = 1408
 tv93 = 1408
 __$ArrayPad$ = 1416
 argc$ = 1440
@@ -20680,11 +22227,11 @@ $T10 = 1376
 $T11 = 1384
 $T12 = 1392
 $T13 = 1400
-tv245 = 1408
-tv237 = 1408
-tv229 = 1408
-tv202 = 1408
-tv188 = 1408
+tv247 = 1408
+tv239 = 1408
+tv231 = 1408
+tv204 = 1408
+tv190 = 1408
 tv93 = 1408
 __$ArrayPad$ = 1416
 argc$ = 1440
@@ -20701,6 +22248,29 @@ main$dtor$1 PROC
 	ret	0
 main$dtor$1 ENDP
 text$x	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+;	COMDAT ?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z
+_TEXT	SEGMENT
+this$ = 96
+classSize$ = 104
+?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z PROC ; Application::Scene::Renderer3DScene::__autoclassinit2, COMDAT
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	push	rdi
+	sub	rsp, 72					; 00000048H
+	mov	rbp, rsp
+	mov	rdi, QWORD PTR this$[rbp]
+	xor	eax, eax
+	mov	rcx, QWORD PTR classSize$[rbp]
+	rep stosb
+	lea	rsp, QWORD PTR [rbp+72]
+	pop	rdi
+	pop	rbp
+	ret	0
+?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z ENDP ; Application::Scene::Renderer3DScene::__autoclassinit2
+_TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ;	COMDAT ?__autoclassinit2@LayerScene@Scene@Application@@QEAAX_K@Z
 _TEXT	SEGMENT

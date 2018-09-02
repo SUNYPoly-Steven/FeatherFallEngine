@@ -76,6 +76,7 @@ PUBLIC	?length@?$tmat4x4@N$0A@@glm@@SAHXZ		; glm::tmat4x4<double,0>::length
 PUBLIC	??A?$tmat4x4@N$0A@@glm@@QEAAAEAU?$tvec4@N$0A@@1@H@Z ; glm::tmat4x4<double,0>::operator[]
 PUBLIC	??A?$tmat4x4@N$0A@@glm@@QEBAAEBU?$tvec4@N$0A@@1@H@Z ; glm::tmat4x4<double,0>::operator[]
 PUBLIC	??$?0N$0A@@?$tmat4x4@M$0A@@glm@@QEAA@AEBU?$tmat4x4@N$0A@@1@@Z ; glm::tmat4x4<float,0>::tmat4x4<float,0><double,0>
+PUBLIC	??$?0M$0A@@?$tvec2@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z ; glm::tvec2<float,0>::tvec2<float,0><float,0>
 PUBLIC	??$_Unfancy@D@std@@YAPEADPEAD@Z			; std::_Unfancy<char>
 PUBLIC	??$?0$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ; std::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1>::_Compressed_pair<std::allocator<char>,std::_String_val<std::_Simple_types<char> >,1><>
 PUBLIC	??$addressof@PEAD@std@@YAPEAPEADAEAPEAD@Z	; std::addressof<char *>
@@ -111,6 +112,7 @@ PUBLIC	??_C@_0BL@OOFMDA@res?1shaders?1Sandbox?4shader?$AA@ ; `string'
 PUBLIC	??_C@_08IMNAFLGG@prMatrix?$AA@			; `string'
 PUBLIC	??_C@_09GCGFNBLA@playerPos?$AA@			; `string'
 PUBLIC	??_C@_0BF@FEFAANEH@This?5is?5the?5Sandbox?$CB?$AA@ ; `string'
+PUBLIC	??_C@_0BL@CKFJBINN@Light?5Position?3?5?$CF?41f?0?5?$CF?41f?$AA@ ; `string'
 PUBLIC	??_C@_1DK@BGNCJAPL@?$AAi?$AA?5?$AA?$DO?$AA?$DN?$AA?5?$AA0?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt?$AAh?$AAi?$AAs?$AA?9?$AA?$DO?$AAl?$AAe?$AAn?$AAg?$AAt?$AAh?$AA?$CI?$AA?$CJ?$AA?$AA@ ; `string'
 PUBLIC	??_C@_1JE@JLGGFMIE@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf?$AAa?$AAl?$AAl?$AAe?$AAn?$AAg?$AAi?$AAn?$AAe?$AA?2?$AAd?$AAe?$AAp?$AAe?$AAn?$AAd?$AAs@ ; `string'
 PUBLIC	??_C@_1JI@BDACPION@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf?$AAa?$AAl?$AAl?$AAe?$AAn?$AAg?$AAi?$AAn?$AAe?$AA?2?$AAd?$AAe?$AAp?$AAe?$AAn?$AAd?$AAs@ ; `string'
@@ -136,6 +138,8 @@ PUBLIC	__real@4022000000000000
 PUBLIC	__real@4030000000000000
 PUBLIC	__real@40400000
 PUBLIC	__real@41000000
+PUBLIC	__real@41100000
+PUBLIC	__real@41800000
 PUBLIC	__real@42000000
 PUBLIC	__real@bfc00000
 PUBLIC	__real@bff0000000000000
@@ -164,9 +168,10 @@ EXTRN	??1BatchRenderer2D@graphics@core@@QEAA@XZ:PROC	; core::graphics::BatchRend
 EXTRN	??0Shader@graphics@core@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z:PROC ; core::graphics::Shader::Shader
 EXTRN	??1Shader@graphics@core@@QEAA@XZ:PROC		; core::graphics::Shader::~Shader
 EXTRN	?bind@Shader@graphics@core@@QEBAXXZ:PROC	; core::graphics::Shader::bind
-EXTRN	?setUniformVec4@Shader@graphics@core@@QEAAXPEBDAEBU?$tvec4@M$0A@@glm@@@Z:PROC ; core::graphics::Shader::setUniformVec4
+EXTRN	?setUniformVec2@Shader@graphics@core@@QEAAXPEBDAEBU?$tvec2@M$0A@@glm@@@Z:PROC ; core::graphics::Shader::setUniformVec2
 EXTRN	?setUniformMat4@Shader@graphics@core@@QEAAXPEBDAEBU?$tmat4x4@M$0A@@glm@@@Z:PROC ; core::graphics::Shader::setUniformMat4
 EXTRN	??0Sprite@graphics@core@@QEAA@MMMMAEBU?$tvec4@M$0A@@glm@@@Z:PROC ; core::graphics::Sprite::Sprite
+EXTRN	?getWindowSize_s@Window@graphics@core@@SAAEBU?$tvec2@M$0A@@glm@@XZ:PROC ; core::graphics::Window::getWindowSize_s
 EXTRN	??_ESandboxScene@Scene@Application@@UEAAPEAXI@Z:PROC ; Application::Scene::SandboxScene::`vector deleting destructor'
 EXTRN	?Text@ImGui@@YAXPEBDZZ:PROC			; ImGui::Text
 EXTRN	?GetMousePos@ImGui@@YA?AUImVec2@@XZ:PROC	; ImGui::GetMousePos
@@ -578,19 +583,19 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?OnUpdate@SandboxScene@Scene@Application@@UEAAXM@Z DD imagerel $LN3
-	DD	imagerel $LN3+78
+	DD	imagerel $LN3+377
 	DD	imagerel $unwind$?OnUpdate@SandboxScene@Scene@Application@@UEAAXM@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?OnRender@SandboxScene@Scene@Application@@UEAAXXZ DD imagerel $LN3
-	DD	imagerel $LN3+228
+	DD	imagerel $LN3+243
 	DD	imagerel $unwind$?OnRender@SandboxScene@Scene@Application@@UEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?OnImGuiRender@SandboxScene@Scene@Application@@UEAAXXZ DD imagerel $LN3
-	DD	imagerel $LN3+33
+	DD	imagerel $LN3+82
 	DD	imagerel $unwind$?OnImGuiRender@SandboxScene@Scene@Application@@UEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -652,6 +657,12 @@ pdata	SEGMENT
 $pdata$??$?0N$0A@@?$tmat4x4@M$0A@@glm@@QEAA@AEBU?$tmat4x4@N$0A@@1@@Z DD imagerel $LN3
 	DD	imagerel $LN3+306
 	DD	imagerel $unwind$??$?0N$0A@@?$tmat4x4@M$0A@@glm@@QEAA@AEBU?$tmat4x4@N$0A@@1@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0M$0A@@?$tvec2@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+62
+	DD	imagerel $unwind$??$?0M$0A@@?$tvec2@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -858,6 +869,14 @@ CONST	ENDS
 CONST	SEGMENT
 __real@42000000 DD 042000000r			; 32
 CONST	ENDS
+;	COMDAT __real@41800000
+CONST	SEGMENT
+__real@41800000 DD 041800000r			; 16
+CONST	ENDS
+;	COMDAT __real@41100000
+CONST	SEGMENT
+__real@41100000 DD 041100000r			; 9
+CONST	ENDS
 ;	COMDAT __real@41000000
 CONST	SEGMENT
 __real@41000000 DD 041000000r			; 8
@@ -1040,6 +1059,11 @@ CONST	SEGMENT
 	DB	00H, 't', 00H, 'h', 00H, 'i', 00H, 's', 00H, '-', 00H, '>', 00H
 	DB	'l', 00H, 'e', 00H, 'n', 00H, 'g', 00H, 't', 00H, 'h', 00H, '('
 	DB	00H, ')', 00H, 00H, 00H			; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BL@CKFJBINN@Light?5Position?3?5?$CF?41f?0?5?$CF?41f?$AA@
+CONST	SEGMENT
+??_C@_0BL@CKFJBINN@Light?5Position?3?5?$CF?41f?0?5?$CF?41f?$AA@ DB 'Light'
+	DB	' Position: %.1f, %.1f', 00H			; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_0BF@FEFAANEH@This?5is?5the?5Sandbox?$CB?$AA@
 CONST	SEGMENT
@@ -1285,6 +1309,12 @@ $unwind$??$_Unfancy@D@std@@YAPEADPEAD@Z DD 05030d01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$?0M$0A@@?$tvec2@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z DD 05031201H
+	DD	0720f0312H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??$?0N$0A@@?$tmat4x4@M$0A@@glm@@QEAA@AEBU?$tmat4x4@N$0A@@1@@Z DD 025061901H
 	DD	01142319H
 	DD	0700d0014H
@@ -1359,9 +1389,11 @@ $unwind$?OnRender@SandboxScene@Scene@Application@@UEAAXXZ DD 025030f01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?OnUpdate@SandboxScene@Scene@Application@@UEAAXM@Z DD 025031501H
-	DD	0d2102315H
-	DD	0500cH
+$unwind$?OnUpdate@SandboxScene@Scene@Application@@UEAAXM@Z DD 025042619H
+	DD	01132318H
+	DD	0500c0012H
+	DD	imagerel __GSHandlerCheck
+	DD	088H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -3349,6 +3381,45 @@ $LN3:
 ??$_Unfancy@D@std@@YAPEADPEAD@Z ENDP			; std::_Unfancy<char>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec2.inl
+;	COMDAT ??$?0M$0A@@?$tvec2@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z
+_TEXT	SEGMENT
+this$ = 80
+v$ = 88
+??$?0M$0A@@?$tvec2@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z PROC ; glm::tvec2<float,0>::tvec2<float,0><float,0>, COMDAT
+
+; 96   : 	{}
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 64					; 00000040H
+	mov	rbp, rsp
+
+; 94   : 		: x(static_cast<T>(v.x))
+
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR v$[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	movss	DWORD PTR [rax], xmm0
+
+; 95   : 		, y(static_cast<T>(v.y))
+
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR v$[rbp]
+	movss	xmm0, DWORD PTR [rcx+4]
+	movss	DWORD PTR [rax+4], xmm0
+
+; 96   : 	{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0M$0A@@?$tvec2@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z ENDP ; glm::tvec2<float,0>::tvec2<float,0><float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_mat4x4.inl
 ;	COMDAT ??$?0N$0A@@?$tmat4x4@M$0A@@glm@@QEAA@AEBU?$tmat4x4@N$0A@@1@@Z
 _TEXT	SEGMENT
@@ -3849,7 +3920,7 @@ _TEXT	SEGMENT
 this$ = 80
 ?OnImGuiRender@SandboxScene@Scene@Application@@UEAAXXZ PROC ; Application::Scene::SandboxScene::OnImGuiRender, COMDAT
 
-; 77   : 	{
+; 98   : 	{
 
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
@@ -3857,14 +3928,27 @@ $LN3:
 	sub	rsp, 96					; 00000060H
 	lea	rbp, QWORD PTR [rsp+32]
 
-; 78   : 	
-; 79   : 		ImGui::Text("This is the Sandbox!");
+; 99   : 	
+; 100  : 		ImGui::Text("This is the Sandbox!");
 
 	lea	rcx, OFFSET FLAT:??_C@_0BF@FEFAANEH@This?5is?5the?5Sandbox?$CB?$AA@
 	call	?Text@ImGui@@YAXPEBDZZ			; ImGui::Text
 
-; 80   : 	
-; 81   : 	}
+; 101  : 		ImGui::Text("Light Position: %.1f, %.1f", mousePos.x, mousePos.y);
+
+	mov	rax, QWORD PTR this$[rbp]
+	cvtss2sd xmm0, DWORD PTR [rax+304]
+	mov	rax, QWORD PTR this$[rbp]
+	cvtss2sd xmm1, DWORD PTR [rax+300]
+	movaps	xmm2, xmm0
+	movq	r8, xmm2
+	movq	rdx, xmm1
+	lea	rcx, OFFSET FLAT:??_C@_0BL@CKFJBINN@Light?5Position?3?5?$CF?41f?0?5?$CF?41f?$AA@
+	call	?Text@ImGui@@YAXPEBDZZ			; ImGui::Text
+
+; 102  : 
+; 103  : 
+; 104  : 	}
 
 	lea	rsp, QWORD PTR [rbp+64]
 	pop	rbp
@@ -3875,15 +3959,16 @@ _TEXT	ENDS
 ; File l:\dev\featherfallengine\featherfall-examples\src\scene\sandboxscene.cpp
 ;	COMDAT ?OnRender@SandboxScene@Scene@Application@@UEAAXXZ
 _TEXT	SEGMENT
-tv167 = 64
-tv166 = 64
-tv165 = 64
-tv164 = 64
-tv82 = 64
+$T1 = 64
+tv169 = 72
+tv168 = 72
+tv167 = 72
+tv166 = 72
+tv84 = 72
 this$ = 96
 ?OnRender@SandboxScene@Scene@Application@@UEAAXXZ PROC	; Application::Scene::SandboxScene::OnRender, COMDAT
 
-; 60   : 	{
+; 81   : 	{
 
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
@@ -3891,34 +3976,38 @@ $LN3:
 	sub	rsp, 112				; 00000070H
 	lea	rbp, QWORD PTR [rsp+32]
 
-; 61   : 
-; 62   : 		//Set uniforms here
-; 63   : 		shader.setUniformVec4("playerPos", playerSprite.getPosition());//glm::vec4(mousePos, 0.0f, 1.0f));
+; 82   : 
+; 83   : 		//Set uniforms here
+; 84   : 		shader.setUniformVec2("playerPos", playerSprite.getPosition());//glm::vec4(mousePos, 0.0f, 1.0f));
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
 	mov	rcx, rax
 	call	?getPosition@Renderable2D@graphics@core@@QEBAAEBU?$tvec4@M$0A@@glm@@XZ ; core::graphics::Renderable2D::getPosition
-	mov	rcx, QWORD PTR this$[rbp]
-	add	rcx, 232				; 000000e8H
-	mov	r8, rax
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??$?0M$0A@@?$tvec2@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z ; glm::tvec2<float,0>::tvec2<float,0><float,0>
+	mov	rax, QWORD PTR this$[rbp]
+	add	rax, 232				; 000000e8H
+	lea	r8, QWORD PTR $T1[rbp]
 	lea	rdx, OFFSET FLAT:??_C@_09GCGFNBLA@playerPos?$AA@
-	call	?setUniformVec4@Shader@graphics@core@@QEAAXPEBDAEBU?$tvec4@M$0A@@glm@@@Z ; core::graphics::Shader::setUniformVec4
+	mov	rcx, rax
+	call	?setUniformVec2@Shader@graphics@core@@QEAAXPEBDAEBU?$tvec2@M$0A@@glm@@@Z ; core::graphics::Shader::setUniformVec2
 
-; 64   : 
-; 65   : 		renderer.begin();
+; 85   : 
+; 86   : 		renderer.begin();
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 104				; 00000068H
 	mov	rcx, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rcx+104]
-	mov	QWORD PTR tv82[rbp], rcx
+	mov	QWORD PTR tv84[rbp], rcx
 	mov	rcx, rax
-	mov	rax, QWORD PTR tv82[rbp]
+	mov	rax, QWORD PTR tv84[rbp]
 	call	QWORD PTR [rax]
 
-; 66   : 
-; 67   : 		renderer.submit(&playerSprite);
+; 87   : 
+; 88   : 		renderer.submit(&playerSprite);
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -3926,12 +4015,12 @@ $LN3:
 	add	rcx, 104				; 00000068H
 	mov	rdx, QWORD PTR this$[rbp]
 	mov	rdx, QWORD PTR [rdx+104]
-	mov	QWORD PTR tv167[rbp], rdx
+	mov	QWORD PTR tv169[rbp], rdx
 	mov	rdx, rax
-	mov	rax, QWORD PTR tv167[rbp]
+	mov	rax, QWORD PTR tv169[rbp]
 	call	QWORD PTR [rax+8]
 
-; 68   : 		renderer.submit(&groundSprite);
+; 89   : 		renderer.submit(&groundSprite);
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 56					; 00000038H
@@ -3939,37 +4028,37 @@ $LN3:
 	add	rcx, 104				; 00000068H
 	mov	rdx, QWORD PTR this$[rbp]
 	mov	rdx, QWORD PTR [rdx+104]
-	mov	QWORD PTR tv166[rbp], rdx
+	mov	QWORD PTR tv168[rbp], rdx
 	mov	rdx, rax
-	mov	rax, QWORD PTR tv166[rbp]
+	mov	rax, QWORD PTR tv168[rbp]
 	call	QWORD PTR [rax+8]
 
-; 69   : 
-; 70   : 		renderer.end();
+; 90   : 
+; 91   : 		renderer.end();
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 104				; 00000068H
 	mov	rcx, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rcx+104]
-	mov	QWORD PTR tv165[rbp], rcx
+	mov	QWORD PTR tv167[rbp], rcx
 	mov	rcx, rax
-	mov	rax, QWORD PTR tv165[rbp]
+	mov	rax, QWORD PTR tv167[rbp]
 	call	QWORD PTR [rax+24]
 
-; 71   : 
-; 72   : 		renderer.flush();
+; 92   : 
+; 93   : 		renderer.flush();
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 104				; 00000068H
 	mov	rcx, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rcx+104]
-	mov	QWORD PTR tv164[rbp], rcx
+	mov	QWORD PTR tv166[rbp], rcx
 	mov	rcx, rax
-	mov	rax, QWORD PTR tv164[rbp]
+	mov	rax, QWORD PTR tv166[rbp]
 	call	QWORD PTR [rax+16]
 
-; 73   : 
-; 74   : 	}
+; 94   : 
+; 95   : 	}
 
 	lea	rsp, QWORD PTR [rbp+80]
 	pop	rbp
@@ -3980,10 +4069,16 @@ _TEXT	ENDS
 ; File l:\dev\featherfallengine\featherfall-examples\src\scene\sandboxscene.cpp
 ;	COMDAT ?OnUpdate@SandboxScene@Scene@Application@@UEAAXM@Z
 _TEXT	SEGMENT
-$T1 = 64
-$T2 = 72
-this$ = 96
-deltaTime$ = 104
+windowSize$ = 0
+input_start$ = 8
+input_end$ = 12
+output_start$ = 16
+output_end$ = 20
+$T1 = 88
+$T2 = 96
+__$ArrayPad$ = 104
+this$ = 128
+deltaTime$ = 136
 ?OnUpdate@SandboxScene@Scene@Application@@UEAAXM@Z PROC	; Application::Scene::SandboxScene::OnUpdate, COMDAT
 
 ; 24   : 	{
@@ -3992,8 +4087,11 @@ $LN3:
 	movss	DWORD PTR [rsp+16], xmm1
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 112				; 00000070H
+	sub	rsp, 144				; 00000090H
 	lea	rbp, QWORD PTR [rsp+32]
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rbp
+	mov	QWORD PTR __$ArrayPad$[rbp], rax
 
 ; 25   : 	
 ; 26   : 		mousePos.x = ImGui::GetMousePos().x;
@@ -4013,37 +4111,132 @@ $LN3:
 	movss	DWORD PTR [rcx+304], xmm0
 
 ; 28   : 
-; 29   : 		// #Dev_Note: when architechting the movement system, 
-; 30   : 		//            set it up similar to the rendering system.
-; 31   : 		//            it could be used a lot like the rendering API,
-; 32   : 		//            where you will submit "movables" to the system,
-; 33   : 		//            and the system will "flush" its buffer and update,
-; 34   : 		//            all submitted "movables".
-; 35   : 		//
-; 36   : 		//            i.e.
-; 37   : 		// 
-; 38   : 		//            MotionSystem->submit(Movable2D);
-; 39   : 		//            MotionSystem->flush();
-; 40   : 		//
-; 41   : 		//            P.S. - if its constructed this way. would it be
-; 42   : 		//                   possible to map the position data to a buffer
-; 43   : 		//                   on the GPU and get the updates rendered from 
-; 44   : 		//                   a compute shader? (one problem with this is 
-; 45   : 		//                   you will have to copy data into GPU and then
-; 46   : 		//                   back out every frame?)
-; 47   : 		//           
-; 48   : 		//            P.P.S - if you could submit all the sprites that need
-; 49   : 		//                    to be updated every frame at the setup of the
-; 50   : 		//                    scene, you might not have to take that data off
-; 51   : 		//                    of the GPU, and could instead just use texture
-; 52   : 		//                    data to store and read vertex positions directly
-; 53   : 		//                    on the GPU. which has the added benefit of not
-; 54   : 		//                    needing to pass the position data to the renderer
-; 55   : 		//                    every frame, right?
-; 56   : 
-; 57   : 	}
+; 29   : 		glm::vec2 windowSize = core::graphics::Window::getWindowSize_s();
 
-	lea	rsp, QWORD PTR [rbp+80]
+	call	?getWindowSize_s@Window@graphics@core@@SAAEBU?$tvec2@M$0A@@glm@@XZ ; core::graphics::Window::getWindowSize_s
+	mov	rax, QWORD PTR [rax]
+	mov	QWORD PTR windowSize$[rbp], rax
+
+; 30   : 
+; 31   : 		//translate range 0 to windowSize.x -> a range between othro::left and ortho::right
+; 32   : 		float input_start = 0;
+
+	xorps	xmm0, xmm0
+	movss	DWORD PTR input_start$[rbp], xmm0
+
+; 33   : 		float input_end = windowSize.x;
+
+	movss	xmm0, DWORD PTR windowSize$[rbp]
+	movss	DWORD PTR input_end$[rbp], xmm0
+
+; 34   : 		float output_start = -16.0;
+
+	movss	xmm0, DWORD PTR __real@c1800000
+	movss	DWORD PTR output_start$[rbp], xmm0
+
+; 35   : 		float output_end = 16.0;
+
+	movss	xmm0, DWORD PTR __real@41800000
+	movss	DWORD PTR output_end$[rbp], xmm0
+
+; 36   : 
+; 37   : 		mousePos.x = (mousePos.x - input_start) * (output_end - output_start) / (input_end - input_start) + output_start;
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR [rax+300]
+	subss	xmm0, DWORD PTR input_start$[rbp]
+	movss	xmm1, DWORD PTR output_end$[rbp]
+	subss	xmm1, DWORD PTR output_start$[rbp]
+	mulss	xmm0, xmm1
+	movss	xmm1, DWORD PTR input_end$[rbp]
+	subss	xmm1, DWORD PTR input_start$[rbp]
+	divss	xmm0, xmm1
+	addss	xmm0, DWORD PTR output_start$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+300], xmm0
+
+; 38   : 
+; 39   : 		output_start = -9.0;
+
+	movss	xmm0, DWORD PTR __real@c1100000
+	movss	DWORD PTR output_start$[rbp], xmm0
+
+; 40   : 		output_end = 9.0;
+
+	movss	xmm0, DWORD PTR __real@41100000
+	movss	DWORD PTR output_end$[rbp], xmm0
+
+; 41   : 		input_end = windowSize.y;
+
+	movss	xmm0, DWORD PTR windowSize$[rbp+4]
+	movss	DWORD PTR input_end$[rbp], xmm0
+
+; 42   : 
+; 43   : 		mousePos.y = (mousePos.y - input_start) * (output_end - output_start) / (input_end - input_start) + output_start;
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR [rax+304]
+	subss	xmm0, DWORD PTR input_start$[rbp]
+	movss	xmm1, DWORD PTR output_end$[rbp]
+	subss	xmm1, DWORD PTR output_start$[rbp]
+	mulss	xmm0, xmm1
+	movss	xmm1, DWORD PTR input_end$[rbp]
+	subss	xmm1, DWORD PTR input_start$[rbp]
+	divss	xmm0, xmm1
+	addss	xmm0, DWORD PTR output_start$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+304], xmm0
+
+; 44   : 
+; 45   : 		mousePos.x = 0.0f;
+
+	mov	rax, QWORD PTR this$[rbp]
+	xorps	xmm0, xmm0
+	movss	DWORD PTR [rax+300], xmm0
+
+; 46   : 		mousePos.y = 0.0f;
+
+	mov	rax, QWORD PTR this$[rbp]
+	xorps	xmm0, xmm0
+	movss	DWORD PTR [rax+304], xmm0
+
+; 47   : 
+; 48   : 		// #Dev_Note: when architechting the movement system, 
+; 49   : 		//            set it up similar to the rendering system.
+; 50   : 		//            it could be used a lot like the rendering API,
+; 51   : 		//            where you will submit "movables" to the system,
+; 52   : 		//            and the system will "flush" its buffer and update,
+; 53   : 		//            all submitted "movables".
+; 54   : 		//
+; 55   : 		//            i.e.
+; 56   : 		// 
+; 57   : 		//            MotionSystem->submit(Movable2D);
+; 58   : 		//            MotionSystem->flush();
+; 59   : 		//
+; 60   : 		//            P.S. - if its constructed this way. would it be
+; 61   : 		//                   possible to map the position data to a buffer
+; 62   : 		//                   on the GPU and get the updates rendered from 
+; 63   : 		//                   a compute shader? (one problem with this is 
+; 64   : 		//                   you will have to copy data into GPU and then
+; 65   : 		//                   back out every frame?)
+; 66   : 		//           
+; 67   : 		//            P.P.S - if you could submit all the sprites that need
+; 68   : 		//                    to be updated every frame at the setup of the
+; 69   : 		//                    scene, you might not have to take that data off
+; 70   : 		//                    of the GPU, and could instead just use texture
+; 71   : 		//                    data to store and read vertex positions directly
+; 72   : 		//                    on the GPU. which has the added benefit of not
+; 73   : 		//                    needing to pass the position data to the renderer
+; 74   : 		//                    every frame, right?
+; 75   : 
+; 76   : 
+; 77   : 
+; 78   : 	}
+
+	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
+	xor	rcx, rbp
+	call	__security_check_cookie
+	lea	rsp, QWORD PTR [rbp+112]
 	pop	rbp
 	ret	0
 ?OnUpdate@SandboxScene@Scene@Application@@UEAAXM@Z ENDP	; Application::Scene::SandboxScene::OnUpdate

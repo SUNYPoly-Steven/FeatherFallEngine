@@ -1,12 +1,6 @@
 #pragma once
-#include "glm/glm.hpp"                   //
-#include "glm/vec3.hpp"                  // NOTE:
-#include "glm/mat4x4.hpp"                //    not all of these need to be here,
-#include "glm/matrix.hpp"                //    sort through them later!
-#include "glm/trigonometric.hpp"         //    
-#include "glm/gtc/matrix_transform.hpp"  //    also, move the ones you need but not
-#include "glm/gtx/transform.hpp"         //    in the .h into Camera.cpp
-#include "glm/gtc/type_ptr.hpp"          //
+#include "glm/gtx/transform.hpp"
+
 
 namespace core { namespace graphics {
 

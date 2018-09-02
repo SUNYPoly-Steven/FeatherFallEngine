@@ -23,6 +23,7 @@
 #include "src/Scene/MandelbrotScene.h"
 #include "src/Scene/ComputeShaderScene.h"
 #include "src/Scene/LayerScene.h"
+#include "src/Scene/Renderer3DScene.h"
 
 //defines
 #define WINDOW_FULLSCREEN false
@@ -84,6 +85,7 @@ int main(int argc, char** argv)
 	mms->RegisterScene<BoidScene>("Flocking (Boids)");
 	mms->RegisterScene<MandelbrotScene>("Mandelbrot Set");
 	mms->RegisterScene<ComputeShaderScene>("Simple Compute Shader");
+	mms->RegisterScene<Renderer3DScene>("3D Scene");
 
 	currScene = mms;//make the current scene the main menu scene (this will be changed by components inside main menu later)
 

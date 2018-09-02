@@ -216,6 +216,7 @@
     <ClCompile Include="src\graphics\Shader.cpp" />
     <ClCompile Include="src\buffers\VAO.cpp" />
     <ClCompile Include="src\graphics\SimpleRenderer2D.cpp" />
+    <ClCompile Include="src\graphics\SimpleRenderer3D.cpp" />
     <ClCompile Include="src\graphics\Sprite.cpp" />
     <ClCompile Include="src\graphics\Texture.cpp" />
     <ClCompile Include="src\graphics\Window.cpp" />
@@ -242,10 +243,13 @@
     <ClInclude Include="src\graphics\BatchRenderer2D.h" />
     <ClInclude Include="src\graphics\Camera.h" />
     <ClInclude Include="src\graphics\Renderable2D.h" />
+    <ClInclude Include="src\graphics\Renderable3D.h" />
     <ClInclude Include="src\graphics\Renderer2D.h" />
+    <ClInclude Include="src\graphics\Renderer3D.h" />
     <ClInclude Include="src\graphics\Shader.h" />
     <ClInclude Include="src\buffers\VAO.h" />
     <ClInclude Include="src\graphics\SimpleRenderer2D.h" />
+    <ClInclude Include="src\graphics\SimpleRenderer3D.h" />
     <ClInclude Include="src\graphics\Sprite.h" />
     <ClInclude Include="src\graphics\Texture.h" />
     <ClInclude Include="src\graphics\Window.h" />

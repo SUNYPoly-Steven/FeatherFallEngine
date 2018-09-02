@@ -9,12 +9,12 @@ out vec4 vPos;
 flat out vec2 lightPos;
 
 uniform mat4 prMatrix;
-uniform vec4 playerPos;
+uniform vec2 playerPos;
 
 void main() {
 
 	vColor = color; //pixel color = interpolated vertex color
-	lightPos = playerPos.xy; //lightPos = players world space coords
+	lightPos = playerPos; //lightPos = players world space coords
 	vPos = position; //pixel position = interpolated vertex position
 	gl_Position = prMatrix * vPos; //place vertex in screen space
 
@@ -35,6 +35,7 @@ void main() {
 
 	float distance = length(vPos.xy - lightPos.xy);
 	float intensity = (1.0 / distance) * strength;
-	out_color = vColor * intensity;
+	//out_color = vColor * intensity;
+	out_color = vec4(lightPos.x, lightPos.y, 0.0, 1.0);
 
 }

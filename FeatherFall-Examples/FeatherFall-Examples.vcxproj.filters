@@ -57,6 +57,9 @@
     <ClCompile Include="src\Scene\LayerScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scene\Renderer3DScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Scene\Scene.h">
@@ -98,6 +101,9 @@
     <ClInclude Include="src\Scene\LayerScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Scene\Renderer3DScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\BuffersTest.shader" />
@@ -111,5 +117,6 @@
     <None Include="res\shaders\c_HelloCompute.shader" />
     <None Include="res\shaders\LayerSceneTest.shader" />
     <None Include="res\shaders\Sandbox.shader" />
+    <None Include="res\shaders\Renderer3DTest.shader" />
   </ItemGroup>
 </Project>

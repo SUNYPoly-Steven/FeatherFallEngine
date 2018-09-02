@@ -21,6 +21,7 @@ namespace core { namespace graphics {
 		bool buttons[MAX_BUTTONS];
 
 		static glm::vec2 mousePos_s;
+		static glm::vec2 winSize_s;
 
 	public:
 		GLFWwindow* window;//NOTE: please move this back into private when ImGui is fully implemented
@@ -37,6 +38,7 @@ namespace core { namespace graphics {
 		const glm::vec2& getMousePos() const ;
 
 		static const glm::vec2& getMousePos_s();
+		static const glm::vec2& getWindowSize_s();
 
 		void update() const ;
 		void clear() const ;

@@ -1931,7 +1931,7 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?__LINE__Var@?0??OnReloadScene@MainMenuScene@Scene@Application@@QEAAXXZ@4JA
 _DATA	SEGMENT
-?__LINE__Var@?0??OnReloadScene@MainMenuScene@Scene@Application@@QEAAXXZ@4JA DD 05aH ; `Application::Scene::MainMenuScene::OnReloadScene'::`1'::__LINE__Var
+?__LINE__Var@?0??OnReloadScene@MainMenuScene@Scene@Application@@QEAAXXZ@4JA DD 05fH ; `Application::Scene::MainMenuScene::OnReloadScene'::`1'::__LINE__Var
 _DATA	ENDS
 ;	COMDAT ??_C@_0BI@LDGJAANB@TODO?3?5Make?5Gradient?5BG?$CB?$AA@
 CONST	SEGMENT
@@ -1972,7 +1972,7 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?__LINE__Var@?0??OnRender@MainMenuScene@Scene@Application@@UEAAXXZ@4JA
 _DATA	SEGMENT
-?__LINE__Var@?0??OnRender@MainMenuScene@Scene@Application@@UEAAXXZ@4JA DD 043H ; `Application::Scene::MainMenuScene::OnRender'::`1'::__LINE__Var
+?__LINE__Var@?0??OnRender@MainMenuScene@Scene@Application@@UEAAXXZ@4JA DD 046H ; `Application::Scene::MainMenuScene::OnRender'::`1'::__LINE__Var
 _DATA	ENDS
 ;	COMDAT ??_C@_0CB@MPFGBK@res?1textures?1FeatherFall?9Owl?4png@
 CONST	SEGMENT
@@ -7300,7 +7300,7 @@ _TEXT	SEGMENT
 this$ = 80
 ?OnReloadScene@MainMenuScene@Scene@Application@@QEAAXXZ PROC ; Application::Scene::MainMenuScene::OnReloadScene, COMDAT
 
-; 90   : 	void MainMenuScene::OnReloadScene() {
+; 95   : 	{
 
 $LN4:
 	mov	QWORD PTR [rsp+8], rcx
@@ -7308,8 +7308,8 @@ $LN4:
 	sub	rsp, 96					; 00000060H
 	lea	rbp, QWORD PTR [rsp+32]
 
-; 91   : 
-; 92   : 		GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
+; 96   : 
+; 97   : 		GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
 
 	call	?GLClearError@@YAXXZ			; GLClearError
 	movss	xmm3, DWORD PTR __real@3f800000
@@ -7329,29 +7329,29 @@ $LN4:
 	int	3
 $LN2@OnReloadSc:
 
-; 93   : 
-; 94   : 		ffTex->bind(0);
+; 98   : 
+; 99   : 		ffTex->bind(0);
 
 	xor	edx, edx
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rax+80]
 	call	?bind@Texture@graphics@core@@QEBAXI@Z	; core::graphics::Texture::bind
 
-; 95   : 		iconTex->bind(1);
+; 100  : 		iconTex->bind(1);
 
 	mov	edx, 1
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rax+88]
 	call	?bind@Texture@graphics@core@@QEBAXI@Z	; core::graphics::Texture::bind
 
-; 96   : 
-; 97   : 		shader->bind();
+; 101  : 
+; 102  : 		shader->bind();
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rax+96]
 	call	?bind@Shader@graphics@core@@QEBAXXZ	; core::graphics::Shader::bind
 
-; 98   : 		shader->setUniformMat4("prMatrix", *ortho);
+; 103  : 		shader->setUniformMat4("prMatrix", *ortho);
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	r8, QWORD PTR [rax+104]
@@ -7360,7 +7360,7 @@ $LN2@OnReloadSc:
 	mov	rcx, QWORD PTR [rax+96]
 	call	?setUniformMat4@Shader@graphics@core@@QEAAXPEBDAEBU?$tmat4x4@M$0A@@glm@@@Z ; core::graphics::Shader::setUniformMat4
 
-; 99   : 		shader->setUniform1i("ffTex", 0);
+; 104  : 		shader->setUniform1i("ffTex", 0);
 
 	xor	r8d, r8d
 	lea	rdx, OFFSET FLAT:??_C@_05GLHHFCDG@ffTex?$AA@
@@ -7368,7 +7368,7 @@ $LN2@OnReloadSc:
 	mov	rcx, QWORD PTR [rax+96]
 	call	?setUniform1i@Shader@graphics@core@@QEAAXPEBDH@Z ; core::graphics::Shader::setUniform1i
 
-; 100  : 		shader->setUniform1i("iconTex", 1);
+; 105  : 		shader->setUniform1i("iconTex", 1);
 
 	mov	r8d, 1
 	lea	rdx, OFFSET FLAT:??_C@_07NNBCNLBN@iconTex?$AA@
@@ -7376,21 +7376,21 @@ $LN2@OnReloadSc:
 	mov	rcx, QWORD PTR [rax+96]
 	call	?setUniform1i@Shader@graphics@core@@QEAAXPEBDH@Z ; core::graphics::Shader::setUniform1i
 
-; 101  : 
-; 102  : 		vao->bind();
+; 106  : 
+; 107  : 		vao->bind();
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rax+48]
 	call	?bind@VAO@buffers@core@@QEBAXXZ		; core::buffers::VAO::bind
 
-; 103  : 		ibo->bind();
+; 108  : 		ibo->bind();
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rax+64]
 	call	?bind@IBO@buffers@core@@QEBAXXZ		; core::buffers::IBO::bind
 
-; 104  : 
-; 105  : 	}
+; 109  : 
+; 110  : 	}
 
 	lea	rsp, QWORD PTR [rbp+64]
 	pop	rbp
@@ -7409,7 +7409,7 @@ $T5 = 96
 this$ = 128
 ?OnImGuiRender@MainMenuScene@Scene@Application@@UEAAXXZ PROC ; Application::Scene::MainMenuScene::OnImGuiRender, COMDAT
 
-; 74   : 	void MainMenuScene::OnImGuiRender() {
+; 78   : 	{
 
 $LN7:
 	mov	QWORD PTR [rsp+8], rcx
@@ -7417,13 +7417,13 @@ $LN7:
 	sub	rsp, 160				; 000000a0H
 	lea	rbp, QWORD PTR [rsp+48]
 
-; 75   : 
-; 76   : 		ImGui::Text("Select a Scene to load: ");
+; 79   : 
+; 80   : 		ImGui::Text("Select a Scene to load: ");
 
 	lea	rcx, OFFSET FLAT:??_C@_0BJ@IDPKMNNF@Select?5a?5Scene?5to?5load?3?5?$AA@
 	call	?Text@ImGui@@YAXPEBDZZ			; ImGui::Text
 
-; 77   : 		for (auto& scene : scenes) {
+; 81   : 		for (auto& scene : scenes) {
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 16
@@ -7446,7 +7446,7 @@ $LN4@OnImGuiRen:
 	mov	rax, QWORD PTR <begin>$L0$2[rbp]
 	mov	QWORD PTR scene$4[rbp], rax
 
-; 78   : 			if (ImGui::Button(scene.first)) {
+; 82   : 			if (ImGui::Button(scene.first)) {
 
 	xorps	xmm2, xmm2
 	xorps	xmm1, xmm1
@@ -7460,7 +7460,7 @@ $LN4@OnImGuiRen:
 	test	eax, eax
 	je	SHORT $LN5@OnImGuiRen
 
-; 79   : 				currentScene = scene.second();
+; 83   : 				currentScene = scene.second();
 
 	mov	rax, QWORD PTR scene$4[rbp]
 	add	rax, 8
@@ -7471,21 +7471,21 @@ $LN4@OnImGuiRen:
 	mov	QWORD PTR [rcx], rax
 $LN5@OnImGuiRen:
 
-; 80   : 			}
-; 81   : 		}
+; 84   : 			}
+; 85   : 		}
 
 	jmp	SHORT $LN2@OnImGuiRen
 $LN3@OnImGuiRen:
 
-; 82   : 
-; 83   : 		ImGui::Begin("BG Texture Control");
+; 86   : 
+; 87   : 		ImGui::Begin("BG Texture Control");
 
 	xor	r8d, r8d
 	xor	edx, edx
 	lea	rcx, OFFSET FLAT:??_C@_0BD@KHMMBBJK@BG?5Texture?5Control?$AA@
 	call	?Begin@ImGui@@YA_NPEBDPEA_NH@Z		; ImGui::Begin
 
-; 84   : 		ImGui::SliderFloat("Texture Control", &texMix, 0.0f, 1.0f);
+; 88   : 		ImGui::SliderFloat("Texture Control", &texMix, 0.0f, 1.0f);
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 112				; 00000070H
@@ -7499,17 +7499,17 @@ $LN3@OnImGuiRen:
 	lea	rcx, OFFSET FLAT:??_C@_0BA@NNMDDBIH@Texture?5Control?$AA@
 	call	?SliderFloat@ImGui@@YA_NPEBDPEAMMM0M@Z	; ImGui::SliderFloat
 
-; 85   : 		ImGui::Text("TODO: Make Gradient BG!");
+; 89   : 		ImGui::Text("TODO: Make Gradient BG!");
 
 	lea	rcx, OFFSET FLAT:??_C@_0BI@LDGJAANB@TODO?3?5Make?5Gradient?5BG?$CB?$AA@
 	call	?Text@ImGui@@YAXPEBDZZ			; ImGui::Text
 
-; 86   : 		ImGui::End();
+; 90   : 		ImGui::End();
 
 	call	?End@ImGui@@YAXXZ			; ImGui::End
 
-; 87   : 
-; 88   : 	}
+; 91   : 
+; 92   : 	}
 
 	lea	rsp, QWORD PTR [rbp+112]
 	pop	rbp
@@ -7523,7 +7523,7 @@ _TEXT	SEGMENT
 this$ = 80
 ?OnRender@MainMenuScene@Scene@Application@@UEAAXXZ PROC	; Application::Scene::MainMenuScene::OnRender, COMDAT
 
-; 67   : 	void MainMenuScene::OnRender() {
+; 70   : 	{
 
 $LN4:
 	mov	QWORD PTR [rsp+8], rcx
@@ -7531,8 +7531,8 @@ $LN4:
 	sub	rsp, 96					; 00000060H
 	lea	rbp, QWORD PTR [rsp+32]
 
-; 68   : 		
-; 69   : 		shader->setUniform1f("percentage", texMix);
+; 71   : 		
+; 72   : 		shader->setUniform1f("percentage", texMix);
 
 	mov	rax, QWORD PTR this$[rbp]
 	movss	xmm2, DWORD PTR [rax+112]
@@ -7541,7 +7541,7 @@ $LN4:
 	mov	rcx, QWORD PTR [rax+96]
 	call	?setUniform1f@Shader@graphics@core@@QEAAXPEBDM@Z ; core::graphics::Shader::setUniform1f
 
-; 70   : 		GLCall(glDrawElements(GL_TRIANGLES, ibo->getCount(), GL_UNSIGNED_INT, nullptr));
+; 73   : 		GLCall(glDrawElements(GL_TRIANGLES, ibo->getCount(), GL_UNSIGNED_INT, nullptr));
 
 	call	?GLClearError@@YAXXZ			; GLClearError
 	mov	rax, QWORD PTR this$[rbp]
@@ -7564,8 +7564,8 @@ $LN4:
 	int	3
 $LN2@OnRender:
 
-; 71   : 
-; 72   : 	}
+; 74   : 
+; 75   : 	}
 
 	lea	rsp, QWORD PTR [rbp+64]
 	pop	rbp
@@ -7580,7 +7580,7 @@ this$ = 80
 deltaTime$ = 88
 ?OnUpdate@MainMenuScene@Scene@Application@@UEAAXM@Z PROC ; Application::Scene::MainMenuScene::OnUpdate, COMDAT
 
-; 63   : 	void MainMenuScene::OnUpdate(float deltaTime) {
+; 65   : 	{
 
 $LN3:
 	movss	DWORD PTR [rsp+16], xmm1
@@ -7589,8 +7589,8 @@ $LN3:
 	sub	rsp, 64					; 00000040H
 	mov	rbp, rsp
 
-; 64   : 
-; 65   : 	}
+; 66   : 
+; 67   : 	}
 
 	lea	rsp, QWORD PTR [rbp+64]
 	pop	rbp
@@ -7623,7 +7623,7 @@ tv81 = 168
 this$ = 192
 ??1MainMenuScene@Scene@Application@@UEAA@XZ PROC	; Application::Scene::MainMenuScene::~MainMenuScene, COMDAT
 
-; 49   : 	MainMenuScene::~MainMenuScene() {
+; 50   : 	{
 
 $LN15:
 	mov	QWORD PTR [rsp+8], rcx
@@ -7634,8 +7634,8 @@ $LN15:
 	lea	rcx, OFFSET FLAT:??_7MainMenuScene@Scene@Application@@6B@
 	mov	QWORD PTR [rax], rcx
 
-; 50   : 
-; 51   : 		delete vao;
+; 51   : 
+; 52   : 		delete vao;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+48]
@@ -7653,7 +7653,7 @@ $LN3@MainMenuSc:
 	mov	QWORD PTR tv81[rbp], 0
 $LN4@MainMenuSc:
 
-; 52   : 		delete vbo;
+; 53   : 		delete vbo;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+56]
@@ -7671,7 +7671,7 @@ $LN5@MainMenuSc:
 	mov	QWORD PTR tv87[rbp], 0
 $LN6@MainMenuSc:
 
-; 53   : 		delete ibo;
+; 54   : 		delete ibo;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+64]
@@ -7689,7 +7689,7 @@ $LN7@MainMenuSc:
 	mov	QWORD PTR tv93[rbp], 0
 $LN8@MainMenuSc:
 
-; 54   : 		delete layout;
+; 55   : 		delete layout;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+72]
@@ -7707,8 +7707,8 @@ $LN9@MainMenuSc:
 	mov	QWORD PTR tv131[rbp], 0
 $LN10@MainMenuSc:
 
-; 55   : 
-; 56   : 		delete ffTex;
+; 56   : 
+; 57   : 		delete ffTex;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+80]
@@ -7726,7 +7726,7 @@ $LN11@MainMenuSc:
 	mov	QWORD PTR tv137[rbp], 0
 $LN12@MainMenuSc:
 
-; 57   : 		delete shader;
+; 58   : 		delete shader;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+96]
@@ -7744,8 +7744,8 @@ $LN13@MainMenuSc:
 	mov	QWORD PTR tv143[rbp], 0
 $LN14@MainMenuSc:
 
-; 58   : 
-; 59   : 		delete ortho;
+; 59   : 
+; 60   : 		delete ortho;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+104]
@@ -7754,8 +7754,8 @@ $LN14@MainMenuSc:
 	mov	rcx, QWORD PTR $T13[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 
-; 60   : 
-; 61   : 	}
+; 61   : 
+; 62   : 	}
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 16

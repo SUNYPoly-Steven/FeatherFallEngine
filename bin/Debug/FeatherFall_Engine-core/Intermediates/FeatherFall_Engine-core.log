@@ -1,2 +1,9 @@
-﻿  BatchRenderer2D.cpp
+﻿  SimpleRenderer3D.cpp
+  Layer.cpp
+c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  l:\dev\featherfallengine\depends\install\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
+  Layer2D.cpp
+c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  l:\dev\featherfallengine\depends\install\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
+  Generating Code...
   FeatherFall_Engine-core.vcxproj -> L:\Dev\FeatherFallEngine\bin\Debug\FeatherFall_Engine-core\FeatherFall_Engine-core.lib

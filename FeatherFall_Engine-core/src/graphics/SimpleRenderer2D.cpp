@@ -26,9 +26,7 @@ namespace core { namespace graphics {
 		delete vbo;
 	}
 
-	void SimpleRenderer2D::begin() { 
-
-	}
+	void SimpleRenderer2D::begin() { }
 
 	void SimpleRenderer2D::submit(const Renderable2D* renderable)
 	{

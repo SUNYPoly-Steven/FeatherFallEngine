@@ -10,6 +10,7 @@
 namespace core { namespace graphics {
 
 	glm::vec2 Window::mousePos_s;
+	glm::vec2 Window::winSize_s;
 
 	Window::Window(const int& pwidth, const int& pheight, const char* ptitle, bool fullScreen, bool vSync) 
 		: windowSize(pwidth, pheight), mousePos(0, 0), title(ptitle)
@@ -21,7 +22,7 @@ namespace core { namespace graphics {
 
 		//Init GLFW
 		if (!glfwInit()) { //LOG THIS
-			Log::printError("GLFW failed to Initalize!");
+			Log::printError("GLFW failed to Initialize!");
 			exit(EXIT_FAILURE);
 		}
 
@@ -117,6 +118,11 @@ namespace core { namespace graphics {
 
 	const glm::vec2& Window::getMousePos_s() {
 		return Window::mousePos_s;
+	}
+
+	const glm::vec2 & Window::getWindowSize_s()
+	{
+		return winSize_s;
 	}
 
 	void Window::update() const {

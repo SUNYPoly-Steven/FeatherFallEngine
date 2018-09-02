@@ -26,6 +26,25 @@ namespace Application { namespace Scene {
 		mousePos.x = ImGui::GetMousePos().x;
 		mousePos.y = ImGui::GetMousePos().y;
 
+		glm::vec2 windowSize = core::graphics::Window::getWindowSize_s();
+
+		//translate range 0 to windowSize.x -> a range between othro::left and ortho::right
+		float input_start = 0;
+		float input_end = windowSize.x;
+		float output_start = -16.0;
+		float output_end = 16.0;
+
+		mousePos.x = (mousePos.x - input_start) * (output_end - output_start) / (input_end - input_start) + output_start;
+
+		output_start = -9.0;
+		output_end = 9.0;
+		input_end = windowSize.y;
+
+		mousePos.y = (mousePos.y - input_start) * (output_end - output_start) / (input_end - input_start) + output_start;
+
+		mousePos.x = 0.0f;
+		mousePos.y = 0.0f;
+
 		// #Dev_Note: when architechting the movement system, 
 		//            set it up similar to the rendering system.
 		//            it could be used a lot like the rendering API,
@@ -54,13 +73,15 @@ namespace Application { namespace Scene {
 		//                    needing to pass the position data to the renderer
 		//                    every frame, right?
 
+
+
 	}
 	
 	void SandboxScene::OnRender() 
 	{
 
 		//Set uniforms here
-		shader.setUniformVec4("playerPos", playerSprite.getPosition());//glm::vec4(mousePos, 0.0f, 1.0f));
+		shader.setUniformVec2("playerPos", playerSprite.getPosition());//glm::vec4(mousePos, 0.0f, 1.0f));
 
 		renderer.begin();
 
@@ -77,7 +98,9 @@ namespace Application { namespace Scene {
 	{
 	
 		ImGui::Text("This is the Sandbox!");
-	
+		ImGui::Text("Light Position: %.1f, %.1f", mousePos.x, mousePos.y);
+
+
 	}
 
 }}
