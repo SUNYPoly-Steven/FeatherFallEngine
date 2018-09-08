@@ -6,8 +6,8 @@ layout(location = 1) in vec4 color;
 
 out vec4 oColor;
 
-uniform mat4 prMatrix;
-uniform mat4 vwMatrix;
+uniform mat4 prMatrix = mat4(1.0f);
+uniform mat4 vwMatrix = mat4(1.0f);
 
 void main() {
 

@@ -17,14 +17,14 @@ namespace Application { namespace Scene {
 		vert = new float[7 * 8];
 		float intern_vert[] = {
 //            X      Y      Z      R      G      B      A    
-			-1.0f, -1.0f, -1.0f,  1.0f,  0.0f,  0.0f,  1.0f, // 0
-			 1.0f, -1.0f, -1.0f,  0.0f,  1.0f,  0.0f,  1.0f, // 1
-			 1.0f,  1.0f, -1.0f,  0.0f,  0.0f,  1.0f,  1.0f, // 2
+			-1.0f, -1.0f,  1.0f,  1.0f,  0.0f,  0.0f,  1.0f, // 0
+			-1.0f,  1.0f,  1.0f,  0.0f,  1.0f,  0.0f,  1.0f, // 1
+			-1.0f, -1.0f, -1.0f,  0.0f,  0.0f,  1.0f,  1.0f, // 2
 			-1.0f,  1.0f, -1.0f,  1.0f,  1.0f,  1.0f,  1.0f, // 3
-			-1.0f, -1.0f,  1.0f,  1.0f,  0.0f,  0.0f,  1.0f, // 4
-			 1.0f, -1.0f,  1.0f,  0.0f,  1.0f,  0.0f,  1.0f, // 5
-			 1.0f,  1.0f,  1.0f,  0.0f,  0.0f,  1.0f,  1.0f, // 6
-			-1.0f,  1.0f,  1.0f,  1.0f,  1.0f,  1.0f,  1.0f  // 7
+			 1.0f, -1.0f,  1.0f,  1.0f,  0.0f,  0.0f,  1.0f, // 4
+			 1.0f,  1.0f,  1.0f,  0.0f,  1.0f,  0.0f,  1.0f, // 5
+			 1.0f, -1.0f, -1.0f,  0.0f,  0.0f,  1.0f,  1.0f, // 6
+			 1.0f,  1.0f, -1.0f,  1.0f,  1.0f,  1.0f,  1.0f  // 7
 		};
 
 		for (int i = 0; i < 7 * 8; ++i) {
@@ -33,22 +33,22 @@ namespace Application { namespace Scene {
 
 		index = new unsigned int[3 * 12];
 		unsigned int intern_index[] = {
-			0, 1, 2, //front face
+			0, 1, 2, 
 			2, 3, 0,
 
-			4, 0, 2, //left face
+			4, 0, 2, 
 			2, 7, 4,
 
-			1, 5, 6, //right face
+			1, 5, 6, 
 			6, 2, 1,
 
-			5, 4, 7, //back face
+			5, 4, 7, 
 			7, 6, 5,
 
-			3, 2, 6, //top face
+			3, 2, 6, 
 			6, 7, 3,
 
-			4, 5, 1, //bottom face
+			4, 5, 1, 
 			1, 0, 4
 		};
 
@@ -65,8 +65,9 @@ namespace Application { namespace Scene {
 
 	Renderer3DScene::~Renderer3DScene()
 	{
-		delete[] vert; 
 		delete[] index;
+		delete[] vert; 
+		delete m_Cube;
 	}
 
 	void Renderer3DScene::OnUpdate(float deltaTime)

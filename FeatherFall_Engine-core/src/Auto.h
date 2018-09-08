@@ -1,5 +1,13 @@
 #pragma once
 
+/*
+ * Auto.h
+ * 
+ * A Macro that will create an ad hoc RAII type to
+ * perform the given tasks at scope exit
+ *
+ */
+
 template<class Lambda>
 class AtScopeExit {
 	Lambda& m_lambda;
