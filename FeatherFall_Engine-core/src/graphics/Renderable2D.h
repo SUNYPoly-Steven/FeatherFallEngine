@@ -18,7 +18,6 @@ namespace core { namespace graphics {
 	public:
 
 		Renderable2D(const glm::vec4& pposition, const glm::vec2& psize, const glm::vec4& pcolor);
-		Renderable2D(float px, float py, float sizex, float sizey, unsigned int pcolor);
 
 		virtual ~Renderable2D();
 

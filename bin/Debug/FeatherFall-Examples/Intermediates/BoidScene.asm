@@ -92,8 +92,8 @@ __C7FC7610_utility DB 01H
 __2F30B87A_type_vec2.inl DB 01H
 __EEB2B1DD_type_vec2.hpp DB 01H
 __A0704DDA_type_vec4.inl DB 01H
-__BF97B2F5_type_mat4x4.inl DB 01H
 __61F2447D_type_vec4.hpp DB 01H
+__BF97B2F5_type_mat4x4.inl DB 01H
 __30E3E102_xstddef DB 01H
 __B60C3EDD_matrix_transform.inl DB 01H
 __7E15BB52_type_mat4x4.hpp DB 01H
@@ -108,6 +108,7 @@ PUBLIC	?max@?$numeric_limits@_J@std@@SA_JXZ		; std::numeric_limits<__int64>::max
 PUBLIC	?length@?$tvec4@M$0A@@glm@@SAHXZ		; glm::tvec4<float,0>::length
 PUBLIC	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z		; glm::tvec4<float,0>::operator[]
 PUBLIC	??0?$tvec4@M$0A@@glm@@QEAA@XZ			; glm::tvec4<float,0>::tvec4<float,0>
+PUBLIC	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z		; glm::tvec4<float,0>::tvec4<float,0>
 PUBLIC	??0?$tvec2@M$0A@@glm@@QEAA@XZ			; glm::tvec2<float,0>::tvec2<float,0>
 PUBLIC	??0?$tvec2@M$0A@@glm@@QEAA@MM@Z			; glm::tvec2<float,0>::tvec2<float,0>
 PUBLIC	?length@?$char_traits@D@std@@SA_KQEBD@Z		; std::char_traits<char>::length
@@ -364,7 +365,7 @@ EXTRN	??0Shader@graphics@core@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?
 EXTRN	??1Shader@graphics@core@@QEAA@XZ:PROC		; core::graphics::Shader::~Shader
 EXTRN	?bind@Shader@graphics@core@@QEBAXXZ:PROC	; core::graphics::Shader::bind
 EXTRN	?setUniformMat4@Shader@graphics@core@@QEAAXPEBDAEBU?$tmat4x4@M$0A@@glm@@@Z:PROC ; core::graphics::Shader::setUniformMat4
-EXTRN	??0Boid@0Application@@QEAA@MMI@Z:PROC		; Application::Boid::Boid::Boid
+EXTRN	??0Boid@0Application@@QEAA@MMAEBU?$tvec4@M$0A@@glm@@@Z:PROC ; Application::Boid::Boid::Boid
 EXTRN	?updatePos@Boid@1Application@@QEAAXXZ:PROC	; Application::Boid::Boid::updatePos
 EXTRN	?updateFlockMates@Boid@1Application@@QEAAXAEBV?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@@Z:PROC ; Application::Boid::Boid::updateFlockMates
 EXTRN	?updateSteer@Boid@1Application@@QEAAXXZ:PROC	; Application::Boid::Boid::updateSteer
@@ -437,6 +438,12 @@ pdata	SEGMENT
 $pdata$??0?$tvec4@M$0A@@glm@@QEAA@XZ DD imagerel $LN3
 	DD	imagerel $LN3+84
 	DD	imagerel $unwind$??0?$tvec4@M$0A@@glm@@QEAA@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z DD imagerel $LN3
+	DD	imagerel $LN3+110
+	DD	imagerel $unwind$??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1197,7 +1204,7 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$??0BoidScene@Scene@Application@@QEAA@XZ DD imagerel $LN23
-	DD	imagerel $LN23+891
+	DD	imagerel $LN23+942
 	DD	imagerel $unwind$??0BoidScene@Scene@Application@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1269,7 +1276,7 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ DD imagerel $LN14
-	DD	imagerel $LN14+427
+	DD	imagerel $LN14+503
 	DD	imagerel $unwind$?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -2632,9 +2639,9 @@ xdata	ENDS
 xdata	SEGMENT
 $ip2state$?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ DD imagerel ?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ
 	DD	0ffffffffH
-	DD	imagerel ?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ+227
+	DD	imagerel ?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ+245
 	DD	00H
-	DD	imagerel ?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ+382
+	DD	imagerel ?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ+458
 	DD	0ffffffffH
 xdata	ENDS
 ;	COMDAT xdata
@@ -2651,15 +2658,15 @@ $cppxdata$?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ DD 019930522H
 	DD	00H
 	DD	03H
 	DD	imagerel $ip2state$?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ
-	DD	090H
+	DD	0b0H
 	DD	00H
 	DD	01H
 CONST	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ DD 025041a11H
-	DD	010d2312H
-	DD	050060016H
+$unwind$?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ DD 035041d11H
+	DD	010d3312H
+	DD	05006001aH
 	DD	imagerel __CxxFrameHandler3
 	DD	imagerel $cppxdata$?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ
 xdata	ENDS
@@ -2772,9 +2779,9 @@ $ip2state$??0BoidScene@Scene@Application@@QEAA@XZ DD imagerel ??0BoidScene@Scene
 	DD	01H
 	DD	imagerel ??0BoidScene@Scene@Application@@QEAA@XZ+533
 	DD	07H
-	DD	imagerel ??0BoidScene@Scene@Application@@QEAA@XZ+710
+	DD	imagerel ??0BoidScene@Scene@Application@@QEAA@XZ+761
 	DD	01H
-	DD	imagerel ??0BoidScene@Scene@Application@@QEAA@XZ+875
+	DD	imagerel ??0BoidScene@Scene@Application@@QEAA@XZ+926
 	DD	0ffffffffH
 xdata	ENDS
 ;	COMDAT xdata
@@ -2805,7 +2812,7 @@ $cppxdata$??0BoidScene@Scene@Application@@QEAA@XZ DD 019930522H
 	DD	00H
 	DD	010H
 	DD	imagerel $ip2state$??0BoidScene@Scene@Application@@QEAA@XZ
-	DD	0108H
+	DD	0118H
 	DD	00H
 	DD	01H
 CONST	ENDS
@@ -2813,7 +2820,7 @@ CONST	ENDS
 xdata	SEGMENT
 $unwind$??0BoidScene@Scene@Application@@QEAA@XZ DD 045041d11H
 	DD	010d4312H
-	DD	050060024H
+	DD	050060028H
 	DD	imagerel __CxxFrameHandler3
 	DD	imagerel $cppxdata$??0BoidScene@Scene@Application@@QEAA@XZ
 xdata	ENDS
@@ -4974,6 +4981,12 @@ xdata	SEGMENT
 $unwind$??0?$tvec2@M$0A@@glm@@QEAA@XZ DD 025030f01H
 	DD	0b20a230fH
 	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z DD 025032101H
+	DD	0b21c2321H
+	DD	05018H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -8051,11 +8064,13 @@ $T5 = 88
 $T6 = 96
 $T7 = 104
 $T8 = 112
-tv142 = 120
-tv85 = 120
-tv65 = 120
-tv150 = 128
-this$ = 160
+$T9 = 128
+tv138 = 136
+tv85 = 136
+tv65 = 136
+tv148 = 144
+tv156 = 152
+this$ = 176
 ?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ PROC	; Application::Scene::BoidScene::ResetBoids, COMDAT
 
 ; 101  : 	void BoidScene::ResetBoids() {
@@ -8063,9 +8078,9 @@ this$ = 160
 $LN14:
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 176				; 000000b0H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	QWORD PTR $T8[rbp], -2
+	sub	rsp, 208				; 000000d0H
+	lea	rbp, QWORD PTR [rsp+48]
+	mov	QWORD PTR $T9[rbp], -2
 	lea	rcx, OFFSET FLAT:__8BDE7EBA_boidscene.cpp
 	call	__CheckForDebuggerJustMyCode
 
@@ -8114,7 +8129,7 @@ $LN10@ResetBoids:
 
 ; 105  : 		}
 
-	jmp	SHORT $LN2@ResetBoids
+	jmp	$LN2@ResetBoids
 $LN3@ResetBoids:
 
 ; 106  : 		boids.clear();
@@ -8143,10 +8158,18 @@ $LN7@ResetBoids:
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T7[rbp], rax
 	cmp	QWORD PTR $T7[rbp], 0
-	je	SHORT $LN11@ResetBoids
+	je	$LN11@ResetBoids
 	mov	edx, 88					; 00000058H
 	mov	rcx, QWORD PTR $T7[rbp]
 	call	?__autoclassinit2@Boid@1Application@@QEAAX_K@Z
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR [rsp+32], xmm0
+	xorps	xmm3, xmm3
+	xorps	xmm2, xmm2
+	movss	xmm1, DWORD PTR __real@3f800000
+	lea	rcx, QWORD PTR $T8[rbp]
+	call	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z	; glm::tvec4<float,0>::tvec4<float,0>
+	mov	QWORD PTR tv138[rbp], rax
 	call	QWORD PTR __imp_rand
 	cdq
 	mov	ecx, 9000				; 00002328H
@@ -8155,7 +8178,7 @@ $LN7@ResetBoids:
 	cvtsi2ss xmm0, eax
 	divss	xmm0, DWORD PTR __real@447a0000
 	subss	xmm0, DWORD PTR __real@40900000
-	movss	DWORD PTR tv142[rbp], xmm0
+	movss	DWORD PTR tv148[rbp], xmm0
 	call	QWORD PTR __imp_rand
 	cdq
 	mov	ecx, 16000				; 00003e80H
@@ -8164,18 +8187,19 @@ $LN7@ResetBoids:
 	cvtsi2ss xmm0, eax
 	divss	xmm0, DWORD PTR __real@447a0000
 	subss	xmm0, DWORD PTR __real@41000000
-	mov	r9d, -16776961				; ff0000ffH
-	movss	xmm1, DWORD PTR tv142[rbp]
+	mov	rax, QWORD PTR tv138[rbp]
+	mov	r9, rax
+	movss	xmm1, DWORD PTR tv148[rbp]
 	movaps	xmm2, xmm1
 	movaps	xmm1, xmm0
 	mov	rcx, QWORD PTR $T7[rbp]
-	call	??0Boid@0Application@@QEAA@MMI@Z	; Application::Boid::Boid::Boid
-	mov	QWORD PTR tv150[rbp], rax
+	call	??0Boid@0Application@@QEAA@MMAEBU?$tvec4@M$0A@@glm@@@Z ; Application::Boid::Boid::Boid
+	mov	QWORD PTR tv156[rbp], rax
 	jmp	SHORT $LN12@ResetBoids
 $LN11@ResetBoids:
-	mov	QWORD PTR tv150[rbp], 0
+	mov	QWORD PTR tv156[rbp], 0
 $LN12@ResetBoids:
-	mov	rax, QWORD PTR tv150[rbp]
+	mov	rax, QWORD PTR tv156[rbp]
 	mov	QWORD PTR $T6[rbp], rax
 	mov	rax, QWORD PTR $T6[rbp]
 	mov	QWORD PTR $T5[rbp], rax
@@ -8187,7 +8211,7 @@ $LN12@ResetBoids:
 
 ; 110  : 				((rand() % 16000) / 1000.0f) - 8.0f,
 ; 111  : 				((rand() % 9000) / 1000.0f) - 4.5f,
-; 112  : 				0xFF0000FF));
+; 112  : 				glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)));
 ; 113  : 		}
 
 	jmp	$LN5@ResetBoids
@@ -8195,7 +8219,7 @@ $LN6@ResetBoids:
 
 ; 114  : 	}
 
-	lea	rsp, QWORD PTR [rbp+144]
+	lea	rsp, QWORD PTR [rbp+160]
 	pop	rbp
 	ret	0
 ?ResetBoids@BoidScene@Scene@Application@@AEAAXXZ ENDP	; Application::Scene::BoidScene::ResetBoids
@@ -8210,15 +8234,17 @@ $T5 = 88
 $T6 = 96
 $T7 = 104
 $T8 = 112
-tv142 = 120
-tv85 = 120
-tv65 = 120
-tv150 = 128
-this$ = 160
+$T9 = 128
+tv138 = 136
+tv85 = 136
+tv65 = 136
+tv148 = 144
+tv156 = 152
+this$ = 176
 ?dtor$0@?0??ResetBoids@BoidScene@Scene@Application@@AEAAXXZ@4HA PROC ; `Application::Scene::BoidScene::ResetBoids'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
-	lea	rbp, QWORD PTR [rdx+32]
+	lea	rbp, QWORD PTR [rdx+48]
 	mov	edx, 88					; 00000058H
 	mov	rcx, QWORD PTR $T7[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
@@ -8238,15 +8264,17 @@ $T5 = 88
 $T6 = 96
 $T7 = 104
 $T8 = 112
-tv142 = 120
-tv85 = 120
-tv65 = 120
-tv150 = 128
-this$ = 160
+$T9 = 128
+tv138 = 136
+tv85 = 136
+tv65 = 136
+tv148 = 144
+tv156 = 152
+this$ = 176
 ?dtor$0@?0??ResetBoids@BoidScene@Scene@Application@@AEAAXXZ@4HA PROC ; `Application::Scene::BoidScene::ResetBoids'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
-	lea	rbp, QWORD PTR [rdx+32]
+	lea	rbp, QWORD PTR [rdx+48]
 	mov	edx, 88					; 00000058H
 	mov	rcx, QWORD PTR $T7[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
@@ -8728,14 +8756,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ??0BoidScene@Scene@Application@@QEAA@XZ PROC		; Application::Scene::BoidScene::BoidScene, COMDAT
 
 ; 22   : 	{
@@ -8743,10 +8773,10 @@ this$ = 240
 $LN23:
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 288				; 00000120H
+	sub	rsp, 320				; 00000140H
 	lea	rbp, QWORD PTR [rsp+64]
-	mov	QWORD PTR $T14[rbp], -2
-	mov	DWORD PTR $T13[rbp], 0
+	mov	QWORD PTR $T15[rbp], -2
+	mov	DWORD PTR $T14[rbp], 0
 	lea	rcx, OFFSET FLAT:__8BDE7EBA_boidscene.cpp
 	call	__CheckForDebuggerJustMyCode
 	mov	rcx, QWORD PTR this$[rbp]
@@ -8833,9 +8863,9 @@ $LN9@BoidScene:
 	lea	rcx, QWORD PTR $T8[rbp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	npad	1
-	mov	eax, DWORD PTR $T13[rbp]
+	mov	eax, DWORD PTR $T14[rbp]
 	or	eax, 1
-	mov	DWORD PTR $T13[rbp], eax
+	mov	DWORD PTR $T14[rbp], eax
 	lea	rdx, QWORD PTR $T8[rbp]
 	mov	rcx, QWORD PTR $T7[rbp]
 	call	??0Shader@graphics@core@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; core::graphics::Shader::Shader
@@ -8849,11 +8879,11 @@ $LN11@BoidScene:
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR $T6[rbp]
 	mov	QWORD PTR [rax+48], rcx
-	mov	eax, DWORD PTR $T13[rbp]
+	mov	eax, DWORD PTR $T14[rbp]
 	and	eax, 1
 	test	eax, eax
 	je	SHORT $LN21@BoidScene
-	and	DWORD PTR $T13[rbp], -2
+	and	DWORD PTR $T14[rbp], -2
 	lea	rcx, QWORD PTR $T8[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN21@BoidScene:
@@ -8881,6 +8911,14 @@ $LN4@BoidScene:
 	mov	edx, 88					; 00000058H
 	mov	rcx, QWORD PTR $T11[rbp]
 	call	?__autoclassinit2@Boid@1Application@@QEAAX_K@Z
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR [rsp+32], xmm0
+	xorps	xmm3, xmm3
+	xorps	xmm2, xmm2
+	movss	xmm1, DWORD PTR __real@3f800000
+	lea	rcx, QWORD PTR $T12[rbp]
+	call	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z	; glm::tvec4<float,0>::tvec4<float,0>
+	mov	QWORD PTR tv192[rbp], rax
 	call	QWORD PTR __imp_rand
 	cdq
 	mov	ecx, 9000				; 00002328H
@@ -8889,7 +8927,7 @@ $LN4@BoidScene:
 	cvtsi2ss xmm0, eax
 	divss	xmm0, DWORD PTR __real@447a0000
 	subss	xmm0, DWORD PTR __real@40900000
-	movss	DWORD PTR tv196[rbp], xmm0
+	movss	DWORD PTR tv202[rbp], xmm0
 	call	QWORD PTR __imp_rand
 	cdq
 	mov	ecx, 16000				; 00003e80H
@@ -8898,18 +8936,19 @@ $LN4@BoidScene:
 	cvtsi2ss xmm0, eax
 	divss	xmm0, DWORD PTR __real@447a0000
 	subss	xmm0, DWORD PTR __real@41000000
-	mov	r9d, -16776961				; ff0000ffH
-	movss	xmm1, DWORD PTR tv196[rbp]
+	mov	rax, QWORD PTR tv192[rbp]
+	mov	r9, rax
+	movss	xmm1, DWORD PTR tv202[rbp]
 	movaps	xmm2, xmm1
 	movaps	xmm1, xmm0
 	mov	rcx, QWORD PTR $T11[rbp]
-	call	??0Boid@0Application@@QEAA@MMI@Z	; Application::Boid::Boid::Boid
-	mov	QWORD PTR tv204[rbp], rax
+	call	??0Boid@0Application@@QEAA@MMAEBU?$tvec4@M$0A@@glm@@@Z ; Application::Boid::Boid::Boid
+	mov	QWORD PTR tv210[rbp], rax
 	jmp	SHORT $LN13@BoidScene
 $LN12@BoidScene:
-	mov	QWORD PTR tv204[rbp], 0
+	mov	QWORD PTR tv210[rbp], 0
 $LN13@BoidScene:
-	mov	rax, QWORD PTR tv204[rbp]
+	mov	rax, QWORD PTR tv210[rbp]
 	mov	QWORD PTR $T10[rbp], rax
 	mov	rax, QWORD PTR $T10[rbp]
 	mov	QWORD PTR $T9[rbp], rax
@@ -8921,7 +8960,7 @@ $LN13@BoidScene:
 
 ; 32   : 				((rand() % 16000) / 1000.0f) - 8.0f, 
 ; 33   : 				((rand() %  9000) / 1000.0f) - 4.5f, 
-; 34   : 				0xFF0000FF));
+; 34   : 				glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)));
 ; 35   : 		}
 
 	jmp	$LN2@BoidScene
@@ -8972,7 +9011,7 @@ $LN3@BoidScene:
 
 	xorps	xmm2, xmm2
 	xorps	xmm1, xmm1
-	lea	rcx, QWORD PTR $T12[rbp]
+	lea	rcx, QWORD PTR $T13[rbp]
 	call	??0?$tvec2@M$0A@@glm@@QEAA@MM@Z		; glm::tvec2<float,0>::tvec2<float,0>
 	mov	rax, QWORD PTR [rax]
 	mov	QWORD PTR ?trackPos@BoidScene@Scene@Application@@2U?$tvec2@M$0A@@glm@@A, rax ; Application::Scene::BoidScene::trackPos
@@ -8980,7 +9019,7 @@ $LN3@BoidScene:
 ; 47   : 	}
 
 	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+224]
+	lea	rsp, QWORD PTR [rbp+256]
 	pop	rbp
 	ret	0
 ??0BoidScene@Scene@Application@@QEAA@XZ ENDP		; Application::Scene::BoidScene::BoidScene
@@ -8999,14 +9038,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$0@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9032,14 +9073,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$1@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9066,14 +9109,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$2@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9100,14 +9145,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$3@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$3
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9134,14 +9181,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$4@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$4
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9168,23 +9217,25 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$5@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$5
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+64]
-	mov	eax, DWORD PTR $T13[rbp]
+	mov	eax, DWORD PTR $T14[rbp]
 	and	eax, 1
 	test	eax, eax
 	je	SHORT $LN20@dtor$5
-	and	DWORD PTR $T13[rbp], -2
+	and	DWORD PTR $T14[rbp], -2
 	lea	rcx, QWORD PTR $T8[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN20@dtor$5:
@@ -9207,14 +9258,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$6@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$6
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9242,14 +9295,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$0@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9276,14 +9331,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$1@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9311,14 +9368,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$2@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9346,14 +9405,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$3@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$3
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9381,14 +9442,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$4@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$4
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -9416,23 +9479,25 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$5@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$5
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+64]
-	mov	eax, DWORD PTR $T13[rbp]
+	mov	eax, DWORD PTR $T14[rbp]
 	and	eax, 1
 	test	eax, eax
 	je	SHORT $LN20@dtor$5
-	and	DWORD PTR $T13[rbp], -2
+	and	DWORD PTR $T14[rbp], -2
 	lea	rcx, QWORD PTR $T8[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN20@dtor$5:
@@ -9456,14 +9521,16 @@ $T9 = 160
 $T10 = 168
 $T11 = 176
 $T12 = 184
-$T13 = 192
-$T14 = 200
-tv196 = 208
-tv174 = 208
-tv157 = 208
-tv138 = 208
-tv204 = 216
-this$ = 240
+$T13 = 200
+$T14 = 208
+$T15 = 216
+tv192 = 224
+tv174 = 224
+tv157 = 224
+tv138 = 224
+tv202 = 232
+tv210 = 240
+this$ = 272
 ?dtor$6@?0???0BoidScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::BoidScene::BoidScene'::`1'::dtor$6
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -14947,6 +15014,53 @@ $LN3:
 	pop	rbp
 	ret	0
 ??0?$tvec2@M$0A@@glm@@QEAA@XZ ENDP			; glm::tvec2<float,0>::tvec2<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z
+_TEXT	SEGMENT
+this$ = 80
+a$ = 88
+b$ = 96
+c$ = 104
+d$ = 112
+??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z PROC			; glm::tvec4<float,0>::tvec4<float,0>, COMDAT
+
+; 193  : 	{}
+
+$LN3:
+	movss	DWORD PTR [rsp+32], xmm3
+	movss	DWORD PTR [rsp+24], xmm2
+	movss	DWORD PTR [rsp+16], xmm1
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 192  : 		: x(a), y(b), z(c), w(d)
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR a$[rbp]
+	movss	DWORD PTR [rax], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR b$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR c$[rbp]
+	movss	DWORD PTR [rax+8], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR d$[rbp]
+	movss	DWORD PTR [rax+12], xmm0
+
+; 193  : 	{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z ENDP			; glm::tvec4<float,0>::tvec4<float,0>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl

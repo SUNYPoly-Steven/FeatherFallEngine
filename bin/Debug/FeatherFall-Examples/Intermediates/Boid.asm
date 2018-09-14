@@ -150,16 +150,12 @@ PUBLIC	?_Tidy@?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application
 PUBLIC	?_Xlength@?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@CAXXZ ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::_Xlength
 PUBLIC	?_Orphan_range@?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@AEBAXPEAPEAVBoid@3Application@@0@Z ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::_Orphan_range
 PUBLIC	??0Boid@0Application@@QEAA@MMAEBU?$tvec4@M$0A@@glm@@@Z ; Application::Boid::Boid::Boid
-PUBLIC	??0Boid@0Application@@QEAA@MMI@Z		; Application::Boid::Boid::Boid
 PUBLIC	??1Boid@0Application@@UEAA@XZ			; Application::Boid::Boid::~Boid
 PUBLIC	?updatePos@Boid@1Application@@QEAAXXZ		; Application::Boid::Boid::updatePos
 PUBLIC	?updateFlockMates@Boid@1Application@@QEAAXAEBV?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@@Z ; Application::Boid::Boid::updateFlockMates
 PUBLIC	?updateSteer@Boid@1Application@@QEAAXXZ		; Application::Boid::Boid::updateSteer
 PUBLIC	?inRadius@Boid@1Application@@AEBA_NPEBV112@@Z	; Application::Boid::Boid::inRadius
 PUBLIC	??_GBoid@0Application@@UEAAPEAXI@Z		; Application::Boid::Boid::`scalar deleting destructor'
-PUBLIC	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z	; glm::tvec2<float,0>::operator+=<float>
-PUBLIC	??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z ; glm::length<float,0,glm::tvec2>
-PUBLIC	??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z	; glm::tvec2<float,0>::operator/=<float>
 PUBLIC	??$?GM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z	; glm::operator-<float,0>
 PUBLIC	??$length@M$0A@Utvec4@glm@@@glm@@YAMAEBU?$tvec4@M$0A@@0@@Z ; glm::length<float,0,glm::tvec4>
 PUBLIC	??$?0M$0A@@?$tvec3@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z ; glm::tvec3<float,0>::tvec3<float,0><float,0>
@@ -170,6 +166,9 @@ PUBLIC	??$?XH@?$tvec3@M$0A@@glm@@QEAAAEAU01@H@Z	; glm::tvec3<float,0>::operator*
 PUBLIC	??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z	; glm::tvec4<float,0>::operator+=<float>
 PUBLIC	??$?_0_K@?$tvec4@M$0A@@glm@@QEAAAEAU01@_K@Z	; glm::tvec4<float,0>::operator/=<unsigned __int64>
 PUBLIC	??$?_0M@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z	; glm::tvec4<float,0>::operator/=<float>
+PUBLIC	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z	; glm::tvec2<float,0>::operator+=<float>
+PUBLIC	??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z ; glm::length<float,0,glm::tvec2>
+PUBLIC	??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z	; glm::tvec2<float,0>::operator/=<float>
 PUBLIC	??$emplace_back@AEBQEAVBoid@1Application@@@?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@QEAA@AEBQEAVBoid@2Application@@@Z ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::emplace_back<Application::Boid::Boid * const &>
 PUBLIC	??$forward@AEBQEAVBoid@1Application@@@std@@YAAEBQEAVBoid@1Application@@AEBQEAV112@@Z ; std::forward<Application::Boid::Boid * const &>
 PUBLIC	??$_Emplace_back_with_unused_capacity@AEBQEAVBoid@1Application@@@?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@AEAA@AEBQEAVBoid@2Application@@@Z ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::_Emplace_back_with_unused_capacity<Application::Boid::Boid * const &>
@@ -189,25 +188,25 @@ PUBLIC	??$_Unfancy@U_Container_proxy@std@@@std@@YAPEAU_Container_proxy@0@PEAU10@
 PUBLIC	??$construct@U_Container_proxy@std@@U12@@?$_Default_allocator_traits@V?$allocator@U_Container_proxy@std@@@std@@@std@@SAXAEAV?$allocator@U_Container_proxy@std@@@1@QEAU_Container_proxy@1@$$QEAU31@@Z ; std::_Default_allocator_traits<std::allocator<std::_Container_proxy> >::construct<std::_Container_proxy,std::_Container_proxy>
 PUBLIC	??$addressof@V?$_Vector_val@U?$_Simple_types@PEAVBoid@1Application@@@std@@@std@@@std@@YAPEAV?$_Vector_val@U?$_Simple_types@PEAVBoid@1Application@@@std@@@0@AEAV10@@Z ; std::addressof<std::_Vector_val<std::_Simple_types<Application::Boid::Boid *> > >
 PUBLIC	??$_Get_size_of_n@$0BA@@std@@YA_K_K@Z		; std::_Get_size_of_n<16>
-PUBLIC	?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z ; glm::detail::compute_length<glm::tvec2,float,0,0>::call
 PUBLIC	??$?ZM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z	; glm::tvec4<float,0>::operator-=<float>
 PUBLIC	?call@?$compute_length@Utvec4@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec4@M$0A@@3@@Z ; glm::detail::compute_length<glm::tvec4,float,0,0>::call
 PUBLIC	?call@?$compute_length@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@@Z ; glm::detail::compute_length<glm::tvec3,float,0,0>::call
 PUBLIC	?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ; glm::detail::compute_vec4_add<float,0,0>::call
 PUBLIC	?call@?$compute_vec4_div@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ; glm::detail::compute_vec4_div<float,0,0>::call
+PUBLIC	?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z ; glm::detail::compute_length<glm::tvec2,float,0,0>::call
 PUBLIC	??$_Destroy_range1@V?$allocator@PEAVBoid@1Application@@@std@@@std@@YAXPEAPEAVBoid@1Application@@0AEAV?$allocator@PEAVBoid@1Application@@@0@U?$integral_constant@_N$00@0@@Z ; std::_Destroy_range1<std::allocator<Application::Boid::Boid *> >
 PUBLIC	??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z ; std::_Allocate_manually_vector_aligned<std::_Default_allocate_traits>
 PUBLIC	??$forward@U_Container_proxy@std@@@std@@YA$$QEAU_Container_proxy@0@AEAU10@@Z ; std::forward<std::_Container_proxy>
+PUBLIC	??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z ; glm::dot<float,0,glm::tvec2>
 PUBLIC	??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z ; glm::dot<float,0,glm::tvec3>
 PUBLIC	??$dot@M$0A@Utvec4@glm@@@glm@@YAMAEBU?$tvec4@M$0A@@0@0@Z ; glm::dot<float,0,glm::tvec4>
-PUBLIC	??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z ; glm::dot<float,0,glm::tvec2>
 PUBLIC	??$_Uninitialized_move@PEAPEAVBoid@1Application@@PEAPEAV112@V?$allocator@PEAVBoid@1Application@@@std@@@std@@YAPEAPEAVBoid@1Application@@QEAPEAV112@0PEAPEAV112@AEAV?$allocator@PEAVBoid@1Application@@@0@@Z ; std::_Uninitialized_move<Application::Boid::Boid * *,Application::Boid::Boid * *,std::allocator<Application::Boid::Boid *> >
 PUBLIC	??$_Get_size_of_n@$07@std@@YA_K_K@Z		; std::_Get_size_of_n<8>
 PUBLIC	?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ; glm::detail::compute_vec4_mul<float,0,0>::call
 PUBLIC	?call@?$compute_vec4_sub@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ; glm::detail::compute_vec4_sub<float,0,0>::call
+PUBLIC	?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z ; glm::detail::compute_dot<glm::tvec2,float,0,0>::call
 PUBLIC	?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z ; glm::detail::compute_dot<glm::tvec3,float,0,0>::call
 PUBLIC	?call@?$compute_dot@Utvec4@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec4@M$0A@@3@0@Z ; glm::detail::compute_dot<glm::tvec4,float,0,0>::call
-PUBLIC	?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z ; glm::detail::compute_dot<glm::tvec2,float,0,0>::call
 PUBLIC	??$_Get_unwrapped@PEAVBoid@1Application@@@std@@YAPEAPEAVBoid@1Application@@QEAPEAV112@@Z ; std::_Get_unwrapped<Application::Boid::Boid *>
 PUBLIC	??$_Idl_distance@PEAPEAVBoid@1Application@@PEAPEAV112@@std@@YA@AEBQEAPEAVBoid@1Application@@0@Z ; std::_Idl_distance<Application::Boid::Boid * *,Application::Boid::Boid * *>
 PUBLIC	??$_Idl_distance1@PEAPEAVBoid@1Application@@PEAPEAV112@@std@@YA_JAEBQEAPEAVBoid@1Application@@0Urandom_access_iterator_tag@0@@Z ; std::_Idl_distance1<Application::Boid::Boid * *,Application::Boid::Boid * *>
@@ -215,9 +214,9 @@ PUBLIC	??$_Get_unwrapped_n@PEAVBoid@1Application@@_J$0A@@std@@YAPEAPEAVBoid@1App
 PUBLIC	??$_Ptr_move_cat@PEAVBoid@1Application@@PEAV112@@std@@YA?AU_Really_trivial_ptr_iterator_tag@0@AEBQEAPEAVBoid@2Application@@0@Z ; std::_Ptr_move_cat<Application::Boid::Boid *,Application::Boid::Boid *>
 PUBLIC	??$_Uninitialized_move_al_unchecked@PEAVBoid@1Application@@PEAV112@V?$allocator@PEAVBoid@1Application@@@std@@@std@@YAPEAPEAVBoid@1Application@@QEAPEAV112@00AEAV?$allocator@PEAVBoid@1Application@@@0@U_Really_trivial_ptr_iterator_tag@0@U?$integral_constant@_N$00@0@@Z ; std::_Uninitialized_move_al_unchecked<Application::Boid::Boid *,Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >
 PUBLIC	??$_Seek_wrapped@PEAVBoid@1Application@@@std@@YAXAEAPEAPEAVBoid@1Application@@QEAPEAV112@@Z ; std::_Seek_wrapped<Application::Boid::Boid *>
-PUBLIC	??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z	; glm::operator*<float,0>
 PUBLIC	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z	; glm::operator*<float,0>
 PUBLIC	??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z	; glm::operator*<float,0>
+PUBLIC	??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z	; glm::operator*<float,0>
 PUBLIC	??$_Copy_memmove@PEAPEAVBoid@1Application@@PEAPEAV112@@std@@YAPEAPEAVBoid@1Application@@PEAPEAV112@00@Z ; std::_Copy_memmove<Application::Boid::Boid * *,Application::Boid::Boid * *>
 PUBLIC	??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z	; glm::tvec4<float,0>::operator*=<float>
 PUBLIC	??_C@_0BB@FCMFBGOM@invalid?5argument@		; `string'
@@ -245,7 +244,6 @@ PUBLIC	??_R0?AVRenderable2D@graphics@core@@@8		; core::graphics::Renderable2D `R
 PUBLIC	??_R3Renderable2D@graphics@core@@8		; core::graphics::Renderable2D::`RTTI Class Hierarchy Descriptor'
 PUBLIC	??_R2Renderable2D@graphics@core@@8		; core::graphics::Renderable2D::`RTTI Base Class Array'
 PUBLIC	__real@3c23d70a
-PUBLIC	__real@3d4ccccd
 PUBLIC	__real@3dcccccd
 PUBLIC	__real@3e19999a
 PUBLIC	__real@3f000000
@@ -254,7 +252,6 @@ PUBLIC	__real@40900000
 PUBLIC	__real@41000000
 PUBLIC	__real@41200000
 PUBLIC	__real@447a0000
-PUBLIC	__real@461c4000
 PUBLIC	__real@5f800000
 PUBLIC	__real@c0900000
 PUBLIC	__real@c1000000
@@ -268,7 +265,6 @@ EXTRN	__imp_rand:PROC
 EXTRN	__imp_sqrtf:PROC
 EXTRN	memmove:PROC
 EXTRN	??0Renderable2D@graphics@core@@QEAA@AEBU?$tvec4@M$0A@@glm@@AEBU?$tvec2@M$0A@@4@0@Z:PROC ; core::graphics::Renderable2D::Renderable2D
-EXTRN	??0Renderable2D@graphics@core@@QEAA@MMMMI@Z:PROC ; core::graphics::Renderable2D::Renderable2D
 EXTRN	??1Renderable2D@graphics@core@@UEAA@XZ:PROC	; core::graphics::Renderable2D::~Renderable2D
 EXTRN	?_Xlength_error@std@@YAXPEBD@Z:PROC		; std::_Xlength_error
 EXTRN	??_EBoid@0Application@@UEAAPEAXI@Z:PROC		; Application::Boid::Boid::`vector deleting destructor'
@@ -694,24 +690,6 @@ $pdata$?dtor$0@?0???0Boid@0Application@@QEAA@MMAEBU?$tvec4@M$0A@@glm@@@Z@4HA DD 
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0Boid@0Application@@QEAA@MMI@Z DD imagerel $LN5
-	DD	imagerel $LN5+365
-	DD	imagerel $unwind$??0Boid@0Application@@QEAA@MMI@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA DD imagerel ?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA
-	DD	imagerel ?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA+25
-	DD	imagerel $unwind$?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA DD imagerel ?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA
-	DD	imagerel ?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA+29
-	DD	imagerel $unwind$?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
 $pdata$??1Boid@0Application@@UEAA@XZ DD imagerel $LN3
 	DD	imagerel $LN3+83
 	DD	imagerel $unwind$??1Boid@0Application@@UEAA@XZ
@@ -745,24 +723,6 @@ pdata	SEGMENT
 $pdata$??_GBoid@0Application@@UEAAPEAXI@Z DD imagerel $LN4
 	DD	imagerel $LN4+62
 	DD	imagerel $unwind$??_GBoid@0Application@@UEAAPEAXI@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z DD imagerel $LN3
-	DD	imagerel $LN3+93
-	DD	imagerel $unwind$??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z DD imagerel $LN3
-	DD	imagerel $LN3+42
-	DD	imagerel $unwind$??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z DD imagerel $LN3
-	DD	imagerel $LN3+87
-	DD	imagerel $unwind$??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -823,6 +783,24 @@ pdata	SEGMENT
 $pdata$??$?_0M@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z DD imagerel $LN3
 	DD	imagerel $LN3+106
 	DD	imagerel $unwind$??$?_0M@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+93
+	DD	imagerel $unwind$??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z DD imagerel $LN3
+	DD	imagerel $LN3+42
+	DD	imagerel $unwind$??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z DD imagerel $LN3
+	DD	imagerel $LN3+87
+	DD	imagerel $unwind$??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -946,12 +924,6 @@ $pdata$??$_Get_size_of_n@$0BA@@std@@YA_K_K@Z DD imagerel $LN4
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z DD imagerel $LN3
-	DD	imagerel $LN3+51
-	DD	imagerel $unwind$?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
 $pdata$??$?ZM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z DD imagerel $LN3
 	DD	imagerel $LN3+110
 	DD	imagerel $unwind$??$?ZM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z
@@ -982,6 +954,12 @@ $pdata$?call@?$compute_vec4_div@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU4
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z DD imagerel $LN3
+	DD	imagerel $LN3+51
+	DD	imagerel $unwind$?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??$_Destroy_range1@V?$allocator@PEAVBoid@1Application@@@std@@@std@@YAXPEAPEAVBoid@1Application@@0AEAV?$allocator@PEAVBoid@1Application@@@0@U?$integral_constant@_N$00@0@@Z DD imagerel $LN3
 	DD	imagerel $LN3+48
 	DD	imagerel $unwind$??$_Destroy_range1@V?$allocator@PEAVBoid@1Application@@@std@@@std@@YAXPEAPEAVBoid@1Application@@0AEAV?$allocator@PEAVBoid@1Application@@@0@U?$integral_constant@_N$00@0@@Z
@@ -1000,6 +978,12 @@ $pdata$??$forward@U_Container_proxy@std@@@std@@YA$$QEAU_Container_proxy@0@AEAU10
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+51
+	DD	imagerel $unwind$??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z DD imagerel $LN3
 	DD	imagerel $LN3+51
 	DD	imagerel $unwind$??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z
@@ -1009,12 +993,6 @@ pdata	SEGMENT
 $pdata$??$dot@M$0A@Utvec4@glm@@@glm@@YAMAEBU?$tvec4@M$0A@@0@0@Z DD imagerel $LN3
 	DD	imagerel $LN3+51
 	DD	imagerel $unwind$??$dot@M$0A@Utvec4@glm@@@glm@@YAMAEBU?$tvec4@M$0A@@0@0@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z DD imagerel $LN3
-	DD	imagerel $LN3+51
-	DD	imagerel $unwind$??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1042,6 +1020,12 @@ $pdata$?call@?$compute_vec4_sub@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU4
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+91
+	DD	imagerel $unwind$?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z DD imagerel $LN3
 	DD	imagerel $LN3+99
 	DD	imagerel $unwind$?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z
@@ -1051,12 +1035,6 @@ pdata	SEGMENT
 $pdata$?call@?$compute_dot@Utvec4@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec4@M$0A@@3@0@Z DD imagerel $LN3
 	DD	imagerel $LN3+108
 	DD	imagerel $unwind$?call@?$compute_dot@Utvec4@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec4@M$0A@@3@0@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z DD imagerel $LN3
-	DD	imagerel $LN3+91
-	DD	imagerel $unwind$?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1102,12 +1080,6 @@ $pdata$??$_Seek_wrapped@PEAVBoid@1Application@@@std@@YAXAEAPEAPEAVBoid@1Applicat
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z DD imagerel $LN3
-	DD	imagerel $LN3+93
-	DD	imagerel $unwind$??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
 $pdata$??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z DD imagerel $LN3
 	DD	imagerel $LN3+99
 	DD	imagerel $unwind$??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z
@@ -1117,6 +1089,12 @@ pdata	SEGMENT
 $pdata$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z DD imagerel $LN3
 	DD	imagerel $LN3+127
 	DD	imagerel $unwind$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+93
+	DD	imagerel $unwind$??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1141,10 +1119,6 @@ CONST	ENDS
 ;	COMDAT __real@5f800000
 CONST	SEGMENT
 __real@5f800000 DD 05f800000r			; 1.84467e+19
-CONST	ENDS
-;	COMDAT __real@461c4000
-CONST	SEGMENT
-__real@461c4000 DD 0461c4000r			; 10000
 CONST	ENDS
 ;	COMDAT __real@447a0000
 CONST	SEGMENT
@@ -1177,10 +1151,6 @@ CONST	ENDS
 ;	COMDAT __real@3dcccccd
 CONST	SEGMENT
 __real@3dcccccd DD 03dcccccdr			; 0.1
-CONST	ENDS
-;	COMDAT __real@3d4ccccd
-CONST	SEGMENT
-__real@3d4ccccd DD 03d4ccccdr			; 0.05
 CONST	ENDS
 ;	COMDAT __real@3c23d70a
 CONST	SEGMENT
@@ -1412,6 +1382,12 @@ $unwind$??$_Copy_memmove@PEAPEAVBoid@1Application@@PEAPEAV112@@std@@YAPEAPEAVBoi
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z DD 025031901H
+	DD	0b2142319H
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z DD 025031901H
 	DD	0d2142319H
 	DD	05010H
@@ -1421,12 +1397,6 @@ xdata	SEGMENT
 $unwind$??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z DD 025051b01H
 	DD	0d216231bH
 	DD	060117012H
-	DD	05010H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z DD 025031901H
-	DD	0b2142319H
 	DD	05010H
 xdata	ENDS
 ;	COMDAT xdata
@@ -1473,14 +1443,6 @@ $unwind$??$_Get_unwrapped@PEAVBoid@1Application@@@std@@YAPEAPEAVBoid@1Applicatio
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z DD 025032219H
-	DD	0d20f2314H
-	DD	0500bH
-	DD	imagerel __GSHandlerCheck
-	DD	068H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$?call@?$compute_dot@Utvec4@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec4@M$0A@@3@0@Z DD 025032519H
 	DD	0f2122317H
 	DD	0500bH
@@ -1494,6 +1456,14 @@ $unwind$?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0
 	DD	0500bH
 	DD	imagerel __GSHandlerCheck
 	DD	070H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z DD 025032219H
+	DD	0d20f2314H
+	DD	0500bH
+	DD	imagerel __GSHandlerCheck
+	DD	068H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -1523,12 +1493,6 @@ $unwind$??$_Uninitialized_move@PEAPEAVBoid@1Application@@PEAPEAV112@V?$allocator
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z DD 025031401H
-	DD	0b20f2314H
-	DD	0500bH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$??$dot@M$0A@Utvec4@glm@@@glm@@YAMAEBU?$tvec4@M$0A@@0@0@Z DD 025031401H
 	DD	0b20f2314H
 	DD	0500bH
@@ -1536,6 +1500,12 @@ xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $unwind$??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z DD 025031401H
 	DD	0b20f2314H
 	DD	0500bH
 xdata	ENDS
@@ -1579,6 +1549,12 @@ $unwind$??$_Destroy_range1@V?$allocator@PEAVBoid@1Application@@@std@@@std@@YAXPE
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$?call@?$compute_vec4_div@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z DD 035031c01H
 	DD	0f217331cH
 	DD	05010H
@@ -1607,12 +1583,6 @@ $unwind$??$?ZM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z DD 025051901H
 	DD	0f2142319H
 	DD	0600c700dH
 	DD	0500bH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z DD 025030f01H
-	DD	0b20a230fH
-	DD	05006H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -1851,6 +1821,24 @@ $unwind$??$emplace_back@AEBQEAVBoid@1Application@@@?$vector@PEAVBoid@1Applicatio
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z DD 025031501H
+	DD	0b2102315H
+	DD	0500cH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??$?_0M@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z DD 025051a01H
 	DD	0f215231aH
 	DD	0600d700eH
@@ -1915,24 +1903,6 @@ $unwind$??$?GM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z DD 025051b01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z DD 025031501H
-	DD	0b2102315H
-	DD	0500cH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z DD 025030f01H
-	DD	0b20a230fH
-	DD	05006H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z DD 025031401H
-	DD	0b20f2314H
-	DD	0500bH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$??_GBoid@0Application@@UEAAPEAXI@Z DD 025031301H
 	DD	0b20e2313H
 	DD	0500aH
@@ -1989,56 +1959,6 @@ $unwind$??1Boid@0Application@@UEAA@XZ DD 025031719H
 	DD	05006H
 	DD	imagerel __CxxFrameHandler3
 	DD	imagerel $cppxdata$??1Boid@0Application@@UEAA@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA DD 020601H
-	DD	050023206H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA DD 020601H
-	DD	050023206H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??0Boid@0Application@@QEAA@MMI@Z DD imagerel ??0Boid@0Application@@QEAA@MMI@Z
-	DD	0ffffffffH
-	DD	imagerel ??0Boid@0Application@@QEAA@MMI@Z+124
-	DD	00H
-	DD	imagerel ??0Boid@0Application@@QEAA@MMI@Z+182
-	DD	01H
-	DD	imagerel ??0Boid@0Application@@QEAA@MMI@Z+343
-	DD	0ffffffffH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$stateUnwindMap$??0Boid@0Application@@QEAA@MMI@Z DD 0ffffffffH
-	DD	imagerel ?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA
-	DD	00H
-	DD	imagerel ?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA
-xdata	ENDS
-;	COMDAT CONST
-CONST	SEGMENT
-$cppxdata$??0Boid@0Application@@QEAA@MMI@Z DD 019930522H
-	DD	02H
-	DD	imagerel $stateUnwindMap$??0Boid@0Application@@QEAA@MMI@Z
-	DD	00H
-	DD	00H
-	DD	04H
-	DD	imagerel $ip2state$??0Boid@0Application@@QEAA@MMI@Z
-	DD	078H
-	DD	00H
-	DD	01H
-CONST	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??0Boid@0Application@@QEAA@MMI@Z DD 035043919H
-	DD	011e3323H
-	DD	050170012H
-	DD	imagerel __GSHandlerCheck_EH
-	DD	imagerel $cppxdata$??0Boid@0Application@@QEAA@MMI@Z
-	DD	08aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -3304,6 +3224,51 @@ $LN3:
 ??$_Copy_memmove@PEAPEAVBoid@1Application@@PEAPEAV112@@std@@YAPEAPEAVBoid@1Application@@PEAPEAV112@00@Z ENDP ; std::_Copy_memmove<Application::Boid::Boid * *,Application::Boid::Boid * *>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec2.inl
+;	COMDAT ??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z
+_TEXT	SEGMENT
+__$ReturnUdt$ = 80
+v1$ = 88
+v2$ = 96
+??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z PROC	; glm::operator*<float,0>, COMDAT
+
+; 573  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+24], r8
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__2F30B87A_type_vec2.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 574  : 		return tvec2<T, P>(
+
+	mov	rax, QWORD PTR v1$[rbp]
+	mov	rcx, QWORD PTR v2$[rbp]
+	movss	xmm0, DWORD PTR [rax+4]
+	mulss	xmm0, DWORD PTR [rcx+4]
+	mov	rax, QWORD PTR v1$[rbp]
+	mov	rcx, QWORD PTR v2$[rbp]
+	movss	xmm1, DWORD PTR [rax]
+	mulss	xmm1, DWORD PTR [rcx]
+	movaps	xmm2, xmm0
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??0?$tvec2@M$0A@@glm@@QEAA@MM@Z		; glm::tvec2<float,0>::tvec2<float,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 575  : 			v1.x * v2.x,
+; 576  : 			v1.y * v2.y);
+; 577  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z ENDP	; glm::operator*<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec3.inl
 ;	COMDAT ??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z
 _TEXT	SEGMENT
@@ -3406,51 +3371,6 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ENDP	; glm::operator*<float,0>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec2.inl
-;	COMDAT ??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z
-_TEXT	SEGMENT
-__$ReturnUdt$ = 80
-v1$ = 88
-v2$ = 96
-??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z PROC	; glm::operator*<float,0>, COMDAT
-
-; 573  : 	{
-
-$LN3:
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+32]
-	lea	rcx, OFFSET FLAT:__2F30B87A_type_vec2.inl
-	call	__CheckForDebuggerJustMyCode
-
-; 574  : 		return tvec2<T, P>(
-
-	mov	rax, QWORD PTR v1$[rbp]
-	mov	rcx, QWORD PTR v2$[rbp]
-	movss	xmm0, DWORD PTR [rax+4]
-	mulss	xmm0, DWORD PTR [rcx+4]
-	mov	rax, QWORD PTR v1$[rbp]
-	mov	rcx, QWORD PTR v2$[rbp]
-	movss	xmm1, DWORD PTR [rax]
-	mulss	xmm1, DWORD PTR [rcx]
-	movaps	xmm2, xmm0
-	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
-	call	??0?$tvec2@M$0A@@glm@@QEAA@MM@Z		; glm::tvec2<float,0>::tvec2<float,0>
-	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
-
-; 575  : 			v1.x * v2.x,
-; 576  : 			v1.y * v2.y);
-; 577  : 	}
-
-	lea	rsp, QWORD PTR [rbp+64]
-	pop	rbp
-	ret	0
-??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z ENDP	; glm::operator*<float,0>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\xutility
@@ -3686,52 +3606,6 @@ $LN3:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
-;	COMDAT ?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z
-_TEXT	SEGMENT
-tmp$ = 0
-__$ArrayPad$ = 72
-x$ = 96
-y$ = 104
-?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z PROC ; glm::detail::compute_dot<glm::tvec2,float,0,0>::call, COMDAT
-
-; 47   : 		{
-
-$LN3:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 112				; 00000070H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rax, QWORD PTR __security_cookie
-	xor	rax, rbp
-	mov	QWORD PTR __$ArrayPad$[rbp], rax
-	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
-	call	__CheckForDebuggerJustMyCode
-
-; 48   : 			tvec2<T, P> tmp(x * y);
-
-	mov	r8, QWORD PTR y$[rbp]
-	mov	rdx, QWORD PTR x$[rbp]
-	lea	rcx, QWORD PTR tmp$[rbp]
-	call	??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z ; glm::operator*<float,0>
-
-; 49   : 			return tmp.x + tmp.y;
-
-	movss	xmm0, DWORD PTR tmp$[rbp]
-	addss	xmm0, DWORD PTR tmp$[rbp+4]
-
-; 50   : 		}
-
-	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
-	xor	rcx, rbp
-	call	__security_check_cookie
-	lea	rsp, QWORD PTR [rbp+80]
-	pop	rbp
-	ret	0
-?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z ENDP ; glm::detail::compute_dot<glm::tvec2,float,0,0>::call
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
 ;	COMDAT ?call@?$compute_dot@Utvec4@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec4@M$0A@@3@0@Z
 _TEXT	SEGMENT
 tmp$ = 0
@@ -3825,6 +3699,52 @@ $LN3:
 	pop	rbp
 	ret	0
 ?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z ENDP ; glm::detail::compute_dot<glm::tvec3,float,0,0>::call
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
+;	COMDAT ?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z
+_TEXT	SEGMENT
+tmp$ = 0
+__$ArrayPad$ = 72
+x$ = 96
+y$ = 104
+?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z PROC ; glm::detail::compute_dot<glm::tvec2,float,0,0>::call, COMDAT
+
+; 47   : 		{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rbp
+	mov	QWORD PTR __$ArrayPad$[rbp], rax
+	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 48   : 			tvec2<T, P> tmp(x * y);
+
+	mov	r8, QWORD PTR y$[rbp]
+	mov	rdx, QWORD PTR x$[rbp]
+	lea	rcx, QWORD PTR tmp$[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec2@M$0A@@0@AEBU10@0@Z ; glm::operator*<float,0>
+
+; 49   : 			return tmp.x + tmp.y;
+
+	movss	xmm0, DWORD PTR tmp$[rbp]
+	addss	xmm0, DWORD PTR tmp$[rbp+4]
+
+; 50   : 		}
+
+	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
+	xor	rcx, rbp
+	call	__security_check_cookie
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z ENDP ; glm::detail::compute_dot<glm::tvec2,float,0,0>::call
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
@@ -4087,39 +4007,6 @@ $LN3:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
-;	COMDAT ??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z
-_TEXT	SEGMENT
-x$ = 80
-y$ = 88
-??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z PROC ; glm::dot<float,0,glm::tvec2>, COMDAT
-
-; 172  : 	{
-
-$LN3:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+32]
-	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
-	call	__CheckForDebuggerJustMyCode
-
-; 173  : 		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'dot' accepts only floating-point inputs");
-; 174  : 		return detail::compute_dot<vecType, T, P, detail::is_aligned<P>::value>::call(x, y);
-
-	mov	rdx, QWORD PTR y$[rbp]
-	mov	rcx, QWORD PTR x$[rbp]
-	call	?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z ; glm::detail::compute_dot<glm::tvec2,float,0,0>::call
-
-; 175  : 	}
-
-	lea	rsp, QWORD PTR [rbp+64]
-	pop	rbp
-	ret	0
-??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z ENDP ; glm::dot<float,0,glm::tvec2>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
 ;	COMDAT ??$dot@M$0A@Utvec4@glm@@@glm@@YAMAEBU?$tvec4@M$0A@@0@0@Z
 _TEXT	SEGMENT
 x$ = 80
@@ -4183,6 +4070,39 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z ENDP ; glm::dot<float,0,glm::tvec3>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
+;	COMDAT ??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z
+_TEXT	SEGMENT
+x$ = 80
+y$ = 88
+??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z PROC ; glm::dot<float,0,glm::tvec2>, COMDAT
+
+; 172  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 173  : 		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'dot' accepts only floating-point inputs");
+; 174  : 		return detail::compute_dot<vecType, T, P, detail::is_aligned<P>::value>::call(x, y);
+
+	mov	rdx, QWORD PTR y$[rbp]
+	mov	rcx, QWORD PTR x$[rbp]
+	call	?call@?$compute_dot@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@0@Z ; glm::detail::compute_dot<glm::tvec2,float,0,0>::call
+
+; 175  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z ENDP ; glm::dot<float,0,glm::tvec2>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\type_traits
@@ -4366,6 +4286,37 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$_Destroy_range1@V?$allocator@PEAVBoid@1Application@@@std@@@std@@YAXPEAPEAVBoid@1Application@@0AEAV?$allocator@PEAVBoid@1Application@@@0@U?$integral_constant@_N$00@0@@Z ENDP ; std::_Destroy_range1<std::allocator<Application::Boid::Boid *> >
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
+;	COMDAT ?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z
+_TEXT	SEGMENT
+v$ = 80
+?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z PROC ; glm::detail::compute_length<glm::tvec2,float,0,0>::call, COMDAT
+
+; 17   : 		{
+
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 18   : 			return sqrt(dot(v, v));
+
+	mov	rdx, QWORD PTR v$[rbp]
+	mov	rcx, QWORD PTR v$[rbp]
+	call	??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z ; glm::dot<float,0,glm::tvec2>
+	call	?sqrt@@YAMM@Z				; sqrt
+
+; 19   : 		}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z ENDP ; glm::detail::compute_length<glm::tvec2,float,0,0>::call
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
@@ -4589,37 +4540,6 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$?ZM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ENDP	; glm::tvec4<float,0>::operator-=<float>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
-;	COMDAT ?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z
-_TEXT	SEGMENT
-v$ = 80
-?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z PROC ; glm::detail::compute_length<glm::tvec2,float,0,0>::call, COMDAT
-
-; 17   : 		{
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+32]
-	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
-	call	__CheckForDebuggerJustMyCode
-
-; 18   : 			return sqrt(dot(v, v));
-
-	mov	rdx, QWORD PTR v$[rbp]
-	mov	rcx, QWORD PTR v$[rbp]
-	call	??$dot@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@0@Z ; glm::dot<float,0,glm::tvec2>
-	call	?sqrt@@YAMM@Z				; sqrt
-
-; 19   : 		}
-
-	lea	rsp, QWORD PTR [rbp+64]
-	pop	rbp
-	ret	0
-?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z ENDP ; glm::detail::compute_length<glm::tvec2,float,0,0>::call
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\xmemory0
@@ -5745,6 +5665,131 @@ $LN1@emplace_ba:
 ??$emplace_back@AEBQEAVBoid@1Application@@@?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@QEAA@AEBQEAVBoid@2Application@@@Z ENDP ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::emplace_back<Application::Boid::Boid * const &>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec2.inl
+;	COMDAT ??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z
+_TEXT	SEGMENT
+this$ = 80
+scalar$ = 88
+??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z PROC		; glm::tvec2<float,0>::operator/=<float>, COMDAT
+
+; 219  : 	{
+
+$LN3:
+	movss	DWORD PTR [rsp+16], xmm1
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__2F30B87A_type_vec2.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 220  : 		this->x /= static_cast<T>(scalar);
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR [rax]
+	divss	xmm0, DWORD PTR scalar$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 221  : 		this->y /= static_cast<T>(scalar);
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR [rax+4]
+	divss	xmm0, DWORD PTR scalar$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+
+; 222  : 		return *this;
+
+	mov	rax, QWORD PTR this$[rbp]
+
+; 223  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z ENDP		; glm::tvec2<float,0>::operator/=<float>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
+;	COMDAT ??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z
+_TEXT	SEGMENT
+v$ = 80
+??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z PROC ; glm::length<float,0,glm::tvec2>, COMDAT
+
+; 141  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 142  : 		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'length' accepts only floating-point inputs");
+; 143  : 
+; 144  : 		return detail::compute_length<vecType, T, P, detail::is_aligned<P>::value>::call(v);
+
+	mov	rcx, QWORD PTR v$[rbp]
+	call	?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z ; glm::detail::compute_length<glm::tvec2,float,0,0>::call
+
+; 145  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z ENDP ; glm::length<float,0,glm::tvec2>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec2.inl
+;	COMDAT ??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z
+_TEXT	SEGMENT
+this$ = 80
+v$ = 88
+??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z PROC	; glm::tvec2<float,0>::operator+=<float>, COMDAT
+
+; 156  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__2F30B87A_type_vec2.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 157  : 		this->x += static_cast<T>(v.x);
+
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR v$[rbp]
+	movss	xmm0, DWORD PTR [rax]
+	addss	xmm0, DWORD PTR [rcx]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 158  : 		this->y += static_cast<T>(v.y);
+
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR v$[rbp]
+	movss	xmm0, DWORD PTR [rax+4]
+	addss	xmm0, DWORD PTR [rcx+4]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+
+; 159  : 		return *this;
+
+	mov	rax, QWORD PTR this$[rbp]
+
+; 160  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ENDP	; glm::tvec2<float,0>::operator+=<float>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
 ;	COMDAT ??$?_0M@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z
 _TEXT	SEGMENT
@@ -6224,131 +6269,6 @@ $LN3:
 ??$?GM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ENDP	; glm::operator-<float,0>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
-; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec2.inl
-;	COMDAT ??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z
-_TEXT	SEGMENT
-this$ = 80
-scalar$ = 88
-??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z PROC		; glm::tvec2<float,0>::operator/=<float>, COMDAT
-
-; 219  : 	{
-
-$LN3:
-	movss	DWORD PTR [rsp+16], xmm1
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+32]
-	lea	rcx, OFFSET FLAT:__2F30B87A_type_vec2.inl
-	call	__CheckForDebuggerJustMyCode
-
-; 220  : 		this->x /= static_cast<T>(scalar);
-
-	mov	rax, QWORD PTR this$[rbp]
-	movss	xmm0, DWORD PTR [rax]
-	divss	xmm0, DWORD PTR scalar$[rbp]
-	mov	rax, QWORD PTR this$[rbp]
-	movss	DWORD PTR [rax], xmm0
-
-; 221  : 		this->y /= static_cast<T>(scalar);
-
-	mov	rax, QWORD PTR this$[rbp]
-	movss	xmm0, DWORD PTR [rax+4]
-	divss	xmm0, DWORD PTR scalar$[rbp]
-	mov	rax, QWORD PTR this$[rbp]
-	movss	DWORD PTR [rax+4], xmm0
-
-; 222  : 		return *this;
-
-	mov	rax, QWORD PTR this$[rbp]
-
-; 223  : 	}
-
-	lea	rsp, QWORD PTR [rbp+64]
-	pop	rbp
-	ret	0
-??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z ENDP		; glm::tvec2<float,0>::operator/=<float>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
-;	COMDAT ??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z
-_TEXT	SEGMENT
-v$ = 80
-??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z PROC ; glm::length<float,0,glm::tvec2>, COMDAT
-
-; 141  : 	{
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+32]
-	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
-	call	__CheckForDebuggerJustMyCode
-
-; 142  : 		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'length' accepts only floating-point inputs");
-; 143  : 
-; 144  : 		return detail::compute_length<vecType, T, P, detail::is_aligned<P>::value>::call(v);
-
-	mov	rcx, QWORD PTR v$[rbp]
-	call	?call@?$compute_length@Utvec2@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec2@M$0A@@3@@Z ; glm::detail::compute_length<glm::tvec2,float,0,0>::call
-
-; 145  : 	}
-
-	lea	rsp, QWORD PTR [rbp+64]
-	pop	rbp
-	ret	0
-??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z ENDP ; glm::length<float,0,glm::tvec2>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec2.inl
-;	COMDAT ??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z
-_TEXT	SEGMENT
-this$ = 80
-v$ = 88
-??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z PROC	; glm::tvec2<float,0>::operator+=<float>, COMDAT
-
-; 156  : 	{
-
-$LN3:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+32]
-	lea	rcx, OFFSET FLAT:__2F30B87A_type_vec2.inl
-	call	__CheckForDebuggerJustMyCode
-
-; 157  : 		this->x += static_cast<T>(v.x);
-
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR v$[rbp]
-	movss	xmm0, DWORD PTR [rax]
-	addss	xmm0, DWORD PTR [rcx]
-	mov	rax, QWORD PTR this$[rbp]
-	movss	DWORD PTR [rax], xmm0
-
-; 158  : 		this->y += static_cast<T>(v.y);
-
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR v$[rbp]
-	movss	xmm0, DWORD PTR [rax+4]
-	addss	xmm0, DWORD PTR [rcx+4]
-	mov	rax, QWORD PTR this$[rbp]
-	movss	DWORD PTR [rax+4], xmm0
-
-; 159  : 		return *this;
-
-	mov	rax, QWORD PTR this$[rbp]
-
-; 160  : 	}
-
-	lea	rsp, QWORD PTR [rbp+64]
-	pop	rbp
-	ret	0
-??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ENDP	; glm::tvec2<float,0>::operator+=<float>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
 ;	COMDAT ??_GBoid@0Application@@UEAAPEAXI@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -6388,7 +6308,7 @@ this$ = 96
 boid$ = 104
 ?inRadius@Boid@1Application@@AEBA_NPEBV112@@Z PROC	; Application::Boid::Boid::inRadius, COMDAT
 
-; 132  : 	bool Boid::inRadius(const Boid* boid) const {
+; 122  : 	bool Boid::inRadius(const Boid* boid) const {
 
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
@@ -6399,7 +6319,7 @@ $LN5:
 	lea	rcx, OFFSET FLAT:__62129A41_boid.cpp
 	call	__CheckForDebuggerJustMyCode
 
-; 133  : 		float xcheck = (boid->position.x - this->position.x) * (boid->position.x - this->position.x);
+; 123  : 		float xcheck = (boid->position.x - this->position.x) * (boid->position.x - this->position.x);
 
 	mov	rax, QWORD PTR boid$[rbp]
 	mov	rcx, QWORD PTR this$[rbp]
@@ -6412,7 +6332,7 @@ $LN5:
 	mulss	xmm0, xmm1
 	movss	DWORD PTR xcheck$[rbp], xmm0
 
-; 134  : 		float ycheck = (boid->position.y - this->position.y) * (boid->position.y - this->position.y);
+; 124  : 		float ycheck = (boid->position.y - this->position.y) * (boid->position.y - this->position.y);
 
 	mov	rax, QWORD PTR boid$[rbp]
 	mov	rcx, QWORD PTR this$[rbp]
@@ -6425,14 +6345,14 @@ $LN5:
 	mulss	xmm0, xmm1
 	movss	DWORD PTR ycheck$[rbp], xmm0
 
-; 135  : 		float radius = FLOCK_RADIUS * FLOCK_RADIUS;
+; 125  : 		float radius = FLOCK_RADIUS * FLOCK_RADIUS;
 
 	movss	xmm0, DWORD PTR __real@3f800000
 	movss	DWORD PTR radius$[rbp], xmm0
 
-; 136  : 
-; 137  : 		//euclidian dist x^2 + y^2 = z^2 to check for point in circle
-; 138  : 		return (xcheck + ycheck < radius);
+; 126  : 
+; 127  : 		//euclidian dist x^2 + y^2 = z^2 to check for point in circle
+; 128  : 		return (xcheck + ycheck < radius);
 
 	movss	xmm0, DWORD PTR xcheck$[rbp]
 	addss	xmm0, DWORD PTR ycheck$[rbp]
@@ -6446,7 +6366,7 @@ $LN3@inRadius:
 $LN4@inRadius:
 	movzx	eax, BYTE PTR tv152[rbp]
 
-; 139  : 	}
+; 129  : 	}
 
 	lea	rsp, QWORD PTR [rbp+80]
 	pop	rbp
@@ -6496,7 +6416,7 @@ __$ArrayPad$ = 368
 this$ = 416
 ?updateSteer@Boid@1Application@@QEAAXXZ PROC		; Application::Boid::Boid::updateSteer, COMDAT
 
-; 67   : 	void Boid::updateSteer() {
+; 57   : 	void Boid::updateSteer() {
 
 $LN19:
 	mov	QWORD PTR [rsp+8], rcx
@@ -6511,8 +6431,8 @@ $LN19:
 	lea	rcx, OFFSET FLAT:__62129A41_boid.cpp
 	call	__CheckForDebuggerJustMyCode
 
-; 68   : 
-; 69   : 		glm::vec3 output = glm::vec3(0.0f, 0.0f, 0.0f);
+; 58   : 
+; 59   : 		glm::vec3 output = glm::vec3(0.0f, 0.0f, 0.0f);
 
 	xorps	xmm3, xmm3
 	xorps	xmm2, xmm2
@@ -6520,9 +6440,9 @@ $LN19:
 	lea	rcx, QWORD PTR output$[rbp]
 	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
 
-; 70   : 
-; 71   : 		//RULE Separation
-; 72   : 		glm::vec3 sep = glm::vec3(0.0f, 0.0f, 0.0f);
+; 60   : 
+; 61   : 		//RULE Separation
+; 62   : 		glm::vec3 sep = glm::vec3(0.0f, 0.0f, 0.0f);
 
 	xorps	xmm3, xmm3
 	xorps	xmm2, xmm2
@@ -6530,7 +6450,7 @@ $LN19:
 	lea	rcx, QWORD PTR sep$[rbp]
 	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
 
-; 73   : 		for (int i = 0; i < flockMates.size(); ++i) {
+; 63   : 		for (int i = 0; i < flockMates.size(); ++i) {
 
 	mov	DWORD PTR i$1[rbp], 0
 	jmp	SHORT $LN4@updateStee
@@ -6548,7 +6468,7 @@ $LN4@updateStee:
 	cmp	rcx, rax
 	jae	$LN3@updateStee
 
-; 74   : 			float dist = glm::length(flockMates[i]->position - position);
+; 64   : 			float dist = glm::length(flockMates[i]->position - position);
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -6571,13 +6491,13 @@ $LN4@updateStee:
 	call	??$length@M$0A@Utvec4@glm@@@glm@@YAMAEBU?$tvec4@M$0A@@0@@Z ; glm::length<float,0,glm::tvec4>
 	movss	DWORD PTR dist$2[rbp], xmm0
 
-; 75   : 				if (dist < CROWD_DIST) {
+; 65   : 				if (dist < CROWD_DIST) {
 
 	movss	xmm0, DWORD PTR __real@3e19999a
 	comiss	xmm0, DWORD PTR dist$2[rbp]
 	jbe	$LN11@updateStee
 
-; 76   : 					glm::vec3 diff = flockMates[i]->position - position;
+; 66   : 					glm::vec3 diff = flockMates[i]->position - position;
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -6600,7 +6520,7 @@ $LN4@updateStee:
 	lea	rcx, QWORD PTR diff$3[rbp]
 	call	??$?0M$0A@@?$tvec3@M$0A@@glm@@QEAA@AEBU?$tvec4@M$0A@@1@@Z ; glm::tvec3<float,0>::tvec3<float,0><float,0>
 
-; 77   : 					diff /= glm::length(diff);
+; 67   : 					diff /= glm::length(diff);
 
 	lea	rcx, QWORD PTR diff$3[rbp]
 	call	??$length@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@@Z ; glm::length<float,0,glm::tvec3>
@@ -6608,35 +6528,35 @@ $LN4@updateStee:
 	lea	rcx, QWORD PTR diff$3[rbp]
 	call	??$?_0M@?$tvec3@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec3<float,0>::operator/=<float>
 
-; 78   : 					diff /= dist; //weight
+; 68   : 					diff /= dist; //weight
 
 	movss	xmm1, DWORD PTR dist$2[rbp]
 	lea	rcx, QWORD PTR diff$3[rbp]
 	call	??$?_0M@?$tvec3@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec3<float,0>::operator/=<float>
 
-; 79   : 					sep += diff;
+; 69   : 					sep += diff;
 
 	lea	rdx, QWORD PTR diff$3[rbp]
 	lea	rcx, QWORD PTR sep$[rbp]
 	call	??$?YM@?$tvec3@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec3<float,0>::operator+=<float>
 $LN11@updateStee:
 
-; 80   : 				}
-; 81   : 		}
+; 70   : 				}
+; 71   : 		}
 
 	jmp	$LN2@updateStee
 $LN3@updateStee:
 
-; 82   : 		//sep /= glm::length(sep) * 10; //do i want this normalized??
-; 83   : 		sep *= -1;
+; 72   : 		//sep /= glm::length(sep) * 10; //do i want this normalized??
+; 73   : 		sep *= -1;
 
 	mov	edx, -1
 	lea	rcx, QWORD PTR sep$[rbp]
 	call	??$?XH@?$tvec3@M$0A@@glm@@QEAAAEAU01@H@Z ; glm::tvec3<float,0>::operator*=<int>
 
-; 84   : 
-; 85   : 		//RULE Alignment
-; 86   : 		glm::vec3 ali = glm::vec3(0.0f, 0.0f, 0.0f);
+; 74   : 
+; 75   : 		//RULE Alignment
+; 76   : 		glm::vec3 ali = glm::vec3(0.0f, 0.0f, 0.0f);
 
 	xorps	xmm3, xmm3
 	xorps	xmm2, xmm2
@@ -6644,7 +6564,7 @@ $LN3@updateStee:
 	lea	rcx, QWORD PTR ali$[rbp]
 	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
 
-; 87   : 		for (int i = 0; i < flockMates.size(); ++i) {
+; 77   : 		for (int i = 0; i < flockMates.size(); ++i) {
 
 	mov	DWORD PTR i$4[rbp], 0
 	jmp	SHORT $LN7@updateStee
@@ -6662,7 +6582,7 @@ $LN7@updateStee:
 	cmp	rcx, rax
 	jae	$LN6@updateStee
 
-; 88   : 			ali += glm::vec3(flockMates[i]->direction.x, flockMates[i]->direction.y, 0.0f);
+; 78   : 			ali += glm::vec3(flockMates[i]->direction.x, flockMates[i]->direction.y, 0.0f);
 
 	movsxd	rax, DWORD PTR i$4[rbp]
 	mov	rcx, QWORD PTR this$[rbp]
@@ -6689,7 +6609,7 @@ $LN7@updateStee:
 	lea	rcx, QWORD PTR ali$[rbp]
 	call	??$?YM@?$tvec3@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec3<float,0>::operator+=<float>
 
-; 89   : 			ali /= glm::length(ali);
+; 79   : 			ali /= glm::length(ali);
 
 	lea	rcx, QWORD PTR ali$[rbp]
 	call	??$length@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@@Z ; glm::length<float,0,glm::tvec3>
@@ -6697,15 +6617,15 @@ $LN7@updateStee:
 	lea	rcx, QWORD PTR ali$[rbp]
 	call	??$?_0M@?$tvec3@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec3<float,0>::operator/=<float>
 
-; 90   : 		}
+; 80   : 		}
 
 	jmp	$LN5@updateStee
 $LN6@updateStee:
 
-; 91   : 		//ali /= glm::length(ali) * 10;
-; 92   : 
-; 93   : 		//RULE Cohesion
-; 94   : 		glm::vec4 coh = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
+; 81   : 		//ali /= glm::length(ali) * 10;
+; 82   : 
+; 83   : 		//RULE Cohesion
+; 84   : 		glm::vec4 coh = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
 
 	movss	xmm0, DWORD PTR __real@3f800000
 	movss	DWORD PTR [rsp+32], xmm0
@@ -6715,7 +6635,7 @@ $LN6@updateStee:
 	lea	rcx, QWORD PTR coh$[rbp]
 	call	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z	; glm::tvec4<float,0>::tvec4<float,0>
 
-; 95   : 		for (int i = 0; i < flockMates.size(); ++i) {
+; 85   : 		for (int i = 0; i < flockMates.size(); ++i) {
 
 	mov	DWORD PTR i$5[rbp], 0
 	jmp	SHORT $LN10@updateStee
@@ -6733,7 +6653,7 @@ $LN10@updateStee:
 	cmp	rcx, rax
 	jae	SHORT $LN9@updateStee
 
-; 96   : 			coh += flockMates[i]->position;
+; 86   : 			coh += flockMates[i]->position;
 
 	movsxd	rax, DWORD PTR i$5[rbp]
 	mov	rcx, QWORD PTR this$[rbp]
@@ -6746,12 +6666,12 @@ $LN10@updateStee:
 	lea	rcx, QWORD PTR coh$[rbp]
 	call	??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec4<float,0>::operator+=<float>
 
-; 97   : 		}
+; 87   : 		}
 
 	jmp	SHORT $LN8@updateStee
 $LN9@updateStee:
 
-; 98   : 		coh /= flockMates.size();
+; 88   : 		coh /= flockMates.size();
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 56					; 00000038H
@@ -6761,7 +6681,7 @@ $LN9@updateStee:
 	lea	rcx, QWORD PTR coh$[rbp]
 	call	??$?_0_K@?$tvec4@M$0A@@glm@@QEAAAEAU01@_K@Z ; glm::tvec4<float,0>::operator/=<unsigned __int64>
 
-; 99   : 		coh = coh - position;
+; 89   : 		coh = coh - position;
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -6775,7 +6695,7 @@ $LN9@updateStee:
 	mov	ecx, 16
 	rep movsb
 
-; 100  : 		coh /= glm::length(coh) * 10;
+; 90   : 		coh /= glm::length(coh) * 10;
 
 	lea	rcx, QWORD PTR coh$[rbp]
 	call	??$length@M$0A@Utvec4@glm@@@glm@@YAMAEBU?$tvec4@M$0A@@0@@Z ; glm::length<float,0,glm::tvec4>
@@ -6784,9 +6704,9 @@ $LN9@updateStee:
 	lea	rcx, QWORD PTR coh$[rbp]
 	call	??$?_0M@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec4<float,0>::operator/=<float>
 
-; 101  : 
-; 102  : 		//RULE Mouse Tracking
-; 103  : 		glm::vec3 mtk = glm::vec3(0.0f, 0.0f, 0.0f);
+; 91   : 
+; 92   : 		//RULE Mouse Tracking
+; 93   : 		glm::vec3 mtk = glm::vec3(0.0f, 0.0f, 0.0f);
 
 	xorps	xmm3, xmm3
 	xorps	xmm2, xmm2
@@ -6794,7 +6714,7 @@ $LN9@updateStee:
 	lea	rcx, QWORD PTR mtk$[rbp]
 	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
 
-; 104  : 		mtk = glm::vec4(Scene::BoidScene::trackPos.x, Scene::BoidScene::trackPos.y, 0.0f, 1.0f) - position;
+; 94   : 		mtk = glm::vec4(Scene::BoidScene::trackPos.x, Scene::BoidScene::trackPos.y, 0.0f, 1.0f) - position;
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -6821,7 +6741,7 @@ $LN9@updateStee:
 	mov	ecx, 12
 	rep movsb
 
-; 105  : 		mtk /= glm::length(mtk) * 0.1f;
+; 95   : 		mtk /= glm::length(mtk) * 0.1f;
 
 	lea	rcx, QWORD PTR mtk$[rbp]
 	call	??$length@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@@Z ; glm::length<float,0,glm::tvec3>
@@ -6830,10 +6750,10 @@ $LN9@updateStee:
 	lea	rcx, QWORD PTR mtk$[rbp]
 	call	??$?_0M@?$tvec3@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec3<float,0>::operator/=<float>
 
-; 106  : 
-; 107  : 		//RULE Obstacle Avoidance
-; 108  : 		//NOTE: for now, the obstacles are just going to be the walls
-; 109  : 		glm::vec3 avo = glm::vec3(0.0f, 0.0f, 0.0f);
+; 96   : 
+; 97   : 		//RULE Obstacle Avoidance
+; 98   : 		//NOTE: for now, the obstacles are just going to be the walls
+; 99   : 		glm::vec3 avo = glm::vec3(0.0f, 0.0f, 0.0f);
 
 	xorps	xmm3, xmm3
 	xorps	xmm2, xmm2
@@ -6841,7 +6761,7 @@ $LN9@updateStee:
 	lea	rcx, QWORD PTR avo$[rbp]
 	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
 
-; 110  : 		avo.x = (-4.5f - position.x) + (4.5f - position.x);
+; 100  : 		avo.x = (-4.5f - position.x) + (4.5f - position.x);
 
 	mov	rax, QWORD PTR this$[rbp]
 	movss	xmm0, DWORD PTR __real@c0900000
@@ -6852,7 +6772,7 @@ $LN9@updateStee:
 	addss	xmm0, xmm1
 	movss	DWORD PTR avo$[rbp], xmm0
 
-; 111  : 		avo.y = (-8.0f - position.y) + (8.0f - position.y);
+; 101  : 		avo.y = (-8.0f - position.y) + (8.0f - position.y);
 
 	mov	rax, QWORD PTR this$[rbp]
 	movss	xmm0, DWORD PTR __real@c1000000
@@ -6863,7 +6783,7 @@ $LN9@updateStee:
 	addss	xmm0, xmm1
 	movss	DWORD PTR avo$[rbp+4], xmm0
 
-; 112  : 		avo /= glm::length(avo) * 10;
+; 102  : 		avo /= glm::length(avo) * 10;
 
 	lea	rcx, QWORD PTR avo$[rbp]
 	call	??$length@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@@Z ; glm::length<float,0,glm::tvec3>
@@ -6872,11 +6792,11 @@ $LN9@updateStee:
 	lea	rcx, QWORD PTR avo$[rbp]
 	call	??$?_0M@?$tvec3@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec3<float,0>::operator/=<float>
 
-; 113  : 
-; 114  : 
-; 115  : 
-; 116  : 
-; 117  : 		if (Scene::BoidScene::doSeparation)    direction += glm::vec2(sep.x, sep.y);
+; 103  : 
+; 104  : 
+; 105  : 
+; 106  : 
+; 107  : 		if (Scene::BoidScene::doSeparation)    direction += glm::vec2(sep.x, sep.y);
 
 	movzx	eax, BYTE PTR ?doSeparation@BoidScene@Scene@Application@@2_NA ; Application::Scene::BoidScene::doSeparation
 	test	eax, eax
@@ -6891,7 +6811,7 @@ $LN9@updateStee:
 	call	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec2<float,0>::operator+=<float>
 $LN12@updateStee:
 
-; 118  : 		if (Scene::BoidScene::doAlignment)     direction += glm::vec2(ali.x, ali.y);
+; 108  : 		if (Scene::BoidScene::doAlignment)     direction += glm::vec2(ali.x, ali.y);
 
 	movzx	eax, BYTE PTR ?doAlignment@BoidScene@Scene@Application@@2_NA ; Application::Scene::BoidScene::doAlignment
 	test	eax, eax
@@ -6906,7 +6826,7 @@ $LN12@updateStee:
 	call	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec2<float,0>::operator+=<float>
 $LN13@updateStee:
 
-; 119  : 		if (Scene::BoidScene::doCohesion)      direction += glm::vec2(coh.x, coh.y);
+; 109  : 		if (Scene::BoidScene::doCohesion)      direction += glm::vec2(coh.x, coh.y);
 
 	movzx	eax, BYTE PTR ?doCohesion@BoidScene@Scene@Application@@2_NA ; Application::Scene::BoidScene::doCohesion
 	test	eax, eax
@@ -6921,9 +6841,9 @@ $LN13@updateStee:
 	call	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec2<float,0>::operator+=<float>
 $LN14@updateStee:
 
-; 120  : 
-; 121  : 		//add Noise
-; 122  : 		if (Scene::BoidScene::doNoise)         direction += glm::vec2((rand() % 1000 / 1000.0f) - 0.5f, (rand() % 1000 / 1000.0f) - 0.5f);
+; 110  : 
+; 111  : 		//add Noise
+; 112  : 		if (Scene::BoidScene::doNoise)         direction += glm::vec2((rand() % 1000 / 1000.0f) - 0.5f, (rand() % 1000 / 1000.0f) - 0.5f);
 
 	movzx	eax, BYTE PTR ?doNoise@BoidScene@Scene@Application@@2_NA ; Application::Scene::BoidScene::doNoise
 	test	eax, eax
@@ -6956,9 +6876,9 @@ $LN14@updateStee:
 	call	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec2<float,0>::operator+=<float>
 $LN15@updateStee:
 
-; 123  : 
-; 124  : 		//add Mouse Tracking
-; 125  : 		if (Scene::BoidScene::doMouseTracking) direction += glm::vec2(mtk.x, mtk.y);
+; 113  : 
+; 114  : 		//add Mouse Tracking
+; 115  : 		if (Scene::BoidScene::doMouseTracking) direction += glm::vec2(mtk.x, mtk.y);
 
 	movzx	eax, BYTE PTR ?doMouseTracking@BoidScene@Scene@Application@@2_NA ; Application::Scene::BoidScene::doMouseTracking
 	test	eax, eax
@@ -6973,7 +6893,7 @@ $LN15@updateStee:
 	call	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec2<float,0>::operator+=<float>
 $LN16@updateStee:
 
-; 126  : 		if (Scene::BoidScene::doAvoid)         direction += glm::vec2(avo.x, avo.y);
+; 116  : 		if (Scene::BoidScene::doAvoid)         direction += glm::vec2(avo.x, avo.y);
 
 	movzx	eax, BYTE PTR ?doAvoid@BoidScene@Scene@Application@@2_NA ; Application::Scene::BoidScene::doAvoid
 	test	eax, eax
@@ -6988,8 +6908,8 @@ $LN16@updateStee:
 	call	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec2<float,0>::operator+=<float>
 $LN17@updateStee:
 
-; 127  : 
-; 128  : 		direction /= glm::length(direction) * 10;
+; 117  : 
+; 118  : 		direction /= glm::length(direction) * 10;
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 48					; 00000030H
@@ -7002,8 +6922,8 @@ $LN17@updateStee:
 	mov	rcx, rax
 	call	??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec2<float,0>::operator/=<float>
 
-; 129  : 
-; 130  : 	}
+; 119  : 
+; 120  : 	}
 
 	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
 	xor	rcx, rbp
@@ -7025,7 +6945,7 @@ this$ = 96
 boids$ = 104
 ?updateFlockMates@Boid@1Application@@QEAAXAEBV?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@@Z PROC ; Application::Boid::Boid::updateFlockMates, COMDAT
 
-; 50   : 	void Boid::updateFlockMates(const std::vector<Boid*>& boids) {
+; 40   : 	void Boid::updateFlockMates(const std::vector<Boid*>& boids) {
 
 $LN8:
 	mov	QWORD PTR [rsp+16], rdx
@@ -7036,16 +6956,16 @@ $LN8:
 	lea	rcx, OFFSET FLAT:__62129A41_boid.cpp
 	call	__CheckForDebuggerJustMyCode
 
-; 51   : 
-; 52   : 		flockMates.clear();
+; 41   : 
+; 42   : 		flockMates.clear();
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 56					; 00000038H
 	mov	rcx, rax
 	call	?clear@?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@QEAAXXZ ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::clear
 
-; 53   : 
-; 54   : 		for (int i = 0; i < boids.size(); ++i) {
+; 43   : 
+; 44   : 		for (int i = 0; i < boids.size(); ++i) {
 
 	mov	DWORD PTR i$1[rbp], 0
 	jmp	SHORT $LN4@updateFloc
@@ -7062,7 +6982,7 @@ $LN4@updateFloc:
 	cmp	rcx, rax
 	jae	SHORT $LN3@updateFloc
 
-; 55   : 			if (boids[i] == this) {
+; 45   : 			if (boids[i] == this) {
 
 	movsxd	rax, DWORD PTR i$1[rbp]
 	mov	rdx, rax
@@ -7072,13 +6992,13 @@ $LN4@updateFloc:
 	cmp	QWORD PTR [rax], rcx
 	jne	SHORT $LN5@updateFloc
 
-; 56   : 				continue; //dont add yourself to flockmates
+; 46   : 				continue; //dont add yourself to flockmates
 
 	jmp	SHORT $LN2@updateFloc
 $LN5@updateFloc:
 
-; 57   : 			}
-; 58   : 			if (inRadius(boids[i])) {
+; 47   : 			}
+; 48   : 			if (inRadius(boids[i])) {
 
 	movsxd	rax, DWORD PTR i$1[rbp]
 	mov	rdx, rax
@@ -7091,8 +7011,8 @@ $LN5@updateFloc:
 	test	eax, eax
 	je	SHORT $LN6@updateFloc
 
-; 59   : 				//if the boid is in the radius, that boid is a flockmate
-; 60   : 				flockMates.push_back(boids[i]);
+; 49   : 				//if the boid is in the radius, that boid is a flockmate
+; 50   : 				flockMates.push_back(boids[i]);
 
 	movsxd	rax, DWORD PTR i$1[rbp]
 	mov	rdx, rax
@@ -7104,15 +7024,15 @@ $LN5@updateFloc:
 	call	?push_back@?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@QEAAXAEBQEAVBoid@3Application@@@Z ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::push_back
 $LN6@updateFloc:
 
-; 61   : 			}
-; 62   : 
-; 63   : 		}
+; 51   : 			}
+; 52   : 
+; 53   : 		}
 
 	jmp	$LN2@updateFloc
 $LN3@updateFloc:
 
-; 64   : 
-; 65   : 	}
+; 54   : 
+; 55   : 	}
 
 	lea	rsp, QWORD PTR [rbp+80]
 	pop	rbp
@@ -7126,7 +7046,7 @@ _TEXT	SEGMENT
 this$ = 80
 ?updatePos@Boid@1Application@@QEAAXXZ PROC		; Application::Boid::Boid::updatePos, COMDAT
 
-; 32   : 	void Boid::updatePos() {
+; 22   : 	void Boid::updatePos() {
 
 $LN7:
 	mov	QWORD PTR [rsp+8], rcx
@@ -7136,14 +7056,14 @@ $LN7:
 	lea	rcx, OFFSET FLAT:__62129A41_boid.cpp
 	call	__CheckForDebuggerJustMyCode
 
-; 33   : 
-; 34   : 		//find the new direction to move in
-; 35   : 		//glm::vec2 acc = glm::vec2(((rand() % 1000) / 10000.0f) - 0.05f, ((rand() % 1000) / 10000.0f) - 0.05f);
-; 36   : 		//direction += acc;
-; 37   : 		//direction /= glm::length(direction) * 10;
-; 38   : 
-; 39   : 		//add that move vector to the current position
-; 40   : 		position.x += direction.x;
+; 23   : 
+; 24   : 		//find the new direction to move in
+; 25   : 		//glm::vec2 acc = glm::vec2(((rand() % 1000) / 10000.0f) - 0.05f, ((rand() % 1000) / 10000.0f) - 0.05f);
+; 26   : 		//direction += acc;
+; 27   : 		//direction /= glm::length(direction) * 10;
+; 28   : 
+; 29   : 		//add that move vector to the current position
+; 30   : 		position.x += direction.x;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR this$[rbp]
@@ -7152,7 +7072,7 @@ $LN7:
 	mov	rax, QWORD PTR this$[rbp]
 	movss	DWORD PTR [rax+8], xmm0
 
-; 41   : 		position.y += direction.y;
+; 31   : 		position.y += direction.y;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR this$[rbp]
@@ -7161,9 +7081,9 @@ $LN7:
 	mov	rax, QWORD PTR this$[rbp]
 	movss	DWORD PTR [rax+12], xmm0
 
-; 42   : 
-; 43   : 		//check for out of bounds collitions
-; 44   : 		if (position.x > 8.0f) position.x = -8.0f;
+; 32   : 
+; 33   : 		//check for out of bounds collitions
+; 34   : 		if (position.x > 8.0f) position.x = -8.0f;
 
 	mov	rax, QWORD PTR this$[rbp]
 	movss	xmm0, DWORD PTR [rax+8]
@@ -7174,7 +7094,7 @@ $LN7:
 	movss	DWORD PTR [rax+8], xmm0
 $LN2@updatePos:
 
-; 45   : 		if (position.x < -8.0f) position.x = 8.0f;
+; 35   : 		if (position.x < -8.0f) position.x = 8.0f;
 
 	mov	rax, QWORD PTR this$[rbp]
 	movss	xmm0, DWORD PTR __real@c1000000
@@ -7185,7 +7105,7 @@ $LN2@updatePos:
 	movss	DWORD PTR [rax+8], xmm0
 $LN3@updatePos:
 
-; 46   : 		if (position.y > 4.5f) position.y = -4.5f;
+; 36   : 		if (position.y > 4.5f) position.y = -4.5f;
 
 	mov	rax, QWORD PTR this$[rbp]
 	movss	xmm0, DWORD PTR [rax+12]
@@ -7196,7 +7116,7 @@ $LN3@updatePos:
 	movss	DWORD PTR [rax+12], xmm0
 $LN4@updatePos:
 
-; 47   : 		if (position.y < -4.5f) position.y = 4.5f;
+; 37   : 		if (position.y < -4.5f) position.y = 4.5f;
 
 	mov	rax, QWORD PTR this$[rbp]
 	movss	xmm0, DWORD PTR __real@c0900000
@@ -7207,7 +7127,7 @@ $LN4@updatePos:
 	movss	DWORD PTR [rax+12], xmm0
 $LN5@updatePos:
 
-; 48   : 	}
+; 38   : 	}
 
 	lea	rsp, QWORD PTR [rbp+64]
 	pop	rbp
@@ -7222,7 +7142,7 @@ $T1 = 64
 this$ = 96
 ??1Boid@0Application@@UEAA@XZ PROC			; Application::Boid::Boid::~Boid, COMDAT
 
-; 28   : 	Boid::~Boid() {
+; 18   : 	Boid::~Boid() {
 
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
@@ -7237,8 +7157,8 @@ $LN3:
 	lea	rcx, OFFSET FLAT:??_7Boid@0Application@@6B@
 	mov	QWORD PTR [rax], rcx
 
-; 29   : 
-; 30   : 	}
+; 19   : 
+; 20   : 	}
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 56					; 00000038H
@@ -7253,220 +7173,6 @@ $LN3:
 	ret	0
 ??1Boid@0Application@@UEAA@XZ ENDP			; Application::Boid::Boid::~Boid
 _TEXT	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-; File l:\dev\featherfallengine\featherfall-examples\src\boids\boid.cpp
-;	COMDAT ??0Boid@0Application@@QEAA@MMI@Z
-_TEXT	SEGMENT
-acc$ = 0
-$T1 = 72
-tv132 = 80
-__$ArrayPad$ = 88
-this$ = 112
-px$ = 120
-py$ = 128
-pcolor$ = 136
-??0Boid@0Application@@QEAA@MMI@Z PROC			; Application::Boid::Boid::Boid, COMDAT
-
-; 21   : 	{
-
-$LN5:
-	mov	DWORD PTR [rsp+32], r9d
-	movss	DWORD PTR [rsp+24], xmm2
-	movss	DWORD PTR [rsp+16], xmm1
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 144				; 00000090H
-	lea	rbp, QWORD PTR [rsp+48]
-	mov	QWORD PTR $T1[rbp], -2
-	mov	rax, QWORD PTR __security_cookie
-	xor	rax, rbp
-	mov	QWORD PTR __$ArrayPad$[rbp], rax
-	lea	rcx, OFFSET FLAT:__62129A41_boid.cpp
-	call	__CheckForDebuggerJustMyCode
-
-; 19   : 		: Renderable2D(px, py, 0.1f, 0.1f, pcolor),
-
-	mov	eax, DWORD PTR pcolor$[rbp]
-	mov	DWORD PTR [rsp+40], eax
-	movss	xmm0, DWORD PTR __real@3dcccccd
-	movss	DWORD PTR [rsp+32], xmm0
-	movss	xmm3, DWORD PTR __real@3dcccccd
-	movss	xmm2, DWORD PTR py$[rbp]
-	movss	xmm1, DWORD PTR px$[rbp]
-	mov	rcx, QWORD PTR this$[rbp]
-	call	??0Renderable2D@graphics@core@@QEAA@MMMMI@Z ; core::graphics::Renderable2D::Renderable2D
-	npad	1
-
-; 21   : 	{
-
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rcx, OFFSET FLAT:??_7Boid@0Application@@6B@
-	mov	QWORD PTR [rax], rcx
-
-; 20   : 		  direction(glm::vec2(0.01f, 0.0f))
-
-	mov	rax, QWORD PTR this$[rbp]
-	add	rax, 48					; 00000030H
-	xorps	xmm2, xmm2
-	movss	xmm1, DWORD PTR __real@3c23d70a
-	mov	rcx, rax
-	call	??0?$tvec2@M$0A@@glm@@QEAA@MM@Z		; glm::tvec2<float,0>::tvec2<float,0>
-
-; 21   : 	{
-
-	mov	rax, QWORD PTR this$[rbp]
-	add	rax, 56					; 00000038H
-	mov	rcx, rax
-	call	??0?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@QEAA@XZ ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >
-	npad	1
-
-; 22   : 		glm::vec2 acc = glm::vec2(((rand() % 1000) / 10000.0f) - 0.05f, ((rand() % 1000) / 10000.0f) - 0.05f);
-
-	call	QWORD PTR __imp_rand
-	cdq
-	mov	ecx, 1000				; 000003e8H
-	idiv	ecx
-	mov	eax, edx
-	cvtsi2ss xmm0, eax
-	divss	xmm0, DWORD PTR __real@461c4000
-	subss	xmm0, DWORD PTR __real@3d4ccccd
-	movss	DWORD PTR tv132[rbp], xmm0
-	call	QWORD PTR __imp_rand
-	cdq
-	mov	ecx, 1000				; 000003e8H
-	idiv	ecx
-	mov	eax, edx
-	cvtsi2ss xmm0, eax
-	divss	xmm0, DWORD PTR __real@461c4000
-	subss	xmm0, DWORD PTR __real@3d4ccccd
-	movss	xmm1, DWORD PTR tv132[rbp]
-	movaps	xmm2, xmm1
-	movaps	xmm1, xmm0
-	lea	rcx, QWORD PTR acc$[rbp]
-	call	??0?$tvec2@M$0A@@glm@@QEAA@MM@Z		; glm::tvec2<float,0>::tvec2<float,0>
-
-; 23   : 		direction += acc;
-
-	mov	rax, QWORD PTR this$[rbp]
-	add	rax, 48					; 00000030H
-	lea	rdx, QWORD PTR acc$[rbp]
-	mov	rcx, rax
-	call	??$?YM@?$tvec2@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec2<float,0>::operator+=<float>
-
-; 24   : 		direction /= glm::length(direction) * 10;
-
-	mov	rax, QWORD PTR this$[rbp]
-	add	rax, 48					; 00000030H
-	mov	rcx, rax
-	call	??$length@M$0A@Utvec2@glm@@@glm@@YAMAEBU?$tvec2@M$0A@@0@@Z ; glm::length<float,0,glm::tvec2>
-	mulss	xmm0, DWORD PTR __real@41200000
-	mov	rax, QWORD PTR this$[rbp]
-	add	rax, 48					; 00000030H
-	movaps	xmm1, xmm0
-	mov	rcx, rax
-	call	??$?_0M@?$tvec2@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec2<float,0>::operator/=<float>
-	npad	1
-
-; 25   : 
-; 26   : 	}
-
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
-	xor	rcx, rbp
-	call	__security_check_cookie
-	lea	rsp, QWORD PTR [rbp+96]
-	pop	rbp
-	ret	0
-??0Boid@0Application@@QEAA@MMI@Z ENDP			; Application::Boid::Boid::Boid
-_TEXT	ENDS
-;	COMDAT text$x
-text$x	SEGMENT
-acc$ = 0
-$T1 = 72
-tv132 = 80
-__$ArrayPad$ = 88
-this$ = 112
-px$ = 120
-py$ = 128
-pcolor$ = 136
-?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA PROC	; `Application::dtor$0::Boid::Boid'::`1'::dtor$0
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	lea	rbp, QWORD PTR [rdx+48]
-	mov	rcx, QWORD PTR this$[rbp]
-	call	??1Renderable2D@graphics@core@@UEAA@XZ	; core::graphics::Renderable2D::~Renderable2D
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA ENDP	; `Application::dtor$0::Boid::Boid'::`1'::dtor$0
-text$x	ENDS
-;	COMDAT text$x
-text$x	SEGMENT
-acc$ = 0
-$T1 = 72
-tv132 = 80
-__$ArrayPad$ = 88
-this$ = 112
-px$ = 120
-py$ = 128
-pcolor$ = 136
-?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA PROC	; `Application::dtor$1::Boid::Boid'::`1'::dtor$1
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	lea	rbp, QWORD PTR [rdx+48]
-	mov	rcx, QWORD PTR this$[rbp]
-	add	rcx, 56					; 00000038H
-	call	??1?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@QEAA@XZ ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::~vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA ENDP	; `Application::dtor$1::Boid::Boid'::`1'::dtor$1
-text$x	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-;	COMDAT text$x
-text$x	SEGMENT
-acc$ = 0
-$T1 = 72
-tv132 = 80
-__$ArrayPad$ = 88
-this$ = 112
-px$ = 120
-py$ = 128
-pcolor$ = 136
-?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA PROC	; `Application::dtor$0::Boid::Boid'::`1'::dtor$0
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	lea	rbp, QWORD PTR [rdx+48]
-	mov	rcx, QWORD PTR this$[rbp]
-	call	??1Renderable2D@graphics@core@@UEAA@XZ	; core::graphics::Renderable2D::~Renderable2D
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$0@?0???0Boid@0Application@@QEAA@MMI@Z@4HA ENDP	; `Application::dtor$0::Boid::Boid'::`1'::dtor$0
-text$x	ENDS
-; Function compile flags: /Odtp /RTCu /ZI
-;	COMDAT text$x
-text$x	SEGMENT
-acc$ = 0
-$T1 = 72
-tv132 = 80
-__$ArrayPad$ = 88
-this$ = 112
-px$ = 120
-py$ = 128
-pcolor$ = 136
-?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA PROC	; `Application::dtor$1::Boid::Boid'::`1'::dtor$1
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	lea	rbp, QWORD PTR [rdx+48]
-	mov	rcx, QWORD PTR this$[rbp]
-	add	rcx, 56					; 00000038H
-	call	??1?$vector@PEAVBoid@1Application@@V?$allocator@PEAVBoid@1Application@@@std@@@std@@QEAA@XZ ; std::vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >::~vector<Application::Boid::Boid *,std::allocator<Application::Boid::Boid *> >
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$1@?0???0Boid@0Application@@QEAA@MMI@Z@4HA ENDP	; `Application::dtor$1::Boid::Boid'::`1'::dtor$1
-text$x	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File l:\dev\featherfallengine\featherfall-examples\src\boids\boid.cpp
 ;	COMDAT ??0Boid@0Application@@QEAA@MMAEBU?$tvec4@M$0A@@glm@@@Z

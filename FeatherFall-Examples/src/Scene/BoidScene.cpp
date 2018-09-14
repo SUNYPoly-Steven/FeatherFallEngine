@@ -31,7 +31,7 @@ namespace Application { namespace Scene {
 			boids.push_back(new Boid::Boid(
 				((rand() % 16000) / 1000.0f) - 8.0f, 
 				((rand() %  9000) / 1000.0f) - 4.5f, 
-				0xFF0000FF));
+				glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)));
 		}
 
 		shader->bind();
@@ -109,7 +109,7 @@ namespace Application { namespace Scene {
 			boids.push_back(new Boid::Boid(
 				((rand() % 16000) / 1000.0f) - 8.0f,
 				((rand() % 9000) / 1000.0f) - 4.5f,
-				0xFF0000FF));
+				glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)));
 		}
 	}
 

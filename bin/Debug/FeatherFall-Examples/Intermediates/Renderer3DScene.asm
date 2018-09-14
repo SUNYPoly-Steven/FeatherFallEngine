@@ -81,15 +81,27 @@ __A0704DDA_type_vec4.inl DB 01H
 __BF97B2F5_type_mat4x4.inl DB 01H
 __61F2447D_type_vec4.hpp DB 01H
 __30E3E102_xstddef DB 01H
+__7BEF4FA2_transform.inl DB 01H
 __7E15BB52_type_mat4x4.hpp DB 01H
 __7419D44A__vectorize.hpp DB 01H
+__B60C3EDD_matrix_transform.inl DB 01H
 __AD6915D3_xmemory DB 01H
+__01BEA0FA_func_geometric.inl DB 01H
+__C83BDAB1_func_exponential.inl DB 01H
 msvcjmc	ENDS
 PUBLIC	??_H@YAXPEAX_K1P6APEAX0@Z@Z			; `vector constructor iterator'
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
 PUBLIC	??2@YAPEAX_KPEAX@Z				; operator new
+PUBLIC	?cos@@YAMM@Z					; cos
+PUBLIC	?sin@@YAMM@Z					; sin
+PUBLIC	?sqrt@@YAMM@Z					; sqrt
 PUBLIC	?max@?$numeric_limits@_J@std@@SA_JXZ		; std::numeric_limits<__int64>::max
+PUBLIC	?length@?$tvec4@M$0A@@glm@@SAHXZ		; glm::tvec4<float,0>::length
+PUBLIC	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z		; glm::tvec4<float,0>::operator[]
+PUBLIC	??0?$tvec4@M$0A@@glm@@QEAA@XZ			; glm::tvec4<float,0>::tvec4<float,0>
+PUBLIC	??0?$tvec4@M$0A@@glm@@QEAA@M@Z			; glm::tvec4<float,0>::tvec4<float,0>
+PUBLIC	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z		; glm::tvec4<float,0>::tvec4<float,0>
 PUBLIC	?length@?$char_traits@D@std@@SA_KQEBD@Z		; std::char_traits<char>::length
 PUBLIC	?copy@?$char_traits@D@std@@SAPEADQEADQEBD_K@Z	; std::char_traits<char>::copy
 PUBLIC	?move@?$char_traits@D@std@@SAPEADQEADQEBD_K@Z	; std::char_traits<char>::move
@@ -139,6 +151,13 @@ PUBLIC	?_Calculate_growth@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2
 PUBLIC	?_Tidy_init@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAXXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Tidy_init
 PUBLIC	?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAXXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Tidy_deallocate
 PUBLIC	?_Xlen@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@SAXXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Xlen
+PUBLIC	??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z	; glm::tmat4x4<float,0>::tmat4x4<float,0>
+PUBLIC	??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z		; glm::tmat4x4<float,0>::tmat4x4<float,0>
+PUBLIC	?length@?$tmat4x4@M$0A@@glm@@SAHXZ		; glm::tmat4x4<float,0>::length
+PUBLIC	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+PUBLIC	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+PUBLIC	?length@?$tvec3@M$0A@@glm@@SAHXZ		; glm::tvec3<float,0>::length
+PUBLIC	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z		; glm::tvec3<float,0>::operator[]
 PUBLIC	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z		; glm::tvec3<float,0>::tvec3<float,0>
 PUBLIC	?SizeOfType@BufferElement@buffers@core@@SAII@Z	; core::buffers::BufferElement::SizeOfType
 PUBLIC	??0?$allocator@UBufferElement@buffers@core@@@std@@QEAA@XZ ; std::allocator<core::buffers::BufferElement>::allocator<core::buffers::BufferElement>
@@ -187,6 +206,7 @@ PUBLIC	??0BufferLayout@buffers@core@@QEAA@XZ		; core::buffers::BufferLayout::Buf
 PUBLIC	??$push@M@BufferLayout@buffers@core@@QEAAXI@Z	; core::buffers::BufferLayout::push<float>
 PUBLIC	??1BufferLayout@buffers@core@@QEAA@XZ		; core::buffers::BufferLayout::~BufferLayout
 PUBLIC	?__autoclassinit2@BufferLayout@buffers@core@@QEAAX_K@Z ; core::buffers::BufferLayout::__autoclassinit2
+PUBLIC	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z	; glm::operator*<float,0>
 PUBLIC	??0Renderable3D@graphics@core@@QEAA@PEBXPEBIII_N@Z ; core::graphics::Renderable3D::Renderable3D
 PUBLIC	??1Renderable3D@graphics@core@@QEAA@XZ		; core::graphics::Renderable3D::~Renderable3D
 PUBLIC	??_GRenderable3D@graphics@core@@QEAAPEAXI@Z	; core::graphics::Renderable3D::`scalar deleting destructor'
@@ -196,6 +216,7 @@ PUBLIC	?OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z ; Application::Scen
 PUBLIC	?OnRender@Renderer3DScene@Scene@Application@@UEAAXXZ ; Application::Scene::Renderer3DScene::OnRender
 PUBLIC	?OnImGuiRender@Renderer3DScene@Scene@Application@@UEAAXXZ ; Application::Scene::Renderer3DScene::OnImGuiRender
 PUBLIC	??_GRenderer3DScene@Scene@Application@@UEAAPEAXI@Z ; Application::Scene::Renderer3DScene::`scalar deleting destructor'
+PUBLIC	??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@MAEBU?$tvec3@M$0A@@0@@Z ; glm::rotate<float,0>
 PUBLIC	??$move@AEAUBufferElement@buffers@core@@@std@@YA$$QEAUBufferElement@buffers@core@@AEAU123@@Z ; std::move<core::buffers::BufferElement &>
 PUBLIC	??$emplace_back@UBufferElement@buffers@core@@@?$vector@UBufferElement@buffers@core@@V?$allocator@UBufferElement@buffers@core@@@std@@@std@@QEAA@$$QEAUBufferElement@buffers@core@@@Z ; std::vector<core::buffers::BufferElement,std::allocator<core::buffers::BufferElement> >::emplace_back<core::buffers::BufferElement>
 PUBLIC	??$forward@UBufferElement@buffers@core@@@std@@YA$$QEAUBufferElement@buffers@core@@AEAU123@@Z ; std::forward<core::buffers::BufferElement>
@@ -224,12 +245,23 @@ PUBLIC	??$addressof@V?$_Vector_val@U?$_Simple_types@UBufferElement@buffers@core@
 PUBLIC	??$_Destroy_range@V?$allocator@UBufferElement@buffers@core@@@std@@@std@@YAXPEAUBufferElement@buffers@core@@0AEAV?$allocator@UBufferElement@buffers@core@@@0@@Z ; std::_Destroy_range<std::allocator<core::buffers::BufferElement> >
 PUBLIC	??$?0D@?$allocator@U_Container_proxy@std@@@std@@QEAA@AEBV?$allocator@D@1@@Z ; std::allocator<std::_Container_proxy>::allocator<std::_Container_proxy><char>
 PUBLIC	??$_Get_size_of_n@$0BA@@std@@YA_K_K@Z		; std::_Get_size_of_n<16>
+PUBLIC	??$?0MHHH@?$tvec4@M$0A@@glm@@QEAA@MHHH@Z	; glm::tvec4<float,0>::tvec4<float,0><float,int,int,int>
+PUBLIC	??$?0HMHH@?$tvec4@M$0A@@glm@@QEAA@HMHH@Z	; glm::tvec4<float,0>::tvec4<float,0><int,float,int,int>
+PUBLIC	??$?0HHMH@?$tvec4@M$0A@@glm@@QEAA@HHMH@Z	; glm::tvec4<float,0>::tvec4<float,0><int,int,float,int>
+PUBLIC	??$?0HHHM@?$tvec4@M$0A@@glm@@QEAA@HHHM@Z	; glm::tvec4<float,0>::tvec4<float,0><int,int,int,float>
+PUBLIC	??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z	; glm::operator+<float,0>
+PUBLIC	??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z	; glm::tvec4<float,0>::operator*=<float>
+PUBLIC	??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@AEBU10@MAEBU?$tvec3@M$0A@@0@@Z ; glm::rotate<float,0>
 PUBLIC	??$forward@AEBQEAD@std@@YAAEBQEADAEBQEAD@Z	; std::forward<char * const &>
 PUBLIC	??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z ; std::_Allocate_manually_vector_aligned<std::_Default_allocate_traits>
 PUBLIC	??$forward@U_Container_proxy@std@@@std@@YA$$QEAU_Container_proxy@0@AEAU10@@Z ; std::forward<std::_Container_proxy>
 PUBLIC	??$_Destroy_range1@V?$allocator@UBufferElement@buffers@core@@@std@@@std@@YAXPEAUBufferElement@buffers@core@@0AEAV?$allocator@UBufferElement@buffers@core@@@0@U?$integral_constant@_N$00@0@@Z ; std::_Destroy_range1<std::allocator<core::buffers::BufferElement> >
 PUBLIC	??$_Uninitialized_move@PEAUBufferElement@buffers@core@@PEAU123@V?$allocator@UBufferElement@buffers@core@@@std@@@std@@YAPEAUBufferElement@buffers@core@@QEAU123@0PEAU123@AEAV?$allocator@UBufferElement@buffers@core@@@0@@Z ; std::_Uninitialized_move<core::buffers::BufferElement *,core::buffers::BufferElement *,std::allocator<core::buffers::BufferElement> >
 PUBLIC	??$_Get_size_of_n@$0M@@std@@YA_K_K@Z		; std::_Get_size_of_n<12>
+PUBLIC	??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z	; glm::tvec4<float,0>::operator+=<float>
+PUBLIC	?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ; glm::detail::compute_vec4_mul<float,0,0>::call
+PUBLIC	??$normalize@M$0A@Utvec3@glm@@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@@Z ; glm::normalize<float,0,glm::tvec3>
+PUBLIC	??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@MAEBU10@@Z	; glm::operator*<float,0>
 PUBLIC	??$_Get_unwrapped@UBufferElement@buffers@core@@@std@@YAPEAUBufferElement@buffers@core@@QEAU123@@Z ; std::_Get_unwrapped<core::buffers::BufferElement>
 PUBLIC	??$_Idl_distance@PEAUBufferElement@buffers@core@@PEAU123@@std@@YA@AEBQEAUBufferElement@buffers@core@@0@Z ; std::_Idl_distance<core::buffers::BufferElement *,core::buffers::BufferElement *>
 PUBLIC	??$_Idl_distance1@PEAUBufferElement@buffers@core@@PEAU123@@std@@YA_JAEBQEAUBufferElement@buffers@core@@0Urandom_access_iterator_tag@0@@Z ; std::_Idl_distance1<core::buffers::BufferElement *,core::buffers::BufferElement *>
@@ -237,7 +269,14 @@ PUBLIC	??$_Get_unwrapped_n@UBufferElement@buffers@core@@_J$0A@@std@@YAPEAUBuffer
 PUBLIC	??$_Ptr_move_cat@UBufferElement@buffers@core@@U123@@std@@YA?AU_Really_trivial_ptr_iterator_tag@0@AEBQEAUBufferElement@buffers@core@@0@Z ; std::_Ptr_move_cat<core::buffers::BufferElement,core::buffers::BufferElement>
 PUBLIC	??$_Uninitialized_move_al_unchecked@UBufferElement@buffers@core@@U123@V?$allocator@UBufferElement@buffers@core@@@std@@@std@@YAPEAUBufferElement@buffers@core@@QEAU123@00AEAV?$allocator@UBufferElement@buffers@core@@@0@U_Really_trivial_ptr_iterator_tag@0@U?$integral_constant@_N$00@0@@Z ; std::_Uninitialized_move_al_unchecked<core::buffers::BufferElement,core::buffers::BufferElement,std::allocator<core::buffers::BufferElement> >
 PUBLIC	??$_Seek_wrapped@UBufferElement@buffers@core@@@std@@YAXAEAPEAUBufferElement@buffers@core@@QEAU123@@Z ; std::_Seek_wrapped<core::buffers::BufferElement>
+PUBLIC	?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ; glm::detail::compute_vec4_add<float,0,0>::call
+PUBLIC	?call@?$compute_normalize@M$0A@Utvec3@glm@@$0A@@detail@glm@@SA?AU?$tvec3@M$0A@@3@AEBU43@@Z ; glm::detail::compute_normalize<float,0,glm::tvec3,0>::call
 PUBLIC	??$_Copy_memmove@PEAUBufferElement@buffers@core@@PEAU123@@std@@YAPEAUBufferElement@buffers@core@@PEAU123@00@Z ; std::_Copy_memmove<core::buffers::BufferElement *,core::buffers::BufferElement *>
+PUBLIC	??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z ; glm::dot<float,0,glm::tvec3>
+PUBLIC	??$inversesqrt@M@glm@@YAMM@Z			; glm::inversesqrt<float>
+PUBLIC	??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@M@Z	; glm::operator*<float,0>
+PUBLIC	?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z ; glm::detail::compute_dot<glm::tvec3,float,0,0>::call
+PUBLIC	??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z	; glm::operator*<float,0>
 PUBLIC	??_C@_0BB@FCMFBGOM@invalid?5argument@		; `string'
 PUBLIC	??_C@_02DKCKIIND@?$CFs@				; `string'
 PUBLIC	??_C@_1CG@JNLFBNGN@?$AA?$CC?$AAi?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAa?$AAr?$AAg?$AAu?$AAm?$AAe@ ; `string'
@@ -246,12 +285,21 @@ PUBLIC	??_C@_0GK@FKLKIKPD@c?3?2program?5files?5?$CIx86?$CJ?2microsof@ ; `string'
 PUBLIC	??_C@_1NE@MCNNPIKO@?$AAc?$AA?3?$AA?2?$AAp?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAf?$AAi?$AAl?$AAe@ ; `string'
 PUBLIC	??_C@_1EK@NIFDJFDG@?$AAs?$AAt?$AAd?$AA?3?$AA?3?$AA_?$AAA?$AAd?$AAj?$AAu?$AAs?$AAt?$AA_?$AAm?$AAa@ ; `string'
 PUBLIC	??_7Renderer3DScene@Scene@Application@@6B@	; Application::Scene::Renderer3DScene::`vftable'
+PUBLIC	?__LINE__Var@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4JA ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::__LINE__Var
 PUBLIC	??_C@_0CC@GLNBHNPM@res?1shaders?1Renderer3DTest?4shad@ ; `string'
 PUBLIC	??_C@_08IMNAFLGG@prMatrix@			; `string'
 PUBLIC	??_C@_08LHCKCMII@vwMatrix@			; `string'
+PUBLIC	??_C@_0EM@HCBNGLBJ@l?3?2dev?2featherfallengine?2feathe@ ; `string'
+PUBLIC	??_C@_0CF@NGMMNMAN@glClearColor?$CI0?45f?0?50?45f?0?50?45f?0?5@ ; `string'
+PUBLIC	??_C@_08LIGONNFJ@mlMatrix@			; `string'
+PUBLIC	??_C@_1DK@BGNCJAPL@?$AAi?$AA?5?$AA?$DO?$AA?$DN?$AA?5?$AA0?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt@ ; `string'
+PUBLIC	??_C@_1JE@JLGGFMIE@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@ ; `string'
+PUBLIC	??_C@_1JI@BDACPION@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@ ; `string'
+PUBLIC	??_C@_1CG@KOFHLCJL@?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt?$AAh?$AAi?$AAs?$AA?9?$AA?$DO?$AAl?$AAe?$AAn?$AAg?$AAt@ ; `string'
 PUBLIC	??_C@_0BD@OLBABOEK@vector?$DMT?$DO?5too?5long@	; `string'
 PUBLIC	??_C@_0BA@JFNIOLAK@string?5too?5long@		; `string'
 PUBLIC	??_C@_1EO@GFNCMDLA@?$AAs?$AAt?$AAd?$AA?3?$AA?3?$AA_?$AAA?$AAl?$AAl?$AAo?$AAc?$AAa?$AAt?$AAe?$AA_@ ; `string'
+PUBLIC	??_C@_1JE@OPPOLFAL@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@ ; `string'
 PUBLIC	??_R4Renderer3DScene@Scene@Application@@6B@	; Application::Scene::Renderer3DScene::`RTTI Complete Object Locator'
 PUBLIC	??_R0?AVRenderer3DScene@Scene@Application@@@8	; Application::Scene::Renderer3DScene `RTTI Type Descriptor'
 PUBLIC	??_R3Renderer3DScene@Scene@Application@@8	; Application::Scene::Renderer3DScene::`RTTI Class Hierarchy Descriptor'
@@ -262,7 +310,10 @@ PUBLIC	??_R0?AVScene@0Application@@@8			; Application::Scene::Scene `RTTI Type D
 PUBLIC	??_R3Scene@0Application@@8			; Application::Scene::Scene::`RTTI Class Hierarchy Descriptor'
 PUBLIC	??_R2Scene@0Application@@8			; Application::Scene::Scene::`RTTI Base Class Array'
 PUBLIC	__real@3dcccccd
+PUBLIC	__real@3f000000
 PUBLIC	__real@3f800000
+PUBLIC	__real@40000000
+PUBLIC	__real@40400000
 PUBLIC	__real@41100000
 PUBLIC	__real@41800000
 PUBLIC	__real@42b40000
@@ -270,20 +321,25 @@ PUBLIC	__real@42c80000
 PUBLIC	__real@bf800000
 EXTRN	??2@YAPEAX_K@Z:PROC				; operator new
 EXTRN	??3@YAXPEAX_K@Z:PROC				; operator delete
-EXTRN	??_U@YAPEAX_K@Z:PROC				; operator new[]
-EXTRN	??_V@YAXPEAX@Z:PROC				; operator delete[]
 EXTRN	??0Scene@0Application@@QEAA@XZ:PROC		; Application::Scene::Scene::Scene
 EXTRN	??1Scene@0Application@@UEAA@XZ:PROC		; Application::Scene::Scene::~Scene
 EXTRN	__imp__invalid_parameter:PROC
 EXTRN	__imp__CrtDbgReport:PROC
 EXTRN	__imp_??0_Lockit@std@@QEAA@H@Z:PROC
 EXTRN	__imp_??1_Lockit@std@@QEAA@XZ:PROC
+EXTRN	__imp__wassert:PROC
+EXTRN	__imp_cosf:PROC
+EXTRN	__imp_sinf:PROC
+EXTRN	__imp_sqrtf:PROC
 EXTRN	memcpy:PROC
 EXTRN	memmove:PROC
+EXTRN	__imp_glClearColor:PROC
 EXTRN	strlen:PROC
 EXTRN	?_Xlength_error@std@@YAXPEBD@Z:PROC		; std::_Xlength_error
 EXTRN	??0VBO@buffers@core@@QEAA@PEBXI_N@Z:PROC	; core::buffers::VBO::VBO
 EXTRN	??1VBO@buffers@core@@QEAA@XZ:PROC		; core::buffers::VBO::~VBO
+EXTRN	?GLLogError@@YA_NPEBD0H@Z:PROC			; GLLogError
+EXTRN	?GLClearError@@YAXXZ:PROC			; GLClearError
 EXTRN	??0VAO@buffers@core@@QEAA@XZ:PROC		; core::buffers::VAO::VAO
 EXTRN	??1VAO@buffers@core@@QEAA@XZ:PROC		; core::buffers::VAO::~VAO
 EXTRN	?addBuffer@VAO@buffers@core@@QEAAXAEBVVBO@23@AEBVBufferLayout@23@@Z:PROC ; core::buffers::VAO::addBuffer
@@ -310,6 +366,9 @@ EXTRN	__security_check_cookie:PROC
 EXTRN	??_7type_info@@6B@:BYTE				; type_info::`vftable'
 EXTRN	__security_cookie:QWORD
 EXTRN	_fltused:DWORD
+_BSS	SEGMENT
+?angle@?1??OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z@4MA DD 01H DUP (?) ; `Application::Scene::Renderer3DScene::OnUpdate'::`2'::angle
+_BSS	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$??_H@YAXPEAX_K1P6APEAX0@Z@Z DD imagerel $LN7
@@ -336,9 +395,57 @@ $pdata$??2@YAPEAX_KPEAX@Z DD imagerel $LN3
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?cos@@YAMM@Z DD imagerel $LN3
+	DD	imagerel $LN3+55
+	DD	imagerel $unwind$?cos@@YAMM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?sin@@YAMM@Z DD imagerel $LN3
+	DD	imagerel $LN3+55
+	DD	imagerel $unwind$?sin@@YAMM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?sqrt@@YAMM@Z DD imagerel $LN3
+	DD	imagerel $LN3+55
+	DD	imagerel $unwind$?sqrt@@YAMM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$?max@?$numeric_limits@_J@std@@SA_JXZ DD imagerel $LN3
 	DD	imagerel $LN3+48
 	DD	imagerel $unwind$?max@?$numeric_limits@_J@std@@SA_JXZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?length@?$tvec4@M$0A@@glm@@SAHXZ DD imagerel $LN3
+	DD	imagerel $LN3+34
+	DD	imagerel $unwind$?length@?$tvec4@M$0A@@glm@@SAHXZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z DD imagerel $LN5
+	DD	imagerel $LN5+93
+	DD	imagerel $unwind$??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??0?$tvec4@M$0A@@glm@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+84
+	DD	imagerel $unwind$??0?$tvec4@M$0A@@glm@@QEAA@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??0?$tvec4@M$0A@@glm@@QEAA@M@Z DD imagerel $LN3
+	DD	imagerel $LN3+98
+	DD	imagerel $unwind$??0?$tvec4@M$0A@@glm@@QEAA@M@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z DD imagerel $LN3
+	DD	imagerel $LN3+110
+	DD	imagerel $unwind$??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -648,6 +755,48 @@ $pdata$?_Xlen@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@SAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+68
+	DD	imagerel $unwind$??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z DD imagerel $LN3
+	DD	imagerel $LN3+339
+	DD	imagerel $unwind$??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?length@?$tmat4x4@M$0A@@glm@@SAHXZ DD imagerel $LN3
+	DD	imagerel $LN3+34
+	DD	imagerel $unwind$?length@?$tmat4x4@M$0A@@glm@@SAHXZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z DD imagerel $LN4
+	DD	imagerel $LN4+93
+	DD	imagerel $unwind$??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z DD imagerel $LN4
+	DD	imagerel $LN4+93
+	DD	imagerel $unwind$??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?length@?$tvec3@M$0A@@glm@@SAHXZ DD imagerel $LN3
+	DD	imagerel $LN3+34
+	DD	imagerel $unwind$?length@?$tvec3@M$0A@@glm@@SAHXZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z DD imagerel $LN5
+	DD	imagerel $LN5+93
+	DD	imagerel $unwind$??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z DD imagerel $LN3
 	DD	imagerel $LN3+96
 	DD	imagerel $unwind$??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z
@@ -942,6 +1091,12 @@ $pdata$?__autoclassinit2@BufferLayout@buffers@core@@QEAAX_K@Z DD imagerel $LN3
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z DD imagerel $LN3
+	DD	imagerel $LN3+101
+	DD	imagerel $unwind$??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??0Renderable3D@graphics@core@@QEAA@PEBXPEBIII_N@Z DD imagerel $LN7
 	DD	imagerel $LN7+288
 	DD	imagerel $unwind$??0Renderable3D@graphics@core@@QEAA@PEBXPEBIII_N@Z
@@ -984,8 +1139,8 @@ $pdata$??_GRenderable3D@graphics@core@@QEAAPEAXI@Z DD imagerel $LN4
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0Renderer3DScene@Scene@Application@@QEAA@XZ DD imagerel $LN21
-	DD	imagerel $LN21+2110
+$pdata$??0Renderer3DScene@Scene@Application@@QEAA@XZ DD imagerel $LN16
+	DD	imagerel $LN16+2033
 	DD	imagerel $unwind$??0Renderer3DScene@Scene@Application@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1027,13 +1182,13 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$??1Renderer3DScene@Scene@Application@@UEAA@XZ DD imagerel $LN5
-	DD	imagerel $LN5+230
+	DD	imagerel $LN5+159
 	DD	imagerel $unwind$??1Renderer3DScene@Scene@Application@@UEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z DD imagerel $LN3
-	DD	imagerel $LN3+39
+	DD	imagerel $LN3+195
 	DD	imagerel $unwind$?OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1053,6 +1208,12 @@ pdata	SEGMENT
 $pdata$??_GRenderer3DScene@Scene@Application@@UEAAPEAXI@Z DD imagerel $LN4
 	DD	imagerel $LN4+62
 	DD	imagerel $unwind$??_GRenderer3DScene@Scene@Application@@UEAAPEAXI@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@MAEBU?$tvec3@M$0A@@0@@Z DD imagerel $LN3
+	DD	imagerel $LN3+119
+	DD	imagerel $unwind$??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@MAEBU?$tvec3@M$0A@@0@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1242,6 +1403,48 @@ $pdata$??$_Get_size_of_n@$0BA@@std@@YA_K_K@Z DD imagerel $LN4
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$??$?0MHHH@?$tvec4@M$0A@@glm@@QEAA@MHHH@Z DD imagerel $LN3
+	DD	imagerel $LN3+108
+	DD	imagerel $unwind$??$?0MHHH@?$tvec4@M$0A@@glm@@QEAA@MHHH@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0HMHH@?$tvec4@M$0A@@glm@@QEAA@HMHH@Z DD imagerel $LN3
+	DD	imagerel $LN3+107
+	DD	imagerel $unwind$??$?0HMHH@?$tvec4@M$0A@@glm@@QEAA@HMHH@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0HHMH@?$tvec4@M$0A@@glm@@QEAA@HHMH@Z DD imagerel $LN3
+	DD	imagerel $LN3+107
+	DD	imagerel $unwind$??$?0HHMH@?$tvec4@M$0A@@glm@@QEAA@HHMH@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?0HHHM@?$tvec4@M$0A@@glm@@QEAA@HHHM@Z DD imagerel $LN3
+	DD	imagerel $LN3+106
+	DD	imagerel $unwind$??$?0HHHM@?$tvec4@M$0A@@glm@@QEAA@HHHM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+99
+	DD	imagerel $unwind$??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z DD imagerel $LN3
+	DD	imagerel $LN3+106
+	DD	imagerel $unwind$??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@AEBU10@MAEBU?$tvec3@M$0A@@0@@Z DD imagerel $LN3
+	DD	imagerel $LN3+2408
+	DD	imagerel $unwind$??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@AEBU10@MAEBU?$tvec3@M$0A@@0@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??$forward@AEBQEAD@std@@YAAEBQEADAEBQEAD@Z DD imagerel $LN3
 	DD	imagerel $LN3+46
 	DD	imagerel $unwind$??$forward@AEBQEAD@std@@YAAEBQEADAEBQEAD@Z
@@ -1275,6 +1478,30 @@ pdata	SEGMENT
 $pdata$??$_Get_size_of_n@$0M@@std@@YA_K_K@Z DD imagerel $LN4
 	DD	imagerel $LN4+84
 	DD	imagerel $unwind$??$_Get_size_of_n@$0M@@std@@YA_K_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+110
+	DD	imagerel $unwind$??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+151
+	DD	imagerel $unwind$?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$normalize@M$0A@Utvec3@glm@@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@@Z DD imagerel $LN3
+	DD	imagerel $LN3+55
+	DD	imagerel $unwind$??$normalize@M$0A@Utvec3@glm@@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@MAEBU10@@Z DD imagerel $LN3
+	DD	imagerel $LN3+117
+	DD	imagerel $unwind$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@MAEBU10@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1320,9 +1547,51 @@ $pdata$??$_Seek_wrapped@UBufferElement@buffers@core@@@std@@YAXAEAPEAUBufferEleme
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+151
+	DD	imagerel $unwind$?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?call@?$compute_normalize@M$0A@Utvec3@glm@@$0A@@detail@glm@@SA?AU?$tvec3@M$0A@@3@AEBU43@@Z DD imagerel $LN3
+	DD	imagerel $LN3+76
+	DD	imagerel $unwind$?call@?$compute_normalize@M$0A@Utvec3@glm@@$0A@@detail@glm@@SA?AU?$tvec3@M$0A@@3@AEBU43@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??$_Copy_memmove@PEAUBufferElement@buffers@core@@PEAU123@@std@@YAPEAUBufferElement@buffers@core@@PEAU123@00@Z DD imagerel $LN3
 	DD	imagerel $LN3+122
 	DD	imagerel $unwind$??$_Copy_memmove@PEAUBufferElement@buffers@core@@PEAU123@@std@@YAPEAUBufferElement@buffers@core@@PEAU123@00@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+51
+	DD	imagerel $unwind$??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$inversesqrt@M@glm@@YAMM@Z DD imagerel $LN3
+	DD	imagerel $LN3+59
+	DD	imagerel $unwind$??$inversesqrt@M@glm@@YAMM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@M@Z DD imagerel $LN3
+	DD	imagerel $LN3+117
+	DD	imagerel $unwind$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@M@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+99
+	DD	imagerel $unwind$?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z DD imagerel $LN3
+	DD	imagerel $LN3+127
+	DD	imagerel $unwind$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z
 pdata	ENDS
 ;	COMDAT __real@bf800000
 CONST	SEGMENT
@@ -1344,9 +1613,21 @@ CONST	ENDS
 CONST	SEGMENT
 __real@41100000 DD 041100000r			; 9
 CONST	ENDS
+;	COMDAT __real@40400000
+CONST	SEGMENT
+__real@40400000 DD 040400000r			; 3
+CONST	ENDS
+;	COMDAT __real@40000000
+CONST	SEGMENT
+__real@40000000 DD 040000000r			; 2
+CONST	ENDS
 ;	COMDAT __real@3f800000
 CONST	SEGMENT
 __real@3f800000 DD 03f800000r			; 1
+CONST	ENDS
+;	COMDAT __real@3f000000
+CONST	SEGMENT
+__real@3f000000 DD 03f000000r			; 0.5
 CONST	ENDS
 ;	COMDAT __real@3dcccccd
 CONST	SEGMENT
@@ -1426,6 +1707,22 @@ rdata$r	SEGMENT
 	DD	imagerel ??_R3Renderer3DScene@Scene@Application@@8
 	DD	imagerel ??_R4Renderer3DScene@Scene@Application@@6B@
 rdata$r	ENDS
+;	COMDAT ??_C@_1JE@OPPOLFAL@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@
+CONST	SEGMENT
+??_C@_1JE@OPPOLFAL@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@ DB 'l'
+	DB	00H, ':', 00H, '\', 00H, 'd', 00H, 'e', 00H, 'v', 00H, '\', 00H
+	DB	'f', 00H, 'e', 00H, 'a', 00H, 't', 00H, 'h', 00H, 'e', 00H, 'r'
+	DB	00H, 'f', 00H, 'a', 00H, 'l', 00H, 'l', 00H, 'e', 00H, 'n', 00H
+	DB	'g', 00H, 'i', 00H, 'n', 00H, 'e', 00H, '\', 00H, 'd', 00H, 'e'
+	DB	00H, 'p', 00H, 'e', 00H, 'n', 00H, 'd', 00H, 's', 00H, '\', 00H
+	DB	'i', 00H, 'n', 00H, 's', 00H, 't', 00H, 'a', 00H, 'l', 00H, 'l'
+	DB	00H, '\', 00H, 'i', 00H, 'n', 00H, 'c', 00H, 'l', 00H, 'u', 00H
+	DB	'd', 00H, 'e', 00H, '\', 00H, 'g', 00H, 'l', 00H, 'm', 00H, '\'
+	DB	00H, 'd', 00H, 'e', 00H, 't', 00H, 'a', 00H, 'i', 00H, 'l', 00H
+	DB	'\', 00H, 't', 00H, 'y', 00H, 'p', 00H, 'e', 00H, '_', 00H, 'v'
+	DB	00H, 'e', 00H, 'c', 00H, '3', 00H, '.', 00H, 'i', 00H, 'n', 00H
+	DB	'l', 00H, 00H, 00H				; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_1EO@GFNCMDLA@?$AAs?$AAt?$AAd?$AA?3?$AA?3?$AA_?$AAA?$AAl?$AAl?$AAo?$AAc?$AAa?$AAt?$AAe?$AA_@
 CONST	SEGMENT
 ??_C@_1EO@GFNCMDLA@?$AAs?$AAt?$AAd?$AA?3?$AA?3?$AA_?$AAA?$AAl?$AAl?$AAo?$AAc?$AAa?$AAt?$AAe?$AA_@ DB 's'
@@ -1444,6 +1741,69 @@ CONST	ENDS
 CONST	SEGMENT
 ??_C@_0BD@OLBABOEK@vector?$DMT?$DO?5too?5long@ DB 'vector<T> too long', 00H ; `string'
 CONST	ENDS
+;	COMDAT ??_C@_1CG@KOFHLCJL@?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt?$AAh?$AAi?$AAs?$AA?9?$AA?$DO?$AAl?$AAe?$AAn?$AAg?$AAt@
+CONST	SEGMENT
+??_C@_1CG@KOFHLCJL@?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt?$AAh?$AAi?$AAs?$AA?9?$AA?$DO?$AAl?$AAe?$AAn?$AAg?$AAt@ DB 'i'
+	DB	00H, ' ', 00H, '<', 00H, ' ', 00H, 't', 00H, 'h', 00H, 'i', 00H
+	DB	's', 00H, '-', 00H, '>', 00H, 'l', 00H, 'e', 00H, 'n', 00H, 'g'
+	DB	00H, 't', 00H, 'h', 00H, '(', 00H, ')', 00H, 00H, 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_1JI@BDACPION@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@
+CONST	SEGMENT
+??_C@_1JI@BDACPION@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@ DB 'l'
+	DB	00H, ':', 00H, '\', 00H, 'd', 00H, 'e', 00H, 'v', 00H, '\', 00H
+	DB	'f', 00H, 'e', 00H, 'a', 00H, 't', 00H, 'h', 00H, 'e', 00H, 'r'
+	DB	00H, 'f', 00H, 'a', 00H, 'l', 00H, 'l', 00H, 'e', 00H, 'n', 00H
+	DB	'g', 00H, 'i', 00H, 'n', 00H, 'e', 00H, '\', 00H, 'd', 00H, 'e'
+	DB	00H, 'p', 00H, 'e', 00H, 'n', 00H, 'd', 00H, 's', 00H, '\', 00H
+	DB	'i', 00H, 'n', 00H, 's', 00H, 't', 00H, 'a', 00H, 'l', 00H, 'l'
+	DB	00H, '\', 00H, 'i', 00H, 'n', 00H, 'c', 00H, 'l', 00H, 'u', 00H
+	DB	'd', 00H, 'e', 00H, '\', 00H, 'g', 00H, 'l', 00H, 'm', 00H, '\'
+	DB	00H, 'd', 00H, 'e', 00H, 't', 00H, 'a', 00H, 'i', 00H, 'l', 00H
+	DB	'\', 00H, 't', 00H, 'y', 00H, 'p', 00H, 'e', 00H, '_', 00H, 'm'
+	DB	00H, 'a', 00H, 't', 00H, '4', 00H, 'x', 00H, '4', 00H, '.', 00H
+	DB	'i', 00H, 'n', 00H, 'l', 00H, 00H, 00H	; `string'
+CONST	ENDS
+;	COMDAT ??_C@_1JE@JLGGFMIE@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@
+CONST	SEGMENT
+??_C@_1JE@JLGGFMIE@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@ DB 'l'
+	DB	00H, ':', 00H, '\', 00H, 'd', 00H, 'e', 00H, 'v', 00H, '\', 00H
+	DB	'f', 00H, 'e', 00H, 'a', 00H, 't', 00H, 'h', 00H, 'e', 00H, 'r'
+	DB	00H, 'f', 00H, 'a', 00H, 'l', 00H, 'l', 00H, 'e', 00H, 'n', 00H
+	DB	'g', 00H, 'i', 00H, 'n', 00H, 'e', 00H, '\', 00H, 'd', 00H, 'e'
+	DB	00H, 'p', 00H, 'e', 00H, 'n', 00H, 'd', 00H, 's', 00H, '\', 00H
+	DB	'i', 00H, 'n', 00H, 's', 00H, 't', 00H, 'a', 00H, 'l', 00H, 'l'
+	DB	00H, '\', 00H, 'i', 00H, 'n', 00H, 'c', 00H, 'l', 00H, 'u', 00H
+	DB	'd', 00H, 'e', 00H, '\', 00H, 'g', 00H, 'l', 00H, 'm', 00H, '\'
+	DB	00H, 'd', 00H, 'e', 00H, 't', 00H, 'a', 00H, 'i', 00H, 'l', 00H
+	DB	'\', 00H, 't', 00H, 'y', 00H, 'p', 00H, 'e', 00H, '_', 00H, 'v'
+	DB	00H, 'e', 00H, 'c', 00H, '4', 00H, '.', 00H, 'i', 00H, 'n', 00H
+	DB	'l', 00H, 00H, 00H				; `string'
+CONST	ENDS
+;	COMDAT ??_C@_1DK@BGNCJAPL@?$AAi?$AA?5?$AA?$DO?$AA?$DN?$AA?5?$AA0?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt@
+CONST	SEGMENT
+??_C@_1DK@BGNCJAPL@?$AAi?$AA?5?$AA?$DO?$AA?$DN?$AA?5?$AA0?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt@ DB 'i'
+	DB	00H, ' ', 00H, '>', 00H, '=', 00H, ' ', 00H, '0', 00H, ' ', 00H
+	DB	'&', 00H, '&', 00H, ' ', 00H, 'i', 00H, ' ', 00H, '<', 00H, ' '
+	DB	00H, 't', 00H, 'h', 00H, 'i', 00H, 's', 00H, '-', 00H, '>', 00H
+	DB	'l', 00H, 'e', 00H, 'n', 00H, 'g', 00H, 't', 00H, 'h', 00H, '('
+	DB	00H, ')', 00H, 00H, 00H			; `string'
+CONST	ENDS
+;	COMDAT ??_C@_08LIGONNFJ@mlMatrix@
+CONST	SEGMENT
+??_C@_08LIGONNFJ@mlMatrix@ DB 'mlMatrix', 00H		; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0CF@NGMMNMAN@glClearColor?$CI0?45f?0?50?45f?0?50?45f?0?5@
+CONST	SEGMENT
+??_C@_0CF@NGMMNMAN@glClearColor?$CI0?45f?0?50?45f?0?50?45f?0?5@ DB 'glCle'
+	DB	'arColor(0.5f, 0.5f, 0.5f, 1.0f)', 00H	; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0EM@HCBNGLBJ@l?3?2dev?2featherfallengine?2feathe@
+CONST	SEGMENT
+??_C@_0EM@HCBNGLBJ@l?3?2dev?2featherfallengine?2feathe@ DB 'l:\dev\feathe'
+	DB	'rfallengine\featherfall-examples\src\scene\renderer3dscene.cp'
+	DB	'p', 00H					; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_08LHCKCMII@vwMatrix@
 CONST	SEGMENT
 ??_C@_08LHCKCMII@vwMatrix@ DB 'vwMatrix', 00H		; `string'
@@ -1457,6 +1817,10 @@ CONST	SEGMENT
 ??_C@_0CC@GLNBHNPM@res?1shaders?1Renderer3DTest?4shad@ DB 'res/shaders/Re'
 	DB	'nderer3DTest.shader', 00H			; `string'
 CONST	ENDS
+;	COMDAT ?__LINE__Var@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4JA
+_DATA	SEGMENT
+?__LINE__Var@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4JA DD 06H ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::__LINE__Var
+_DATA	ENDS
 ;	COMDAT ??_7Renderer3DScene@Scene@Application@@6B@
 CONST	SEGMENT
 ??_7Renderer3DScene@Scene@Application@@6B@ DQ FLAT:??_R4Renderer3DScene@Scene@Application@@6B@ ; Application::Scene::Renderer3DScene::`vftable'
@@ -1523,8 +1887,52 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z DD 025031901H
+	DD	0d2142319H
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z DD 025032519H
+	DD	0f2122317H
+	DD	0500bH
+	DD	imagerel __GSHandlerCheck
+	DD	070H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@M@Z DD 025031a01H
+	DD	0d215231aH
+	DD	05011H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$inversesqrt@M@glm@@YAMM@Z DD 025031001H
+	DD	0b20b2310H
+	DD	05007H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??$_Copy_memmove@PEAUBufferElement@buffers@core@@PEAU123@@std@@YAPEAUBufferElement@buffers@core@@PEAU123@00@Z DD 025031c01H
 	DD	0f217231cH
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?call@?$compute_normalize@M$0A@Utvec3@glm@@$0A@@detail@glm@@SA?AU?$tvec3@M$0A@@3@AEBU43@@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z DD 035031c01H
+	DD	0f217331cH
 	DD	05010H
 xdata	ENDS
 ;	COMDAT xdata
@@ -1568,6 +1976,31 @@ xdata	SEGMENT
 $unwind$??$_Get_unwrapped@UBufferElement@buffers@core@@@std@@YAPEAUBufferElement@buffers@core@@QEAU123@@Z DD 025030f01H
 	DD	0b20a230fH
 	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@MAEBU10@@Z DD 025031a01H
+	DD	0d215231aH
+	DD	05011H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$normalize@M$0A@Utvec3@glm@@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z DD 035031c01H
+	DD	0f217331cH
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z DD 025051901H
+	DD	0f2142319H
+	DD	0600c700dH
+	DD	0500bH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -1646,6 +2079,53 @@ $unwind$??$forward@AEBQEAD@std@@YAAEBQEADAEBQEAD@Z DD 025031719H
 	DD	05006H
 	DD	imagerel __CxxFrameHandler3
 	DD	imagerel $cppxdata$??$forward@AEBQEAD@std@@YAAEBQEADAEBQEAD@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@AEBU10@MAEBU?$tvec3@M$0A@@0@@Z DD 025063519H
+	DD	011f2324H
+	DD	070180048H
+	DD	050166017H
+	DD	imagerel __GSHandlerCheck
+	DD	0230H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z DD 025051a01H
+	DD	0f215231aH
+	DD	0600d700eH
+	DD	0500cH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z DD 025051b01H
+	DD	0d216231bH
+	DD	060117012H
+	DD	05010H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?0HHHM@?$tvec4@M$0A@@glm@@QEAA@HHHM@Z DD 025031d01H
+	DD	0b218231dH
+	DD	05014H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?0HHMH@?$tvec4@M$0A@@glm@@QEAA@HHMH@Z DD 025031e01H
+	DD	0b219231eH
+	DD	05015H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?0HMHH@?$tvec4@M$0A@@glm@@QEAA@HMHH@Z DD 025031e01H
+	DD	0b219231eH
+	DD	05015H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?0MHHH@?$tvec4@M$0A@@glm@@QEAA@MHHH@Z DD 025031f01H
+	DD	0b21a231fH
+	DD	05016H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -2053,6 +2533,12 @@ $unwind$??$move@AEAUBufferElement@buffers@core@@@std@@YA$$QEAUBufferElement@buff
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@MAEBU?$tvec3@M$0A@@0@@Z DD 025041d01H
+	DD	0118231dH
+	DD	050110016H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$??_GRenderer3DScene@Scene@Application@@UEAAPEAXI@Z DD 025031301H
 	DD	0b20e2313H
 	DD	0500aH
@@ -2071,9 +2557,10 @@ $unwind$?OnRender@Renderer3DScene@Scene@Application@@UEAAXXZ DD 025030f01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z DD 025031501H
-	DD	0b2102315H
-	DD	0500cH
+$unwind$?OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z DD 025061a01H
+	DD	0115231aH
+	DD	0700e0016H
+	DD	0500c600dH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -2089,15 +2576,15 @@ $cppxdata$??1Renderer3DScene@Scene@Application@@UEAA@XZ DD 019930522H
 	DD	00H
 	DD	01H
 	DD	imagerel $ip2state$??1Renderer3DScene@Scene@Application@@UEAA@XZ
-	DD	080H
+	DD	070H
 	DD	00H
 	DD	05H
 CONST	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??1Renderer3DScene@Scene@Application@@UEAA@XZ DD 025041a19H
-	DD	010d2312H
-	DD	050060012H
+$unwind$??1Renderer3DScene@Scene@Application@@UEAA@XZ DD 025031a19H
+	DD	0f20d2312H
+	DD	05006H
 	DD	imagerel __CxxFrameHandler3
 	DD	imagerel $cppxdata$??1Renderer3DScene@Scene@Application@@UEAA@XZ
 xdata	ENDS
@@ -2135,27 +2622,27 @@ xdata	ENDS
 xdata	SEGMENT
 $ip2state$??0Renderer3DScene@Scene@Application@@QEAA@XZ DD imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ
 	DD	0ffffffffH
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+64
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+81
 	DD	00H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+98
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+115
 	DD	01H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+128
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+145
 	DD	02H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+171
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+188
 	DD	01H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+182
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+199
 	DD	02H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+196
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+213
 	DD	03H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+223
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+240
 	DD	05H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+522
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+549
 	DD	06H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+1866
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+1710
 	DD	07H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+1969
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+1796
 	DD	06H
-	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+2094
+	DD	imagerel ??0Renderer3DScene@Scene@Application@@QEAA@XZ+2002
 	DD	0ffffffffH
 xdata	ENDS
 ;	COMDAT xdata
@@ -2186,17 +2673,18 @@ $cppxdata$??0Renderer3DScene@Scene@Application@@QEAA@XZ DD 019930522H
 	DD	00H
 	DD	0cH
 	DD	imagerel $ip2state$??0Renderer3DScene@Scene@Application@@QEAA@XZ
-	DD	02f0H
+	DD	02d0H
 	DD	00H
 	DD	01H
 CONST	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0Renderer3DScene@Scene@Application@@QEAA@XZ DD 055041d11H
+$unwind$??0Renderer3DScene@Scene@Application@@QEAA@XZ DD 055042e19H
 	DD	010d5312H
-	DD	050060062H
-	DD	imagerel __CxxFrameHandler3
+	DD	05006005eH
+	DD	imagerel __GSHandlerCheck_EH
 	DD	imagerel $cppxdata$??0Renderer3DScene@Scene@Application@@QEAA@XZ
+	DD	02eaH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -2279,6 +2767,13 @@ $unwind$??0Renderable3D@graphics@core@@QEAA@PEBXPEBIII_N@Z DD 025043719H
 	DD	imagerel __GSHandlerCheck_EH
 	DD	imagerel $cppxdata$??0Renderable3D@graphics@core@@QEAA@PEBXPEBIII_N@Z
 	DD	092H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z DD 025051c01H
+	DD	0d217231cH
+	DD	060127013H
+	DD	05011H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -3087,6 +3582,49 @@ xdata	SEGMENT
 $unwind$??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z DD 025032101H
 	DD	0b21c2321H
 	DD	05018H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z DD 025031301H
+	DD	0b20e2313H
+	DD	0500aH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?length@?$tvec3@M$0A@@glm@@SAHXZ DD 025030b01H
+	DD	0b206230bH
+	DD	05002H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z DD 025031301H
+	DD	0b20e2313H
+	DD	0500aH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z DD 025031301H
+	DD	0b20e2313H
+	DD	0500aH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?length@?$tmat4x4@M$0A@@glm@@SAHXZ DD 025030b01H
+	DD	0b206230bH
+	DD	05002H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z DD 035061901H
+	DD	01143319H
+	DD	0700d0016H
+	DD	0500b600cH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z DD 025031301H
+	DD	0b20e2313H
+	DD	0500aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -3961,6 +4499,36 @@ $unwind$?length@?$char_traits@D@std@@SA_KQEBD@Z DD 025031719H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z DD 025032101H
+	DD	0b21c2321H
+	DD	05018H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??0?$tvec4@M$0A@@glm@@QEAA@M@Z DD 025031501H
+	DD	0b2102315H
+	DD	0500cH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??0?$tvec4@M$0A@@glm@@QEAA@XZ DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z DD 025031301H
+	DD	0b20e2313H
+	DD	0500aH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?length@?$tvec4@M$0A@@glm@@SAHXZ DD 025030b01H
+	DD	0b206230bH
+	DD	05002H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $ip2state$?max@?$numeric_limits@_J@std@@SA_JXZ DD imagerel ?max@?$numeric_limits@_J@std@@SA_JXZ
 	DD	0ffffffffH
 xdata	ENDS
@@ -3984,6 +4552,84 @@ $unwind$?max@?$numeric_limits@_J@std@@SA_JXZ DD 025031319H
 	DD	05002H
 	DD	imagerel __CxxFrameHandler3
 	DD	imagerel $cppxdata$?max@?$numeric_limits@_J@std@@SA_JXZ
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$?sqrt@@YAMM@Z DD imagerel ?sqrt@@YAMM@Z
+	DD	0ffffffffH
+xdata	ENDS
+;	COMDAT CONST
+CONST	SEGMENT
+$cppxdata$?sqrt@@YAMM@Z DD 019930522H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	01H
+	DD	imagerel $ip2state$?sqrt@@YAMM@Z
+	DD	060H
+	DD	00H
+	DD	05H
+CONST	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?sqrt@@YAMM@Z DD 025031819H
+	DD	0d20b2310H
+	DD	05007H
+	DD	imagerel __CxxFrameHandler3
+	DD	imagerel $cppxdata$?sqrt@@YAMM@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$?sin@@YAMM@Z DD imagerel ?sin@@YAMM@Z
+	DD	0ffffffffH
+xdata	ENDS
+;	COMDAT CONST
+CONST	SEGMENT
+$cppxdata$?sin@@YAMM@Z DD 019930522H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	01H
+	DD	imagerel $ip2state$?sin@@YAMM@Z
+	DD	060H
+	DD	00H
+	DD	05H
+CONST	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?sin@@YAMM@Z DD 025031819H
+	DD	0d20b2310H
+	DD	05007H
+	DD	imagerel __CxxFrameHandler3
+	DD	imagerel $cppxdata$?sin@@YAMM@Z
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$?cos@@YAMM@Z DD imagerel ?cos@@YAMM@Z
+	DD	0ffffffffH
+xdata	ENDS
+;	COMDAT CONST
+CONST	SEGMENT
+$cppxdata$?cos@@YAMM@Z DD 019930522H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	00H
+	DD	01H
+	DD	imagerel $ip2state$?cos@@YAMM@Z
+	DD	060H
+	DD	00H
+	DD	05H
+CONST	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?cos@@YAMM@Z DD 025031819H
+	DD	0d20b2310H
+	DD	05007H
+	DD	imagerel __CxxFrameHandler3
+	DD	imagerel $cppxdata$?cos@@YAMM@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4029,6 +4675,225 @@ $unwind$??_H@YAXPEAX_K1P6APEAX0@Z@Z DD 025031e01H
 	DD	0d219231eH
 	DD	05015H
 xdata	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec3.inl
+;	COMDAT ??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z
+_TEXT	SEGMENT
+tv76 = 64
+__$ReturnUdt$ = 96
+v1$ = 104
+v2$ = 112
+??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z PROC	; glm::operator*<float,0>, COMDAT
+
+; 664  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+24], r8
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__125091CA_type_vec3.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 665  : 		return tvec3<T, P>(
+
+	mov	rax, QWORD PTR v1$[rbp]
+	mov	rcx, QWORD PTR v2$[rbp]
+	movss	xmm0, DWORD PTR [rax+8]
+	mulss	xmm0, DWORD PTR [rcx+8]
+	mov	rax, QWORD PTR v1$[rbp]
+	mov	rcx, QWORD PTR v2$[rbp]
+	movss	xmm1, DWORD PTR [rax+4]
+	mulss	xmm1, DWORD PTR [rcx+4]
+	mov	rax, QWORD PTR v1$[rbp]
+	mov	rcx, QWORD PTR v2$[rbp]
+	movss	xmm2, DWORD PTR [rax]
+	mulss	xmm2, DWORD PTR [rcx]
+	movss	DWORD PTR tv76[rbp], xmm2
+	movaps	xmm3, xmm0
+	movaps	xmm2, xmm1
+	movss	xmm0, DWORD PTR tv76[rbp]
+	movaps	xmm1, xmm0
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 666  : 			v1.x * v2.x,
+; 667  : 			v1.y * v2.y,
+; 668  : 			v1.z * v2.z);
+; 669  : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z ENDP	; glm::operator*<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
+;	COMDAT ?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z
+_TEXT	SEGMENT
+tmp$ = 0
+__$ArrayPad$ = 80
+x$ = 112
+y$ = 120
+?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z PROC ; glm::detail::compute_dot<glm::tvec3,float,0,0>::call, COMDAT
+
+; 57   : 		{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 128				; 00000080H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rbp
+	mov	QWORD PTR __$ArrayPad$[rbp], rax
+	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 58   : 			tvec3<T, P> tmp(x * y);
+
+	mov	r8, QWORD PTR y$[rbp]
+	mov	rdx, QWORD PTR x$[rbp]
+	lea	rcx, QWORD PTR tmp$[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@0@Z ; glm::operator*<float,0>
+
+; 59   : 			return tmp.x + tmp.y + tmp.z;
+
+	movss	xmm0, DWORD PTR tmp$[rbp]
+	addss	xmm0, DWORD PTR tmp$[rbp+4]
+	addss	xmm0, DWORD PTR tmp$[rbp+8]
+
+; 60   : 		}
+
+	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
+	xor	rcx, rbp
+	call	__security_check_cookie
+	lea	rsp, QWORD PTR [rbp+96]
+	pop	rbp
+	ret	0
+?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z ENDP ; glm::detail::compute_dot<glm::tvec3,float,0,0>::call
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec3.inl
+;	COMDAT ??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@M@Z
+_TEXT	SEGMENT
+tv73 = 64
+__$ReturnUdt$ = 96
+v$ = 104
+scalar$ = 112
+??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@M@Z PROC	; glm::operator*<float,0>, COMDAT
+
+; 628  : 	{
+
+$LN3:
+	movss	DWORD PTR [rsp+24], xmm2
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__125091CA_type_vec3.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 629  : 		return tvec3<T, P>(
+
+	mov	rax, QWORD PTR v$[rbp]
+	movss	xmm0, DWORD PTR [rax+8]
+	mulss	xmm0, DWORD PTR scalar$[rbp]
+	mov	rax, QWORD PTR v$[rbp]
+	movss	xmm1, DWORD PTR [rax+4]
+	mulss	xmm1, DWORD PTR scalar$[rbp]
+	mov	rax, QWORD PTR v$[rbp]
+	movss	xmm2, DWORD PTR [rax]
+	mulss	xmm2, DWORD PTR scalar$[rbp]
+	movss	DWORD PTR tv73[rbp], xmm2
+	movaps	xmm3, xmm0
+	movaps	xmm2, xmm1
+	movss	xmm0, DWORD PTR tv73[rbp]
+	movaps	xmm1, xmm0
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 630  : 			v.x * scalar,
+; 631  : 			v.y * scalar,
+; 632  : 			v.z * scalar);
+; 633  : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@M@Z ENDP	; glm::operator*<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_exponential.inl
+;	COMDAT ??$inversesqrt@M@glm@@YAMM@Z
+_TEXT	SEGMENT
+x$ = 80
+??$inversesqrt@M@glm@@YAMM@Z PROC			; glm::inversesqrt<float>, COMDAT
+
+; 131  : 	{
+
+$LN3:
+	movss	DWORD PTR [rsp+8], xmm0
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__C83BDAB1_func_exponential.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 132  : 		return static_cast<genType>(1) / sqrt(x);
+
+	movss	xmm0, DWORD PTR x$[rbp]
+	call	?sqrt@@YAMM@Z				; sqrt
+	movss	xmm1, DWORD PTR __real@3f800000
+	divss	xmm1, xmm0
+	movaps	xmm0, xmm1
+
+; 133  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$inversesqrt@M@glm@@YAMM@Z ENDP			; glm::inversesqrt<float>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
+;	COMDAT ??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z
+_TEXT	SEGMENT
+x$ = 80
+y$ = 88
+??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z PROC ; glm::dot<float,0,glm::tvec3>, COMDAT
+
+; 172  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 173  : 		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'dot' accepts only floating-point inputs");
+; 174  : 		return detail::compute_dot<vecType, T, P, detail::is_aligned<P>::value>::call(x, y);
+
+	mov	rdx, QWORD PTR y$[rbp]
+	mov	rcx, QWORD PTR x$[rbp]
+	call	?call@?$compute_dot@Utvec3@glm@@M$0A@$0A@@detail@glm@@SAMAEBU?$tvec3@M$0A@@3@0@Z ; glm::detail::compute_dot<glm::tvec3,float,0,0>::call
+
+; 175  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z ENDP ; glm::dot<float,0,glm::tvec3>
+_TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\xutility
 ;	COMDAT ??$_Copy_memmove@PEAUBufferElement@buffers@core@@PEAU123@@std@@YAPEAUBufferElement@buffers@core@@PEAU123@00@Z
@@ -4097,6 +4962,102 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$_Copy_memmove@PEAUBufferElement@buffers@core@@PEAU123@@std@@YAPEAUBufferElement@buffers@core@@PEAU123@00@Z ENDP ; std::_Copy_memmove<core::buffers::BufferElement *,core::buffers::BufferElement *>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
+;	COMDAT ?call@?$compute_normalize@M$0A@Utvec3@glm@@$0A@@detail@glm@@SA?AU?$tvec3@M$0A@@3@AEBU43@@Z
+_TEXT	SEGMENT
+__$ReturnUdt$ = 80
+v$ = 88
+?call@?$compute_normalize@M$0A@Utvec3@glm@@$0A@@detail@glm@@SA?AU?$tvec3@M$0A@@3@AEBU43@@Z PROC ; glm::detail::compute_normalize<float,0,glm::tvec3,0>::call, COMDAT
+
+; 91   : 		{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 92   : 			GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'normalize' accepts only floating-point inputs");
+; 93   : 
+; 94   : 			return v * inversesqrt(dot(v, v));
+
+	mov	rdx, QWORD PTR v$[rbp]
+	mov	rcx, QWORD PTR v$[rbp]
+	call	??$dot@M$0A@Utvec3@glm@@@glm@@YAMAEBU?$tvec3@M$0A@@0@0@Z ; glm::dot<float,0,glm::tvec3>
+	call	??$inversesqrt@M@glm@@YAMM@Z		; glm::inversesqrt<float>
+	movaps	xmm2, xmm0
+	mov	rdx, QWORD PTR v$[rbp]
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 95   : 		}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?call@?$compute_normalize@M$0A@Utvec3@glm@@$0A@@detail@glm@@SA?AU?$tvec3@M$0A@@3@AEBU43@@Z ENDP ; glm::detail::compute_normalize<float,0,glm::tvec3,0>::call
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z
+_TEXT	SEGMENT
+tv80 = 64
+__$ReturnUdt$ = 96
+a$ = 104
+b$ = 112
+?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z PROC ; glm::detail::compute_vec4_add<float,0,0>::call, COMDAT
+
+; 41   : 		{
+
+$LN3:
+	mov	QWORD PTR [rsp+24], r8
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 128				; 00000080H
+	lea	rbp, QWORD PTR [rsp+48]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 42   : 			return tvec4<T, P>(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
+
+	mov	rax, QWORD PTR a$[rbp]
+	mov	rcx, QWORD PTR b$[rbp]
+	movss	xmm0, DWORD PTR [rax+12]
+	addss	xmm0, DWORD PTR [rcx+12]
+	mov	rax, QWORD PTR a$[rbp]
+	mov	rcx, QWORD PTR b$[rbp]
+	movss	xmm1, DWORD PTR [rax+8]
+	addss	xmm1, DWORD PTR [rcx+8]
+	mov	rax, QWORD PTR a$[rbp]
+	mov	rcx, QWORD PTR b$[rbp]
+	movss	xmm2, DWORD PTR [rax+4]
+	addss	xmm2, DWORD PTR [rcx+4]
+	mov	rax, QWORD PTR a$[rbp]
+	mov	rcx, QWORD PTR b$[rbp]
+	movss	xmm3, DWORD PTR [rax]
+	addss	xmm3, DWORD PTR [rcx]
+	movss	DWORD PTR tv80[rbp], xmm3
+	movss	DWORD PTR [rsp+32], xmm0
+	movaps	xmm3, xmm1
+	movss	xmm0, DWORD PTR tv80[rbp]
+	movaps	xmm1, xmm0
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z	; glm::tvec4<float,0>::tvec4<float,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 43   : 		}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ENDP ; glm::detail::compute_vec4_add<float,0,0>::call
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\xutility
@@ -4331,6 +5292,198 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$_Get_unwrapped@UBufferElement@buffers@core@@@std@@YAPEAUBufferElement@buffers@core@@QEAU123@@Z ENDP ; std::_Get_unwrapped<core::buffers::BufferElement>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec3.inl
+;	COMDAT ??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@MAEBU10@@Z
+_TEXT	SEGMENT
+tv73 = 64
+__$ReturnUdt$ = 96
+scalar$ = 104
+v$ = 112
+??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@MAEBU10@@Z PROC	; glm::operator*<float,0>, COMDAT
+
+; 646  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+24], r8
+	movss	DWORD PTR [rsp+16], xmm1
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__125091CA_type_vec3.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 647  : 		return tvec3<T, P>(
+
+	mov	rax, QWORD PTR v$[rbp]
+	movss	xmm0, DWORD PTR scalar$[rbp]
+	mulss	xmm0, DWORD PTR [rax+8]
+	mov	rax, QWORD PTR v$[rbp]
+	movss	xmm1, DWORD PTR scalar$[rbp]
+	mulss	xmm1, DWORD PTR [rax+4]
+	mov	rax, QWORD PTR v$[rbp]
+	movss	xmm2, DWORD PTR scalar$[rbp]
+	mulss	xmm2, DWORD PTR [rax]
+	movss	DWORD PTR tv73[rbp], xmm2
+	movaps	xmm3, xmm0
+	movaps	xmm2, xmm1
+	movss	xmm0, DWORD PTR tv73[rbp]
+	movaps	xmm1, xmm0
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 648  : 			scalar * v.x,
+; 649  : 			scalar * v.y,
+; 650  : 			scalar * v.z);
+; 651  : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@MAEBU10@@Z ENDP	; glm::operator*<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\func_geometric.inl
+;	COMDAT ??$normalize@M$0A@Utvec3@glm@@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@@Z
+_TEXT	SEGMENT
+__$ReturnUdt$ = 80
+x$ = 88
+??$normalize@M$0A@Utvec3@glm@@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@@Z PROC ; glm::normalize<float,0,glm::tvec3>, COMDAT
+
+; 195  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__01BEA0FA_func_geometric.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 196  : 		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'normalize' accepts only floating-point inputs");
+; 197  : 
+; 198  : 		return detail::compute_normalize<T, P, vecType, detail::is_aligned<P>::value>::call(x);
+
+	mov	rdx, QWORD PTR x$[rbp]
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	?call@?$compute_normalize@M$0A@Utvec3@glm@@$0A@@detail@glm@@SA?AU?$tvec3@M$0A@@3@AEBU43@@Z ; glm::detail::compute_normalize<float,0,glm::tvec3,0>::call
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 199  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$normalize@M$0A@Utvec3@glm@@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@@Z ENDP ; glm::normalize<float,0,glm::tvec3>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z
+_TEXT	SEGMENT
+tv80 = 64
+__$ReturnUdt$ = 96
+a$ = 104
+b$ = 112
+?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z PROC ; glm::detail::compute_vec4_mul<float,0,0>::call, COMDAT
+
+; 59   : 		{
+
+$LN3:
+	mov	QWORD PTR [rsp+24], r8
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 128				; 00000080H
+	lea	rbp, QWORD PTR [rsp+48]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 60   : 			return tvec4<T, P>(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
+
+	mov	rax, QWORD PTR a$[rbp]
+	mov	rcx, QWORD PTR b$[rbp]
+	movss	xmm0, DWORD PTR [rax+12]
+	mulss	xmm0, DWORD PTR [rcx+12]
+	mov	rax, QWORD PTR a$[rbp]
+	mov	rcx, QWORD PTR b$[rbp]
+	movss	xmm1, DWORD PTR [rax+8]
+	mulss	xmm1, DWORD PTR [rcx+8]
+	mov	rax, QWORD PTR a$[rbp]
+	mov	rcx, QWORD PTR b$[rbp]
+	movss	xmm2, DWORD PTR [rax+4]
+	mulss	xmm2, DWORD PTR [rcx+4]
+	mov	rax, QWORD PTR a$[rbp]
+	mov	rcx, QWORD PTR b$[rbp]
+	movss	xmm3, DWORD PTR [rax]
+	mulss	xmm3, DWORD PTR [rcx]
+	movss	DWORD PTR tv80[rbp], xmm3
+	movss	DWORD PTR [rsp+32], xmm0
+	movaps	xmm3, xmm1
+	movss	xmm0, DWORD PTR tv80[rbp]
+	movaps	xmm1, xmm0
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z	; glm::tvec4<float,0>::tvec4<float,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 61   : 		}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ENDP ; glm::detail::compute_vec4_mul<float,0,0>::call
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z
+_TEXT	SEGMENT
+$T1 = 64
+$T2 = 80
+this$ = 128
+v$ = 136
+??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z PROC	; glm::tvec4<float,0>::operator+=<float>, COMDAT
+
+; 383  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	push	rsi
+	push	rdi
+	sub	rsp, 128				; 00000080H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 384  : 		return (*this = detail::compute_vec4_add<T, P, detail::is_aligned<P>::value>::call(*this, tvec4<T, P>(v)));
+
+	lea	rax, QWORD PTR $T1[rbp]
+	mov	rdi, rax
+	mov	rsi, QWORD PTR v$[rbp]
+	mov	ecx, 16
+	rep movsb
+	lea	r8, QWORD PTR $T1[rbp]
+	mov	rdx, QWORD PTR this$[rbp]
+	lea	rcx, QWORD PTR $T2[rbp]
+	call	?call@?$compute_vec4_add@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ; glm::detail::compute_vec4_add<float,0,0>::call
+	mov	rdi, QWORD PTR this$[rbp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+	mov	rax, QWORD PTR this$[rbp]
+
+; 385  : 	}
+
+	lea	rsp, QWORD PTR [rbp+96]
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	ret	0
+??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ENDP	; glm::tvec4<float,0>::operator+=<float>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\xmemory0
@@ -4691,6 +5844,973 @@ $LN3:
 	pop	rbp
 	ret	0
 ??$forward@AEBQEAD@std@@YAAEBQEADAEBQEAD@Z ENDP		; std::forward<char * const &>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\gtc\matrix_transform.inl
+;	COMDAT ??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@AEBU10@MAEBU?$tvec3@M$0A@@0@@Z
+_TEXT	SEGMENT
+a$ = 0
+c$ = 4
+s$ = 8
+axis$ = 16
+temp$ = 32
+Rotate$ = 48
+Result$ = 112
+$T1 = 240
+$T2 = 256
+$T3 = 272
+$T4 = 288
+$T5 = 304
+$T6 = 320
+$T7 = 336
+$T8 = 352
+$T9 = 368
+$T10 = 384
+$T11 = 400
+$T12 = 416
+$T13 = 432
+$T14 = 448
+$T15 = 464
+tv418 = 480
+tv372 = 480
+tv321 = 480
+tv270 = 480
+tv252 = 480
+tv234 = 480
+tv216 = 480
+tv198 = 480
+tv184 = 480
+tv166 = 480
+tv148 = 480
+tv130 = 480
+tv84 = 480
+tv367 = 488
+tv316 = 488
+tv265 = 488
+tv258 = 488
+tv239 = 488
+tv221 = 488
+tv203 = 488
+tv190 = 488
+tv171 = 488
+tv153 = 488
+tv135 = 488
+tv90 = 488
+tv244 = 492
+tv226 = 492
+tv208 = 492
+tv176 = 492
+tv158 = 492
+tv140 = 492
+tv387 = 496
+tv336 = 496
+tv285 = 496
+tv382 = 504
+tv331 = 504
+tv280 = 504
+tv401 = 512
+tv350 = 512
+tv299 = 512
+tv366 = 520
+tv315 = 520
+tv264 = 520
+__$ArrayPad$ = 528
+__$ReturnUdt$ = 576
+m$ = 584
+angle$ = 592
+v$ = 600
+??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@AEBU10@MAEBU?$tvec3@M$0A@@0@@Z PROC ; glm::rotate<float,0>, COMDAT
+
+; 20   : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+32], r9
+	movss	DWORD PTR [rsp+24], xmm2
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	push	rsi
+	push	rdi
+	sub	rsp, 576				; 00000240H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rbp
+	mov	QWORD PTR __$ArrayPad$[rbp], rax
+	lea	rcx, OFFSET FLAT:__B60C3EDD_matrix_transform.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 21   : 		T const a = angle;
+
+	movss	xmm0, DWORD PTR angle$[rbp]
+	movss	DWORD PTR a$[rbp], xmm0
+
+; 22   : 		T const c = cos(a);
+
+	movss	xmm0, DWORD PTR a$[rbp]
+	call	?cos@@YAMM@Z				; cos
+	movss	DWORD PTR c$[rbp], xmm0
+
+; 23   : 		T const s = sin(a);
+
+	movss	xmm0, DWORD PTR a$[rbp]
+	call	?sin@@YAMM@Z				; sin
+	movss	DWORD PTR s$[rbp], xmm0
+
+; 24   : 
+; 25   : 		tvec3<T, P> axis(normalize(v));
+
+	mov	rdx, QWORD PTR v$[rbp]
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??$normalize@M$0A@Utvec3@glm@@@glm@@YA?AU?$tvec3@M$0A@@0@AEBU10@@Z ; glm::normalize<float,0,glm::tvec3>
+
+; 26   : 		tvec3<T, P> temp((T(1) - c) * axis);
+
+	movss	xmm0, DWORD PTR __real@3f800000
+	subss	xmm0, DWORD PTR c$[rbp]
+	lea	r8, QWORD PTR axis$[rbp]
+	movaps	xmm1, xmm0
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec3@M$0A@@0@MAEBU10@@Z ; glm::operator*<float,0>
+
+; 27   : 
+; 28   : 		tmat4x4<T, P> Rotate(uninitialize);
+
+	xor	edx, edx
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z ; glm::tmat4x4<float,0>::tmat4x4<float,0>
+
+; 29   : 		Rotate[0][0] = c + temp[0] * axis[0];
+
+	xor	edx, edx
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv84[rbp], rax
+	xor	edx, edx
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv84[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR c$[rbp]
+	addss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv90[rbp], xmm0
+	xor	edx, edx
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	xor	edx, edx
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv90[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 30   : 		Rotate[0][1] = temp[0] * axis[1] + s * axis[2];
+
+	xor	edx, edx
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv130[rbp], rax
+	mov	edx, 1
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv130[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	DWORD PTR tv135[rbp], xmm0
+	mov	edx, 2
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	movss	xmm0, DWORD PTR s$[rbp]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR tv135[rbp]
+	addss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv140[rbp], xmm0
+	xor	edx, edx
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 1
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv140[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 31   : 		Rotate[0][2] = temp[0] * axis[2] - s * axis[1];
+
+	xor	edx, edx
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv148[rbp], rax
+	mov	edx, 2
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv148[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	DWORD PTR tv153[rbp], xmm0
+	mov	edx, 1
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	movss	xmm0, DWORD PTR s$[rbp]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR tv153[rbp]
+	subss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv158[rbp], xmm0
+	xor	edx, edx
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 2
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv158[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 32   : 
+; 33   : 		Rotate[1][0] = temp[1] * axis[0] - s * axis[2];
+
+	mov	edx, 1
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv166[rbp], rax
+	xor	edx, edx
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv166[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	DWORD PTR tv171[rbp], xmm0
+	mov	edx, 2
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	movss	xmm0, DWORD PTR s$[rbp]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR tv171[rbp]
+	subss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv176[rbp], xmm0
+	mov	edx, 1
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	xor	edx, edx
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv176[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 34   : 		Rotate[1][1] = c + temp[1] * axis[1];
+
+	mov	edx, 1
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv184[rbp], rax
+	mov	edx, 1
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv184[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR c$[rbp]
+	addss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv190[rbp], xmm0
+	mov	edx, 1
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 1
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv190[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 35   : 		Rotate[1][2] = temp[1] * axis[2] + s * axis[0];
+
+	mov	edx, 1
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv198[rbp], rax
+	mov	edx, 2
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv198[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	DWORD PTR tv203[rbp], xmm0
+	xor	edx, edx
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	movss	xmm0, DWORD PTR s$[rbp]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR tv203[rbp]
+	addss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv208[rbp], xmm0
+	mov	edx, 1
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 2
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv208[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 36   : 
+; 37   : 		Rotate[2][0] = temp[2] * axis[0] + s * axis[1];
+
+	mov	edx, 2
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv216[rbp], rax
+	xor	edx, edx
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv216[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	DWORD PTR tv221[rbp], xmm0
+	mov	edx, 1
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	movss	xmm0, DWORD PTR s$[rbp]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR tv221[rbp]
+	addss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv226[rbp], xmm0
+	mov	edx, 2
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	xor	edx, edx
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv226[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 38   : 		Rotate[2][1] = temp[2] * axis[1] - s * axis[0];
+
+	mov	edx, 2
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv234[rbp], rax
+	mov	edx, 1
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv234[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	DWORD PTR tv239[rbp], xmm0
+	xor	edx, edx
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	movss	xmm0, DWORD PTR s$[rbp]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR tv239[rbp]
+	subss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv244[rbp], xmm0
+	mov	edx, 2
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 1
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv244[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 39   : 		Rotate[2][2] = c + temp[2] * axis[2];
+
+	mov	edx, 2
+	lea	rcx, QWORD PTR temp$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	QWORD PTR tv252[rbp], rax
+	mov	edx, 2
+	lea	rcx, QWORD PTR axis$[rbp]
+	call	??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec3<float,0>::operator[]
+	mov	rcx, QWORD PTR tv252[rbp]
+	movss	xmm0, DWORD PTR [rcx]
+	mulss	xmm0, DWORD PTR [rax]
+	movss	xmm1, DWORD PTR c$[rbp]
+	addss	xmm1, xmm0
+	movaps	xmm0, xmm1
+	movss	DWORD PTR tv258[rbp], xmm0
+	mov	edx, 2
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 2
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	movss	xmm0, DWORD PTR tv258[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 40   : 
+; 41   : 		tmat4x4<T, P> Result(uninitialize);
+
+	xor	edx, edx
+	lea	rcx, QWORD PTR Result$[rbp]
+	call	??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z ; glm::tmat4x4<float,0>::tmat4x4<float,0>
+
+; 42   : 		Result[0] = m[0] * Rotate[0][0] + m[1] * Rotate[0][1] + m[2] * Rotate[0][2];
+
+	xor	edx, edx
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 2
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv270[rbp], rax
+	mov	edx, 2
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv270[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	QWORD PTR tv265[rbp], rax
+	xor	edx, edx
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 1
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv285[rbp], rax
+	mov	edx, 1
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv285[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T2[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	QWORD PTR tv280[rbp], rax
+	xor	edx, edx
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	xor	edx, edx
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv299[rbp], rax
+	xor	edx, edx
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv299[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T3[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	rcx, QWORD PTR tv280[rbp]
+	mov	r8, rcx
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T4[rbp]
+	call	??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ; glm::operator+<float,0>
+	mov	rcx, QWORD PTR tv265[rbp]
+	mov	r8, rcx
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T5[rbp]
+	call	??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ; glm::operator+<float,0>
+	mov	QWORD PTR tv264[rbp], rax
+	xor	edx, edx
+	lea	rcx, QWORD PTR Result$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rdi, rax
+	mov	rax, QWORD PTR tv264[rbp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+
+; 43   : 		Result[1] = m[0] * Rotate[1][0] + m[1] * Rotate[1][1] + m[2] * Rotate[1][2];
+
+	mov	edx, 1
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 2
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv321[rbp], rax
+	mov	edx, 2
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv321[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T6[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	QWORD PTR tv316[rbp], rax
+	mov	edx, 1
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 1
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv336[rbp], rax
+	mov	edx, 1
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv336[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T7[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	QWORD PTR tv331[rbp], rax
+	mov	edx, 1
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	xor	edx, edx
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv350[rbp], rax
+	xor	edx, edx
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv350[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T8[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	rcx, QWORD PTR tv331[rbp]
+	mov	r8, rcx
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T9[rbp]
+	call	??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ; glm::operator+<float,0>
+	mov	rcx, QWORD PTR tv316[rbp]
+	mov	r8, rcx
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T10[rbp]
+	call	??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ; glm::operator+<float,0>
+	mov	QWORD PTR tv315[rbp], rax
+	mov	edx, 1
+	lea	rcx, QWORD PTR Result$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rdi, rax
+	mov	rax, QWORD PTR tv315[rbp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+
+; 44   : 		Result[2] = m[0] * Rotate[2][0] + m[1] * Rotate[2][1] + m[2] * Rotate[2][2];
+
+	mov	edx, 2
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 2
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv372[rbp], rax
+	mov	edx, 2
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv372[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T11[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	QWORD PTR tv367[rbp], rax
+	mov	edx, 2
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	edx, 1
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv387[rbp], rax
+	mov	edx, 1
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv387[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T12[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	QWORD PTR tv382[rbp], rax
+	mov	edx, 2
+	lea	rcx, QWORD PTR Rotate$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	xor	edx, edx
+	mov	rcx, rax
+	call	??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z	; glm::tvec4<float,0>::operator[]
+	mov	QWORD PTR tv401[rbp], rax
+	xor	edx, edx
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rcx, QWORD PTR tv401[rbp]
+	movss	xmm2, DWORD PTR [rcx]
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T13[rbp]
+	call	??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ; glm::operator*<float,0>
+	mov	rcx, QWORD PTR tv382[rbp]
+	mov	r8, rcx
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T14[rbp]
+	call	??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ; glm::operator+<float,0>
+	mov	rcx, QWORD PTR tv367[rbp]
+	mov	r8, rcx
+	mov	rdx, rax
+	lea	rcx, QWORD PTR $T15[rbp]
+	call	??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ; glm::operator+<float,0>
+	mov	QWORD PTR tv366[rbp], rax
+	mov	edx, 2
+	lea	rcx, QWORD PTR Result$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rdi, rax
+	mov	rax, QWORD PTR tv366[rbp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+
+; 45   : 		Result[3] = m[3];
+
+	mov	edx, 3
+	mov	rcx, QWORD PTR m$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	QWORD PTR tv418[rbp], rax
+	mov	edx, 3
+	lea	rcx, QWORD PTR Result$[rbp]
+	call	??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ; glm::tmat4x4<float,0>::operator[]
+	mov	rdi, rax
+	mov	rax, QWORD PTR tv418[rbp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+
+; 46   : 		return Result;
+
+	lea	rax, QWORD PTR Result$[rbp]
+	mov	rdi, QWORD PTR __$ReturnUdt$[rbp]
+	mov	rsi, rax
+	mov	ecx, 64					; 00000040H
+	rep movsb
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 47   : 	}
+
+	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
+	xor	rcx, rbp
+	call	__security_check_cookie
+	lea	rsp, QWORD PTR [rbp+544]
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	ret	0
+??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@AEBU10@MAEBU?$tvec3@M$0A@@0@@Z ENDP ; glm::rotate<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z
+_TEXT	SEGMENT
+$T1 = 64
+$T2 = 80
+this$ = 128
+scalar$ = 136
+??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z PROC		; glm::tvec4<float,0>::operator*=<float>, COMDAT
+
+; 411  : 	{
+
+$LN3:
+	movss	DWORD PTR [rsp+16], xmm1
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	push	rsi
+	push	rdi
+	sub	rsp, 128				; 00000080H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 412  : 		return (*this = detail::compute_vec4_mul<T, P, detail::is_aligned<P>::value>::call(*this, tvec4<T, P>(scalar)));
+
+	movss	xmm1, DWORD PTR scalar$[rbp]
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??0?$tvec4@M$0A@@glm@@QEAA@M@Z		; glm::tvec4<float,0>::tvec4<float,0>
+	mov	r8, rax
+	mov	rdx, QWORD PTR this$[rbp]
+	lea	rcx, QWORD PTR $T2[rbp]
+	call	?call@?$compute_vec4_mul@M$0A@$0A@@detail@glm@@SA?AU?$tvec4@M$0A@@3@AEBU43@0@Z ; glm::detail::compute_vec4_mul<float,0,0>::call
+	mov	rdi, QWORD PTR this$[rbp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+	mov	rax, QWORD PTR this$[rbp]
+
+; 413  : 	}
+
+	lea	rsp, QWORD PTR [rbp+96]
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	ret	0
+??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z ENDP		; glm::tvec4<float,0>::operator*=<float>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z
+_TEXT	SEGMENT
+$T1 = 64
+__$ReturnUdt$ = 112
+v1$ = 120
+v2$ = 128
+??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z PROC	; glm::operator+<float,0>, COMDAT
+
+; 658  : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+24], r8
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	push	rsi
+	push	rdi
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 659  : 		return tvec4<T, P>(v1) += v2;
+
+	lea	rax, QWORD PTR $T1[rbp]
+	mov	rdi, rax
+	mov	rsi, QWORD PTR v1$[rbp]
+	mov	ecx, 16
+	rep movsb
+	mov	rdx, QWORD PTR v2$[rbp]
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??$?YM@?$tvec4@M$0A@@glm@@QEAAAEAU01@AEBU01@@Z ; glm::tvec4<float,0>::operator+=<float>
+	mov	rdi, QWORD PTR __$ReturnUdt$[rbp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 660  : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	ret	0
+??$?HM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@0@Z ENDP	; glm::operator+<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??$?0HHHM@?$tvec4@M$0A@@glm@@QEAA@HHHM@Z
+_TEXT	SEGMENT
+this$ = 80
+a$ = 88
+b$ = 96
+c$ = 104
+d$ = 112
+??$?0HHHM@?$tvec4@M$0A@@glm@@QEAA@HHHM@Z PROC		; glm::tvec4<float,0>::tvec4<float,0><int,int,int,float>, COMDAT
+
+; 204  : 	{}
+
+$LN3:
+	mov	DWORD PTR [rsp+32], r9d
+	mov	DWORD PTR [rsp+24], r8d
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 200  : 		x(static_cast<T>(a)),
+
+	cvtsi2ss xmm0, DWORD PTR a$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 201  : 		y(static_cast<T>(b)),
+
+	cvtsi2ss xmm0, DWORD PTR b$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+
+; 202  : 		z(static_cast<T>(c)),
+
+	cvtsi2ss xmm0, DWORD PTR c$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+8], xmm0
+
+; 203  : 		w(static_cast<T>(d))
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR d$[rbp]
+	movss	DWORD PTR [rax+12], xmm0
+
+; 204  : 	{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0HHHM@?$tvec4@M$0A@@glm@@QEAA@HHHM@Z ENDP		; glm::tvec4<float,0>::tvec4<float,0><int,int,int,float>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??$?0HHMH@?$tvec4@M$0A@@glm@@QEAA@HHMH@Z
+_TEXT	SEGMENT
+this$ = 80
+a$ = 88
+b$ = 96
+c$ = 104
+d$ = 112
+??$?0HHMH@?$tvec4@M$0A@@glm@@QEAA@HHMH@Z PROC		; glm::tvec4<float,0>::tvec4<float,0><int,int,float,int>, COMDAT
+
+; 204  : 	{}
+
+$LN3:
+	movss	DWORD PTR [rsp+32], xmm3
+	mov	DWORD PTR [rsp+24], r8d
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 200  : 		x(static_cast<T>(a)),
+
+	cvtsi2ss xmm0, DWORD PTR a$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 201  : 		y(static_cast<T>(b)),
+
+	cvtsi2ss xmm0, DWORD PTR b$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+
+; 202  : 		z(static_cast<T>(c)),
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR c$[rbp]
+	movss	DWORD PTR [rax+8], xmm0
+
+; 203  : 		w(static_cast<T>(d))
+
+	cvtsi2ss xmm0, DWORD PTR d$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+12], xmm0
+
+; 204  : 	{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0HHMH@?$tvec4@M$0A@@glm@@QEAA@HHMH@Z ENDP		; glm::tvec4<float,0>::tvec4<float,0><int,int,float,int>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??$?0HMHH@?$tvec4@M$0A@@glm@@QEAA@HMHH@Z
+_TEXT	SEGMENT
+this$ = 80
+a$ = 88
+b$ = 96
+c$ = 104
+d$ = 112
+??$?0HMHH@?$tvec4@M$0A@@glm@@QEAA@HMHH@Z PROC		; glm::tvec4<float,0>::tvec4<float,0><int,float,int,int>, COMDAT
+
+; 204  : 	{}
+
+$LN3:
+	mov	DWORD PTR [rsp+32], r9d
+	movss	DWORD PTR [rsp+24], xmm2
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 200  : 		x(static_cast<T>(a)),
+
+	cvtsi2ss xmm0, DWORD PTR a$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 201  : 		y(static_cast<T>(b)),
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR b$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+
+; 202  : 		z(static_cast<T>(c)),
+
+	cvtsi2ss xmm0, DWORD PTR c$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+8], xmm0
+
+; 203  : 		w(static_cast<T>(d))
+
+	cvtsi2ss xmm0, DWORD PTR d$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+12], xmm0
+
+; 204  : 	{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0HMHH@?$tvec4@M$0A@@glm@@QEAA@HMHH@Z ENDP		; glm::tvec4<float,0>::tvec4<float,0><int,float,int,int>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??$?0MHHH@?$tvec4@M$0A@@glm@@QEAA@MHHH@Z
+_TEXT	SEGMENT
+this$ = 80
+a$ = 88
+b$ = 96
+c$ = 104
+d$ = 112
+??$?0MHHH@?$tvec4@M$0A@@glm@@QEAA@MHHH@Z PROC		; glm::tvec4<float,0>::tvec4<float,0><float,int,int,int>, COMDAT
+
+; 204  : 	{}
+
+$LN3:
+	mov	DWORD PTR [rsp+32], r9d
+	mov	DWORD PTR [rsp+24], r8d
+	movss	DWORD PTR [rsp+16], xmm1
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 200  : 		x(static_cast<T>(a)),
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR a$[rbp]
+	movss	DWORD PTR [rax], xmm0
+
+; 201  : 		y(static_cast<T>(b)),
+
+	cvtsi2ss xmm0, DWORD PTR b$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+
+; 202  : 		z(static_cast<T>(c)),
+
+	cvtsi2ss xmm0, DWORD PTR c$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+8], xmm0
+
+; 203  : 		w(static_cast<T>(d))
+
+	cvtsi2ss xmm0, DWORD PTR d$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	movss	DWORD PTR [rax+12], xmm0
+
+; 204  : 	{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$?0MHHH@?$tvec4@M$0A@@glm@@QEAA@MHHH@Z ENDP		; glm::tvec4<float,0>::tvec4<float,0><float,int,int,int>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\xmemory0
@@ -6346,6 +8466,50 @@ $LN3:
 ??$move@AEAUBufferElement@buffers@core@@@std@@YA$$QEAUBufferElement@buffers@core@@AEAU123@@Z ENDP ; std::move<core::buffers::BufferElement &>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\gtx\transform.inl
+;	COMDAT ??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@MAEBU?$tvec3@M$0A@@0@@Z
+_TEXT	SEGMENT
+$T1 = 64
+$T2 = 128
+__$ReturnUdt$ = 160
+angle$ = 168
+v$ = 176
+??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@MAEBU?$tvec3@M$0A@@0@@Z PROC ; glm::rotate<float,0>, COMDAT
+
+; 14   : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+24], r8
+	movss	DWORD PTR [rsp+16], xmm1
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 176				; 000000b0H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__7BEF4FA2_transform.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 15   : 		return rotate(tmat4x4<T, P>(static_cast<T>(1)), angle, v);
+
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR $T2[rbp], xmm0
+	lea	rdx, QWORD PTR $T2[rbp]
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z	; glm::tmat4x4<float,0>::tmat4x4<float,0>
+	mov	r9, QWORD PTR v$[rbp]
+	movss	xmm2, DWORD PTR angle$[rbp]
+	mov	rdx, rax
+	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
+	call	??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@AEBU10@MAEBU?$tvec3@M$0A@@0@@Z ; glm::rotate<float,0>
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 16   : 	}
+
+	lea	rsp, QWORD PTR [rbp+144]
+	pop	rbp
+	ret	0
+??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@MAEBU?$tvec3@M$0A@@0@@Z ENDP ; glm::rotate<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
 ;	COMDAT ??_GRenderer3DScene@Scene@Application@@UEAAPEAXI@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -6363,7 +8527,7 @@ $LN4:
 	and	eax, 1
 	test	eax, eax
 	je	SHORT $LN2@scalar
-	mov	edx, 280				; 00000118H
+	mov	edx, 328				; 00000148H
 	mov	rcx, QWORD PTR this$[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN2@scalar:
@@ -6380,7 +8544,7 @@ _TEXT	SEGMENT
 this$ = 80
 ?OnImGuiRender@Renderer3DScene@Scene@Application@@UEAAXXZ PROC ; Application::Scene::Renderer3DScene::OnImGuiRender, COMDAT
 
-; 91   : 	{
+; 90   : 	{
 
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
@@ -6390,7 +8554,7 @@ $LN3:
 	lea	rcx, OFFSET FLAT:__07D19415_renderer3dscene.cpp
 	call	__CheckForDebuggerJustMyCode
 
-; 92   : 	}
+; 91   : 	}
 
 	lea	rsp, QWORD PTR [rbp+64]
 	pop	rbp
@@ -6408,7 +8572,7 @@ tv135 = 64
 this$ = 96
 ?OnRender@Renderer3DScene@Scene@Application@@UEAAXXZ PROC ; Application::Scene::Renderer3DScene::OnRender, COMDAT
 
-; 78   : 	{
+; 77   : 	{
 
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
@@ -6418,8 +8582,8 @@ $LN3:
 	lea	rcx, OFFSET FLAT:__07D19415_renderer3dscene.cpp
 	call	__CheckForDebuggerJustMyCode
 
-; 79   : 
-; 80   : 		m_Renderer.begin();
+; 78   : 
+; 79   : 		m_Renderer.begin();
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -6430,8 +8594,8 @@ $LN3:
 	mov	rax, QWORD PTR tv138[rbp]
 	call	QWORD PTR [rax+8]
 
-; 81   : 		
-; 82   : 		m_Renderer.submit(m_Cube);
+; 80   : 		
+; 81   : 		m_Renderer.submit(m_Cube);
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -6444,8 +8608,8 @@ $LN3:
 	mov	rax, QWORD PTR tv137[rbp]
 	call	QWORD PTR [rax+16]
 
-; 83   : 		
-; 84   : 		m_Renderer.end();
+; 82   : 		
+; 83   : 		m_Renderer.end();
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -6456,8 +8620,8 @@ $LN3:
 	mov	rax, QWORD PTR tv136[rbp]
 	call	QWORD PTR [rax+32]
 
-; 85   : 
-; 86   : 		m_Renderer.flush();
+; 84   : 
+; 85   : 		m_Renderer.flush();
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
@@ -6468,8 +8632,8 @@ $LN3:
 	mov	rax, QWORD PTR tv135[rbp]
 	call	QWORD PTR [rax+24]
 
-; 87   : 
-; 88   : 	}
+; 86   : 
+; 87   : 	}
 
 	lea	rsp, QWORD PTR [rbp+80]
 	pop	rbp
@@ -6480,24 +8644,71 @@ _TEXT	ENDS
 ; File l:\dev\featherfallengine\featherfall-examples\src\scene\renderer3dscene.cpp
 ;	COMDAT ?OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z
 _TEXT	SEGMENT
-this$ = 80
-deltaTime$ = 88
+$T1 = 64
+$T2 = 80
+this$ = 176
+deltaTime$ = 184
 ?OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z PROC ; Application::Scene::Renderer3DScene::OnUpdate, COMDAT
 
-; 74   : 	{
+; 67   : 	{
 
 $LN3:
 	movss	DWORD PTR [rsp+16], xmm1
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 96					; 00000060H
+	push	rsi
+	push	rdi
+	sub	rsp, 176				; 000000b0H
 	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__07D19415_renderer3dscene.cpp
 	call	__CheckForDebuggerJustMyCode
 
-; 75   : 	}
+; 68   : 		static float angle = 0.0f;
+; 69   : 		mlMatrix = glm::rotate(angle, glm::vec3(0.0f, 1.0f, 0.0f));
 
-	lea	rsp, QWORD PTR [rbp+64]
+	xorps	xmm3, xmm3
+	movss	xmm2, DWORD PTR __real@3f800000
+	xorps	xmm1, xmm1
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
+	mov	r8, rax
+	movss	xmm1, DWORD PTR ?angle@?1??OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z@4MA
+	lea	rcx, QWORD PTR $T2[rbp]
+	call	??$rotate@M$0A@@glm@@YA?AU?$tmat4x4@M$0A@@0@MAEBU?$tvec3@M$0A@@0@@Z ; glm::rotate<float,0>
+	mov	rcx, QWORD PTR this$[rbp]
+	lea	rdi, QWORD PTR [rcx+260]
+	mov	rsi, rax
+	mov	ecx, 64					; 00000040H
+	rep movsb
+
+; 70   : 		angle += deltaTime;
+
+	movss	xmm0, DWORD PTR ?angle@?1??OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z@4MA
+	addss	xmm0, DWORD PTR deltaTime$[rbp]
+	movss	DWORD PTR ?angle@?1??OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z@4MA, xmm0
+
+; 71   : 		m_Renderer.m_Shader->bind();
+
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR [rax+56]
+	call	?bind@Shader@graphics@core@@QEBAXXZ	; core::graphics::Shader::bind
+
+; 72   : 		m_Renderer.m_Shader->setUniformMat4("mlMatrix", mlMatrix);
+
+	mov	rax, QWORD PTR this$[rbp]
+	add	rax, 260				; 00000104H
+	mov	r8, rax
+	lea	rdx, OFFSET FLAT:??_C@_08LIGONNFJ@mlMatrix@
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR [rax+56]
+	call	?setUniformMat4@Shader@graphics@core@@QEAAXPEBDAEBU?$tmat4x4@M$0A@@glm@@@Z ; core::graphics::Shader::setUniformMat4
+
+; 73   : 
+; 74   : 	}
+
+	lea	rsp, QWORD PTR [rbp+144]
+	pop	rdi
+	pop	rsi
 	pop	rbp
 	ret	0
 ?OnUpdate@Renderer3DScene@Scene@Application@@UEAAXM@Z ENDP ; Application::Scene::Renderer3DScene::OnUpdate
@@ -6509,20 +8720,18 @@ _TEXT	SEGMENT
 $T1 = 64
 $T2 = 72
 $T3 = 80
-$T4 = 88
-$T5 = 96
-tv87 = 104
-this$ = 128
+tv83 = 88
+this$ = 112
 ??1Renderer3DScene@Scene@Application@@UEAA@XZ PROC	; Application::Scene::Renderer3DScene::~Renderer3DScene, COMDAT
 
-; 67   : 	{
+; 62   : 	{ 
 
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 144				; 00000090H
+	sub	rsp, 128				; 00000080H
 	lea	rbp, QWORD PTR [rsp+32]
-	mov	QWORD PTR $T5[rbp], -2
+	mov	QWORD PTR $T3[rbp], -2
 	lea	rcx, OFFSET FLAT:__07D19415_renderer3dscene.cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
@@ -6530,44 +8739,26 @@ $LN5:
 	lea	rcx, OFFSET FLAT:??_7Renderer3DScene@Scene@Application@@6B@
 	mov	QWORD PTR [rax], rcx
 
-; 68   : 		delete[] index;
-
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rax, QWORD PTR [rax+272]
-	mov	QWORD PTR $T1[rbp], rax
-	mov	rcx, QWORD PTR $T1[rbp]
-	call	??_V@YAXPEAX@Z				; operator delete[]
-	npad	1
-
-; 69   : 		delete[] vert; 
-
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rax, QWORD PTR [rax+264]
-	mov	QWORD PTR $T2[rbp], rax
-	mov	rcx, QWORD PTR $T2[rbp]
-	call	??_V@YAXPEAX@Z				; operator delete[]
-	npad	1
-
-; 70   : 		delete m_Cube;
+; 63   : 		delete m_Cube;
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+64]
-	mov	QWORD PTR $T4[rbp], rax
-	mov	rax, QWORD PTR $T4[rbp]
-	mov	QWORD PTR $T3[rbp], rax
-	cmp	QWORD PTR $T3[rbp], 0
+	mov	QWORD PTR $T2[rbp], rax
+	mov	rax, QWORD PTR $T2[rbp]
+	mov	QWORD PTR $T1[rbp], rax
+	cmp	QWORD PTR $T1[rbp], 0
 	je	SHORT $LN3@Renderer3D
 	mov	edx, 1
-	mov	rcx, QWORD PTR $T3[rbp]
+	mov	rcx, QWORD PTR $T1[rbp]
 	call	??_GRenderable3D@graphics@core@@QEAAPEAXI@Z
 	npad	1
-	mov	QWORD PTR tv87[rbp], rax
+	mov	QWORD PTR tv83[rbp], rax
 	jmp	SHORT $LN4@Renderer3D
 $LN3@Renderer3D:
-	mov	QWORD PTR tv87[rbp], 0
+	mov	QWORD PTR tv83[rbp], 0
 $LN4@Renderer3D:
 
-; 71   : 	}
+; 64   : 	}
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 72					; 00000048H
@@ -6582,7 +8773,7 @@ $LN4@Renderer3D:
 	mov	rcx, QWORD PTR this$[rbp]
 	call	??1Scene@0Application@@UEAA@XZ		; Application::Scene::Scene::~Scene
 	npad	1
-	lea	rsp, QWORD PTR [rbp+112]
+	lea	rsp, QWORD PTR [rbp+96]
 	pop	rbp
 	ret	0
 ??1Renderer3DScene@Scene@Application@@UEAA@XZ ENDP	; Application::Scene::Renderer3DScene::~Renderer3DScene
@@ -6592,42 +8783,43 @@ _TEXT	ENDS
 ;	COMDAT ??0Renderer3DScene@Scene@Application@@QEAA@XZ
 _TEXT	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ??0Renderer3DScene@Scene@Application@@QEAA@XZ PROC	; Application::Scene::Renderer3DScene::Renderer3DScene, COMDAT
 
-; 15   : 	{
+; 16   : 	{
 
-$LN21:
+$LN16:
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 784				; 00000310H
+	sub	rsp, 752				; 000002f0H
 	lea	rbp, QWORD PTR [rsp+80]
-	mov	QWORD PTR $T19[rbp], -2
-	mov	DWORD PTR $T18[rbp], 0
+	mov	QWORD PTR $T16[rbp], -2
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rbp
+	mov	QWORD PTR __$ArrayPad$[rbp], rax
+	mov	DWORD PTR $T15[rbp], 0
 	lea	rcx, OFFSET FLAT:__07D19415_renderer3dscene.cpp
 	call	__CheckForDebuggerJustMyCode
 	mov	rcx, QWORD PTR this$[rbp]
@@ -6641,81 +8833,81 @@ $LN21:
 
 	mov	ecx, 4
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T4[rbp], rax
-	cmp	QWORD PTR $T4[rbp], 0
-	je	SHORT $LN9@Renderer3D
+	mov	QWORD PTR $T2[rbp], rax
+	cmp	QWORD PTR $T2[rbp], 0
+	je	SHORT $LN4@Renderer3D
 	lea	rdx, OFFSET FLAT:??_C@_0CC@GLNBHNPM@res?1shaders?1Renderer3DTest?4shad@
-	lea	rcx, QWORD PTR $T5[rbp]
+	lea	rcx, QWORD PTR $T3[rbp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	npad	1
-	mov	eax, DWORD PTR $T18[rbp]
+	mov	eax, DWORD PTR $T15[rbp]
 	or	eax, 1
-	mov	DWORD PTR $T18[rbp], eax
-	lea	rdx, QWORD PTR $T5[rbp]
-	mov	rcx, QWORD PTR $T4[rbp]
+	mov	DWORD PTR $T15[rbp], eax
+	lea	rdx, QWORD PTR $T3[rbp]
+	mov	rcx, QWORD PTR $T2[rbp]
 	call	??0Shader@graphics@core@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; core::graphics::Shader::Shader
 	mov	QWORD PTR tv131[rbp], rax
-	jmp	SHORT $LN10@Renderer3D
-$LN9@Renderer3D:
+	jmp	SHORT $LN5@Renderer3D
+$LN4@Renderer3D:
 	mov	QWORD PTR tv131[rbp], 0
-$LN10@Renderer3D:
+$LN5@Renderer3D:
 	mov	rax, QWORD PTR tv131[rbp]
-	mov	QWORD PTR $T3[rbp], rax
+	mov	QWORD PTR $T1[rbp], rax
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
-	mov	rdx, QWORD PTR $T3[rbp]
+	mov	rdx, QWORD PTR $T1[rbp]
 	mov	rcx, rax
 	call	??0SimpleRenderer3D@graphics@core@@QEAA@PEAVShader@12@@Z ; core::graphics::SimpleRenderer3D::SimpleRenderer3D
 	npad	1
-	mov	eax, DWORD PTR $T18[rbp]
+	mov	eax, DWORD PTR $T15[rbp]
 	and	eax, 1
 	test	eax, eax
-	je	SHORT $LN18@Renderer3D
-	and	DWORD PTR $T18[rbp], -2
-	lea	rcx, QWORD PTR $T5[rbp]
+	je	SHORT $LN13@Renderer3D
+	and	DWORD PTR $T15[rbp], -2
+	lea	rcx, QWORD PTR $T3[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
-$LN18@Renderer3D:
+$LN13@Renderer3D:
 
-; 7    : 		m_Camera(glm::vec3(0.0f, 0.0f, -1.0f),
+; 7    : 		m_Camera(glm::vec3(2.0f, 2.0f, 3.0f),
 
 	movss	xmm0, DWORD PTR __real@41100000
-	movss	DWORD PTR $T6[rbp], xmm0
+	movss	DWORD PTR $T4[rbp], xmm0
 	movss	xmm0, DWORD PTR __real@41800000
-	movss	DWORD PTR $T7[rbp], xmm0
+	movss	DWORD PTR $T5[rbp], xmm0
 	movss	xmm0, DWORD PTR __real@42c80000
-	movss	DWORD PTR $T8[rbp], xmm0
+	movss	DWORD PTR $T6[rbp], xmm0
 	movss	xmm0, DWORD PTR __real@3dcccccd
-	movss	DWORD PTR $T9[rbp], xmm0
+	movss	DWORD PTR $T7[rbp], xmm0
 	movss	xmm0, DWORD PTR __real@42b40000
-	movss	DWORD PTR $T10[rbp], xmm0
+	movss	DWORD PTR $T8[rbp], xmm0
 	xorps	xmm3, xmm3
 	movss	xmm2, DWORD PTR __real@3f800000
 	xorps	xmm1, xmm1
-	lea	rcx, QWORD PTR $T11[rbp]
+	lea	rcx, QWORD PTR $T9[rbp]
 	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
 	mov	QWORD PTR tv143[rbp], rax
 	xorps	xmm3, xmm3
 	xorps	xmm2, xmm2
 	xorps	xmm1, xmm1
-	lea	rcx, QWORD PTR $T12[rbp]
+	lea	rcx, QWORD PTR $T10[rbp]
 	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
 	mov	QWORD PTR tv149[rbp], rax
-	movss	xmm3, DWORD PTR __real@bf800000
-	xorps	xmm2, xmm2
-	xorps	xmm1, xmm1
-	lea	rcx, QWORD PTR $T13[rbp]
+	movss	xmm3, DWORD PTR __real@40400000
+	movss	xmm2, DWORD PTR __real@40000000
+	movss	xmm1, DWORD PTR __real@40000000
+	lea	rcx, QWORD PTR $T11[rbp]
 	call	??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z	; glm::tvec3<float,0>::tvec3<float,0>
 	mov	rcx, QWORD PTR this$[rbp]
 	add	rcx, 72					; 00000048H
-	lea	rdx, QWORD PTR $T6[rbp]
+	lea	rdx, QWORD PTR $T4[rbp]
 	mov	QWORD PTR [rsp+64], rdx
-	lea	rdx, QWORD PTR $T7[rbp]
+	lea	rdx, QWORD PTR $T5[rbp]
 	mov	QWORD PTR [rsp+56], rdx
-	lea	rdx, QWORD PTR $T8[rbp]
+	lea	rdx, QWORD PTR $T6[rbp]
 	mov	QWORD PTR [rsp+48], rdx
-	lea	rdx, QWORD PTR $T9[rbp]
+	lea	rdx, QWORD PTR $T7[rbp]
 	mov	QWORD PTR [rsp+40], rdx
-	lea	rdx, QWORD PTR $T10[rbp]
+	lea	rdx, QWORD PTR $T8[rbp]
 	mov	QWORD PTR [rsp+32], rdx
 	mov	rdx, QWORD PTR tv143[rbp]
 	mov	r9, rdx
@@ -6725,16 +8917,24 @@ $LN18@Renderer3D:
 	call	??0Camera@graphics@core@@QEAA@AEBU?$tvec3@M$0A@@glm@@00AEBM1111@Z ; core::graphics::Camera::Camera
 	npad	1
 
-; 16   : 
-; 17   : 		vert = new float[7 * 8];
+; 8    : 				glm::vec3(0.0f, 0.0f, 0.0f),
+; 9    : 				glm::vec3(0.0f, 1.0f, 0.0f),
+; 10   : 				90.0f,
+; 11   : 				0.1f,
+; 12   : 				100.0f,
+; 13   : 				16.0f,
+; 14   : 				9.0f),
+; 15   : 		mlMatrix(1.0f)
 
-	mov	ecx, 224				; 000000e0H
-	call	??_U@YAPEAX_K@Z				; operator new[]
-	mov	QWORD PTR $T14[rbp], rax
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR $T12[rbp], xmm0
 	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR $T14[rbp]
-	mov	QWORD PTR [rax+264], rcx
+	add	rax, 260				; 00000104H
+	lea	rdx, QWORD PTR $T12[rbp]
+	mov	rcx, rax
+	call	??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z	; glm::tmat4x4<float,0>::tmat4x4<float,0>
 
+; 17   : 
 ; 18   : 		float intern_vert[] = {
 ; 19   : //            X      Y      Z      R      G      B      A    
 ; 20   : 			-1.0f, -1.0f,  1.0f,  1.0f,  0.0f,  0.0f,  1.0f, // 0
@@ -6875,183 +9075,119 @@ $LN18@Renderer3D:
 
 ; 28   : 		};
 ; 29   : 
-; 30   : 		for (int i = 0; i < 7 * 8; ++i) {
-
-	mov	DWORD PTR i$1[rbp], 0
-	jmp	SHORT $LN4@Renderer3D
-$LN2@Renderer3D:
-	mov	eax, DWORD PTR i$1[rbp]
-	inc	eax
-	mov	DWORD PTR i$1[rbp], eax
-$LN4@Renderer3D:
-	cmp	DWORD PTR i$1[rbp], 56			; 00000038H
-	jge	SHORT $LN3@Renderer3D
-
-; 31   : 			vert[i] = intern_vert[i];
-
-	movsxd	rax, DWORD PTR i$1[rbp]
-	movsxd	rcx, DWORD PTR i$1[rbp]
-	mov	rdx, QWORD PTR this$[rbp]
-	mov	rdx, QWORD PTR [rdx+264]
-	movss	xmm0, DWORD PTR intern_vert$[rbp+rax*4]
-	movss	DWORD PTR [rdx+rcx*4], xmm0
-
-; 32   : 		}
-
-	jmp	SHORT $LN2@Renderer3D
-$LN3@Renderer3D:
-
-; 33   : 
-; 34   : 		index = new unsigned int[3 * 12];
-
-	mov	ecx, 144				; 00000090H
-	call	??_U@YAPEAX_K@Z				; operator new[]
-	mov	QWORD PTR $T15[rbp], rax
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR $T15[rbp]
-	mov	QWORD PTR [rax+272], rcx
-
-; 35   : 		unsigned int intern_index[] = {
-; 36   : 			0, 1, 2, //front face
+; 30   : 		unsigned int intern_index[] = {
+; 31   : 			0, 1, 2, // Left
 
 	mov	DWORD PTR intern_index$[rbp], 0
 	mov	DWORD PTR intern_index$[rbp+4], 1
 	mov	DWORD PTR intern_index$[rbp+8], 2
 
-; 37   : 			2, 3, 0,
+; 32   : 			1, 3, 2, //
 
-	mov	DWORD PTR intern_index$[rbp+12], 2
+	mov	DWORD PTR intern_index$[rbp+12], 1
 	mov	DWORD PTR intern_index$[rbp+16], 3
-	mov	DWORD PTR intern_index$[rbp+20], 0
+	mov	DWORD PTR intern_index$[rbp+20], 2
 
-; 38   : 
-; 39   : 			4, 0, 2, //left face
+; 33   : 
+; 34   : 			4, 0, 2, // Bottom
 
 	mov	DWORD PTR intern_index$[rbp+24], 4
 	mov	DWORD PTR intern_index$[rbp+28], 0
 	mov	DWORD PTR intern_index$[rbp+32], 2
 
-; 40   : 			2, 7, 4,
+; 35   : 			2, 6, 4, // 
 
 	mov	DWORD PTR intern_index$[rbp+36], 2
-	mov	DWORD PTR intern_index$[rbp+40], 7
+	mov	DWORD PTR intern_index$[rbp+40], 6
 	mov	DWORD PTR intern_index$[rbp+44], 4
 
-; 41   : 
-; 42   : 			1, 5, 6, //right face
+; 36   : 
+; 37   : 			1, 5, 7, // Top 
 
 	mov	DWORD PTR intern_index$[rbp+48], 1
 	mov	DWORD PTR intern_index$[rbp+52], 5
-	mov	DWORD PTR intern_index$[rbp+56], 6
+	mov	DWORD PTR intern_index$[rbp+56], 7
 
-; 43   : 			6, 2, 1,
+; 38   : 			7, 3, 1, //
 
-	mov	DWORD PTR intern_index$[rbp+60], 6
-	mov	DWORD PTR intern_index$[rbp+64], 2
+	mov	DWORD PTR intern_index$[rbp+60], 7
+	mov	DWORD PTR intern_index$[rbp+64], 3
 	mov	DWORD PTR intern_index$[rbp+68], 1
 
-; 44   : 
-; 45   : 			5, 4, 7, //back face
+; 39   : 
+; 40   : 			7, 5, 4, // Right 
 
-	mov	DWORD PTR intern_index$[rbp+72], 5
-	mov	DWORD PTR intern_index$[rbp+76], 4
-	mov	DWORD PTR intern_index$[rbp+80], 7
+	mov	DWORD PTR intern_index$[rbp+72], 7
+	mov	DWORD PTR intern_index$[rbp+76], 5
+	mov	DWORD PTR intern_index$[rbp+80], 4
 
-; 46   : 			7, 6, 5,
+; 41   : 			4, 6, 7, //
 
-	mov	DWORD PTR intern_index$[rbp+84], 7
+	mov	DWORD PTR intern_index$[rbp+84], 4
 	mov	DWORD PTR intern_index$[rbp+88], 6
-	mov	DWORD PTR intern_index$[rbp+92], 5
+	mov	DWORD PTR intern_index$[rbp+92], 7
 
-; 47   : 
-; 48   : 			3, 2, 6, //top face
+; 42   : 
+; 43   : 			6, 2, 3, // Back
 
-	mov	DWORD PTR intern_index$[rbp+96], 3
+	mov	DWORD PTR intern_index$[rbp+96], 6
 	mov	DWORD PTR intern_index$[rbp+100], 2
-	mov	DWORD PTR intern_index$[rbp+104], 6
+	mov	DWORD PTR intern_index$[rbp+104], 3
 
-; 49   : 			6, 7, 3,
+; 44   : 			3, 7, 6, //
 
-	mov	DWORD PTR intern_index$[rbp+108], 6
+	mov	DWORD PTR intern_index$[rbp+108], 3
 	mov	DWORD PTR intern_index$[rbp+112], 7
-	mov	DWORD PTR intern_index$[rbp+116], 3
+	mov	DWORD PTR intern_index$[rbp+116], 6
 
-; 50   : 
-; 51   : 			4, 5, 1, //bottom face
+; 45   : 
+; 46   : 			4, 5, 1, // Front
 
 	mov	DWORD PTR intern_index$[rbp+120], 4
 	mov	DWORD PTR intern_index$[rbp+124], 5
 	mov	DWORD PTR intern_index$[rbp+128], 1
 
-; 52   : 			1, 0, 4
+; 47   : 			1, 0, 4  //
 
 	mov	DWORD PTR intern_index$[rbp+132], 1
 	mov	DWORD PTR intern_index$[rbp+136], 0
 	mov	DWORD PTR intern_index$[rbp+140], 4
 
-; 53   : 		};
-; 54   : 
-; 55   : 		for (int i = 0; i < 3 * 12; ++i) {
-
-	mov	DWORD PTR i$2[rbp], 0
-	jmp	SHORT $LN7@Renderer3D
-$LN5@Renderer3D:
-	mov	eax, DWORD PTR i$2[rbp]
-	inc	eax
-	mov	DWORD PTR i$2[rbp], eax
-$LN7@Renderer3D:
-	cmp	DWORD PTR i$2[rbp], 36			; 00000024H
-	jge	SHORT $LN6@Renderer3D
-
-; 56   : 			index[i] = intern_index[i];
-
-	movsxd	rax, DWORD PTR i$2[rbp]
-	movsxd	rcx, DWORD PTR i$2[rbp]
-	mov	rdx, QWORD PTR this$[rbp]
-	mov	rdx, QWORD PTR [rdx+272]
-	mov	eax, DWORD PTR intern_index$[rbp+rax*4]
-	mov	DWORD PTR [rdx+rcx*4], eax
-
-; 57   : 		}
-
-	jmp	SHORT $LN5@Renderer3D
-$LN6@Renderer3D:
-
-; 58   : 
-; 59   : 		m_Cube = new core::graphics::Renderable3D(vert, index, 7 * 8, 3 * 12);
+; 48   : 		};
+; 49   : 
+; 50   : 		m_Cube = new core::graphics::Renderable3D(intern_vert, intern_index, 7 * 8 * 4, 3 * 12);
 
 	mov	ecx, 16
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T17[rbp], rax
-	cmp	QWORD PTR $T17[rbp], 0
-	je	SHORT $LN11@Renderer3D
+	mov	QWORD PTR $T14[rbp], rax
+	cmp	QWORD PTR $T14[rbp], 0
+	je	SHORT $LN6@Renderer3D
 	mov	BYTE PTR [rsp+40], 1
 	mov	DWORD PTR [rsp+32], 36			; 00000024H
-	mov	r9d, 56					; 00000038H
-	mov	rax, QWORD PTR this$[rbp]
-	mov	r8, QWORD PTR [rax+272]
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rdx, QWORD PTR [rax+264]
-	mov	rcx, QWORD PTR $T17[rbp]
+	mov	r9d, 224				; 000000e0H
+	lea	r8, QWORD PTR intern_index$[rbp]
+	lea	rdx, QWORD PTR intern_vert$[rbp]
+	mov	rcx, QWORD PTR $T14[rbp]
 	call	??0Renderable3D@graphics@core@@QEAA@PEBXPEBIII_N@Z ; core::graphics::Renderable3D::Renderable3D
-	mov	QWORD PTR tv403[rbp], rax
-	jmp	SHORT $LN12@Renderer3D
-$LN11@Renderer3D:
-	mov	QWORD PTR tv403[rbp], 0
-$LN12@Renderer3D:
-	mov	rax, QWORD PTR tv403[rbp]
-	mov	QWORD PTR $T16[rbp], rax
+	mov	QWORD PTR tv182[rbp], rax
+	jmp	SHORT $LN7@Renderer3D
+$LN6@Renderer3D:
+	mov	QWORD PTR tv182[rbp], 0
+$LN7@Renderer3D:
+	mov	rax, QWORD PTR tv182[rbp]
+	mov	QWORD PTR $T13[rbp], rax
 	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR $T16[rbp]
+	mov	rcx, QWORD PTR $T13[rbp]
 	mov	QWORD PTR [rax+64], rcx
 
-; 60   : 		m_Renderer.m_Shader->bind();
+; 51   : 		
+; 52   : 		m_Renderer.m_Shader->bind();
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rax+56]
 	call	?bind@Shader@graphics@core@@QEBAXXZ	; core::graphics::Shader::bind
 
-; 61   : 		m_Renderer.m_Shader->setUniformMat4("prMatrix", m_Camera.getProjectionMatrix());
+; 53   : 		m_Renderer.m_Shader->setUniformMat4("prMatrix", m_Camera.getProjectionMatrix());
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 72					; 00000048H
@@ -7063,7 +9199,7 @@ $LN12@Renderer3D:
 	mov	rcx, QWORD PTR [rax+56]
 	call	?setUniformMat4@Shader@graphics@core@@QEAAXPEBDAEBU?$tmat4x4@M$0A@@glm@@@Z ; core::graphics::Shader::setUniformMat4
 
-; 62   : 		m_Renderer.m_Shader->setUniformMat4("vwMatrix", m_Camera.getViewMatrix());
+; 54   : 		m_Renderer.m_Shader->setUniformMat4("vwMatrix", m_Camera.getViewMatrix());
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 72					; 00000048H
@@ -7074,13 +9210,37 @@ $LN12@Renderer3D:
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR [rax+56]
 	call	?setUniformMat4@Shader@graphics@core@@QEAAXPEBDAEBU?$tmat4x4@M$0A@@glm@@@Z ; core::graphics::Shader::setUniformMat4
-	npad	1
 
-; 63   : 
-; 64   : 	}
+; 55   : 		
+; 56   : 		//set background to Grey
+; 57   : 		GLCall(glClearColor(0.5f, 0.5f, 0.5f, 1.0f));
+
+	call	?GLClearError@@YAXXZ			; GLClearError
+	movss	xmm3, DWORD PTR __real@3f800000
+	movss	xmm2, DWORD PTR __real@3f000000
+	movss	xmm1, DWORD PTR __real@3f000000
+	movss	xmm0, DWORD PTR __real@3f000000
+	call	QWORD PTR __imp_glClearColor
+	mov	eax, DWORD PTR ?__LINE__Var@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4JA
+	add	eax, 51					; 00000033H
+	mov	r8d, eax
+	lea	rdx, OFFSET FLAT:??_C@_0EM@HCBNGLBJ@l?3?2dev?2featherfallengine?2feathe@
+	lea	rcx, OFFSET FLAT:??_C@_0CF@NGMMNMAN@glClearColor?$CI0?45f?0?50?45f?0?50?45f?0?5@
+	call	?GLLogError@@YA_NPEBD0H@Z		; GLLogError
+	movzx	eax, al
+	test	eax, eax
+	jne	SHORT $LN2@Renderer3D
+	int	3
+$LN2@Renderer3D:
+
+; 58   : 
+; 59   : 	}
 
 	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+704]
+	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
+	xor	rcx, rbp
+	call	__security_check_cookie
+	lea	rsp, QWORD PTR [rbp+672]
 	pop	rbp
 	ret	0
 ??0Renderer3DScene@Scene@Application@@QEAA@XZ ENDP	; Application::Scene::Renderer3DScene::Renderer3DScene
@@ -7088,31 +9248,29 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$0@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7127,37 +9285,35 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$1@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+80]
 	mov	edx, 4
-	mov	rcx, QWORD PTR $T4[rbp]
+	mov	rcx, QWORD PTR $T2[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -7167,43 +9323,41 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$2@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+80]
-	mov	eax, DWORD PTR $T18[rbp]
+	mov	eax, DWORD PTR $T15[rbp]
 	and	eax, 1
 	test	eax, eax
-	je	SHORT $LN16@dtor$2
-	and	DWORD PTR $T18[rbp], -2
-	lea	rcx, QWORD PTR $T5[rbp]
+	je	SHORT $LN11@dtor$2
+	and	DWORD PTR $T15[rbp], -2
+	lea	rcx, QWORD PTR $T3[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
-$LN16@dtor$2:
+$LN11@dtor$2:
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
@@ -7212,31 +9366,29 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$3@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$3
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7252,31 +9404,29 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$4@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$4
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7292,37 +9442,35 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$5@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$5
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+80]
 	mov	edx, 16
-	mov	rcx, QWORD PTR $T17[rbp]
+	mov	rcx, QWORD PTR $T14[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -7333,31 +9481,29 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$0@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7373,37 +9519,35 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$1@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+80]
 	mov	edx, 4
-	mov	rcx, QWORD PTR $T4[rbp]
+	mov	rcx, QWORD PTR $T2[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -7414,43 +9558,41 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$2@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+80]
-	mov	eax, DWORD PTR $T18[rbp]
+	mov	eax, DWORD PTR $T15[rbp]
 	and	eax, 1
 	test	eax, eax
-	je	SHORT $LN16@dtor$2
-	and	DWORD PTR $T18[rbp], -2
-	lea	rcx, QWORD PTR $T5[rbp]
+	je	SHORT $LN11@dtor$2
+	and	DWORD PTR $T15[rbp], -2
+	lea	rcx, QWORD PTR $T3[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
-$LN16@dtor$2:
+$LN11@dtor$2:
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
@@ -7460,31 +9602,29 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$3@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$3
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7501,31 +9641,29 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$4@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$4
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7542,37 +9680,35 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 intern_vert$ = 0
-i$1 = 224
-intern_index$ = 240
-i$2 = 384
-$T3 = 520
-$T4 = 528
-$T5 = 536
-$T6 = 576
-$T7 = 580
-$T8 = 584
-$T9 = 588
-$T10 = 592
+intern_index$ = 224
+$T1 = 496
+$T2 = 504
+$T3 = 512
+$T4 = 552
+$T5 = 556
+$T6 = 560
+$T7 = 564
+$T8 = 568
+$T9 = 572
+$T10 = 584
 $T11 = 596
 $T12 = 608
-$T13 = 620
-$T14 = 632
-$T15 = 640
-$T16 = 648
-$T17 = 656
-$T18 = 664
-$T19 = 672
-tv403 = 680
-tv143 = 680
-tv131 = 680
-tv149 = 688
-this$ = 720
+$T13 = 616
+$T14 = 624
+$T15 = 632
+$T16 = 640
+tv182 = 648
+tv143 = 648
+tv131 = 648
+tv149 = 656
+__$ArrayPad$ = 664
+this$ = 688
 ?dtor$5@?0???0Renderer3DScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::Renderer3DScene::Renderer3DScene'::`1'::dtor$5
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+80]
 	mov	edx, 16
-	mov	rcx, QWORD PTR $T17[rbp]
+	mov	rcx, QWORD PTR $T14[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -7648,7 +9784,7 @@ indexSize$ = 176
 staticDraw$ = 184
 ??0Renderable3D@graphics@core@@QEAA@PEBXPEBIII_N@Z PROC	; core::graphics::Renderable3D::Renderable3D, COMDAT
 
-; 26   : 		{
+; 27   : 		{
 
 $LN7:
 	mov	DWORD PTR [rsp+32], r9d
@@ -7669,7 +9805,7 @@ $LN7:
 	call	??0VAO@buffers@core@@QEAA@XZ		; core::buffers::VAO::VAO
 	npad	1
 
-; 25   : 			: vbo(vertData, vertexSize, staticDraw), ibo(indexData, indexSize, staticDraw)
+; 26   : 			: vbo(vertData, vertexSize, staticDraw), ibo(indexData, indexSize, staticDraw)
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 4
@@ -7688,7 +9824,7 @@ $LN7:
 	call	??0IBO@buffers@core@@QEAA@PEBII_N@Z	; core::buffers::IBO::IBO
 	npad	1
 
-; 27   : 			buffers::BufferLayout layout = buffers::BufferLayout();
+; 28   : 			buffers::BufferLayout layout = buffers::BufferLayout();
 
 	mov	edx, 40					; 00000028H
 	lea	rcx, QWORD PTR layout$[rbp]
@@ -7697,20 +9833,20 @@ $LN7:
 	call	??0BufferLayout@buffers@core@@QEAA@XZ	; core::buffers::BufferLayout::BufferLayout
 	npad	1
 
-; 28   : 			layout.push<float>(3); //position
+; 29   : 			layout.push<float>(3); //position
 
 	mov	edx, 3
 	lea	rcx, QWORD PTR layout$[rbp]
 	call	??$push@M@BufferLayout@buffers@core@@QEAAXI@Z ; core::buffers::BufferLayout::push<float>
 
-; 29   : 			layout.push<float>(4); //color
+; 30   : 			layout.push<float>(4); //color
 
 	mov	edx, 4
 	lea	rcx, QWORD PTR layout$[rbp]
 	call	??$push@M@BufferLayout@buffers@core@@QEAAXI@Z ; core::buffers::BufferLayout::push<float>
 
-; 30   : 
-; 31   : 			vao.addBuffer(vbo, layout);
+; 31   : 
+; 32   : 			vao.addBuffer(vbo, layout);
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 4
@@ -7720,7 +9856,7 @@ $LN7:
 	call	?addBuffer@VAO@buffers@core@@QEAAXAEBVVBO@23@AEBVBufferLayout@23@@Z ; core::buffers::VAO::addBuffer
 	npad	1
 
-; 32   : 		}
+; 33   : 		}
 
 	lea	rcx, QWORD PTR layout$[rbp]
 	call	??1BufferLayout@buffers@core@@QEAA@XZ
@@ -7919,6 +10055,55 @@ staticDraw$ = 184
 ?dtor$3@?0???0Renderable3D@graphics@core@@QEAA@PEBXPEBIII_N@Z@4HA ENDP ; `core::graphics::Renderable3D::Renderable3D'::`1'::dtor$3
 text$x	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z
+_TEXT	SEGMENT
+$T1 = 64
+__$ReturnUdt$ = 112
+v$ = 120
+scalar$ = 128
+??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z PROC	; glm::operator*<float,0>, COMDAT
+
+; 694  : 	{
+
+$LN3:
+	movss	DWORD PTR [rsp+24], xmm2
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	push	rsi
+	push	rdi
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 695  : 		return tvec4<T, P>(v) *= scalar;
+
+	lea	rax, QWORD PTR $T1[rbp]
+	mov	rdi, rax
+	mov	rsi, QWORD PTR v$[rbp]
+	mov	ecx, 16
+	rep movsb
+	movss	xmm1, DWORD PTR scalar$[rbp]
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??$?XM@?$tvec4@M$0A@@glm@@QEAAAEAU01@M@Z ; glm::tvec4<float,0>::operator*=<float>
+	mov	rdi, QWORD PTR __$ReturnUdt$[rbp]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
+
+; 696  : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	ret	0
+??$?DM$0A@@glm@@YA?AU?$tvec4@M$0A@@0@AEBU10@M@Z ENDP	; glm::operator*<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
 ;	COMDAT ?__autoclassinit2@BufferLayout@buffers@core@@QEAAX_K@Z
 _TEXT	SEGMENT
 this$ = 96
@@ -7979,7 +10164,7 @@ $LN3:
 	lea	rcx, OFFSET FLAT:__6DC649C7_bufferlayout.h
 	call	__CheckForDebuggerJustMyCode
 
-; 60   : 			elements.push_back({ GL_FLOAT, count, GL_FALSE });
+; 60   : 			elements.push_back({ GL_FLOAT, count, GL_FALSE }); 
 
 	mov	DWORD PTR $T1[rbp], 5126		; 00001406H
 	mov	eax, DWORD PTR count$[rbp]
@@ -10060,6 +12245,323 @@ $LN3:
 	pop	rbp
 	ret	0
 ??0?$tvec3@M$0A@@glm@@QEAA@MMM@Z ENDP			; glm::tvec3<float,0>::tvec3<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec3.inl
+;	COMDAT ??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z
+_TEXT	SEGMENT
+this$ = 80
+i$ = 88
+??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z PROC			; glm::tvec3<float,0>::operator[], COMDAT
+
+; 144  : 	{
+
+$LN5:
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__125091CA_type_vec3.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 145  : 		assert(i >= 0 && i < this->length());
+
+	cmp	DWORD PTR i$[rbp], 0
+	jl	SHORT $LN3@operator
+	call	?length@?$tvec3@M$0A@@glm@@SAHXZ	; glm::tvec3<float,0>::length
+	cmp	DWORD PTR i$[rbp], eax
+	jl	SHORT $LN4@operator
+$LN3@operator:
+	mov	r8d, 145				; 00000091H
+	lea	rdx, OFFSET FLAT:??_C@_1JE@OPPOLFAL@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@
+	lea	rcx, OFFSET FLAT:??_C@_1DK@BGNCJAPL@?$AAi?$AA?5?$AA?$DO?$AA?$DN?$AA?5?$AA0?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt@
+	call	QWORD PTR __imp__wassert
+	xor	eax, eax
+$LN4@operator:
+
+; 146  : 		return (&x)[i];
+
+	movsxd	rax, DWORD PTR i$[rbp]
+	mov	rcx, QWORD PTR this$[rbp]
+	lea	rax, QWORD PTR [rcx+rax*4]
+
+; 147  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??A?$tvec3@M$0A@@glm@@QEAAAEAMH@Z ENDP			; glm::tvec3<float,0>::operator[]
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec3.hpp
+;	COMDAT ?length@?$tvec3@M$0A@@glm@@SAHXZ
+_TEXT	SEGMENT
+?length@?$tvec3@M$0A@@glm@@SAHXZ PROC			; glm::tvec3<float,0>::length, COMDAT
+
+; 82   : 		GLM_FUNC_DECL static length_type length(){return 3;}
+
+$LN3:
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__D3D2986D_type_vec3.hpp
+	call	__CheckForDebuggerJustMyCode
+	mov	eax, 3
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?length@?$tvec3@M$0A@@glm@@SAHXZ ENDP			; glm::tvec3<float,0>::length
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_mat4x4.inl
+;	COMDAT ??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z
+_TEXT	SEGMENT
+this$ = 80
+i$ = 88
+??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z PROC ; glm::tmat4x4<float,0>::operator[], COMDAT
+
+; 248  : 	{
+
+$LN4:
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__BF97B2F5_type_mat4x4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 249  : 		assert(i < this->length());
+
+	call	?length@?$tmat4x4@M$0A@@glm@@SAHXZ	; glm::tmat4x4<float,0>::length
+	cmp	DWORD PTR i$[rbp], eax
+	jl	SHORT $LN3@operator
+	mov	r8d, 249				; 000000f9H
+	lea	rdx, OFFSET FLAT:??_C@_1JI@BDACPION@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@
+	lea	rcx, OFFSET FLAT:??_C@_1CG@KOFHLCJL@?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt?$AAh?$AAi?$AAs?$AA?9?$AA?$DO?$AAl?$AAe?$AAn?$AAg?$AAt@
+	call	QWORD PTR __imp__wassert
+	xor	eax, eax
+$LN3@operator:
+
+; 250  : 		return this->value[i];
+
+	movsxd	rax, DWORD PTR i$[rbp]
+	imul	rax, rax, 16
+	mov	rcx, QWORD PTR this$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+
+; 251  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??A?$tmat4x4@M$0A@@glm@@QEBAAEBU?$tvec4@M$0A@@1@H@Z ENDP ; glm::tmat4x4<float,0>::operator[]
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_mat4x4.inl
+;	COMDAT ??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z
+_TEXT	SEGMENT
+this$ = 80
+i$ = 88
+??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z PROC ; glm::tmat4x4<float,0>::operator[], COMDAT
+
+; 241  : 	{
+
+$LN4:
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__BF97B2F5_type_mat4x4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 242  : 		assert(i < this->length());
+
+	call	?length@?$tmat4x4@M$0A@@glm@@SAHXZ	; glm::tmat4x4<float,0>::length
+	cmp	DWORD PTR i$[rbp], eax
+	jl	SHORT $LN3@operator
+	mov	r8d, 242				; 000000f2H
+	lea	rdx, OFFSET FLAT:??_C@_1JI@BDACPION@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@
+	lea	rcx, OFFSET FLAT:??_C@_1CG@KOFHLCJL@?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt?$AAh?$AAi?$AAs?$AA?9?$AA?$DO?$AAl?$AAe?$AAn?$AAg?$AAt@
+	call	QWORD PTR __imp__wassert
+	xor	eax, eax
+$LN3@operator:
+
+; 243  : 		return this->value[i];
+
+	movsxd	rax, DWORD PTR i$[rbp]
+	imul	rax, rax, 16
+	mov	rcx, QWORD PTR this$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+
+; 244  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??A?$tmat4x4@M$0A@@glm@@QEAAAEAU?$tvec4@M$0A@@1@H@Z ENDP ; glm::tmat4x4<float,0>::operator[]
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_mat4x4.hpp
+;	COMDAT ?length@?$tmat4x4@M$0A@@glm@@SAHXZ
+_TEXT	SEGMENT
+?length@?$tmat4x4@M$0A@@glm@@SAHXZ PROC			; glm::tmat4x4<float,0>::length, COMDAT
+
+; 84   : 		GLM_FUNC_DECL static length_type length(){return 4;}
+
+$LN3:
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__7E15BB52_type_mat4x4.hpp
+	call	__CheckForDebuggerJustMyCode
+	mov	eax, 4
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?length@?$tmat4x4@M$0A@@glm@@SAHXZ ENDP			; glm::tmat4x4<float,0>::length
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_mat4x4.inl
+;	COMDAT ??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z
+_TEXT	SEGMENT
+$T1 = 64
+$T2 = 80
+$T3 = 96
+$T4 = 112
+this$ = 160
+s$ = 168
+??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z PROC		; glm::tmat4x4<float,0>::tmat4x4<float,0>, COMDAT
+
+; 50   : 	{
+
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	push	rsi
+	push	rdi
+	sub	rsp, 176				; 000000b0H
+	lea	rbp, QWORD PTR [rsp+48]
+	lea	rcx, OFFSET FLAT:__BF97B2F5_type_mat4x4.inl
+	call	__CheckForDebuggerJustMyCode
+	lea	r9, OFFSET FLAT:??0?$tvec4@M$0A@@glm@@QEAA@XZ ; glm::tvec4<float,0>::tvec4<float,0>
+	mov	r8d, 4
+	mov	edx, 16
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??_H@YAXPEAX_K1P6APEAX0@Z@Z
+
+; 51   : 		this->value[0] = col_type(s, 0, 0, 0);
+
+	mov	DWORD PTR [rsp+32], 0
+	xor	r9d, r9d
+	xor	r8d, r8d
+	mov	rax, QWORD PTR s$[rbp]
+	movss	xmm1, DWORD PTR [rax]
+	lea	rcx, QWORD PTR $T1[rbp]
+	call	??$?0MHHH@?$tvec4@M$0A@@glm@@QEAA@MHHH@Z ; glm::tvec4<float,0>::tvec4<float,0><float,int,int,int>
+	mov	ecx, 16
+	imul	rcx, rcx, 0
+	mov	rdx, QWORD PTR this$[rbp]
+	lea	rdi, QWORD PTR [rdx+rcx]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+
+; 52   : 		this->value[1] = col_type(0, s, 0, 0);
+
+	mov	DWORD PTR [rsp+32], 0
+	xor	r9d, r9d
+	mov	rax, QWORD PTR s$[rbp]
+	movss	xmm2, DWORD PTR [rax]
+	xor	edx, edx
+	lea	rcx, QWORD PTR $T2[rbp]
+	call	??$?0HMHH@?$tvec4@M$0A@@glm@@QEAA@HMHH@Z ; glm::tvec4<float,0>::tvec4<float,0><int,float,int,int>
+	mov	ecx, 16
+	imul	rcx, rcx, 1
+	mov	rdx, QWORD PTR this$[rbp]
+	lea	rdi, QWORD PTR [rdx+rcx]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+
+; 53   : 		this->value[2] = col_type(0, 0, s, 0);
+
+	mov	DWORD PTR [rsp+32], 0
+	mov	rax, QWORD PTR s$[rbp]
+	movss	xmm3, DWORD PTR [rax]
+	xor	r8d, r8d
+	xor	edx, edx
+	lea	rcx, QWORD PTR $T3[rbp]
+	call	??$?0HHMH@?$tvec4@M$0A@@glm@@QEAA@HHMH@Z ; glm::tvec4<float,0>::tvec4<float,0><int,int,float,int>
+	mov	ecx, 16
+	imul	rcx, rcx, 2
+	mov	rdx, QWORD PTR this$[rbp]
+	lea	rdi, QWORD PTR [rdx+rcx]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+
+; 54   : 		this->value[3] = col_type(0, 0, 0, s);
+
+	mov	rax, QWORD PTR s$[rbp]
+	movss	xmm0, DWORD PTR [rax]
+	movss	DWORD PTR [rsp+32], xmm0
+	xor	r9d, r9d
+	xor	r8d, r8d
+	xor	edx, edx
+	lea	rcx, QWORD PTR $T4[rbp]
+	call	??$?0HHHM@?$tvec4@M$0A@@glm@@QEAA@HHHM@Z ; glm::tvec4<float,0>::tvec4<float,0><int,int,int,float>
+	mov	ecx, 16
+	imul	rcx, rcx, 3
+	mov	rdx, QWORD PTR this$[rbp]
+	lea	rdi, QWORD PTR [rdx+rcx]
+	mov	rsi, rax
+	mov	ecx, 16
+	rep movsb
+
+; 55   : 	}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+128]
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	ret	0
+??0?$tmat4x4@M$0A@@glm@@QEAA@AEBM@Z ENDP		; glm::tmat4x4<float,0>::tmat4x4<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_mat4x4.inl
+;	COMDAT ??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z
+_TEXT	SEGMENT
+this$ = 80
+__formal$ = 88
+??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z PROC		; glm::tmat4x4<float,0>::tmat4x4<float,0>, COMDAT
+
+; 46   : 	{}
+
+$LN3:
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__BF97B2F5_type_mat4x4.inl
+	call	__CheckForDebuggerJustMyCode
+	lea	r9, OFFSET FLAT:??0?$tvec4@M$0A@@glm@@QEAA@XZ ; glm::tvec4<float,0>::tvec4<float,0>
+	mov	r8d, 4
+	mov	edx, 16
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??_H@YAXPEAX_K1P6APEAX0@Z@Z
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??0?$tmat4x4@M$0A@@glm@@QEAA@W4ctor@1@@Z ENDP		; glm::tmat4x4<float,0>::tmat4x4<float,0>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\xstring
@@ -12359,6 +14861,202 @@ $LN3:
 ?length@?$char_traits@D@std@@SA_KQEBD@Z ENDP		; std::char_traits<char>::length
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z
+_TEXT	SEGMENT
+this$ = 80
+a$ = 88
+b$ = 96
+c$ = 104
+d$ = 112
+??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z PROC			; glm::tvec4<float,0>::tvec4<float,0>, COMDAT
+
+; 193  : 	{}
+
+$LN3:
+	movss	DWORD PTR [rsp+32], xmm3
+	movss	DWORD PTR [rsp+24], xmm2
+	movss	DWORD PTR [rsp+16], xmm1
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 192  : 		: x(a), y(b), z(c), w(d)
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR a$[rbp]
+	movss	DWORD PTR [rax], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR b$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR c$[rbp]
+	movss	DWORD PTR [rax+8], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR d$[rbp]
+	movss	DWORD PTR [rax+12], xmm0
+
+; 193  : 	{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z ENDP			; glm::tvec4<float,0>::tvec4<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??0?$tvec4@M$0A@@glm@@QEAA@M@Z
+_TEXT	SEGMENT
+this$ = 80
+scalar$ = 88
+??0?$tvec4@M$0A@@glm@@QEAA@M@Z PROC			; glm::tvec4<float,0>::tvec4<float,0>, COMDAT
+
+; 188  : 	{}
+
+$LN3:
+	movss	DWORD PTR [rsp+16], xmm1
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 187  : 		: x(scalar), y(scalar), z(scalar), w(scalar)
+
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR scalar$[rbp]
+	movss	DWORD PTR [rax], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR scalar$[rbp]
+	movss	DWORD PTR [rax+4], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR scalar$[rbp]
+	movss	DWORD PTR [rax+8], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	movss	xmm0, DWORD PTR scalar$[rbp]
+	movss	DWORD PTR [rax+12], xmm0
+
+; 188  : 	{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??0?$tvec4@M$0A@@glm@@QEAA@M@Z ENDP			; glm::tvec4<float,0>::tvec4<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??0?$tvec4@M$0A@@glm@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 80
+??0?$tvec4@M$0A@@glm@@QEAA@XZ PROC			; glm::tvec4<float,0>::tvec4<float,0>, COMDAT
+
+; 163  : 		{}
+
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 161  : 				: x(0), y(0), z(0), w(0)
+
+	mov	rax, QWORD PTR this$[rbp]
+	xorps	xmm0, xmm0
+	movss	DWORD PTR [rax], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	xorps	xmm0, xmm0
+	movss	DWORD PTR [rax+4], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	xorps	xmm0, xmm0
+	movss	DWORD PTR [rax+8], xmm0
+	mov	rax, QWORD PTR this$[rbp]
+	xorps	xmm0, xmm0
+	movss	DWORD PTR [rax+12], xmm0
+
+; 163  : 		{}
+
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??0?$tvec4@M$0A@@glm@@QEAA@XZ ENDP			; glm::tvec4<float,0>::tvec4<float,0>
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.inl
+;	COMDAT ??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z
+_TEXT	SEGMENT
+this$ = 80
+i$ = 88
+??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z PROC			; glm::tvec4<float,0>::operator[], COMDAT
+
+; 329  : 	{
+
+$LN5:
+	mov	DWORD PTR [rsp+16], edx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__A0704DDA_type_vec4.inl
+	call	__CheckForDebuggerJustMyCode
+
+; 330  : 		assert(i >= 0 && i < this->length());
+
+	cmp	DWORD PTR i$[rbp], 0
+	jl	SHORT $LN3@operator
+	call	?length@?$tvec4@M$0A@@glm@@SAHXZ	; glm::tvec4<float,0>::length
+	cmp	DWORD PTR i$[rbp], eax
+	jl	SHORT $LN4@operator
+$LN3@operator:
+	mov	r8d, 330				; 0000014aH
+	lea	rdx, OFFSET FLAT:??_C@_1JE@JLGGFMIE@?$AAl?$AA?3?$AA?2?$AAd?$AAe?$AAv?$AA?2?$AAf?$AAe?$AAa?$AAt?$AAh?$AAe?$AAr?$AAf@
+	lea	rcx, OFFSET FLAT:??_C@_1DK@BGNCJAPL@?$AAi?$AA?5?$AA?$DO?$AA?$DN?$AA?5?$AA0?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AAi?$AA?5?$AA?$DM?$AA?5?$AAt@
+	call	QWORD PTR __imp__wassert
+	xor	eax, eax
+$LN4@operator:
+
+; 331  : 		return (&x)[i];
+
+	movsxd	rax, DWORD PTR i$[rbp]
+	mov	rcx, QWORD PTR this$[rbp]
+	lea	rax, QWORD PTR [rcx+rax*4]
+
+; 332  : 	}
+
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??A?$tvec4@M$0A@@glm@@QEAAAEAMH@Z ENDP			; glm::tvec4<float,0>::operator[]
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File l:\dev\featherfallengine\depends\install\include\glm\detail\type_vec4.hpp
+;	COMDAT ?length@?$tvec4@M$0A@@glm@@SAHXZ
+_TEXT	SEGMENT
+?length@?$tvec4@M$0A@@glm@@SAHXZ PROC			; glm::tvec4<float,0>::length, COMDAT
+
+; 85   : 		GLM_FUNC_DECL static length_type length(){return 4;}
+
+$LN3:
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__61F2447D_type_vec4.hpp
+	call	__CheckForDebuggerJustMyCode
+	mov	eax, 4
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?length@?$tvec4@M$0A@@glm@@SAHXZ ENDP			; glm::tvec4<float,0>::length
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\limits
 ;	COMDAT ?max@?$numeric_limits@_J@std@@SA_JXZ
 _TEXT	SEGMENT
@@ -12386,6 +15084,105 @@ $LN3:
 	pop	rbp
 	ret	0
 ?max@?$numeric_limits@_J@std@@SA_JXZ ENDP		; std::numeric_limits<__int64>::max
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\cmath
+;	COMDAT ?sqrt@@YAMM@Z
+_TEXT	SEGMENT
+$T1 = 64
+_Xx$ = 96
+?sqrt@@YAMM@Z PROC					; sqrt, COMDAT
+
+; 294  : 	{
+
+$LN3:
+	movss	DWORD PTR [rsp+8], xmm0
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	QWORD PTR $T1[rbp], -2
+	lea	rcx, OFFSET FLAT:__5340138E_cmath
+	call	__CheckForDebuggerJustMyCode
+	npad	1
+
+; 295  : 	return (_CSTD sqrtf(_Xx));
+
+	movss	xmm0, DWORD PTR _Xx$[rbp]
+	call	QWORD PTR __imp_sqrtf
+	npad	1
+
+; 296  : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?sqrt@@YAMM@Z ENDP					; sqrt
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\cmath
+;	COMDAT ?sin@@YAMM@Z
+_TEXT	SEGMENT
+$T1 = 64
+_Xx$ = 96
+?sin@@YAMM@Z PROC					; sin, COMDAT
+
+; 284  : 	{
+
+$LN3:
+	movss	DWORD PTR [rsp+8], xmm0
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	QWORD PTR $T1[rbp], -2
+	lea	rcx, OFFSET FLAT:__5340138E_cmath
+	call	__CheckForDebuggerJustMyCode
+	npad	1
+
+; 285  : 	return (_CSTD sinf(_Xx));
+
+	movss	xmm0, DWORD PTR _Xx$[rbp]
+	call	QWORD PTR __imp_sinf
+	npad	1
+
+; 286  : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?sin@@YAMM@Z ENDP					; sin
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCu /ZI
+; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\cmath
+;	COMDAT ?cos@@YAMM@Z
+_TEXT	SEGMENT
+$T1 = 64
+_Xx$ = 96
+?cos@@YAMM@Z PROC					; cos, COMDAT
+
+; 77   : 	{
+
+$LN3:
+	movss	DWORD PTR [rsp+8], xmm0
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	QWORD PTR $T1[rbp], -2
+	lea	rcx, OFFSET FLAT:__5340138E_cmath
+	call	__CheckForDebuggerJustMyCode
+	npad	1
+
+; 78   : 	return (_CSTD cosf(_Xx));
+
+	movss	xmm0, DWORD PTR _Xx$[rbp]
+	call	QWORD PTR __imp_cosf
+	npad	1
+
+; 79   : 	}
+
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+?cos@@YAMM@Z ENDP					; cos
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCu /ZI
 ; File c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.15.26726\include\vcruntime_new.h

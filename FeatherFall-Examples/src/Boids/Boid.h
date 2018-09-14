@@ -16,7 +16,6 @@ namespace Application { namespace Boid {
 		public:
 
 			Boid(float px, float py, const glm::vec4& pcolor);
-			Boid(float px, float py, unsigned int pcolor);
 			~Boid();
 
 			void updatePos();

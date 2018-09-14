@@ -1,6 +1,5 @@
 #include "BatchRenderer2D.h"
 #include <memory>
-#include "../Auto.h"
 
 namespace core { namespace graphics {
 

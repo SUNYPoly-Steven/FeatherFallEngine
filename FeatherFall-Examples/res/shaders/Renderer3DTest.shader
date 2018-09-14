@@ -4,26 +4,28 @@
 layout(location = 0) in vec4 position;
 layout(location = 1) in vec4 color;
 
-out vec4 oColor;
+out vec4 vColor;
 
-uniform mat4 prMatrix = mat4(1.0f);
-uniform mat4 vwMatrix = mat4(1.0f);
+uniform mat4 prMatrix = mat4(1.0);
+uniform mat4 vwMatrix = mat4(1.0);
+uniform mat4 mlMatrix = mat4(1.0);
 
 void main() {
 
-	oColor = color;
-	gl_Position = prMatrix * vwMatrix * position;
+	vColor = color;
+	gl_Position = prMatrix * vwMatrix * mlMatrix * position;
 
 }
 
 #shader fragment
 #version 330 core
 
-in vec4 iColor;
-out vec4 out_color;
+layout(location = 0) out vec4 out_color;
+in vec4 vColor;
 
 void main() {
 
-	out_color = iColor;
+	out_color = vColor;
+	//out_color = vec4(vColor.x, 0.0, 0.0, 1.0);
 
 }

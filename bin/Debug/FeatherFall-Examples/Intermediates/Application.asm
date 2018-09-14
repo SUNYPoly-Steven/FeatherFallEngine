@@ -20874,12 +20874,12 @@ this$ = 112
 	mov	QWORD PTR $T3[rbp], -2
 	lea	rcx, OFFSET FLAT:__54642716_mainmenuscene.h
 	call	__CheckForDebuggerJustMyCode
-	mov	ecx, 280				; 00000118H
+	mov	ecx, 328				; 00000148H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T2[rbp], rax
 	cmp	QWORD PTR $T2[rbp], 0
 	je	SHORT $LN3@operator
-	mov	edx, 280				; 00000118H
+	mov	edx, 328				; 00000148H
 	mov	rcx, QWORD PTR $T2[rbp]
 	call	?__autoclassinit2@Renderer3DScene@Scene@Application@@QEAAX_K@Z
 	mov	rcx, QWORD PTR $T2[rbp]
@@ -20908,7 +20908,7 @@ this$ = 112
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+32]
-	mov	edx, 280				; 00000118H
+	mov	edx, 328				; 00000148H
 	mov	rcx, QWORD PTR $T2[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
@@ -20928,7 +20928,7 @@ this$ = 112
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+32]
-	mov	edx, 280				; 00000118H
+	mov	edx, 328				; 00000148H
 	mov	rcx, QWORD PTR $T2[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H

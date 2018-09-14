@@ -57,7 +57,7 @@ namespace core { namespace buffers {
 		template<>
 		void push<float>(unsigned int count) 
 		{
-			elements.push_back({ GL_FLOAT, count, GL_FALSE });
+			elements.push_back({ GL_FLOAT, count, GL_FALSE }); 
 			stride += count * GLsizeof(GL_FLOAT);
 		}
 

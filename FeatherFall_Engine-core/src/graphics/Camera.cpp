@@ -1,4 +1,6 @@
 #include "Camera.h"
+#include <glm/gtx/string_cast.hpp>
+#include <iostream>
 
 namespace core { namespace graphics {
 
@@ -81,12 +83,14 @@ namespace core { namespace graphics {
 	glm::mat4& Camera::computeProjMat() 
 	{
 		projMat = glm::perspective(fov, (viewWidth / viewHeight), nearPlane, farPlane);
+		//std::cout << "projMat: \n" << glm::to_string(projMat) << std::endl;
 		return projMat;
 	}
 
 	glm::mat4& Camera::computeViewMat() 
 	{
 		viewMat = glm::lookAt(eye, lookAt, up);
+		//std::cout << "veiwMat:\n" << glm::to_string(viewMat) << std::endl;
 		return viewMat;
 	}
 

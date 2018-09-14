@@ -3,6 +3,7 @@
 #include "../buffers/VBO.h"
 #include "../buffers/IBO.h"
 #include "../buffers/BufferLayout.h"
+#include <glm/vec3.hpp>
 
 
 namespace core { namespace graphics {
@@ -17,7 +18,7 @@ namespace core { namespace graphics {
 	public:
 
 		Renderable3D() 
-			: vbo(nullptr, 0), ibo(nullptr, 0)
+			: vbo(nullptr, 0), ibo(nullptr, 0) 
 		{
 		}
 

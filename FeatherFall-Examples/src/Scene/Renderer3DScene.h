@@ -10,8 +10,8 @@ namespace Application { namespace Scene {
 		core::graphics::SimpleRenderer3D m_Renderer;
 		core::graphics::Renderable3D* m_Cube;
 		core::graphics::Camera m_Camera;
-		float* vert;
-		unsigned int* index;
+
+		glm::mat4 mlMatrix;
 
 	public:
 

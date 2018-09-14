@@ -79,8 +79,8 @@ __EEB2B1DD_type_vec2.hpp DB 01H
 __125091CA_type_vec3.inl DB 01H
 __D3D2986D_type_vec3.hpp DB 01H
 __A0704DDA_type_vec4.inl DB 01H
-__BF97B2F5_type_mat4x4.inl DB 01H
 __61F2447D_type_vec4.hpp DB 01H
+__BF97B2F5_type_mat4x4.inl DB 01H
 __30E3E102_xstddef DB 01H
 __B60C3EDD_matrix_transform.inl DB 01H
 __7BEF4FA2_transform.inl DB 01H
@@ -301,7 +301,7 @@ EXTRN	__imp_cosf:PROC
 EXTRN	__imp_sinf:PROC
 EXTRN	memcpy:PROC
 EXTRN	memmove:PROC
-EXTRN	??0Renderable2D@graphics@core@@QEAA@MMMMI@Z:PROC ; core::graphics::Renderable2D::Renderable2D
+EXTRN	??0Renderable2D@graphics@core@@QEAA@AEBU?$tvec4@M$0A@@glm@@AEBU?$tvec2@M$0A@@4@0@Z:PROC ; core::graphics::Renderable2D::Renderable2D
 EXTRN	strlen:PROC
 EXTRN	?_Xlength_error@std@@YAXPEBD@Z:PROC		; std::_Xlength_error
 EXTRN	??0BatchRenderer2D@graphics@core@@QEAA@XZ:PROC	; core::graphics::BatchRenderer2D::BatchRenderer2D
@@ -931,7 +931,7 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$??0MandelbrotScene@Scene@Application@@QEAA@XZ DD imagerel $LN23
-	DD	imagerel $LN23+1079
+	DD	imagerel $LN23+1187
 	DD	imagerel $unwind$??0MandelbrotScene@Scene@Application@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -2122,13 +2122,13 @@ $ip2state$??0MandelbrotScene@Scene@Application@@QEAA@XZ DD imagerel ??0Mandelbro
 	DD	00H
 	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+486
 	DD	06H
-	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+588
+	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+696
 	DD	00H
-	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+874
+	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+982
 	DD	07H
-	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+994
+	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+1102
 	DD	00H
-	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+1063
+	DD	imagerel ??0MandelbrotScene@Scene@Application@@QEAA@XZ+1171
 	DD	0ffffffffH
 xdata	ENDS
 ;	COMDAT xdata
@@ -2159,7 +2159,7 @@ $cppxdata$??0MandelbrotScene@Scene@Application@@QEAA@XZ DD 019930522H
 	DD	00H
 	DD	011H
 	DD	imagerel $ip2state$??0MandelbrotScene@Scene@Application@@QEAA@XZ
-	DD	0130H
+	DD	0158H
 	DD	00H
 	DD	01H
 CONST	ENDS
@@ -2167,7 +2167,7 @@ CONST	ENDS
 xdata	SEGMENT
 $unwind$??0MandelbrotScene@Scene@Application@@QEAA@XZ DD 045041d11H
 	DD	010d4312H
-	DD	05006002aH
+	DD	050060030H
 	DD	imagerel __CxxFrameHandler3
 	DD	imagerel $cppxdata$??0MandelbrotScene@Scene@Application@@QEAA@XZ
 xdata	ENDS
@@ -6640,18 +6640,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ??0MandelbrotScene@Scene@Application@@QEAA@XZ PROC	; Application::Scene::MandelbrotScene::MandelbrotScene, COMDAT
 
 ; 14   : 	{
@@ -6659,10 +6664,10 @@ this$ = 288
 $LN23:
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 336				; 00000150H
+	sub	rsp, 384				; 00000180H
 	lea	rbp, QWORD PTR [rsp+64]
-	mov	QWORD PTR $T15[rbp], -2
-	mov	DWORD PTR $T14[rbp], 0
+	mov	QWORD PTR $T18[rbp], -2
+	mov	DWORD PTR $T17[rbp], 0
 	lea	rcx, OFFSET FLAT:__D9F44F68_mandelbrotscene.cpp
 	call	__CheckForDebuggerJustMyCode
 	mov	rcx, QWORD PTR this$[rbp]
@@ -6706,9 +6711,9 @@ $LN4@Mandelbrot:
 	lea	rcx, QWORD PTR $T5[rbp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	npad	1
-	mov	eax, DWORD PTR $T14[rbp]
+	mov	eax, DWORD PTR $T17[rbp]
 	or	eax, 1
-	mov	DWORD PTR $T14[rbp], eax
+	mov	DWORD PTR $T17[rbp], eax
 	lea	rdx, QWORD PTR $T5[rbp]
 	mov	rcx, QWORD PTR $T4[rbp]
 	call	??0Shader@graphics@core@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; core::graphics::Shader::Shader
@@ -6722,11 +6727,11 @@ $LN6@Mandelbrot:
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR $T3[rbp]
 	mov	QWORD PTR [rax+16], rcx
-	mov	eax, DWORD PTR $T14[rbp]
+	mov	eax, DWORD PTR $T17[rbp]
 	and	eax, 1
 	test	eax, eax
 	je	SHORT $LN18@Mandelbrot
-	and	DWORD PTR $T14[rbp], -2
+	and	DWORD PTR $T17[rbp], -2
 	lea	rcx, QWORD PTR $T5[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN18@Mandelbrot:
@@ -6760,27 +6765,46 @@ $LN8@Mandelbrot:
 	mov	rcx, QWORD PTR $T6[rbp]
 	mov	QWORD PTR [rax+24], rcx
 
-; 13   : 		  canvas(  new core::graphics::Renderable2D(-2.0f,-1.0f, 4.0f, 2.0f, 0xFF0000FF))
+; 13   : 		  canvas(  new core::graphics::Renderable2D(glm::vec4(-2.0f,-1.0f, 0.0f, 1.0f), glm::vec2(4.0f, 2.0f), glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)))
 
 	mov	ecx, 48					; 00000030H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T9[rbp], rax
 	cmp	QWORD PTR $T9[rbp], 0
-	je	SHORT $LN9@Mandelbrot
-	mov	DWORD PTR [rsp+40], -16776961		; ff0000ffH
-	movss	xmm0, DWORD PTR __real@40000000
+	je	$LN9@Mandelbrot
+	movss	xmm0, DWORD PTR __real@3f800000
 	movss	DWORD PTR [rsp+32], xmm0
-	movss	xmm3, DWORD PTR __real@40800000
+	xorps	xmm3, xmm3
+	xorps	xmm2, xmm2
+	movss	xmm1, DWORD PTR __real@3f800000
+	lea	rcx, QWORD PTR $T10[rbp]
+	call	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z	; glm::tvec4<float,0>::tvec4<float,0>
+	mov	QWORD PTR tv178[rbp], rax
+	movss	xmm2, DWORD PTR __real@40000000
+	movss	xmm1, DWORD PTR __real@40800000
+	lea	rcx, QWORD PTR $T11[rbp]
+	call	??0?$tvec2@M$0A@@glm@@QEAA@MM@Z		; glm::tvec2<float,0>::tvec2<float,0>
+	mov	QWORD PTR tv185[rbp], rax
+	movss	xmm0, DWORD PTR __real@3f800000
+	movss	DWORD PTR [rsp+32], xmm0
+	xorps	xmm3, xmm3
 	movss	xmm2, DWORD PTR __real@bf800000
 	movss	xmm1, DWORD PTR __real@c0000000
+	lea	rcx, QWORD PTR $T12[rbp]
+	call	??0?$tvec4@M$0A@@glm@@QEAA@MMMM@Z	; glm::tvec4<float,0>::tvec4<float,0>
+	mov	rcx, QWORD PTR tv178[rbp]
+	mov	r9, rcx
+	mov	rcx, QWORD PTR tv185[rbp]
+	mov	r8, rcx
+	mov	rdx, rax
 	mov	rcx, QWORD PTR $T9[rbp]
-	call	??0Renderable2D@graphics@core@@QEAA@MMMMI@Z ; core::graphics::Renderable2D::Renderable2D
-	mov	QWORD PTR tv182[rbp], rax
+	call	??0Renderable2D@graphics@core@@QEAA@AEBU?$tvec4@M$0A@@glm@@AEBU?$tvec2@M$0A@@4@0@Z ; core::graphics::Renderable2D::Renderable2D
+	mov	QWORD PTR tv196[rbp], rax
 	jmp	SHORT $LN10@Mandelbrot
 $LN9@Mandelbrot:
-	mov	QWORD PTR tv182[rbp], 0
+	mov	QWORD PTR tv196[rbp], 0
 $LN10@Mandelbrot:
-	mov	rax, QWORD PTR tv182[rbp]
+	mov	rax, QWORD PTR tv196[rbp]
 	mov	QWORD PTR $T8[rbp], rax
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, QWORD PTR $T8[rbp]
@@ -6878,30 +6902,30 @@ $LN10@Mandelbrot:
 
 	mov	ecx, 72					; 00000048H
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T11[rbp], rax
-	cmp	QWORD PTR $T11[rbp], 0
+	mov	QWORD PTR $T14[rbp], rax
+	cmp	QWORD PTR $T14[rbp], 0
 	je	SHORT $LN11@Mandelbrot
 	mov	edx, 72					; 00000048H
-	mov	rcx, QWORD PTR $T11[rbp]
+	mov	rcx, QWORD PTR $T14[rbp]
 	call	?__autoclassinit2@Texture@graphics@core@@QEAAX_K@Z
-	lea	rax, QWORD PTR $T12[rbp]
-	mov	QWORD PTR $T13[rbp], rax
+	lea	rax, QWORD PTR $T15[rbp]
+	mov	QWORD PTR $T16[rbp], rax
 	lea	rdx, OFFSET FLAT:??_C@_0BF@OFOMGDGN@res?1textures?1pal?4png@
-	mov	rcx, QWORD PTR $T13[rbp]
+	mov	rcx, QWORD PTR $T16[rbp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
-	mov	QWORD PTR tv257[rbp], rax
-	mov	rdx, QWORD PTR tv257[rbp]
-	mov	rcx, QWORD PTR $T11[rbp]
+	mov	QWORD PTR tv271[rbp], rax
+	mov	rdx, QWORD PTR tv271[rbp]
+	mov	rcx, QWORD PTR $T14[rbp]
 	call	??0Texture@graphics@core@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; core::graphics::Texture::Texture
-	mov	QWORD PTR tv233[rbp], rax
+	mov	QWORD PTR tv247[rbp], rax
 	jmp	SHORT $LN12@Mandelbrot
 $LN11@Mandelbrot:
-	mov	QWORD PTR tv233[rbp], 0
+	mov	QWORD PTR tv247[rbp], 0
 $LN12@Mandelbrot:
-	mov	rax, QWORD PTR tv233[rbp]
-	mov	QWORD PTR $T10[rbp], rax
+	mov	rax, QWORD PTR tv247[rbp]
+	mov	QWORD PTR $T13[rbp], rax
 	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR $T10[rbp]
+	mov	rcx, QWORD PTR $T13[rbp]
 	mov	QWORD PTR [rax+72], rcx
 
 ; 23   : 		palette->bind(1);
@@ -6923,7 +6947,7 @@ $LN12@Mandelbrot:
 ; 25   : 	}
 
 	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+272]
+	lea	rsp, QWORD PTR [rbp+320]
 	pop	rbp
 	ret	0
 ??0MandelbrotScene@Scene@Application@@QEAA@XZ ENDP	; Application::Scene::MandelbrotScene::MandelbrotScene
@@ -6940,18 +6964,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$0@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -6975,18 +7004,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$1@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7011,18 +7045,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$2@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7047,27 +7086,32 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$3@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$3
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+64]
-	mov	eax, DWORD PTR $T14[rbp]
+	mov	eax, DWORD PTR $T17[rbp]
 	and	eax, 1
 	test	eax, eax
 	je	SHORT $LN17@dtor$3
-	and	DWORD PTR $T14[rbp], -2
+	and	DWORD PTR $T17[rbp], -2
 	lea	rcx, QWORD PTR $T5[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN17@dtor$3:
@@ -7088,18 +7132,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$4@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$4
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7124,18 +7173,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$5@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$5
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7160,24 +7214,29 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$6@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$6
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+64]
 	mov	edx, 72					; 00000048H
-	mov	rcx, QWORD PTR $T11[rbp]
+	mov	rcx, QWORD PTR $T14[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -7197,18 +7256,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$0@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7233,18 +7297,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$1@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7270,18 +7339,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$2@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7307,27 +7381,32 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$3@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$3
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+64]
-	mov	eax, DWORD PTR $T14[rbp]
+	mov	eax, DWORD PTR $T17[rbp]
 	and	eax, 1
 	test	eax, eax
 	je	SHORT $LN17@dtor$3
-	and	DWORD PTR $T14[rbp], -2
+	and	DWORD PTR $T17[rbp], -2
 	lea	rcx, QWORD PTR $T5[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 $LN17@dtor$3:
@@ -7349,18 +7428,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$4@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$4
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7386,18 +7470,23 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$5@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$5
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -7423,24 +7512,29 @@ $T7 = 144
 $T8 = 152
 $T9 = 160
 $T10 = 168
-$T11 = 176
-$T12 = 184
-$T13 = 224
-$T14 = 232
-$T15 = 240
-tv257 = 248
-tv182 = 248
-tv165 = 248
-tv147 = 248
-tv129 = 248
-tv233 = 256
-this$ = 288
+$T11 = 184
+$T12 = 192
+$T13 = 208
+$T14 = 216
+$T15 = 224
+$T16 = 264
+$T17 = 272
+$T18 = 280
+tv271 = 288
+tv178 = 288
+tv165 = 288
+tv147 = 288
+tv129 = 288
+tv247 = 296
+tv185 = 296
+tv196 = 304
+this$ = 336
 ?dtor$6@?0???0MandelbrotScene@Scene@Application@@QEAA@XZ@4HA PROC ; `Application::Scene::MandelbrotScene::MandelbrotScene'::`1'::dtor$6
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	lea	rbp, QWORD PTR [rdx+64]
 	mov	edx, 72					; 00000048H
-	mov	rcx, QWORD PTR $T11[rbp]
+	mov	rcx, QWORD PTR $T14[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp

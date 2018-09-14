@@ -31,6 +31,9 @@ namespace core { namespace graphics {
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
+		//sample amount
+		glfwWindowHint(GLFW_SAMPLES, 8);
+
 		//Create Window
 		window = glfwCreateWindow((int)windowSize.x, (int)windowSize.y, title, (fullScreen) ? glfwGetPrimaryMonitor() : NULL , NULL);
 		
@@ -96,6 +99,9 @@ namespace core { namespace graphics {
 
 		//enable use of depth buffer
 		GLCall(glEnable(GL_DEPTH_TEST));
+
+		//enable multi sampling
+		GLCall(glEnable(GL_MULTISAMPLE));
 
 	}
 

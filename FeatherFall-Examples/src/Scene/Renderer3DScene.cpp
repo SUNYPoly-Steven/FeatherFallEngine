@@ -4,17 +4,17 @@ namespace Application { namespace Scene {
 
 	Renderer3DScene::Renderer3DScene()
 		: m_Renderer(new core::graphics::Shader("res/shaders/Renderer3DTest.shader")),
-		m_Camera(glm::vec3(0.0f, 0.0f, -1.0f),
+		m_Camera(glm::vec3(2.0f, 2.0f, 3.0f),
 				glm::vec3(0.0f, 0.0f, 0.0f),
 				glm::vec3(0.0f, 1.0f, 0.0f),
 				90.0f,
 				0.1f,
 				100.0f,
 				16.0f,
-				9.0f)
+				9.0f),
+		mlMatrix(1.0f)
 	{
 
-		vert = new float[7 * 8];
 		float intern_vert[] = {
 //            X      Y      Z      R      G      B      A    
 			-1.0f, -1.0f,  1.0f,  1.0f,  0.0f,  0.0f,  1.0f, // 0
@@ -27,51 +27,50 @@ namespace Application { namespace Scene {
 			 1.0f,  1.0f, -1.0f,  1.0f,  1.0f,  1.0f,  1.0f  // 7
 		};
 
-		for (int i = 0; i < 7 * 8; ++i) {
-			vert[i] = intern_vert[i];
-		}
-
-		index = new unsigned int[3 * 12];
 		unsigned int intern_index[] = {
-			0, 1, 2, 
-			2, 3, 0,
+			0, 1, 2, // Left
+			1, 3, 2, //
 
-			4, 0, 2, 
-			2, 7, 4,
+			4, 0, 2, // Bottom
+			2, 6, 4, // 
 
-			1, 5, 6, 
-			6, 2, 1,
+			1, 5, 7, // Top 
+			7, 3, 1, //
 
-			5, 4, 7, 
-			7, 6, 5,
+			7, 5, 4, // Right 
+			4, 6, 7, //
 
-			3, 2, 6, 
-			6, 7, 3,
+			6, 2, 3, // Back
+			3, 7, 6, //
 
-			4, 5, 1, 
-			1, 0, 4
+			4, 5, 1, // Front
+			1, 0, 4  //
 		};
 
-		for (int i = 0; i < 3 * 12; ++i) {
-			index[i] = intern_index[i];
-		}
-
-		m_Cube = new core::graphics::Renderable3D(vert, index, 7 * 8, 3 * 12);
+		m_Cube = new core::graphics::Renderable3D(intern_vert, intern_index, 7 * 8 * 4, 3 * 12);
+		
 		m_Renderer.m_Shader->bind();
 		m_Renderer.m_Shader->setUniformMat4("prMatrix", m_Camera.getProjectionMatrix());
 		m_Renderer.m_Shader->setUniformMat4("vwMatrix", m_Camera.getViewMatrix());
+		
+		//set background to Grey
+		GLCall(glClearColor(0.5f, 0.5f, 0.5f, 1.0f));
 
 	}
 
 	Renderer3DScene::~Renderer3DScene()
-	{
-		delete[] index;
-		delete[] vert; 
+	{ 
 		delete m_Cube;
 	}
 
 	void Renderer3DScene::OnUpdate(float deltaTime)
 	{
+		static float angle = 0.0f;
+		mlMatrix = glm::rotate(angle, glm::vec3(0.0f, 1.0f, 0.0f));
+		angle += deltaTime;
+		m_Renderer.m_Shader->bind();
+		m_Renderer.m_Shader->setUniformMat4("mlMatrix", mlMatrix);
+
 	}
 
 	void Renderer3DScene::OnRender()

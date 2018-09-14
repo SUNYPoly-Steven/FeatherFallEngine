@@ -61,7 +61,6 @@ namespace core { namespace graphics {
 
 		//std::cout << "DUMPING SHADER SOURCE: \n" << source << std::endl;
 
-
 		if (source.empty()) {
 			return 0;
 		}

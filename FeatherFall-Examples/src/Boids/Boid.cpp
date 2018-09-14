@@ -15,16 +15,6 @@ namespace Application { namespace Boid {
 	{
 	}
 
-	Boid::Boid(float px, float py, unsigned int pcolor)
-		: Renderable2D(px, py, 0.1f, 0.1f, pcolor),
-		  direction(glm::vec2(0.01f, 0.0f))
-	{
-		glm::vec2 acc = glm::vec2(((rand() % 1000) / 10000.0f) - 0.05f, ((rand() % 1000) / 10000.0f) - 0.05f);
-		direction += acc;
-		direction /= glm::length(direction) * 10;
-
-	}
-
 	Boid::~Boid() {
 
 	}

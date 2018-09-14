@@ -1,4 +1,5 @@
 #include <GL/glew.h>
+#include <GL/glew.h>
 #include "VAO.h"
 #include "../debuging.h"
 
@@ -35,6 +36,7 @@ namespace core { namespace buffers {
 		for (unsigned int i = 0; i < elements.size(); ++i) {
 			const auto& element = elements[i];
 			GLCall(glEnableVertexAttribArray(i));
+
 			GLCall(glVertexAttribPointer(i, element.count, element.type, element.normalized, layout.getStride(), (const void*)offset));
 
 			offset += element.count * GLsizeof(element.type);

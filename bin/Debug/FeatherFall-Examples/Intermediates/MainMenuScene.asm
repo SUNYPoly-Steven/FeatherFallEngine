@@ -12683,7 +12683,7 @@ $LN3:
 	lea	rcx, OFFSET FLAT:__6DC649C7_bufferlayout.h
 	call	__CheckForDebuggerJustMyCode
 
-; 60   : 			elements.push_back({ GL_FLOAT, count, GL_FALSE });
+; 60   : 			elements.push_back({ GL_FLOAT, count, GL_FALSE }); 
 
 	mov	DWORD PTR $T1[rbp], 5126		; 00001406H
 	mov	eax, DWORD PTR count$[rbp]

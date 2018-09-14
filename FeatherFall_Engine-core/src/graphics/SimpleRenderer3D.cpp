@@ -3,7 +3,7 @@
 namespace core { namespace graphics {
 
 	SimpleRenderer3D::SimpleRenderer3D(Shader* pshader)
-		: m_Shader(pshader)
+		: m_Shader(pshader) 
 	{
 		//buffers::BufferLayout layout = buffers::BufferLayout();
 		
@@ -15,7 +15,7 @@ namespace core { namespace graphics {
 
 	}
 
-	SimpleRenderer3D::~SimpleRenderer3D()
+	SimpleRenderer3D::~SimpleRenderer3D() 
 	{
 		delete m_Shader;
 	}

@@ -7626,7 +7626,7 @@ _TEXT	SEGMENT
 this$ = 80
 ?getPosition@Renderable2D@graphics@core@@QEBAAEBU?$tvec4@M$0A@@glm@@XZ PROC ; core::graphics::Renderable2D::getPosition, COMDAT
 
-; 26   : 		inline const glm::vec4& getPosition() const { return position; }
+; 25   : 		inline const glm::vec4& getPosition() const { return position; }
 
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx

@@ -10,7 +10,7 @@ namespace Application { namespace Scene {
 		: renderer(new core::graphics::BatchRenderer2D()),
 		  shader(  new core::graphics::Shader("res/shaders/Mandelbrot.shader")),
 		  ortho(   new glm::mat4(glm::ortho(-2.0f, 2.0f, -1.0f, 1.0f, -1.0f, 1.0f))),
-		  canvas(  new core::graphics::Renderable2D(-2.0f,-1.0f, 4.0f, 2.0f, 0xFF0000FF))
+		  canvas(  new core::graphics::Renderable2D(glm::vec4(-2.0f,-1.0f, 0.0f, 1.0f), glm::vec2(4.0f, 2.0f), glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)))
 	{
 		shader->bind();
 		shader->setUniformMat4("prMatrix", *ortho);
