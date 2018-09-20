@@ -1,22 +1,23 @@
 #pragma once
-#include <glm/mat4x4.hpp>
+#include "../graphics/Renderable3D.h"
 
 namespace core {
 	namespace mesh {
-		class Mesh {
+		class Mesh : public graphics::Renderable3D {
 		private:
 
-			glm::mat4 modelMat;
-			
+						
 
 		public:
 
-			Mesh();
+			Mesh(const char* filepath);
 			~Mesh();
+
+
 
 		private:
 
-			
+			void ReadFile(const char* filepath);
 
 		};
 	}
