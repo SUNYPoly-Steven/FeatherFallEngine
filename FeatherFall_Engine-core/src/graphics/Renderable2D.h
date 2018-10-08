@@ -9,20 +9,21 @@
 namespace core { namespace graphics {
 
 	class Renderable2D {
-	protected:
-
-		glm::vec4 position;
+	//protected:
+	public:
+		glm::vec3 position;
 		glm::vec2 size;
 		glm::vec4 color;
 
 	public:
 
-		Renderable2D(const glm::vec4& pposition, const glm::vec2& psize, const glm::vec4& pcolor);
+		Renderable2D() = default;
+		Renderable2D(const glm::vec3& pposition, const glm::vec2& psize, const glm::vec4& pcolor);
 
 		virtual ~Renderable2D();
 
 		inline const glm::vec2& getSize() const { return size; }
-		inline const glm::vec4& getPosition() const { return position; }
+		inline const glm::vec3& getPosition() const { return position; }
 		inline const glm::vec4& getColor() const { return color; }
 
 	};

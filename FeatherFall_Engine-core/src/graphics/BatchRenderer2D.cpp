@@ -55,7 +55,7 @@ namespace core { namespace graphics {
 
 	void BatchRenderer2D::submit(const Renderable2D* renderable)
 	{
-		const glm::vec4& pos = renderable->getPosition();
+		const glm::vec3& pos = renderable->getPosition();
 		const glm::vec4& color = renderable->getColor();
 		const glm::vec2& size = renderable->getSize();
 
@@ -72,19 +72,19 @@ namespace core { namespace graphics {
 		//       try to optimize the excessive copies when 
 		//       multiplying with m_StackTop 
 		//       This is a Critical optimization to make.
-		renderBuffer->position = (*m_StackTop) * pos;
+		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos, 1.0f);
 		renderBuffer->color = c;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * glm::vec4(pos.x + size.x, pos.y, 0.0f, 1.0f);
+		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x + size.x, pos.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * glm::vec4(pos.x + size.x, pos.y + size.y, 0.0f, 1.0f);
+		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x + size.x, pos.y + size.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * glm::vec4(pos.x, pos.y + size.y, 0.0f, 1.0f);
+		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x, pos.y + size.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
 		renderBuffer++;
 

@@ -86,12 +86,12 @@ namespace Application { namespace Boid {
 			coh += flockMates[i]->position;
 		}
 		coh /= flockMates.size();
-		coh = coh - position;
+		coh = coh - glm::vec4(position, 1.0f); 
 		coh /= glm::length(coh) * 10;
 
 		//RULE Mouse Tracking
 		glm::vec3 mtk = glm::vec3(0.0f, 0.0f, 0.0f);
-		mtk = glm::vec4(Scene::BoidScene::trackPos.x, Scene::BoidScene::trackPos.y, 0.0f, 1.0f) - position;
+		mtk = glm::vec4(Scene::BoidScene::trackPos.x, Scene::BoidScene::trackPos.y, 0.0f, 1.0f) - glm::vec4(position, 1.0f);
 		mtk /= glm::length(mtk) * 0.1f;
 
 		//RULE Obstacle Avoidance

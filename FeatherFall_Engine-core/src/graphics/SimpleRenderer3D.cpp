@@ -44,6 +44,7 @@ namespace core { namespace graphics {
 			renderable->vao.bind();
 			renderable->vbo.bind();
 			renderable->ibo.bind();
+			m_Shader->setUniformMat4("mlMatrix", renderable->m_mlMatrix);
 
 			GLCall(glDrawElements(GL_TRIANGLES, renderable->ibo.getCount(), GL_UNSIGNED_INT, nullptr));
 			

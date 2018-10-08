@@ -183,14 +183,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
-    <ClCompile Include="src\Boids\Boid.cpp" />
     <ClCompile Include="src\Scene\BatchRendererScene.cpp" />
-    <ClCompile Include="src\Scene\BoidScene.cpp" />
     <ClCompile Include="src\Scene\BuffersTestScene.cpp" />
     <ClCompile Include="src\Scene\ComputeShaderScene.cpp" />
     <ClCompile Include="src\Scene\LayerScene.cpp" />
     <ClCompile Include="src\Scene\MainMenuScene.cpp" />
     <ClCompile Include="src\Scene\MandelbrotScene.cpp" />
+    <ClCompile Include="src\Scene\Particle2DTestScene.cpp" />
     <ClCompile Include="src\Scene\Renderer3DScene.cpp" />
     <ClCompile Include="src\Scene\SandboxScene.cpp" />
     <ClCompile Include="src\Scene\Scene.cpp" />
@@ -207,6 +206,7 @@
     <ClInclude Include="src\Scene\LayerScene.h" />
     <ClInclude Include="src\Scene\MainMenuScene.h" />
     <ClInclude Include="src\Scene\MandelbrotScene.h" />
+    <ClInclude Include="src\Scene\Particle2DTestScene.h" />
     <ClInclude Include="src\Scene\Renderer3DScene.h" />
     <ClInclude Include="src\Scene\SandboxScene.h" />
     <ClInclude Include="src\Scene\Scene.h" />
@@ -228,6 +228,7 @@
     <None Include="res\shaders\LayerSceneTest.shader" />
     <None Include="res\shaders\MainMenu.shader" />
     <None Include="res\shaders\Mandelbrot.shader" />
+    <None Include="res\shaders\ParticleSystem2DTest.shader" />
     <None Include="res\shaders\Renderer3DTest.shader" />
     <None Include="res\shaders\Sandbox.shader" />
     <None Include="res\shaders\SimpleRendererTest.shader" />

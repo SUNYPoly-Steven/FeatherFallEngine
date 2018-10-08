@@ -224,6 +224,7 @@
     <ClCompile Include="src\layers\Layer2D.cpp" />
     <ClCompile Include="src\logging\Logging.cpp" />
     <ClCompile Include="src\mesh\Mesh.cpp" />
+    <ClCompile Include="src\particles\ParticleSystem2D.cpp" />
     <ClCompile Include="vendor\ImGui\imgui.cpp" />
     <ClCompile Include="vendor\ImGui\imgui_demo.cpp" />
     <ClCompile Include="vendor\ImGui\imgui_draw.cpp" />
@@ -257,6 +258,7 @@
     <ClInclude Include="src\layers\Layer2D.h" />
     <ClInclude Include="src\logging\Logging.h" />
     <ClInclude Include="src\mesh\Mesh.h" />
+    <ClInclude Include="src\particles\ParticleSystem2D.h" />
     <ClInclude Include="vendor\ImGui\imconfig.h" />
     <ClInclude Include="vendor\ImGui\imgui.h" />
     <ClInclude Include="vendor\ImGui\imgui_impl_glfw_gl3.h" />

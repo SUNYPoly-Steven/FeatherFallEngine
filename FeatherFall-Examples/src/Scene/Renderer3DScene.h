@@ -9,6 +9,7 @@ namespace Application { namespace Scene {
 
 		core::graphics::SimpleRenderer3D m_Renderer;
 		core::graphics::Renderable3D* m_Cube;
+		core::graphics::Renderable3D* m_Floor;
 		core::graphics::Camera m_Camera;
 
 		glm::mat4 mlMatrix;

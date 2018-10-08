@@ -19,11 +19,12 @@
 #include "src/Scene/TextureTestScene.h"
 #include "src/Scene/SimpleRendererScene.h"
 #include "src/Scene/BatchRendererScene.h"
-#include "src/Scene/BoidScene.h"
+//#include "src/Scene/BoidScene.h"
 #include "src/Scene/MandelbrotScene.h"
 #include "src/Scene/ComputeShaderScene.h"
 #include "src/Scene/LayerScene.h"
 #include "src/Scene/Renderer3DScene.h"
+#include "src/Scene/Particle2DTestScene.h"
 
 //defines
 #define WINDOW_FULLSCREEN false
@@ -82,10 +83,11 @@ int main(int argc, char** argv)
 	mms->RegisterScene<SimpleRendererScene>("Simple Renderer");
 	mms->RegisterScene<BatchRendererScene>("Batch Renderer");
 	mms->RegisterScene<LayerScene>("Layer Scene");
-	mms->RegisterScene<BoidScene>("Flocking (Boids)");
+	//mms->RegisterScene<BoidScene>("Flocking (Boids)");
 	mms->RegisterScene<MandelbrotScene>("Mandelbrot Set");
 	mms->RegisterScene<ComputeShaderScene>("Simple Compute Shader");
 	mms->RegisterScene<Renderer3DScene>("3D Scene");
+	mms->RegisterScene<Particle2DTestScene>("Particle2D Test");
 
 	currScene = mms;//make the current scene the main menu scene (this will be changed by components inside main menu later)
 

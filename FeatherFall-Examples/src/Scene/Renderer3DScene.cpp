@@ -4,7 +4,7 @@ namespace Application { namespace Scene {
 
 	Renderer3DScene::Renderer3DScene()
 		: m_Renderer(new core::graphics::Shader("res/shaders/Renderer3DTest.shader")),
-		m_Camera(glm::vec3(2.0f, 2.0f, 3.0f),
+		m_Camera(glm::vec3(0.0f, 2.0f, 3.0f),
 				glm::vec3(0.0f, 0.0f, 0.0f),
 				glm::vec3(0.0f, 1.0f, 0.0f),
 				90.0f,
@@ -47,8 +47,21 @@ namespace Application { namespace Scene {
 			1, 0, 4  //
 		};
 
+		float floor_verts[] = {
+//            X      Y      Z      R      G      B      A    
+			-8.0f, -2.0f, -8.0f,  1.0f,  1.0f,  1.0f,  1.0f, // 0
+			-8.0f, -2.0f,  8.0f,  1.0f,  1.0f,  1.0f,  1.0f, // 1
+			 8.0f, -2.0f,  8.0f,  1.0f,  1.0f,  1.0f,  1.0f, // 2
+			 8.0f, -2.0f, -8.0f,  1.0f,  1.0f,  1.0f,  1.0f  // 3
+		};
+
+		unsigned int floor_index[] = {
+			0, 1, 2,
+			2, 3, 0
+		};
+
 		m_Cube = new core::graphics::Renderable3D(intern_vert, intern_index, 7 * 8 * 4, 3 * 12);
-		
+		m_Floor = new core::graphics::Renderable3D(floor_verts, floor_index, 4 * 8 * 4, 3 * 6);
 		m_Renderer.m_Shader->bind();
 		m_Renderer.m_Shader->setUniformMat4("prMatrix", m_Camera.getProjectionMatrix());
 		m_Renderer.m_Shader->setUniformMat4("vwMatrix", m_Camera.getViewMatrix());
@@ -61,6 +74,7 @@ namespace Application { namespace Scene {
 	Renderer3DScene::~Renderer3DScene()
 	{ 
 		delete m_Cube;
+		delete m_Floor;
 	}
 
 	void Renderer3DScene::OnUpdate(float deltaTime)
@@ -68,8 +82,9 @@ namespace Application { namespace Scene {
 		static float angle = 0.0f;
 		mlMatrix = glm::rotate(angle, glm::vec3(0.0f, 1.0f, 0.0f));
 		angle += deltaTime;
-		m_Renderer.m_Shader->bind();
-		m_Renderer.m_Shader->setUniformMat4("mlMatrix", mlMatrix);
+		m_Cube->m_mlMatrix = mlMatrix;
+		//m_Renderer.m_Shader->bind();
+		//m_Renderer.m_Shader->setUniformMat4("mlMatrix", mlMatrix);
 
 	}
 
@@ -79,6 +94,7 @@ namespace Application { namespace Scene {
 		m_Renderer.begin();
 		
 		m_Renderer.submit(m_Cube);
+		m_Renderer.submit(m_Floor);
 		
 		m_Renderer.end();
 

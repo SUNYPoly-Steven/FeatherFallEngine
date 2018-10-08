@@ -42,12 +42,6 @@
     <ClCompile Include="src\Scene\BatchRendererScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Scene\BoidScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Boids\Boid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Scene\MandelbrotScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -58,6 +52,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Scene\Renderer3DScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\Particle2DTestScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -104,6 +101,9 @@
     <ClInclude Include="src\Scene\Renderer3DScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Scene\Particle2DTestScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\BuffersTest.shader" />
@@ -118,5 +118,6 @@
     <None Include="res\shaders\LayerSceneTest.shader" />
     <None Include="res\shaders\Sandbox.shader" />
     <None Include="res\shaders\Renderer3DTest.shader" />
+    <None Include="res\shaders\ParticleSystem2DTest.shader" />
   </ItemGroup>
 </Project>

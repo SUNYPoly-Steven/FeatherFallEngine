@@ -1,35 +1,8 @@
-﻿  BufferLayout.cpp
-  IBO.cpp
-  VBO.cpp
-  debugging.cpp
-  BatchRenderer2D.cpp
-  Camera.cpp
-  Renderable2D.cpp
-  Shader.cpp
-  VAO.cpp
-l:\dev\featherfallengine\featherfall_engine-core\src\buffers\vao.cpp(40): warning C4312: 'type cast': conversion from 'unsigned int' to 'const void *' of greater size
-  SimpleRenderer2D.cpp
-  SimpleRenderer3D.cpp
-  Sprite.cpp
-  Texture.cpp
-  Window.cpp
-c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
-  l:\dev\featherfallengine\depends\install\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
-  Layer.cpp
-c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
-  l:\dev\featherfallengine\depends\install\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
-  Layer2D.cpp
-c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
-  l:\dev\featherfallengine\depends\install\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
-  Logging.cpp
-  Mesh.cpp
-  imgui.cpp
-  imgui_demo.cpp
-  Generating Code...
-  Compiling...
-  imgui_draw.cpp
-  imgui_impl_glfw_gl3.cpp
-  stb_image.cpp
-  Generating Code...
+﻿  ParticleSystem2D.cpp
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(37): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(46): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(47): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(47): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
 BufferLayout.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
   FeatherFall_Engine-core.vcxproj -> L:\Dev\FeatherFallEngine\bin\Debug\FeatherFall_Engine-core\FeatherFall_Engine-core.lib
