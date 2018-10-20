@@ -1,4 +1,5 @@
 #include "ParticleSystem2D.h"
+#include <cstdlib>
 
 namespace core { namespace particles {
 
@@ -6,8 +7,8 @@ namespace core { namespace particles {
 		Particle2D* DoNothing(const glm::vec3& spawnPoint) // creates a particle at the exact emitter position with 0 vectors for pos, vel, and acc
 		{
 			return new Particle2D(spawnPoint,
-				glm::vec3(5.0f, 2.0f, 0.0f),
-				glm::vec3(0.0f, -5.0f, 0.0f));
+				glm::vec3(0.0f, 0.0f, 0.0f),
+				glm::vec3(0.0f, 0.0f, 0.0f));
 		}
 
 		Particle2D* UpShower(const glm::vec3& spawnPoint)
@@ -16,9 +17,8 @@ namespace core { namespace particles {
 			// 10 in the positive Y axis with small bounded angle to either positive or negative X and Z
 		{
 			return new Particle2D(spawnPoint,
-				// #TODO: Change this to be slightly more RANDOM 
-				glm::vec3(0.0f, 10.0f, 0.0f),
-				glm::vec3(0.0f, 0.0f, 0.0f));
+				glm::vec3((((float)rand() / (float)RAND_MAX) - 0.5f) * 2, 5.0f, 0.0f),
+				glm::vec3(0.0f, -5.0f, 0.0f));
 		}
 	}
 
@@ -55,11 +55,11 @@ namespace core { namespace particles {
 	}
 
 	ParticleSystem2D::ParticleSystem2D()
-		: position(0.0f, 0.0f, 0.0f), spawnRate(10.0f), lifeSpan(100.0f), spawn(core::particles::SpawnDefaults::DoNothing)
+		: position(0.0f, 0.0f, 0.0f), spawnRate(10.0f), lifeSpan(5.0f), spawn(core::particles::SpawnDefaults::UpShower)
 	{
 	}
 
-	ParticleSystem2D::ParticleSystem2D(const glm::vec3& ppos, float pspawnRate, float plifeSpan, std::function<Particle2D*(const glm::vec3&)>& lambda)
+	ParticleSystem2D::ParticleSystem2D(const glm::vec3& ppos, float pspawnRate, float plifeSpan, std::function<Particle2D*(const glm::vec3&)>&& lambda)
 		: position(ppos), spawnRate(pspawnRate), lifeSpan(plifeSpan), spawn(lambda)
 	{
 	}

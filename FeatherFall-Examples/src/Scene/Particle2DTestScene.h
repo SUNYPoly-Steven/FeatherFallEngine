@@ -9,10 +9,11 @@ namespace Application { namespace Scene {
 	class Particle2DTestScene : public Scene {
 	private:
 
-		core::particles::ParticleSystem2D system;
+		core::particles::ParticleSystem2D* system;
 		core::graphics::BatchRenderer2D renderer;
 		glm::mat4 ortho;
 		core::graphics::Shader shader;
+		core::graphics::Texture texture;
 
 	public:
 

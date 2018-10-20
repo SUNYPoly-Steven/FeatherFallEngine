@@ -13,6 +13,7 @@ namespace core { namespace graphics {
 	public:
 		glm::vec3 position;
 		glm::vec2 size;
+		glm::vec2 uv[4];
 		glm::vec4 color;
 
 	public:
@@ -25,6 +26,10 @@ namespace core { namespace graphics {
 		inline const glm::vec2& getSize() const { return size; }
 		inline const glm::vec3& getPosition() const { return position; }
 		inline const glm::vec4& getColor() const { return color; }
+		inline const glm::vec2* getUVs() const { return uv; }
+
+	private:
+		void setUVDefaults();
 
 	};
 

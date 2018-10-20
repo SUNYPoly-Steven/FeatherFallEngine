@@ -36,7 +36,7 @@ namespace core { namespace graphics {
 		 * this could be deleted in ctor,
 		 * however in the name of "future proofing"
 		 * I am deleting it here in case I should
-		 * want to do any CPU side calculations on
+		 * want to do any CPU side calculations with
 		 * the texture
 		 */
 		SAFE_DELETE(pixels); 

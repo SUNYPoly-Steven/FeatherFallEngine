@@ -10,13 +10,17 @@ namespace core { namespace graphics {
 	#define RENDERER_BUFFER_SIZE		RENDERER_SPRITE_SIZE * RENDERER_MAX_SPRITES
 	#define RENDERER_MAX_INDEX_COUNT	RENDERER_MAX_SPRITES * 6
 
-	#define VERTEX_POSITION_ATTRIB 0
-	#define VERTEX_COLOR_ATTRIB    1
-	//TODO: extend to support other data later
+	#define VERTEX_POSITION_ATTRIB   0
+	#define VERTEX_COLOR_ATTRIB      1
+	#define VERTEX_UV_ATTRIB         2
+	#define VERTEX_TEXTURE_ID_ATTRIB 3
+	//#TODO: extend to support other data later
 
 	struct VertexData {
 		glm::vec4 position;
 		unsigned int color;
+		glm::vec2 uv;
+		//unsigned int tID;
 	};
 
 	class Renderer2D {

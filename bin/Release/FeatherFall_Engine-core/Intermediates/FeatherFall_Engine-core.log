@@ -23,9 +23,15 @@ c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(1
   l:\dev\featherfallengine\depends\install\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
   Logging.cpp
   Mesh.cpp
+  ParticleSystem2D.cpp
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(37): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(46): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(47): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+l:\dev\featherfallengine\featherfall_engine-core\src\particles\particlesystem2d.cpp(47): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   imgui.cpp
-  imgui_demo.cpp
   Compiling...
+  imgui_demo.cpp
   imgui_draw.cpp
   imgui_impl_glfw_gl3.cpp
   stb_image.cpp

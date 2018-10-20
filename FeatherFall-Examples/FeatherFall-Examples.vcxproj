@@ -186,6 +186,7 @@
     <ClCompile Include="src\Scene\BatchRendererScene.cpp" />
     <ClCompile Include="src\Scene\BuffersTestScene.cpp" />
     <ClCompile Include="src\Scene\ComputeShaderScene.cpp" />
+    <ClCompile Include="src\Scene\FeatherFall2DScene.cpp" />
     <ClCompile Include="src\Scene\LayerScene.cpp" />
     <ClCompile Include="src\Scene\MainMenuScene.cpp" />
     <ClCompile Include="src\Scene\MandelbrotScene.cpp" />
@@ -203,6 +204,7 @@
     <ClInclude Include="src\Scene\BoidScene.h" />
     <ClInclude Include="src\Scene\BuffersTestScene.h" />
     <ClInclude Include="src\Scene\ComputeShaderScene.h" />
+    <ClInclude Include="src\Scene\FeatherFall2DScene.h" />
     <ClInclude Include="src\Scene\LayerScene.h" />
     <ClInclude Include="src\Scene\MainMenuScene.h" />
     <ClInclude Include="src\Scene\MandelbrotScene.h" />

@@ -25,6 +25,7 @@
 #include "src/Scene/LayerScene.h"
 #include "src/Scene/Renderer3DScene.h"
 #include "src/Scene/Particle2DTestScene.h"
+#include "src/Scene/FeatherFall2DScene.h"
 
 //defines
 #define WINDOW_FULLSCREEN false
@@ -45,14 +46,6 @@
  *     - Fix the Simple Renderer
  *     - Refactor some examples to use proper
  *       abstracted methods, instead of raw OpenGL code
- *     - Begin work on 3D Renderer
- */
-
-/*
- * NOTES:
- *    When making motion integrators, use verlet algorithm, or forestRuth
- *    integrator. They preserve motion (unlike traditional Euler and RK4)
- *    and are more precise then modified Euler
  */
 
 using namespace Application;
@@ -88,6 +81,7 @@ int main(int argc, char** argv)
 	mms->RegisterScene<ComputeShaderScene>("Simple Compute Shader");
 	mms->RegisterScene<Renderer3DScene>("3D Scene");
 	mms->RegisterScene<Particle2DTestScene>("Particle2D Test");
+	mms->RegisterScene<FeatherFall2DScene>("Feather Fall - 2D Demo");
 
 	currScene = mms;//make the current scene the main menu scene (this will be changed by components inside main menu later)
 

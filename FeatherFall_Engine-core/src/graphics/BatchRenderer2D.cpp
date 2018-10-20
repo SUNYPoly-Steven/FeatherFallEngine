@@ -8,6 +8,8 @@ namespace core { namespace graphics {
 		//Setup BufferLayout
 		layout.push<float>(4); //push position data
 		layout.push<unsigned char>(4); //push color data
+		layout.push<float>(2); //push uv coords data
+		//layout.push<unsigned int>(1); //push tID data
 
 		//create vertex buffer of size RENDERER_BUFFER_SIZE without data
 		vbo = new buffers::VBO(nullptr, RENDERER_BUFFER_SIZE, false);
@@ -58,6 +60,7 @@ namespace core { namespace graphics {
 		const glm::vec3& pos = renderable->getPosition();
 		const glm::vec4& color = renderable->getColor();
 		const glm::vec2& size = renderable->getSize();
+		const glm::vec2* uv = renderable->getUVs();
 
 		/*
 		 * Converting the glm::vec4 into an unsigned int 
@@ -74,18 +77,22 @@ namespace core { namespace graphics {
 		//       This is a Critical optimization to make.
 		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos, 1.0f);
 		renderBuffer->color = c;
+		renderBuffer->uv = uv[0];
 		renderBuffer++;
 
 		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x + size.x, pos.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
+		renderBuffer->uv = uv[1];
 		renderBuffer++;
 
 		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x + size.x, pos.y + size.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
+		renderBuffer->uv = uv[2];
 		renderBuffer++;
 
 		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x, pos.y + size.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
+		renderBuffer->uv = uv[3];
 		renderBuffer++;
 
 		indexCount += 6;

@@ -4,10 +4,22 @@ namespace Application { namespace Scene {
 
 	Particle2DTestScene::Particle2DTestScene()
 		: ortho(glm::ortho(-8.0f, 8.0f, -4.5f, 4.5f, -1.0f, 1.0f)),
-			shader("res/shaders/ParticleSystem2DTest.shader")
+			shader("res/shaders/ParticleSystem2DTest.shader"),
+			texture("res/textures/feather_texture.png")
 	{
+
+		//std::function<core::particles::Particle2D*(const glm::vec3&)> lambda = [](const glm::vec3&) -> core::particles::Particle2D* {
+		//	return new core::particles::Particle2D(glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(5.0f, 0.0f, 0.0f), glm::vec3(0.0f, -10.0f, 0.0f));
+		//};
+		system = new core::particles::ParticleSystem2D(glm::vec3(0.0f, 0.0f, 0.0f), 10.0f, 2.0f, [](const glm::vec3&) -> core::particles::Particle2D* {
+			return new core::particles::Particle2D(glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(5.0f, 0.0f, 0.0f), glm::vec3(0.0f, -10.0f, 0.0f));
+		});
+
 		shader.bind();
 		shader.setUniformMat4("prMatrix", ortho);
+
+		texture.bind();
+		shader.setUniform1i("tex", 0);
 	}
 
 	Particle2DTestScene::~Particle2DTestScene()
@@ -17,8 +29,8 @@ namespace Application { namespace Scene {
 
 	void Particle2DTestScene::OnUpdate(float deltaTime)
 	{
-		system.Create(deltaTime);
-		system.Update(deltaTime);
+		system->Create(deltaTime);
+		system->Update(deltaTime);
 	}
 
 	void Particle2DTestScene::OnRender()
@@ -26,7 +38,7 @@ namespace Application { namespace Scene {
 		renderer.begin();
 
 		//submit all the particles to be rendered
-		system.Submit(renderer);
+		system->Submit(renderer);
 
 		renderer.end();
 

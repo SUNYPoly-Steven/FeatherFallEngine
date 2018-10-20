@@ -7,7 +7,7 @@
 namespace core { namespace particles {
 
 	struct Particle2D : public core::graphics::Renderable2D {
-		//glm::vec3 position;
+		//glm::vec3 position;  //taken care of by base class
 		glm::vec3 velocity;
 		glm::vec3 acceleration; 
 		float age; //age of the particle (calculated through delta time)
@@ -55,7 +55,7 @@ namespace core { namespace particles {
 	public:
 
 		ParticleSystem2D();
-		ParticleSystem2D(const glm::vec3& ppos, float pspawnRate, float plifeSpan, std::function<Particle2D*(const glm::vec3&)>& lambda);
+		ParticleSystem2D(const glm::vec3& ppos, float pspawnRate, float plifeSpan, std::function<Particle2D*(const glm::vec3&)>&& lambda);
 
 		~ParticleSystem2D();
 
