@@ -15,6 +15,7 @@ namespace core { namespace graphics {
 		glm::vec2 size;
 		glm::vec2 uv[4];
 		glm::vec4 color;
+		glm::mat4 rotationMat;
 
 	public:
 
@@ -23,10 +24,14 @@ namespace core { namespace graphics {
 
 		virtual ~Renderable2D();
 
+		void Rotate(float radians, const glm::vec3& axis);
+		void StaticRotate(float radians, const glm::vec3& axis);
+
 		inline const glm::vec2& getSize() const { return size; }
 		inline const glm::vec3& getPosition() const { return position; }
 		inline const glm::vec4& getColor() const { return color; }
 		inline const glm::vec2* getUVs() const { return uv; }
+		inline const glm::mat4& getRotationMatrix() const { return rotationMat; }
 
 	private:
 		void setUVDefaults();

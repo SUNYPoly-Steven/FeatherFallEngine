@@ -7,5 +7,4 @@ namespace core { namespace graphics {
 	{
 	}
 
-
 } }

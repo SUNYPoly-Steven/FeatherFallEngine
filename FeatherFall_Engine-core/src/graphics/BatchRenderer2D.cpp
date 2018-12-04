@@ -61,6 +61,13 @@ namespace core { namespace graphics {
 		const glm::vec4& color = renderable->getColor();
 		const glm::vec2& size = renderable->getSize();
 		const glm::vec2* uv = renderable->getUVs();
+		const glm::mat4& rotMat = renderable->getRotationMatrix();
+
+		auto transMat = glm::translate(glm::mat4(1.0f), pos);
+		auto invTransMat = glm::inverse(transMat);
+
+		auto transform = transMat * rotMat * invTransMat;
+
 
 		/*
 		 * Converting the glm::vec4 into an unsigned int 
@@ -75,22 +82,22 @@ namespace core { namespace graphics {
 		//       try to optimize the excessive copies when 
 		//       multiplying with m_StackTop 
 		//       This is a Critical optimization to make.
-		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos, 1.0f);
+		renderBuffer->position = /*(*m_StackTop) */ transform * glm::vec4(pos, 1.0f);
 		renderBuffer->color = c;
 		renderBuffer->uv = uv[0];
 		renderBuffer++;
 
-		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x + size.x, pos.y, 0.0f, 1.0f);
+		renderBuffer->position = /*(*m_StackTop) */ transform * glm::vec4(pos.x + size.x, pos.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
 		renderBuffer->uv = uv[1];
 		renderBuffer++;
 
-		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x + size.x, pos.y + size.y, 0.0f, 1.0f);
+		renderBuffer->position = /*(*m_StackTop) */ transform * glm::vec4(pos.x + size.x, pos.y + size.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
 		renderBuffer->uv = uv[2];
 		renderBuffer++;
 
-		renderBuffer->position = /*(*m_StackTop) */ glm::vec4(pos.x, pos.y + size.y, 0.0f, 1.0f);
+		renderBuffer->position = /*(*m_StackTop) */ transform * glm::vec4(pos.x, pos.y + size.y, 0.0f, 1.0f);
 		renderBuffer->color = c;
 		renderBuffer->uv = uv[3];
 		renderBuffer++;
@@ -124,20 +131,28 @@ namespace core { namespace graphics {
 
 		vec2 normal = normalize(vec2(y1 - y0, -(x1 - x0))) * thickness;
 
-		renderBuffer->position = (*m_StackTop) * vec4(x0 + normal.x, y0 + normal.y, 0.0f, 1.0f);
-		renderBuffer->color = agbr;
+		renderBuffer->position = /*(*m_StackTop) **/ vec4(x0 + normal.x, y0 + normal.y, 0.0f, 1.0f);
+		renderBuffer->color    = agbr;
+		renderBuffer->uv.x     = 0.0f;
+		renderBuffer->uv.y     = 0.0f;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * vec4(x1 + normal.x, y1 + normal.y, 0.0f, 1.0f);
-		renderBuffer->color = agbr;
+		renderBuffer->position = /*(*m_StackTop) **/ vec4(x1 + normal.x, y1 + normal.y, 0.0f, 1.0f);
+		renderBuffer->color    = agbr;
+		renderBuffer->uv.x     = 1.0f;
+		renderBuffer->uv.y     = 0.0f;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * vec4(x1 - normal.x, y1 - normal.y, 0.0f, 1.0f);
-		renderBuffer->color = agbr;
+		renderBuffer->position = /*(*m_StackTop) **/ vec4(x1 - normal.x, y1 - normal.y, 0.0f, 1.0f);
+		renderBuffer->color    = agbr;
+		renderBuffer->uv.x     = 1.0f;
+		renderBuffer->uv.y     = 1.0f;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * vec4(x0 - normal.x, y0 - normal.y, 0.0f, 1.0f);
-		renderBuffer->color = agbr;
+		renderBuffer->position = /*(*m_StackTop) **/ vec4(x0 - normal.x, y0 - normal.y, 0.0f, 1.0f);
+		renderBuffer->color    = agbr;
+		renderBuffer->uv.x     = 0.0f;
+		renderBuffer->uv.y     = 1.0f;
 		renderBuffer++;
 
 		indexCount += 6;
@@ -164,20 +179,28 @@ namespace core { namespace graphics {
 	void BatchRenderer2D::fillRect(float x, float y, float width, float height, unsigned int abgr) 
 	{
 		
-		renderBuffer->position = (*m_StackTop) * glm::vec4(x, y, 0.0f, 1.0f);
-		renderBuffer->color = abgr;
+		renderBuffer->position = /*(*m_StackTop) **/ glm::vec4(x, y, 0.0f, 1.0f);
+		renderBuffer->color    = abgr;
+		renderBuffer->uv.x     = 0.0f;
+		renderBuffer->uv.y     = 0.0f;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * glm::vec4(x + width, y, 0.0f, 1.0f);
-		renderBuffer->color = abgr;
+		renderBuffer->position = /*(*m_StackTop) **/ glm::vec4(x + width, y, 0.0f, 1.0f);
+		renderBuffer->color    = abgr;
+		renderBuffer->uv.x     = 1.0f;
+		renderBuffer->uv.y     = 0.0f;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * glm::vec4(x + width, y + height, 0.0f, 1.0f);
-		renderBuffer->color = abgr;
+		renderBuffer->position = /*(*m_StackTop) **/ glm::vec4(x + width, y + height, 0.0f, 1.0f);
+		renderBuffer->color    = abgr;
+		renderBuffer->uv.x     = 1.0f;
+		renderBuffer->uv.y     = 1.0f;
 		renderBuffer++;
 
-		renderBuffer->position = (*m_StackTop) * glm::vec4(x, y + height, 0.0f, 1.0f);
-		renderBuffer->color = abgr;
+		renderBuffer->position = /*(*m_StackTop) **/ glm::vec4(x, y + height, 0.0f, 1.0f);
+		renderBuffer->color    = abgr;
+		renderBuffer->uv.x     = 0.0f;
+		renderBuffer->uv.y     = 1.0f;
 		renderBuffer++;
 
 		indexCount += 6;

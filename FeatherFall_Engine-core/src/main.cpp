@@ -55,6 +55,7 @@ int main() {
 	window.setClearColor(glm::vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
 
+
 	float verts[] = {
 //        X        Y      Z         R     G     B     A
 		-0.25f, -0.25f, -2.0f,     1.0f, 0.0f, 0.0f, 1.0f,//0 (Bottom Left) **FRONT**

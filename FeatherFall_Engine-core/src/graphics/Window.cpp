@@ -9,6 +9,8 @@
 
 namespace core { namespace graphics {
 
+	bool Window::keys[MAX_KEYS];
+	bool Window::buttons[MAX_BUTTONS];
 	glm::vec2 Window::mousePos_s;
 	glm::vec2 Window::winSize_s;
 
@@ -103,6 +105,8 @@ namespace core { namespace graphics {
 		//enable multi sampling
 		GLCall(glEnable(GL_MULTISAMPLE));
 
+		//GLCall(glDisable(GL_CULL_FACE));
+
 	}
 
 	Window::~Window() {
@@ -126,7 +130,7 @@ namespace core { namespace graphics {
 		return Window::mousePos_s;
 	}
 
-	const glm::vec2 & Window::getWindowSize_s()
+	const glm::vec2& Window::getWindowSize_s()
 	{
 		return winSize_s;
 	}
@@ -146,16 +150,16 @@ namespace core { namespace graphics {
 		GLCall(glClearColor(color.x, color.y, color.z, color.w));
 	}
 
-	bool Window::isKeyPressed(unsigned int keycode) const {
+	bool Window::isKeyPressed(unsigned int keycode) {
 		if (keycode >= MAX_KEYS)
 			return false;
-		return keys[keycode];
+		return Window::keys[keycode];
 	}
 
-	bool Window::isButtonPressed(unsigned int button) const {
+	bool Window::isButtonPressed(unsigned int button) {
 		if (button >= MAX_BUTTONS)
 			return false;
-		return buttons[button];
+		return Window::buttons[button];
 	}
 
 	void error_callback(int err_code, const char* description) {

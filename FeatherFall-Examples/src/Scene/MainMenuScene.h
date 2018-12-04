@@ -14,10 +14,11 @@
 namespace Application { namespace Scene {
 
 	class MainMenuScene : public Scene {
+	public:
+		std::vector<std::pair<const char*, std::function<Scene*()>>> scenes;
 	private:
 
 		Scene*& currentScene;
-		std::vector<std::pair<const char*, std::function<Scene*()>>> scenes;
 
 		core::buffers::VAO* vao;
 		core::buffers::VBO* vbo;

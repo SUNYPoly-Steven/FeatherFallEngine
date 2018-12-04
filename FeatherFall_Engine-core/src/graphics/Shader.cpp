@@ -142,6 +142,7 @@ namespace core { namespace graphics {
 			std::cout << message << std::endl;
 			GLCall(glDeleteProgram(program));
 			FF_ASSERT(false);
+			return 0;
 		}
 
 		GLCall(glValidateProgram(program));

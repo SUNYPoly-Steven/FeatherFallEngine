@@ -2,8 +2,8 @@
 
 namespace core { namespace graphics {
 
-	SimpleRenderer3D::SimpleRenderer3D(Shader* pshader)
-		: m_Shader(pshader) 
+	SimpleRenderer3D::SimpleRenderer3D(Shader* pshader, Camera* cam)
+		: m_Shader(pshader), m_Camera(cam)
 	{
 		//buffers::BufferLayout layout = buffers::BufferLayout();
 		
@@ -42,11 +42,17 @@ namespace core { namespace graphics {
 		while (!m_RenderQueue.empty()) {
 			auto& renderable = m_RenderQueue.front();
 			renderable->vao.bind();
-			renderable->vbo.bind();
-			renderable->ibo.bind();
-			m_Shader->setUniformMat4("mlMatrix", renderable->m_mlMatrix);
+			renderable->vbo->bind();
+			renderable->ibo->bind();
+			m_Shader->setUniformMat4("modelMat", renderable->m_mlMatrix);
+			glm::mat4 nmMat = glm::transpose(
+				glm::inverse(
+					m_Camera->getViewMatrix() * renderable->m_mlMatrix
+				)
+			);
+			m_Shader->setUniformMat4("normalMat", nmMat);
 
-			GLCall(glDrawElements(GL_TRIANGLES, renderable->ibo.getCount(), GL_UNSIGNED_INT, nullptr));
+			GLCall(glDrawElements(GL_TRIANGLES, renderable->ibo->getCount(), GL_UNSIGNED_INT, nullptr));
 			
 			m_RenderQueue.pop_front();
 		}

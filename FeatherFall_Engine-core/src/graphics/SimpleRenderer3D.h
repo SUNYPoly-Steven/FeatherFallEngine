@@ -3,6 +3,7 @@
 #include <deque>
 #include "../buffers/VAO.h"
 #include "Shader.h"
+#include "Camera.h"
 
 
 namespace core { namespace graphics {
@@ -16,8 +17,9 @@ namespace core { namespace graphics {
 
 	public:
 		Shader* m_Shader;
+		core::graphics::Camera* m_Camera;
 
-		SimpleRenderer3D(Shader* pshader);
+		SimpleRenderer3D(Shader* pshader, Camera* cam);
 		~SimpleRenderer3D();
 
 		void begin() override;

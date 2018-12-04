@@ -59,8 +59,8 @@ namespace core { namespace particles {
 	{
 	}
 
-	ParticleSystem2D::ParticleSystem2D(const glm::vec3& ppos, float pspawnRate, float plifeSpan, std::function<Particle2D*(const glm::vec3&)>&& lambda)
-		: position(ppos), spawnRate(pspawnRate), lifeSpan(plifeSpan), spawn(lambda)
+	ParticleSystem2D::ParticleSystem2D(const glm::vec3& ppos, const glm::vec3& pgravity, float pspawnRate, float plifeSpan, std::function<Particle2D*(const glm::vec3&)>&& spawnLambda, std::function<void(Particle2D*, float)> updateLambda)
+		: position(ppos), gravity(pgravity), spawnRate(pspawnRate), lifeSpan(plifeSpan), spawn(spawnLambda), update(updateLambda)
 	{
 	}
 
@@ -82,9 +82,10 @@ namespace core { namespace particles {
 	void ParticleSystem2D::Update(float deltaTime)
 	{
 		for (int i = 0; i < particles.size(); ++i) {
+			update(particles[i], deltaTime);
 			MotionIntegrators::ModifiedEuler(particles[i]->position,
 											 particles[i]->velocity, 
-											 particles[i]->acceleration, 
+											 particles[i]->acceleration + gravity, 
 											 deltaTime);
 			particles[i]->age += deltaTime;
 			if (particles[i]->age >= lifeSpan) {

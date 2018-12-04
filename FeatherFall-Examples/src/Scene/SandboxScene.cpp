@@ -20,7 +20,7 @@ namespace Application { namespace Scene {
 
 	SandboxScene::~SandboxScene() {}
 
-	void SandboxScene::OnUpdate(float deltaTime) 
+	void SandboxScene::OnUpdate(float deltaTime)
 	{
 	
 		mousePos.x = ImGui::GetMousePos().x;
@@ -77,7 +77,7 @@ namespace Application { namespace Scene {
 
 	}
 	
-	void SandboxScene::OnRender() 
+	void SandboxScene::OnRender()
 	{
 
 		//Set uniforms here

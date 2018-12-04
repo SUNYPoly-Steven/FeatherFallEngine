@@ -42,12 +42,14 @@ namespace core { namespace particles {
 	 *	and as such will have its own position in 3D space 
 	 */
 	class ParticleSystem2D {
-	private:
-
+	//private:
+	public: //temporary for debug purposes
 		glm::vec3 position; // position of emitter
-		float lifeSpan; // the lifespan of the particles this system produces
-		float spawnRate; // the amount of particles per second to spawn
+		glm::vec3 gravity;  // the gravity effecting the particles of this emitter
+		float lifeSpan;     // the lifespan of the particles this system produces
+		float spawnRate;    // the amount of particles per second to spawn
 		std::function<Particle2D*(const glm::vec3&)> spawn; //function to dictate how particles are spawned from the emitter
+		std::function<void(Particle2D*, float)> update;     //function to update the particles over thier lifetime (this is called every frame and is give the deltaTime between each call)
 
 
 		std::vector<Particle2D*> particles; // the particles currently alive in the system
@@ -55,7 +57,7 @@ namespace core { namespace particles {
 	public:
 
 		ParticleSystem2D();
-		ParticleSystem2D(const glm::vec3& ppos, float pspawnRate, float plifeSpan, std::function<Particle2D*(const glm::vec3&)>&& lambda);
+		ParticleSystem2D(const glm::vec3& ppos, const glm::vec3& pgravity, float pspawnRate, float plifeSpan, std::function<Particle2D*(const glm::vec3&)>&& spawnLambda, std::function<void(Particle2D*, float)> updateLambda);
 
 		~ParticleSystem2D();
 

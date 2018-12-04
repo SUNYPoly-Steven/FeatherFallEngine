@@ -12,3 +12,4 @@
 #include "graphics/Sprite.h"
 #include "graphics/Texture.h"
 #include "graphics/Window.h"
+#include "particles/ParticleSystem2D.h"

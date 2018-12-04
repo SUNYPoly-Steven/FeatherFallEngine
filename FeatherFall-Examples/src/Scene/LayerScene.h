@@ -18,9 +18,9 @@ namespace Application { namespace Scene {
 		LayerScene();
 		~LayerScene();
 
-		void OnUpdate(float deltaTime);
-		void OnRender();
-		void OnImGuiRender();
+		void OnUpdate(float deltaTime) override ;
+		void OnRender() override ;
+		void OnImGuiRender() override ;
 
 	private:
 

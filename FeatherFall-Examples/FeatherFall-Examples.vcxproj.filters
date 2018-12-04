@@ -60,6 +60,15 @@
     <ClCompile Include="src\Scene\FeatherFall2DScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scene\TSPScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\RotationTestScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\Particle3DScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Scene\Scene.h">
@@ -110,6 +119,15 @@
     <ClInclude Include="src\Scene\FeatherFall2DScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Scene\TSPScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\RotationTestScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\Particle3DScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\BuffersTest.shader" />
@@ -125,5 +143,6 @@
     <None Include="res\shaders\Sandbox.shader" />
     <None Include="res\shaders\Renderer3DTest.shader" />
     <None Include="res\shaders\ParticleSystem2DTest.shader" />
+    <None Include="res\shaders\RotationTest.shader" />
   </ItemGroup>
 </Project>

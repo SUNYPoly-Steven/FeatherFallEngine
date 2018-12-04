@@ -21,7 +21,7 @@ public:
 
 #define Auto_INTERNAL1(lname, aname, ...) \
     auto lname = [&]() { __VA_ARGS__; }; \
-    AtScopeExit<decltype(lname)> aname(lname);
+    AtScopeExit<decltype(lname)> aname(lname)
 
 #define Auto_INTERNAL2(ctr, ...) \
     Auto_INTERNAL1(TOKEN_PASTE(Auto_func_, ctr), \

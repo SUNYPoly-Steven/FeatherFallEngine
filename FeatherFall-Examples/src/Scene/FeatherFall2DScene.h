@@ -21,9 +21,9 @@ namespace Application {
 			FeatherFall2DScene();
 			~FeatherFall2DScene();
 
-			void OnUpdate(float deltaTime);
-			void OnRender();
-			void OnImGuiRender();
+			void OnUpdate(float deltaTime) override ;
+			void OnRender() override ;
+			void OnImGuiRender() override ;
 
 		private:
 

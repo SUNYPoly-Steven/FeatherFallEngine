@@ -4,7 +4,7 @@
 
 namespace core { namespace math {
    
-    float toRads(float degrees) {
+    static float toRads(float degrees) {
         return (float)(degrees * (M_PI / 180));
     }
     

@@ -121,7 +121,7 @@
       <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
     <Lib>
-      <AdditionalDependencies>glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;glfw3.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)Depends\INSTALL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -143,7 +143,7 @@
       <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
     <Lib>
-      <AdditionalDependencies>glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;glfw3.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)Depends\INSTALL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -171,7 +171,7 @@
       <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
     <Lib>
-      <AdditionalDependencies>glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;glfw3.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)Depends\INSTALL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -199,13 +199,15 @@
       <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
     <Lib>
-      <AdditionalDependencies>glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;glfw3.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)Depends\INSTALL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\graphics\Renderable3D.cpp" />
+    <ClCompile Include="src\particles\ParticleSystem3D.cpp" />
     <ClCompile Include="src\buffers\BufferLayout.cpp" />
     <ClCompile Include="src\buffers\IBO.cpp" />
     <ClCompile Include="src\buffers\VBO.cpp" />
@@ -232,6 +234,7 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\particles\ParticleSystem3D.h" />
     <ClInclude Include="src\Auto.h" />
     <ClInclude Include="src\buffers\BufferLayout.h" />
     <ClInclude Include="src\buffers\IBO.h" />

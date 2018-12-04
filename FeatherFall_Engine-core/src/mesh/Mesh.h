@@ -14,10 +14,10 @@ namespace core {
 			~Mesh();
 
 
+			static core::graphics::Renderable3D* ReadFile(const char* filepath);
 
 		private:
 
-			void ReadFile(const char* filepath);
 
 		};
 	}

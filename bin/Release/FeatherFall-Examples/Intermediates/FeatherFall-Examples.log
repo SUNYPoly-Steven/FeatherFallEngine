@@ -1,7 +1,22 @@
-﻿  FeatherFall2DScene.cpp
+﻿  Application.cpp
+  BatchRendererScene.cpp
+  BuffersTestScene.cpp
+  ComputeShaderScene.cpp
+  FeatherFall2DScene.cpp
+  LayerScene.cpp
+  MainMenuScene.cpp
+  MandelbrotScene.cpp
+  Particle2DTestScene.cpp
+  Renderer3DScene.cpp
+  SandboxScene.cpp
+  Scene.cpp
+  SimpleRendererScene.cpp
+  TestScene.cpp
+  TextureTestScene.cpp
+  TSPScene.cpp
+c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  l:\dev\featherfallengine\depends\install\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
   Generating code
-  10 of 2535 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    9 functions had inline decision re-evaluated but remain unchanged
+  All 2867 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   FeatherFall-Examples.vcxproj -> L:\Dev\FeatherFallEngine\bin\Release\FeatherFall-Examples\FeatherFall-Examples.exe

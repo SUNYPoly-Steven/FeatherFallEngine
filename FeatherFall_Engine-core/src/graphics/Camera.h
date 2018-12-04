@@ -11,11 +11,11 @@ namespace core { namespace graphics {
 		glm::mat4 viewMat;
 		float viewWidth, viewHeight;
 		float aspectRatio;
-		float fov; //feild of view
 		float nearPlane, farPlane;
 
 
 	public:
+		float fov; //feild of view
 		glm::vec3 eye; //the point in space the camera is
 		glm::vec3 lookAt; // the point vector the camera is looking in
 		glm::vec3 up; //the point vector above the camera
@@ -33,11 +33,11 @@ namespace core { namespace graphics {
 		void forward(float dist);
 		void strafeRight(float dist);
 
+		glm::mat4& computeProjMat();
+		glm::mat4& computeViewMat();
 
 	private:
 
-		glm::mat4& computeProjMat();
-		glm::mat4& computeViewMat();
 
 	};
 

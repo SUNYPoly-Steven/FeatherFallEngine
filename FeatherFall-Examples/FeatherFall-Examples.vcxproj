@@ -115,6 +115,7 @@
       <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
       <EnablePREfast>false</EnablePREfast>
       <AssemblerOutput>NoListing</AssemblerOutput>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)Depends\INSTALL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -131,6 +132,7 @@
       <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
       <EnablePREfast>false</EnablePREfast>
       <AssemblerOutput>NoListing</AssemblerOutput>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)Depends\INSTALL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -151,6 +153,7 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnablePREfast>false</EnablePREfast>
       <AssemblerOutput>NoListing</AssemblerOutput>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -173,6 +176,7 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnablePREfast>false</EnablePREfast>
       <AssemblerOutput>NoListing</AssemblerOutput>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -183,6 +187,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="src\Scene\Particle3DScene.cpp" />
+    <ClCompile Include="src\Scene\RotationTestScene.cpp" />
     <ClCompile Include="src\Scene\BatchRendererScene.cpp" />
     <ClCompile Include="src\Scene\BuffersTestScene.cpp" />
     <ClCompile Include="src\Scene\ComputeShaderScene.cpp" />
@@ -197,8 +203,11 @@
     <ClCompile Include="src\Scene\SimpleRendererScene.cpp" />
     <ClCompile Include="src\Scene\TestScene.cpp" />
     <ClCompile Include="src\Scene\TextureTestScene.cpp" />
+    <ClCompile Include="src\Scene\TSPScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Scene\Particle3DScene.h" />
+    <ClInclude Include="src\Scene\RotationTestScene.h" />
     <ClInclude Include="src\Boids\Boid.h" />
     <ClInclude Include="src\Scene\BatchRendererScene.h" />
     <ClInclude Include="src\Scene\BoidScene.h" />
@@ -215,6 +224,7 @@
     <ClInclude Include="src\Scene\SimpleRendererScene.h" />
     <ClInclude Include="src\Scene\TestScene.h" />
     <ClInclude Include="src\Scene\TextureTestScene.h" />
+    <ClInclude Include="src\Scene\TSPScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FeatherFall_Engine-core\FeatherFall_Engine-core.vcxproj">
@@ -232,6 +242,7 @@
     <None Include="res\shaders\Mandelbrot.shader" />
     <None Include="res\shaders\ParticleSystem2DTest.shader" />
     <None Include="res\shaders\Renderer3DTest.shader" />
+    <None Include="res\shaders\RotationTest.shader" />
     <None Include="res\shaders\Sandbox.shader" />
     <None Include="res\shaders\SimpleRendererTest.shader" />
     <None Include="res\shaders\TextureTest.shader" />

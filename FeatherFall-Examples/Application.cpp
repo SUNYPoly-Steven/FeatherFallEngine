@@ -26,6 +26,9 @@
 #include "src/Scene/Renderer3DScene.h"
 #include "src/Scene/Particle2DTestScene.h"
 #include "src/Scene/FeatherFall2DScene.h"
+#include "src/Scene/TSPScene.h"
+#include "src/Scene/RotationTestScene.h"
+#include "src/Scene/Particle3DScene.h"
 
 //defines
 #define WINDOW_FULLSCREEN false
@@ -82,12 +85,17 @@ int main(int argc, char** argv)
 	mms->RegisterScene<Renderer3DScene>("3D Scene");
 	mms->RegisterScene<Particle2DTestScene>("Particle2D Test");
 	mms->RegisterScene<FeatherFall2DScene>("Feather Fall - 2D Demo");
+	mms->RegisterScene<TSPScene>("TSP - Simulated Annealing");
+	mms->RegisterScene<RotationTestScene>("Sprite Rotation");
+	mms->RegisterScene<Particle3DScene>("3D Demo");
 
 	currScene = mms;//make the current scene the main menu scene (this will be changed by components inside main menu later)
+
 
 	while (!window.windowShouldClose()) {
 		//Clear the window for the new frame
 		window.clear();
+
 
 		ImGui_ImplGlfwGL3_NewFrame();
 		if (currScene) {
@@ -95,8 +103,6 @@ int main(int argc, char** argv)
 			//profile this
 			currScene->OnUpdate(ImGui::GetIO().DeltaTime);
 			
-			//profile this
-			currScene->OnRender();
 
 			//for switching scenes
 			ImGui::Begin("Main Menu");
@@ -111,6 +117,7 @@ int main(int argc, char** argv)
 
 			ImGui::End();
 
+			
 		}
 
 		//print framerate in "Profiler" window
@@ -126,7 +133,15 @@ int main(int argc, char** argv)
 
 
 		ImGui::Render();
+		
+		if (currScene) {
+			//profile this
+			currScene->OnRender();
+		}
+		
 		ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());
+
+
 
 		window.update();
 

@@ -3,12 +3,12 @@
 #include <ImGui/imgui.h>
 #include "debuging.h"
 
+
 namespace Application { namespace Scene {  
 
 	TestScene::TestScene()
 		: clearColor { 0.2f, 0.5f, 0.1f, 1.0f }
 	{
-	
 	}
 
 	TestScene::~TestScene() {}

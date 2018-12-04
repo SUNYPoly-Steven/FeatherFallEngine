@@ -17,8 +17,8 @@ namespace core { namespace graphics {
 		glm::vec2 mousePos = glm::vec2(0, 0);
 		const char* title;
 
-		bool keys[MAX_KEYS];
-		bool buttons[MAX_BUTTONS];
+		static bool keys[MAX_KEYS];
+		static bool buttons[MAX_BUTTONS];
 
 		static glm::vec2 mousePos_s;
 		static glm::vec2 winSize_s;
@@ -43,8 +43,9 @@ namespace core { namespace graphics {
 		void update() const ;
 		void clear() const ;
 		void setClearColor(const glm::vec4& color) const ;
-		bool isKeyPressed(unsigned int keycode) const ;
-		bool isButtonPressed(unsigned int keycode) const ;
+
+		static bool isKeyPressed(unsigned int keycode);
+		static bool isButtonPressed(unsigned int button);
 
 
 	private:

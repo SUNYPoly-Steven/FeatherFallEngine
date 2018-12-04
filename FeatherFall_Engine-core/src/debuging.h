@@ -26,4 +26,4 @@ void GLClearError();
 #define SAFE_DELETE(pointer) \
 		if (pointer) \
 			delete pointer; \
-		pointer = 0
+		pointer = nullptr

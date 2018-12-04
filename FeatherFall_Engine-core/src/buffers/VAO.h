@@ -15,10 +15,10 @@ namespace core { namespace buffers {
 		VAO();
 		~VAO();
 
-		/*BINDS the VAO*/
+		/* BINDS the VAO */
 		void bind() const ;
 
-		/*UNBINDS the VAO*/
+		/* UNBINDS the VAO */
 		void unbind() const ;
 
 		void addBuffer(const VBO& vb, const BufferLayout& layout);

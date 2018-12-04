@@ -15,14 +15,13 @@ namespace Application { namespace Scene {
 		core::graphics::Shader shader;
 		core::graphics::Texture texture;
 
-	public:
-
+	public: 
 		Particle2DTestScene();
 		~Particle2DTestScene();
 
-		void OnUpdate(float deltaTime);
-		void OnRender();
-		void OnImGuiRender();
+		void OnUpdate(float deltaTime) override ;
+		void OnRender() override ;
+		void OnImGuiRender() override ;
 
 	private:
 
